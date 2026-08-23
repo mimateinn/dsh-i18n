@@ -1,0 +1,14 @@
+{
+  "pkg": "dsh-client-ui-plan",
+  "entries": [
+    {
+      "ns": "plan",
+      "dict": {
+        "chip.on.aria": "Tryb planowania włączony, naciśnij, aby wyłączyć",
+        "chip.on.title": "Tryb planowania włączony — kliknij, aby wyłączyć (/plan off)",
+        "chip.off.aria": "Tryb planowania wyłączony, naciśnij, aby włączyć",
+        "chip.off.title": "Tryb planowania wyłączony — kliknij, aby włączyć (/plan)"
+      }
+    }
+  ]
+}

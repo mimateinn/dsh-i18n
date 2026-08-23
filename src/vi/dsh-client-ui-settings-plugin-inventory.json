@@ -1,0 +1,28 @@
+{
+  "pkg": "dsh-client-ui-settings-plugin-inventory",
+  "entries": [
+    {
+      "ns": "settings.pluginInventory",
+      "dict": {
+        "tab": "Danh sách plugin",
+        "loading": "Đang đọc plugin…",
+        "error": "Plugin tạm thời không khả dụng.",
+        "retry": "Thử lại",
+        "search": "Tìm plugin",
+        "catalog": "Danh sách plugin",
+        "empty": "Không có plugin nào khả dụng.",
+        "emptySearch": "Không có plugin nào khớp.",
+        "enabledTag": "Đã bật",
+        "disabledTag": "Đã tắt",
+        "configuration": "Cấu hình",
+        "cordis": "Trạng thái Cordis",
+        "unobserved": "Chưa gắn kết",
+        "pending": "Đang chờ phụ thuộc",
+        "loadingPhase": "Đang tải",
+        "active": "Đã gắn kết",
+        "failed": "Gắn kết thất bại",
+        "unloading": "Đang gỡ tải"
+      }
+    }
+  ]
+}

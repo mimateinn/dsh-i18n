@@ -1,0 +1,29 @@
+{
+  "pkg": "dsh-client-ui-permission-presets",
+  "entries": [
+    {
+      "ns": "permission.access",
+      "dict": {
+        "confirm.title": "Enable Full access?",
+        "confirm.description": "Full access reduces confirmation steps and lets the agent perform more actions directly, including sensitive operations, bestand changes, or external commands. Only use it when you trust the current task.",
+        "confirm.acknowledge": "I understand the risks and want to continue",
+        "confirm.cancel": "Cancel",
+        "confirm.enable": "Enable Full access"
+      }
+    },
+    {
+      "ns": "settings.permission",
+      "dict": {
+        "title": "Toestemming",
+        "description": "Kies the standaard permission mode for new sessies",
+        "loading": "Laden",
+        "unavailable": "Niet beschikbaar",
+        "confirm.title": "Enable Full access?",
+        "confirm.description": "Full access lets new sessies reduce confirmation steps and perform more actions directly, including sensitive operations, bestand changes, or external commands. Only use it when you trust subsequent tasks.",
+        "confirm.acknowledge": "I understand the risks and want to continue",
+        "confirm.cancel": "Cancel",
+        "confirm.enable": "Enable Full access"
+      }
+    }
+  ]
+}

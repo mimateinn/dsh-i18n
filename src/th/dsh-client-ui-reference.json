@@ -1,0 +1,16 @@
+{
+  "pkg": "dsh-client-ui-reference",
+  "entries": [
+    {
+      "ns": "reference",
+      "dict": {
+        "section.files": "ไฟล์และโฟลเดอร์",
+        "section.sessions": "การสนทนาในเซสชัน",
+        "candidate.file": "ไฟล์",
+        "candidate.folder": "โฟลเดอร์",
+        "candidate.session": "เซสชัน",
+        "candidate.noCwd": "(ไม่มี cwd)"
+      }
+    }
+  ]
+}

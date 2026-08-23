@@ -2,6 +2,7 @@
 // 用法: node scripts/assemble.mjs
 import fs from "node:fs";
 import path from "node:path";
+import { locales } from "./locales.mjs";
 
 const root = path.join(import.meta.dirname, "..");
 const outFile = path.join(root, "lib", "client.js");
@@ -9,14 +10,9 @@ const outFile = path.join(root, "lib", "client.js");
 // 语言注册表：dir 为 src/ 下的字典目录（小写），id 为 locale id，label 为语言行显示名。
 // useConvert=true 表示该语言支持「简中字元表即时转换」兜底（目前只有 zh-TW 同源可行）；
 // 其他语言缺精译时 fallback 英文（en 字典由官方注册，全部 namespace 齐备）。
-const LANGUAGES = [
-  { id: "zh-TW", dir: "zh-tw", label: "繁體中文", useConvert: true },
-  { id: "ja", dir: "ja", label: "日本語" },
-  { id: "ko", dir: "ko", label: "한국어" },
-  { id: "fr", dir: "fr", label: "Français" },
-  { id: "de", dir: "de", label: "Deutsch" },
-  { id: "es", dir: "es", label: "Español" },
-];
+const LANGUAGES = locales.map(({ id, dir, label, traditional, rtl }) => ({
+  id, dir, label, useConvert: Boolean(traditional), rtl: Boolean(rtl),
+}));
 
 const dicts = {}; // langId -> { ns -> dict }
 for (const lang of LANGUAGES) {
@@ -41,7 +37,7 @@ for (const lang of LANGUAGES) {
 const CHARS = JSON.parse(fs.readFileSync(path.join(root, "src", "zh-tw-parts", "chars.json"), "utf8"));
 console.log(`char table: ${Object.keys(CHARS).length} entries`);
 
-const LANGUAGES_JSON = JSON.stringify(LANGUAGES.map(({ id, label, useConvert }) => ({ id, label, useConvert })));
+const LANGUAGES_JSON = JSON.stringify(LANGUAGES.map(({ id, label, useConvert, rtl }) => ({ id, label, useConvert, rtl })));
 const DICTS_JSON = JSON.stringify(dicts);
 const CHARS_JSON = JSON.stringify(CHARS);
 
@@ -199,9 +195,14 @@ window.__ModuleLoader__.load({
         if (domOriginalLang !== null) document.documentElement.lang = domOriginalLang;
       } catch { /* 忽略 */ }
     }
-    function syncDomConversion(active) {
-      if (active === "zh-TW") startDomConversion();
+    function syncDocumentLocale(active) {
+      const lang = LANGUAGES.find((item) => item.id === active);
+      if (lang?.useConvert) startDomConversion();
       else stopDomConversion();
+      try {
+        document.documentElement.lang = lang?.id ?? document.documentElement.lang;
+        document.documentElement.dir = lang?.rtl ? "rtl" : "ltr";
+      } catch { /* document may not be ready */ }
     }
 
     function apply(ctx) {
@@ -276,7 +277,7 @@ window.__ModuleLoader__.load({
           originalSetLocale(id);
           writePref(null);
         }
-        syncDomConversion(locale.getLocale().active);
+        syncDocumentLocale(locale.getLocale().active);
       };
 
       // 4) 持久化：启动时若 localStorage 有我们的语言偏好则自动启用。
@@ -296,13 +297,13 @@ window.__ModuleLoader__.load({
         locale.adopt = (host) => {
           originalAdopt(host);
           activateIfPreferred();
-          syncDomConversion(locale.getLocale().active);
+          syncDocumentLocale(locale.getLocale().active);
         };
       }
       activateIfPreferred();
-      syncDomConversion(locale.getLocale().active);
+      syncDocumentLocale(locale.getLocale().active);
       // 启动后 DOM 可能未渲染完，延后几拍再补一轮兜底转换
-      try { window.setTimeout(() => syncDomConversion(locale.getLocale().active), 500); } catch { /* 忽略 */ }
+      try { window.setTimeout(() => syncDocumentLocale(locale.getLocale().active), 500); } catch { /* 忽略 */ }
     }
 
     module.exports = { name, inject, apply };

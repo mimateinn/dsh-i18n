@@ -1,0 +1,22 @@
+{
+  "pkg": "dsh-client-ui-message-feedback",
+  "entries": [
+    {
+      "ns": "feedback",
+      "dict": {
+        "action.like": "Хороший ответ",
+        "action.likeActive": "Удалить оценку",
+        "action.dislike": "Плохой ответ",
+        "action.dislikeActive": "Удалить оценку",
+        "note.open": "Добавить заметку",
+        "note.placeholder": "Что было хорошо, а что пошло не так? (необязательный)",
+        "note.save": "Сохранять",
+        "note.cancel": "Отмена",
+        "note.aria": "Примечание к отзыву",
+        "error.conflict": "Этот отзыв изменился в другом месте; отображается последнее состояние",
+        "error.load": "Не удалось загрузить отзыв.",
+        "error.generic": "Не удалось сохранить отзыв"
+      }
+    }
+  ]
+}

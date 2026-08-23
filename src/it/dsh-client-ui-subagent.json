@@ -1,0 +1,43 @@
+{
+  "pkg": "dsh-client-ui-subagent",
+  "entries": [
+    {
+      "ns": "subagent",
+      "dict": {
+        "diagnostic.corrupt": "record di sessione danneggiato",
+        "diagnostic.unsupported": "versione record subagente non supportata",
+        "diagnostic.unavailable": "record di sessione temporaneamente non disponibile",
+        "duration.seconds": "{seconds}s",
+        "duration.minutes": "{minutes}m {seconds}s",
+        "duration.hours": "{hours}h {minutes}m {seconds}s",
+        "duration.days": "{days}d",
+        "duration.daysHours": "{days}d {hours}h",
+        "duration.months": "~{months}mo",
+        "duration.monthsDays": "~{months}mo {days}d",
+        "duration.years": "~{years}y",
+        "duration.yearsMonths": "~{years}y {months}mo",
+        "duration.exactDays": "{days}d {hours}h {minutes}m {seconds}s",
+        "duration.exactTitle": "Durata totale attiva: {duration}",
+        "loading.label": "Caricamento dei subagenti in corso...",
+        "loading.aria": "Caricamento subagenti",
+        "load.error": "Impossibile caricare i subagenti",
+        "retry": "Riprova",
+        "mode.oneShot": "one-shot",
+        "mode.continuable": "continuabile",
+        "activity.running": "running",
+        "activity.inactive": "non in esecuzione",
+        "branch.collapse": "Comprimi discendenti {label}",
+        "branch.expand": "Espandi discendenti {label}",
+        "count.total.one": "{count} subagente",
+        "count.total.other": "Subagenti {count}",
+        "count.running.one": "{count} subagente in esecuzione",
+        "count.running.other": "Subagenti {count} in esecuzione",
+        "tree.aria": "Sessioni con subagenti",
+        "readonly.oneShot.title": "Record subagente one-shot",
+        "readonly.title": "Questo subagente è di sola lettura per ora",
+        "readonly.oneShot.body": "Le attività one-shot non accettano follow-up; rivedere il record di esecuzione completo qui.",
+        "readonly.body": "La sessione principale è offline; riaprirla per continuare a inviare messaggi."
+      }
+    }
+  ]
+}

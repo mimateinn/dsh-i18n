@@ -1,0 +1,25 @@
+{
+  "pkg": "dsh-client-ui-jobs",
+  "entries": [
+    {
+      "ns": "job",
+      "dict": {
+        "count.live.one": "{count} tác vụ nền đang chạy",
+        "count.live.other": "{count} tác vụ nền đang chạy",
+        "count.idle.one": "{count} tác vụ nền",
+        "count.idle.other": "{count} tác vụ nền",
+        "list.aria": "Tác vụ nền",
+        "status.running": "đang chạy",
+        "status.stopping": "đang dừng",
+        "status.completed": "đã hoàn tất",
+        "status.killed": "đã hủy",
+        "status.failed": "thất bại",
+        "duration.seconds": "{seconds} giây",
+        "duration.minutes": "{minutes} phút {seconds} giây",
+        "duration.hours": "{hours} giờ {minutes} phút",
+        "duration.title.live": "Đã chạy được {duration}",
+        "duration.title.done": "Mất {duration}"
+      }
+    }
+  ]
+}

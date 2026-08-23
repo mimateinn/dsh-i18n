@@ -1,0 +1,23 @@
+{
+  "pkg": "dsh-client-ui-directory-picker-browse",
+  "entries": [
+    {
+      "ns": "directory-browser",
+      "dict": {
+        "browser.title": "เลือกไดเรกทอรีพื้นที่ทำงาน",
+        "browser.home": "หน้าหลัก",
+        "browser.newFolder": "โฟลเดอร์ใหม่",
+        "browser.folderName": "ชื่อโฟลเดอร์",
+        "browser.createIn": "โฟลเดอร์ใหม่ใน \"{name}\"",
+        "browser.untitledFolder": "โฟลเดอร์ที่ไม่มีชื่อ",
+        "browser.create": "สร้าง",
+        "browser.cancel": "ยกเลิก",
+        "browser.open": "เปิด",
+        "browser.editPath": "แก้ไขเส้นทาง",
+        "browser.loading": "กำลังโหลด…",
+        "browser.truncated": "มีโฟลเดอร์ลงประกาศมากเกินไปแสดงเฉพาะจุดเริ่มต้นเท่านั้น",
+        "browser.showHidden": "แสดงไฟล์ที่ซ่อนอยู่"
+      }
+    }
+  ]
+}

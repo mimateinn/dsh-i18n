@@ -1,0 +1,14 @@
+{
+  "pkg": "dsh-client-ui-plan",
+  "entries": [
+    {
+      "ns": "plan",
+      "dict": {
+        "chip.on.aria": "plan mode 已開啟，按下關閉",
+        "chip.on.title": "plan mode 已開啟 — 按一下關閉（/plan off）",
+        "chip.off.aria": "plan mode 已關閉，按下開啟",
+        "chip.off.title": "plan mode 已關閉 — 按一下開啟（/plan）"
+      }
+    }
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "pkg": "dsh-client-ui-goal",
+  "entries": [
+    {
+      "ns": "goal",
+      "dict": {
+        "phase.active": "Pågående mål",
+        "phase.paused": "Pausat mål",
+        "phase.blocked": "Blockerat mål",
+        "objective.aria": "Målbeskrivning",
+        "commandInput.aria": "Kommandoinmatning",
+        "action.save": "Spara mål",
+        "action.cancel": "Avbryt redigering",
+        "action.pause": "Pausa mål",
+        "action.resume": "Återuppta mål",
+        "action.edit": "Redigera mål",
+        "action.clear": "Rensa mål"
+      }
+    }
+  ]
+}

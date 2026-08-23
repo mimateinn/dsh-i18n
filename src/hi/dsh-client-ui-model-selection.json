@@ -1,0 +1,27 @@
+{
+  "pkg": "dsh-client-ui-model-selection",
+  "entries": [
+    {
+      "ns": "model",
+      "dict": {
+        "command.description": "इस बातचीत के लिए मॉडल चुनें",
+        "option.loadError": "कैटलॉग लोड नहीं हो सका: {message}",
+        "trigger.fallback": "मॉडल चुनें",
+        "trigger.selectAria": "मॉडल चुनें",
+        "trigger.aria": "मॉडल चुनें, मौजूदा {model}",
+        "trigger.ariaEffort": "मॉडल चुनें, मौजूदा {model}, रीज़निंग प्रयास {effort}",
+        "menu.aria": "मॉडल और रीज़निंग प्रयास",
+        "menu.model": "मॉडल",
+        "menu.effort": "प्रयास",
+        "effort.providerDefault": "डिफ़ॉल्ट",
+        "status.loading": "मॉडल सूची ताज़ा की जा रही है…",
+        "error.action": "मॉडल संचालन विफल रहा: {message}",
+        "action.reload": "फिर से लोड करें",
+        "warning.groupLoad": "{name} लोड नहीं हो सका: {message}",
+        "empty.models": "कोई मॉडल उपलब्ध नहीं।",
+        "blocked.composer": "यह मॉडल उपलब्ध नहीं है — जारी रखने के लिए कोई एक चुनें",
+        "empty.efforts": "यह मॉडल कोई रीज़निंग प्रयास स्तर नहीं देता।"
+      }
+    }
+  ]
+}

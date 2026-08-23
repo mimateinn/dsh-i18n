@@ -1,0 +1,25 @@
+{
+  "pkg": "dsh-client-ui-jobs",
+  "entries": [
+    {
+      "ns": "job",
+      "dict": {
+        "count.live.one": "{count} bakgrundsjobb körs",
+        "count.live.other": "{count} bakgrundsjobb körs",
+        "count.idle.one": "{count} bakgrundsjobb",
+        "count.idle.other": "{count} bakgrundsjobb",
+        "list.aria": "Bakgrundsjobb",
+        "status.running": "körs",
+        "status.stopping": "stoppas",
+        "status.completed": "slutfört",
+        "status.killed": "avbrutet",
+        "status.failed": "misslyckades",
+        "duration.seconds": "{seconds}s",
+        "duration.minutes": "{minutes}m {seconds}s",
+        "duration.hours": "{hours}h {minutes}m",
+        "duration.title.live": "Har körts i {duration}",
+        "duration.title.done": "Tog {duration}"
+      }
+    }
+  ]
+}

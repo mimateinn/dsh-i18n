@@ -1,0 +1,21 @@
+{
+  "pkg": "dsh-client-ui-goal",
+  "entries": [
+    {
+      "ns": "goal",
+      "dict": {
+        "phase.active": "Obiettivo in corso",
+        "phase.paused": "Obiettivo in pausa",
+        "phase.blocked": "Obiettivo bloccato",
+        "objective.aria": "Obiettivo obiettivo",
+        "commandInput.aria": "Ingresso comando",
+        "action.save": "Salva obiettivo",
+        "action.cancel": "Annulla modifica",
+        "action.pause": "Metti in pausa l'obiettivo",
+        "action.resume": "Riprendi obiettivo",
+        "action.edit": "Modifica obiettivo",
+        "action.clear": "Chiaro obiettivo"
+      }
+    }
+  ]
+}

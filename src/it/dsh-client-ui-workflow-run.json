@@ -1,0 +1,28 @@
+{
+  "pkg": "dsh-client-ui-workflow-run",
+  "entries": [
+    {
+      "ns": "workflowRun",
+      "dict": {
+        "run.title": "{name}",
+        "run.members.one": "Membro {count}",
+        "run.members.other": "Membri {count}",
+        "run.empty": "Nessun membro ha iniziato",
+        "phase.unassigned": "Non sfasato",
+        "phase.empty": "Nome fase vuota",
+        "statusCount.running": "Esecuzione di {count}",
+        "statusCount.completed": "Completato {count}",
+        "statusCount.failed": "{count} non riuscito",
+        "statusCount.cancelled": "Annullato {count}",
+        "statusCount.interrupted": "Interrotto {count}",
+        "member.empty": "Nome membro vuoto",
+        "member.open": "Apri {name}",
+        "status.running": "Corsa",
+        "status.completed": "Completato",
+        "status.failed": "Fallito",
+        "status.cancelled": "Annullato",
+        "status.interrupted": "Interrotto"
+      }
+    }
+  ]
+}

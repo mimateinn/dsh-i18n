@@ -1,0 +1,16 @@
+{
+  "pkg": "dsh-client-ui-reference",
+  "entries": [
+    {
+      "ns": "reference",
+      "dict": {
+        "section.files": "ファイルとフォルダー",
+        "section.sessions": "Session の会話",
+        "candidate.file": "ファイル",
+        "candidate.folder": "フォルダー",
+        "candidate.session": "Session",
+        "candidate.noCwd": "（作業ディレクトリなし）"
+      }
+    }
+  ]
+}

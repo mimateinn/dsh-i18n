@@ -1,0 +1,28 @@
+{
+  "pkg": "dsh-client-ui-workflow-run",
+  "entries": [
+    {
+      "ns": "workflowRun",
+      "dict": {
+        "run.title": "{name}",
+        "run.members.one": "สมาชิก {count} คน",
+        "run.members.other": "สมาชิก {count} คน",
+        "run.empty": "ยังไม่ได้เริ่มสมาชิก",
+        "phase.unassigned": "ไม่ระบุเฟส",
+        "phase.empty": "ชื่อเฟสว่าง",
+        "statusCount.running": "กำลังทำงาน {count}",
+        "statusCount.completed": "เสร็จสิ้น {count}",
+        "statusCount.failed": "ล้มเหลว {count}",
+        "statusCount.cancelled": "ยกเลิกแล้ว {count}",
+        "statusCount.interrupted": "ถูกขัดจังหวะ {count}",
+        "member.empty": "ชื่อสมาชิกว่าง",
+        "member.open": "เปิด {name}",
+        "status.running": "กำลังทำงาน",
+        "status.completed": "เสร็จสิ้น",
+        "status.failed": "ล้มเหลว",
+        "status.cancelled": "ยกเลิกแล้ว",
+        "status.interrupted": "ถูกขัดจังหวะ"
+      }
+    }
+  ]
+}

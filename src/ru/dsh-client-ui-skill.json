@@ -1,0 +1,15 @@
+{
+  "pkg": "dsh-client-ui-skill",
+  "entries": [
+    {
+      "ns": "skill",
+      "dict": {
+        "row.running": "Навык загрузки",
+        "row.failed": "Не удалось загрузить навык",
+        "row.stopped": "Загрузка навыков остановлена",
+        "row.instructions": "Инструкции",
+        "menu.userOnly": "только для пользователей"
+      }
+    }
+  ]
+}

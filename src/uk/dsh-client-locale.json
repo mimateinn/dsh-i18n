@@ -1,0 +1,40 @@
+{
+  "pkg": "dsh-client-locale",
+  "entries": [
+    {
+      "ns": "common",
+      "dict": {
+        "ok": "OK",
+        "cancel": "Скасувати",
+        "close": "Закрити",
+        "copy": "Копіювати",
+        "copied": "Скопійовано",
+        "retry": "Повторити",
+        "loading": "Завантаження…",
+        "load.failed": "Не вдалося завантажити",
+        "submit": "Надіслати",
+        "submitting": "Надсилання…",
+        "next": "Далі",
+        "previous": "Назад",
+        "skip": "Пропустити",
+        "delete": "Видалити",
+        "edit": "Редагувати",
+        "save": "Зберегти",
+        "search": "Пошук",
+        "more": "Більше",
+        "collapse": "Згорнути",
+        "expand": "Розгорнути",
+        "back": "Назад",
+        "unknown": "Невідомо",
+        "none": "Немає",
+        "truncated": "Скорочено"
+      }
+    },
+    {
+      "ns": "settings.locale",
+      "dict": {
+        "language.title": "Мова"
+      }
+    }
+  ]
+}

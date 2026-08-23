@@ -1,0 +1,29 @@
+{
+  "pkg": "dsh-client-ui-permission-presets",
+  "entries": [
+    {
+      "ns": "permission.access",
+      "dict": {
+        "confirm.title": "Aktifkan akses penuh?",
+        "confirm.description": "Akses penuh mengurangi langkah konfirmasi dan memungkinkan agen melakukan lebih banyak tindakan secara langsung, termasuk operasi sensitif, perubahan file, atau perintah eksternal. Gunakan hanya saat Anda mempercayai tugas saat ini.",
+        "confirm.acknowledge": "Saya memahami risikonya dan ingin melanjutkan",
+        "confirm.cancel": "Batalkan",
+        "confirm.enable": "Aktifkan akses penuh"
+      }
+    },
+    {
+      "ns": "settings.permission",
+      "dict": {
+        "title": "Izin",
+        "description": "Pilih mode izin default untuk sesi baru",
+        "loading": "Memuat",
+        "unavailable": "Tidak tersedia",
+        "confirm.title": "Aktifkan akses penuh?",
+        "confirm.description": "Akses penuh memungkinkan sesi baru mengurangi langkah konfirmasi dan melakukan lebih banyak tindakan secara langsung, termasuk operasi sensitif, perubahan file, atau perintah eksternal. Gunakan hanya saat Anda mempercayai tugas-tugas berikutnya.",
+        "confirm.acknowledge": "Saya memahami risikonya dan ingin melanjutkan",
+        "confirm.cancel": "Batalkan",
+        "confirm.enable": "Aktifkan akses penuh"
+      }
+    }
+  ]
+}

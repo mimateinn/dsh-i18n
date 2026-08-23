@@ -1,0 +1,15 @@
+{
+  "pkg": "dsh-client-ui-deliverables",
+  "entries": [
+    {
+      "ns": "deliverables",
+      "dict": {
+        "produced.label": "Dihasilkan",
+        "produced.moreOne": "+ 1 berkas",
+        "produced.more": "+ file {count}",
+        "produced.open": "Buka {name}",
+        "produced.showInFolder": "Tampilkan di folder"
+      }
+    }
+  ]
+}

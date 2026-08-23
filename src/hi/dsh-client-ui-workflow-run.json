@@ -1,0 +1,28 @@
+{
+  "pkg": "dsh-client-ui-workflow-run",
+  "entries": [
+    {
+      "ns": "workflowRun",
+      "dict": {
+        "run.title": "{name}",
+        "run.members.one": "{count} सदस्य",
+        "run.members.other": "{count} सदस्य",
+        "run.empty": "कोई सदस्य शुरू नहीं हुआ",
+        "phase.unassigned": "बिना चरण",
+        "phase.empty": "चरण का नाम खाली है",
+        "statusCount.running": "चल रहे {count}",
+        "statusCount.completed": "पूर्ण {count}",
+        "statusCount.failed": "विफल {count}",
+        "statusCount.cancelled": "रद्द {count}",
+        "statusCount.interrupted": "बाधित {count}",
+        "member.empty": "सदस्य का नाम खाली है",
+        "member.open": "{name} खोलें",
+        "status.running": "चल रहा है",
+        "status.completed": "पूर्ण",
+        "status.failed": "विफल",
+        "status.cancelled": "रद्द",
+        "status.interrupted": "बाधित"
+      }
+    }
+  ]
+}

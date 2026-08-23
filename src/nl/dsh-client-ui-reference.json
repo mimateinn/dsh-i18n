@@ -1,0 +1,16 @@
+{
+  "pkg": "dsh-client-ui-reference",
+  "entries": [
+    {
+      "ns": "reference",
+      "dict": {
+        "section.files": "Files & maps",
+        "section.sessions": "Session conversations",
+        "candidate.file": "File",
+        "candidate.folder": "Folder",
+        "candidate.session": "Session",
+        "candidate.noCwd": "(no cwd)"
+      }
+    }
+  ]
+}

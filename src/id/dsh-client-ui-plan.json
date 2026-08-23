@@ -1,0 +1,14 @@
+{
+  "pkg": "dsh-client-ui-plan",
+  "entries": [
+    {
+      "ns": "plan",
+      "dict": {
+        "chip.on.aria": "Mode rencana aktif, tekan untuk mematikan",
+        "chip.on.title": "Mode rencana aktif — klik untuk mematikan (/plan off)",
+        "chip.off.aria": "Mode rencana mati, tekan untuk menyalakan",
+        "chip.off.title": "Mode rencana mati — klik untuk menghidupkan (/plan)"
+      }
+    }
+  ]
+}

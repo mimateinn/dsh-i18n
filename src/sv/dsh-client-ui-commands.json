@@ -1,0 +1,18 @@
+{
+  "pkg": "dsh-client-ui-commands",
+  "entries": [
+    {
+      "ns": "command",
+      "dict": {
+        "search.placeholder": "Sök…",
+        "search.aria": "Filtrera alternativ",
+        "status.loading": "Läser in alternativ…",
+        "status.applying": "Tillämpar…",
+        "status.empty": "Inga alternativ",
+        "overlay.aria": "Alternativ för /{command}",
+        "listbox.aria": "Träffar för /{command}",
+        "notice.imagesUnsupported": "/{command} tar inte emot bildbilagor; ta bort dem först"
+      }
+    }
+  ]
+}

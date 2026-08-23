@@ -10,7 +10,8 @@
         "status.applying": "適用中…",
         "status.empty": "オプションがありません",
         "overlay.aria": "/{command} のオプション",
-        "listbox.aria": "/{command} の一致結果"
+        "listbox.aria": "/{command} の一致結果",
+        "notice.imagesUnsupported": "/{command} は画像の添付に対応していません。先に画像を削除してください"
       }
     }
   ]

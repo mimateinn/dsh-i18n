@@ -1,0 +1,16 @@
+{
+  "pkg": "dsh-client-ui-settings-general",
+  "entries": [
+    {
+      "ns": "settings",
+      "dict": {
+        "trigger": "सेटिंग्स",
+        "title": "सेटिंग्स",
+        "close": "बंद करें",
+        "openDocument": "कॉन्फ़िगरेशन फ़ाइल खोलें",
+        "openDocument.error": "कॉन्फ़िगरेशन फ़ाइल नहीं खुल सकी",
+        "general.nav": "सामान्य"
+      }
+    }
+  ]
+}

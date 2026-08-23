@@ -1,0 +1,23 @@
+{
+  "pkg": "dsh-client-ui-directory-picker-browse",
+  "entries": [
+    {
+      "ns": "directory-browser",
+      "dict": {
+        "browser.title": "Seleziona la directory dello spazio di lavoro",
+        "browser.home": "Home",
+        "browser.newFolder": "Nuova cartella",
+        "browser.folderName": "Nome cartella",
+        "browser.createIn": "Nuova cartella in \"{name}\"",
+        "browser.untitledFolder": "Cartella senza titolo",
+        "browser.create": "Crea",
+        "browser.cancel": "Annulla",
+        "browser.open": "Apri",
+        "browser.editPath": "Modifica percorso",
+        "browser.loading": "Caricamento in corso...",
+        "browser.truncated": "Troppe cartelle da elencare; viene mostrato solo l'inizio.",
+        "browser.showHidden": "Mostra file nascosti"
+      }
+    }
+  ]
+}

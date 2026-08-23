@@ -1,0 +1,40 @@
+{
+  "pkg": "dsh-client-locale",
+  "entries": [
+    {
+      "ns": "common",
+      "dict": {
+        "ok": "OK",
+        "cancel": "Anuluj",
+        "close": "Zamknij",
+        "copy": "Kopiuj",
+        "copied": "Skopiowano",
+        "retry": "Ponów",
+        "loading": "Wczytywanie…",
+        "load.failed": "Nie udało się wczytać",
+        "submit": "Wyślij",
+        "submitting": "Wysyłanie…",
+        "next": "Dalej",
+        "previous": "Wstecz",
+        "skip": "Pomiń",
+        "delete": "Usuń",
+        "edit": "Edytuj",
+        "save": "Zapisz",
+        "search": "Szukaj",
+        "more": "Więcej",
+        "collapse": "Zwiń",
+        "expand": "Rozwiń",
+        "back": "Wstecz",
+        "unknown": "Nieznane",
+        "none": "Brak",
+        "truncated": "Skrócono"
+      }
+    },
+    {
+      "ns": "settings.locale",
+      "dict": {
+        "language.title": "Język"
+      }
+    }
+  ]
+}

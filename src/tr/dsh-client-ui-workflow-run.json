@@ -1,0 +1,28 @@
+{
+  "pkg": "dsh-client-ui-workflow-run",
+  "entries": [
+    {
+      "ns": "workflowRun",
+      "dict": {
+        "run.title": "{name}",
+        "run.members.one": "{count} üye",
+        "run.members.other": "{count} üye",
+        "run.empty": "Hiçbir üye başlatılmadı",
+        "phase.unassigned": "Aşamasız",
+        "phase.empty": "Boş aşama adı",
+        "statusCount.running": "Çalışıyor: {count}",
+        "statusCount.completed": "Tamamlandı: {count}",
+        "statusCount.failed": "Başarısız: {count}",
+        "statusCount.cancelled": "İptal edildi: {count}",
+        "statusCount.interrupted": "Kesildi: {count}",
+        "member.empty": "Boş üye adı",
+        "member.open": "{name} öğesini aç",
+        "status.running": "Çalışıyor",
+        "status.completed": "Tamamlandı",
+        "status.failed": "Başarısız",
+        "status.cancelled": "İptal edildi",
+        "status.interrupted": "Kesildi"
+      }
+    }
+  ]
+}

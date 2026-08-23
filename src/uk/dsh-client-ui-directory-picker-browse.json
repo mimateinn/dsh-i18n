@@ -1,0 +1,23 @@
+{
+  "pkg": "dsh-client-ui-directory-picker-browse",
+  "entries": [
+    {
+      "ns": "directory-browser",
+      "dict": {
+        "browser.title": "Виберіть теку робочого простору",
+        "browser.home": "Домашня тека",
+        "browser.newFolder": "Нова тека",
+        "browser.folderName": "Назва теки",
+        "browser.createIn": "Нова тека в «{name}»",
+        "browser.untitledFolder": "Тека без назви",
+        "browser.create": "Створити",
+        "browser.cancel": "Скасувати",
+        "browser.open": "Відкрити",
+        "browser.editPath": "Змінити шлях",
+        "browser.loading": "Завантаження…",
+        "browser.truncated": "Забагато тек для списку; показано лише початок.",
+        "browser.showHidden": "Показувати приховані файли"
+      }
+    }
+  ]
+}

@@ -1,0 +1,47 @@
+{
+  "pkg": "dsh-client-ui-settings-plugins",
+  "entries": [
+    {
+      "ns": "settings.plugins",
+      "dict": {
+        "nav": "Plugin",
+        "title": "Plugin",
+        "intro": "Cấu hình và xem xét các plugin đã cài trong bản triển khai này.",
+        "tabs": "Các khung xem plugin",
+        "configurableTab": "Cấu hình plugin",
+        "empty": "Bản triển khai này không cung cấp cài đặt plugin nào.",
+        "overridden": "Đã ghi đè",
+        "reset": "Đặt lại về mặc định",
+        "readOnly": "Bản triển khai này lưu cài đặt ở chế độ chỉ đọc.",
+        "expand": "Hiện cài đặt",
+        "collapse": "Ẩn cài đặt",
+        "save": "Lưu",
+        "saving": "Đang lưu…",
+        "discard": "Bỏ thay đổi",
+        "unsaved": "Chưa lưu",
+        "saveFailed": "Bản triển khai không chấp nhận các giá trị này; chúng được giữ lại để bạn chỉnh sửa.",
+        "invalidNumber": "Nhập một số, hoặc để trống để dùng giá trị mặc định.",
+        "bashTitle": "Shell",
+        "bashDescription": "Giới hạn áp dụng cho mọi lệnh mà agent chạy.",
+        "bashTimeoutMs": "Thời gian chờ lệnh (ms)",
+        "bashTimeoutMsHint": "Một lệnh được phép chạy bao lâu trước khi bị kết thúc.",
+        "bashMaxOutputBytes": "Giới hạn đầu ra mỗi luồng (byte)",
+        "bashMaxOutputBytesHint": "Phần đầu ra vượt mức này sẽ được ghi ra tệp tạm thay vì bị mất.",
+        "agentLoopTitle": "Vòng lặp agent",
+        "agentLoopDescription": "Cách agent điều phối các lượt gọi công cụ.",
+        "agentLoopMaxParallel": "Số lượt gọi công cụ song song",
+        "agentLoopMaxParallelHint": "Giới hạn trên số lượt gọi an toàn khi chạy song song trong cùng một bước.",
+        "webSearchTitle": "Tìm kiếm web",
+        "webSearchDescription": "Nhà cung cấp tìm kiếm của DeepSeek.",
+        "webSearchApiKey": "API key",
+        "webSearchApiKeyHint": "Được lưu bên ngoài tệp cài đặt. Để trống để giữ khóa hiện tại.",
+        "webSearchApiKeySet": "Đã cấu hình một khóa.",
+        "webSearchApiKeyUnset": "Chưa cấu hình khóa nào; tính năng tìm kiếm không khả dụng cho tới khi có khóa.",
+        "webSearchBaseUrl": "Điểm cuối",
+        "webSearchBaseUrlHint": "Để trống để dùng mặc định của nhà cung cấp.",
+        "webSearchMaxUses": "Số lần tìm kiếm tối đa mỗi yêu cầu",
+        "webSearchMaxUsesHint": "Một yêu cầu được phép tìm kiếm bao nhiêu lần trước khi phải trả lời."
+      }
+    }
+  ]
+}

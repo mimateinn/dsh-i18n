@@ -1,0 +1,28 @@
+{
+  "pkg": "dsh-client-ui-workflow-run",
+  "entries": [
+    {
+      "ns": "workflowRun",
+      "dict": {
+        "run.title": "{name}",
+        "run.members.one": "{count} учасник",
+        "run.members.other": "{count} учасників",
+        "run.empty": "Учасників не запущено",
+        "phase.unassigned": "Без фази",
+        "phase.empty": "Порожня назва фази",
+        "statusCount.running": "Виконується {count}",
+        "statusCount.completed": "Завершено {count}",
+        "statusCount.failed": "Помилок {count}",
+        "statusCount.cancelled": "Скасовано {count}",
+        "statusCount.interrupted": "Перервано {count}",
+        "member.empty": "Порожнє ім'я учасника",
+        "member.open": "Відкрити {name}",
+        "status.running": "Виконується",
+        "status.completed": "Завершено",
+        "status.failed": "Помилка",
+        "status.cancelled": "Скасовано",
+        "status.interrupted": "Перервано"
+      }
+    }
+  ]
+}

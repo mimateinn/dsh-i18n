@@ -10,7 +10,8 @@
         "status.applying": "Application…",
         "status.empty": "Aucune option",
         "overlay.aria": "Options de /{command}",
-        "listbox.aria": "Correspondances pour /{command}"
+        "listbox.aria": "Correspondances pour /{command}",
+        "notice.imagesUnsupported": "/{command} n’accepte pas les images en pièce jointe ; supprimez-les d’abord"
       }
     }
   ]

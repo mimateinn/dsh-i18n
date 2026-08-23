@@ -1,0 +1,23 @@
+{
+  "pkg": "dsh-client-ui-directory-picker-browse",
+  "entries": [
+    {
+      "ns": "directory-browser",
+      "dict": {
+        "browser.title": "वर्कस्पेस डायरेक्ट्री चुनें",
+        "browser.home": "होम",
+        "browser.newFolder": "नया फ़ोल्डर",
+        "browser.folderName": "फ़ोल्डर का नाम",
+        "browser.createIn": "\"{name}\" में नया फ़ोल्डर",
+        "browser.untitledFolder": "बिना नाम का फ़ोल्डर",
+        "browser.create": "बनाएँ",
+        "browser.cancel": "रद्द करें",
+        "browser.open": "खोलें",
+        "browser.editPath": "पथ संपादित करें",
+        "browser.loading": "लोड हो रहा है…",
+        "browser.truncated": "सूचीबद्ध करने के लिए बहुत अधिक फ़ोल्डर हैं; केवल शुरुआती हिस्सा दिखाया गया है।",
+        "browser.showHidden": "छिपी फ़ाइलें दिखाएँ"
+      }
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "pkg": "dsh-client-ui-permission-presets",
+  "entries": [
+    {
+      "ns": "permission.access",
+      "dict": {
+        "confirm.title": "Abilitare l'accesso completo?",
+        "confirm.description": "L'accesso completo riduce i passaggi di conferma e consente all'agente di eseguire direttamente più azioni, tra cui operazioni sensibili, modifiche ai file o comandi esterni. Usalo solo quando ti fidi dell'attività corrente.",
+        "confirm.acknowledge": "Comprendo i rischi e voglio continuare",
+        "confirm.cancel": "Annulla",
+        "confirm.enable": "Abilita accesso completo"
+      }
+    },
+    {
+      "ns": "settings.permission",
+      "dict": {
+        "title": "Autorizzazione",
+        "description": "Scegli la modalità di autorizzazione predefinita per le nuove sessioni",
+        "loading": "Caricamento",
+        "unavailable": "Non disponibile",
+        "confirm.title": "Abilitare l'accesso completo?",
+        "confirm.description": "L'accesso completo consente alle nuove sessioni di ridurre i passaggi di conferma ed eseguire direttamente più azioni, tra cui operazioni sensibili, modifiche ai file o comandi esterni. Usalo solo quando ti fidi delle attività successive.",
+        "confirm.acknowledge": "Comprendo i rischi e voglio continuare",
+        "confirm.cancel": "Annulla",
+        "confirm.enable": "Abilita accesso completo"
+      }
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "pkg": "dsh-client-ui-message-feedback",
+  "entries": [
+    {
+      "ns": "feedback",
+      "dict": {
+        "action.like": "Goed antwoord",
+        "action.likeActive": "Beoordeling verwijderen",
+        "action.dislike": "Slecht antwoord",
+        "action.dislikeActive": "Beoordeling verwijderen",
+        "note.open": "Notitie toevoegen",
+        "note.placeholder": "What was good, or what went wrong? (optional)",
+        "note.save": "Save",
+        "note.cancel": "Cancel",
+        "note.aria": "Feedbacknotitie",
+        "error.conflict": "Deze feedback changed elsewhere; the latest state is shown",
+        "error.load": "Kon niet load feedback",
+        "error.generic": "Kon niet save feedback"
+      }
+    }
+  ]
+}

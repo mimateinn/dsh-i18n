@@ -1,0 +1,25 @@
+{
+  "pkg": "dsh-client-ui-jobs",
+  "entries": [
+    {
+      "ns": "job",
+      "dict": {
+        "count.live.one": "{count} фонове завдання виконується",
+        "count.live.other": "{count} фонових завдань виконується",
+        "count.idle.one": "{count} фонове завдання",
+        "count.idle.other": "{count} фонових завдань",
+        "list.aria": "Фонові завдання",
+        "status.running": "виконується",
+        "status.stopping": "зупиняється",
+        "status.completed": "завершено",
+        "status.killed": "скасовано",
+        "status.failed": "помилка",
+        "duration.seconds": "{seconds} с",
+        "duration.minutes": "{minutes} хв {seconds} с",
+        "duration.hours": "{hours} год {minutes} хв",
+        "duration.title.live": "Виконується {duration}",
+        "duration.title.done": "Тривало {duration}"
+      }
+    }
+  ]
+}

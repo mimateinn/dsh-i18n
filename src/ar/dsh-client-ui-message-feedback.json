@@ -1,0 +1,22 @@
+{
+  "pkg": "dsh-client-ui-message-feedback",
+  "entries": [
+    {
+      "ns": "feedback",
+      "dict": {
+        "action.like": "إجابة جيدة",
+        "action.likeActive": "إزالة التقييم",
+        "action.dislike": "إجابة سيئة",
+        "action.dislikeActive": "إزالة التقييم",
+        "note.open": "إضافة ملاحظة",
+        "note.placeholder": "‏What was good, or what went wrong? (optional)",
+        "note.save": "حفظ",
+        "note.cancel": "إلغاء",
+        "note.aria": "‏Feedback note",
+        "error.conflict": "‏This feedback changed elsewhere; the latest state is shown",
+        "error.load": "‏Could not load feedback",
+        "error.generic": "‏Could not save feedback"
+      }
+    }
+  ]
+}

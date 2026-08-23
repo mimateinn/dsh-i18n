@@ -1,0 +1,25 @@
+{
+  "pkg": "dsh-client-ui-jobs",
+  "entries": [
+    {
+      "ns": "job",
+      "dict": {
+        "count.live.one": "งานพื้นหลัง {count} กำลังทำงาน",
+        "count.live.other": "งานเบื้องหลัง {count} กำลังทำงาน",
+        "count.idle.one": "งานพื้นหลัง {count}",
+        "count.idle.other": "งานพื้นหลัง {count}",
+        "list.aria": "งานพื้นหลัง",
+        "status.running": "กำลังดำเนินการ",
+        "status.stopping": "หยุด",
+        "status.completed": "เสร็จสมบูรณ์",
+        "status.killed": "ยกเลิกแล้ว",
+        "status.failed": "ล้มเหลว",
+        "duration.seconds": "{seconds}s",
+        "duration.minutes": "{minutes}m {seconds}s",
+        "duration.hours": "{hours}h {minutes}m",
+        "duration.title.live": "กำลังทำงานสำหรับ {duration}",
+        "duration.title.done": "ใช้ {duration}"
+      }
+    }
+  ]
+}

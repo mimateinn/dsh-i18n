@@ -1,0 +1,28 @@
+{
+  "pkg": "dsh-client-ui-settings-plugin-inventory",
+  "entries": [
+    {
+      "ns": "settings.pluginInventory",
+      "dict": {
+        "tab": "Список плагинов",
+        "loading": "Чтение плагинов…",
+        "error": "Плагины временно недоступны.",
+        "retry": "Повторить попытку",
+        "search": "Поиск плагинов",
+        "catalog": "Список плагинов",
+        "empty": "Нет доступных плагинов.",
+        "emptySearch": "Нет подходящих плагинов.",
+        "enabledTag": "Включено",
+        "disabledTag": "Неполноценный",
+        "configuration": "Конфигурация",
+        "cordis": "Статус Кордиса",
+        "unobserved": "Не установлен",
+        "pending": "Ожидание зависимостей",
+        "loadingPhase": "Загрузка",
+        "active": "установлен",
+        "failed": "Монтирование не удалось",
+        "unloading": "Разгрузка"
+      }
+    }
+  ]
+}

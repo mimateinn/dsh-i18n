@@ -1,0 +1,21 @@
+{
+  "pkg": "dsh-client-ui-goal",
+  "entries": [
+    {
+      "ns": "goal",
+      "dict": {
+        "phase.active": "Tujuan yang Sedang Berlangsung",
+        "phase.paused": "Tujuan Dijeda",
+        "phase.blocked": "Gol Terblokir",
+        "objective.aria": "Tujuan sasaran",
+        "commandInput.aria": "Masukan perintah",
+        "action.save": "Simpan tujuan",
+        "action.cancel": "Batalkan suntingan",
+        "action.pause": "Jeda tujuan",
+        "action.resume": "Tujuan resume",
+        "action.edit": "Sunting tujuan",
+        "action.clear": "Tujuan yang jelas"
+      }
+    }
+  ]
+}

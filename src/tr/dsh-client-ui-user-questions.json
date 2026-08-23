@@ -1,0 +1,25 @@
+{
+  "pkg": "dsh-client-ui-user-questions",
+  "entries": [
+    {
+      "ns": "question",
+      "dict": {
+        "error.incomplete": "Lütfen önce bu soruyu tamamlayın.",
+        "error.unanswered": "Lütfen bir seçenek belirleyin veya özel bir yanıt girin.",
+        "nav.prev": "Önceki soru",
+        "nav.next": "Sonraki soru",
+        "nav.minimize": "Soru kartını daralt",
+        "nav.maximize": "Soru kartını genişlet",
+        "nav.cancel": "Tüm soruları kapat",
+        "option.recommended": "Önerilen",
+        "custom.placeholder": "Yanıtınızı yazın",
+        "action.skip": "Bu soruyu atla",
+        "action.next": "Sonraki",
+        "plan.header": "Plan incelemesi",
+        "plan.approve": "Onayla",
+        "plan.decline": "Reddet",
+        "plan.discuss": "Üzerine konuş"
+      }
+    }
+  ]
+}

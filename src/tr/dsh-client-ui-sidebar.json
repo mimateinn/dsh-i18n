@@ -1,0 +1,14 @@
+{
+  "pkg": "dsh-client-ui-sidebar",
+  "entries": [
+    {
+      "ns": "sidebar",
+      "dict": {
+        "session.new": "Yeni Oturum",
+        "session.new.label": "Yeni oturum",
+        "toggle.open": "Kenar çubuğunu aç",
+        "toggle.collapse": "Kenar çubuğunu daralt"
+      }
+    }
+  ]
+}

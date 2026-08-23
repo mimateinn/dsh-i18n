@@ -1,0 +1,18 @@
+{
+  "pkg": "dsh-client-ui-commands",
+  "entries": [
+    {
+      "ns": "command",
+      "dict": {
+        "search.placeholder": "Tìm kiếm…",
+        "search.aria": "Lọc tùy chọn",
+        "status.loading": "Đang tải tùy chọn…",
+        "status.applying": "Đang áp dụng…",
+        "status.empty": "Không có tùy chọn",
+        "overlay.aria": "Tùy chọn /{command}",
+        "listbox.aria": "Kết quả khớp /{command}",
+        "notice.imagesUnsupported": "/{command} không nhận tệp ảnh đính kèm; hãy gỡ chúng trước"
+      }
+    }
+  ]
+}

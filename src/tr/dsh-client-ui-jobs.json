@@ -1,0 +1,25 @@
+{
+  "pkg": "dsh-client-ui-jobs",
+  "entries": [
+    {
+      "ns": "job",
+      "dict": {
+        "count.live.one": "{count} arka plan işi çalışıyor",
+        "count.live.other": "{count} arka plan işi çalışıyor",
+        "count.idle.one": "{count} arka plan işi",
+        "count.idle.other": "{count} arka plan işi",
+        "list.aria": "Arka plan işleri",
+        "status.running": "çalışıyor",
+        "status.stopping": "durduruluyor",
+        "status.completed": "tamamlandı",
+        "status.killed": "iptal edildi",
+        "status.failed": "başarısız",
+        "duration.seconds": "{seconds} sn",
+        "duration.minutes": "{minutes} dk {seconds} sn",
+        "duration.hours": "{hours} sa {minutes} dk",
+        "duration.title.live": "{duration} süredir çalışıyor",
+        "duration.title.done": "{duration} sürdü"
+      }
+    }
+  ]
+}

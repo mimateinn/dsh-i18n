@@ -1,0 +1,14 @@
+{
+  "pkg": "dsh-client-ui-theme",
+  "entries": [
+    {
+      "ns": "settings.theme",
+      "dict": {
+        "appearance.title": "रूप-रंग",
+        "appearance.light": "हल्का",
+        "appearance.dark": "गहरा",
+        "appearance.system": "सिस्टम"
+      }
+    }
+  ]
+}

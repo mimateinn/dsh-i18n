@@ -1,0 +1,29 @@
+{
+  "pkg": "dsh-client-ui-permission-presets",
+  "entries": [
+    {
+      "ns": "permission.access",
+      "dict": {
+        "confirm.title": "Full access चालू करें?",
+        "confirm.description": "Full access पुष्टि के चरण घटा देता है और एजेंट को संवेदनशील कार्य, फ़ाइल बदलाव या बाहरी कमांड सहित अधिक कार्य सीधे करने देता है। इसका उपयोग केवल तभी करें जब आपको मौजूदा कार्य पर भरोसा हो।",
+        "confirm.acknowledge": "मैं जोखिम समझता हूँ और जारी रखना चाहता हूँ",
+        "confirm.cancel": "रद्द करें",
+        "confirm.enable": "Full access चालू करें"
+      }
+    },
+    {
+      "ns": "settings.permission",
+      "dict": {
+        "title": "अनुमति",
+        "description": "नए सत्रों के लिए डिफ़ॉल्ट अनुमति मोड चुनें",
+        "loading": "लोड हो रहा है",
+        "unavailable": "उपलब्ध नहीं",
+        "confirm.title": "Full access चालू करें?",
+        "confirm.description": "Full access नए सत्रों में पुष्टि के चरण घटा देता है और संवेदनशील कार्य, फ़ाइल बदलाव या बाहरी कमांड सहित अधिक कार्य सीधे करने देता है। इसका उपयोग केवल तभी करें जब आपको आगामी कार्यों पर भरोसा हो।",
+        "confirm.acknowledge": "मैं जोखिम समझता हूँ और जारी रखना चाहता हूँ",
+        "confirm.cancel": "रद्द करें",
+        "confirm.enable": "Full access चालू करें"
+      }
+    }
+  ]
+}

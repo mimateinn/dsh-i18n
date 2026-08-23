@@ -1,0 +1,15 @@
+{
+  "pkg": "dsh-client-ui-input-trigger",
+  "entries": [
+    {
+      "ns": "slash.menu",
+      "dict": {
+        "command": "Команды",
+        "skill": "Навыки",
+        "subagent": "Субагенты",
+        "loading": "Загрузка…",
+        "suggestions.aria": "Триггерные предложения"
+      }
+    }
+  ]
+}

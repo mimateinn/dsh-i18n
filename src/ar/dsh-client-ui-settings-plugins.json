@@ -1,0 +1,47 @@
+{
+  "pkg": "dsh-client-ui-settings-plugins",
+  "entries": [
+    {
+      "ns": "settings.plugins",
+      "dict": {
+        "nav": "الإضافات",
+        "title": "الإضافات",
+        "intro": "‏Configure and inspect the plugins installed in this deployment.",
+        "tabs": "إضافة views",
+        "configurableTab": "إضافة configuration",
+        "empty": "‏This deployment exposes no plugin settings.",
+        "overridden": "Overridden",
+        "reset": "إعادة الضبط إلى الافتراضي",
+        "readOnly": "‏This deployment stores settings read-only.",
+        "expand": "إظهار الإعدادات",
+        "collapse": "إخفاء الإعدادات",
+        "save": "حفظ",
+        "saving": "جارٍ الحفظ…",
+        "discard": "تجاهل",
+        "unsaved": "غير محفوظ",
+        "saveFailed": "‏The deployment did not accept these values; they were left for you to correct.",
+        "invalidNumber": "‏Enter a number, or leave blank to use the default.",
+        "bashTitle": "الصدفة",
+        "bashDescription": "‏Limits every command the agent runs.",
+        "bashTimeoutMs": "‏Command timeout (ms)",
+        "bashTimeoutMsHint": "‏How long one command may run before it is terminated.",
+        "bashMaxOutputBytes": "‏Output cap per stream (bytes)",
+        "bashMaxOutputBytesHint": "‏Output beyond this spills to a temporary file rather than being lost.",
+        "agentLoopTitle": "حلقة الوكيل",
+        "agentLoopDescription": "‏How the agent dispatches tool calls.",
+        "agentLoopMaxParallel": "‏Parallel tool calls",
+        "agentLoopMaxParallelHint": "‏Upper bound on parallel-safe calls running at once within one step.",
+        "webSearchTitle": "البحث على الويب",
+        "webSearchDescription": "‏The DeepSeek search provider.",
+        "webSearchApiKey": "مفتاح API",
+        "webSearchApiKeyHint": "‏Stored outside the settings file. Leave blank to keep the current key.",
+        "webSearchApiKeySet": "‏A key is configured.",
+        "webSearchApiKeyUnset": "‏No key is configured; search is unavailable until one is.",
+        "webSearchBaseUrl": "نقطة النهاية",
+        "webSearchBaseUrlHint": "‏Leave blank to use the provider default.",
+        "webSearchMaxUses": "‏Max searches per request",
+        "webSearchMaxUsesHint": "‏How many times one request may search before it must answer."
+      }
+    }
+  ]
+}

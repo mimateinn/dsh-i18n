@@ -1,0 +1,15 @@
+{
+  "pkg": "dsh-client-ui-input-trigger",
+  "entries": [
+    {
+      "ns": "slash.menu",
+      "dict": {
+        "command": "الأوامر",
+        "skill": "المهارات",
+        "subagent": "الوكلاء الفرعيون",
+        "loading": "جارٍ التحميل…",
+        "suggestions.aria": "‏Trigger suggestions"
+      }
+    }
+  ]
+}

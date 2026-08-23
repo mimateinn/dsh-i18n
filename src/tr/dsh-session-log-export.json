@@ -1,0 +1,17 @@
+{
+  "pkg": "dsh-session-log-export",
+  "entries": [
+    {
+      "ns": "session-log-download",
+      "dict": {
+        "dialog.preparingTitle": "Oturum Dışa Aktarılıyor",
+        "dialog.preparingDescription": "Bu Oturumu, alt Oturumlarını ve eklerini içeren bir ZIP hazırlanıyor.",
+        "dialog.successTitle": "Oturum indirmesi başladı",
+        "dialog.successDescription": "Tarayıcı Oturum ZIP dosyasını indiriyor.",
+        "dialog.errorTitle": "Oturum dışa aktarılamadı",
+        "dialog.close": "Kapat",
+        "dialog.commandFailed": "Oturum dışa aktarımı başlatılamadı."
+      }
+    }
+  ]
+}

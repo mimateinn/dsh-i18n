@@ -1,0 +1,28 @@
+{
+  "pkg": "dsh-client-ui-settings-plugin-inventory",
+  "entries": [
+    {
+      "ns": "settings.pluginInventory",
+      "dict": {
+        "tab": "插件清單",
+        "loading": "正在讀取插件…",
+        "error": "暫時無法讀取插件。",
+        "retry": "重試",
+        "search": "搜尋插件",
+        "catalog": "插件清單",
+        "empty": "暫無插件。",
+        "emptySearch": "沒有符合的插件。",
+        "enabledTag": "已啟用",
+        "disabledTag": "已停用",
+        "configuration": "設定狀態",
+        "cordis": "Cordis 狀態",
+        "unobserved": "未掛載",
+        "pending": "等待相依套件",
+        "loadingPhase": "載入中",
+        "active": "已掛載",
+        "failed": "掛載失敗",
+        "unloading": "卸載中"
+      }
+    }
+  ]
+}

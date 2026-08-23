@@ -1,0 +1,22 @@
+{
+  "pkg": "dsh-client-ui-message-feedback",
+  "entries": [
+    {
+      "ns": "feedback",
+      "dict": {
+        "action.like": "अच्छा उत्तर",
+        "action.likeActive": "रेटिंग हटाएँ",
+        "action.dislike": "खराब उत्तर",
+        "action.dislikeActive": "रेटिंग हटाएँ",
+        "note.open": "टिप्पणी जोड़ें",
+        "note.placeholder": "क्या अच्छा रहा, या क्या गलत हुआ? (वैकल्पिक)",
+        "note.save": "सहेजें",
+        "note.cancel": "रद्द करें",
+        "note.aria": "प्रतिक्रिया टिप्पणी",
+        "error.conflict": "यह प्रतिक्रिया कहीं और बदली गई; नवीनतम स्थिति दिखाई जा रही है",
+        "error.load": "प्रतिक्रिया लोड नहीं हो सकी",
+        "error.generic": "प्रतिक्रिया सहेजी नहीं जा सकी"
+      }
+    }
+  ]
+}

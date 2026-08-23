@@ -1,0 +1,24 @@
+{
+  "pkg": "dsh-client-ui-trajectory",
+  "entries": [
+    {
+      "ns": "trajectory",
+      "dict": {
+        "view.trajectory": "Траєкторія",
+        "toolbar.aria": "Панель траєкторії",
+        "toolbar.duration": "Тривалість",
+        "toolbar.useActualDuration": "Показати фактичну тривалість",
+        "toolbar.useEqualWidth": "Показати операції однакової ширини",
+        "toolbar.actualTime": "Фактичний час",
+        "toolbar.turns": "Ходи",
+        "toolbar.expandTurns": "Розгорнути ходи",
+        "toolbar.collapseTurns": "Згорнути ходи",
+        "toolbar.calls": "Виклики",
+        "toolbar.expandCalls": "Розгорнути виклики",
+        "toolbar.collapseCalls": "Згорнути виклики",
+        "toolbar.search": "Пошук у траєкторії",
+        "toolbar.searchPlaceholder": "Пошук"
+      }
+    }
+  ]
+}

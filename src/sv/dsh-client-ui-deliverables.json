@@ -1,0 +1,15 @@
+{
+  "pkg": "dsh-client-ui-deliverables",
+  "entries": [
+    {
+      "ns": "deliverables",
+      "dict": {
+        "produced.label": "Skapat",
+        "produced.moreOne": "+ 1 fil",
+        "produced.more": "+ {count} filer",
+        "produced.open": "Öppna {name}",
+        "produced.showInFolder": "Visa i mapp"
+      }
+    }
+  ]
+}

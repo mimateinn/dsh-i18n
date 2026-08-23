@@ -1,0 +1,29 @@
+{
+  "pkg": "dsh-client-ui-permission-presets",
+  "entries": [
+    {
+      "ns": "permission.access",
+      "dict": {
+        "confirm.title": "Włączyć Full access?",
+        "confirm.description": "Full access ogranicza liczbę potwierdzeń i pozwala agentowi wykonywać więcej działań bezpośrednio, w tym operacje wrażliwe, zmiany plików i polecenia zewnętrzne. Używaj go tylko wtedy, gdy ufasz bieżącemu zadaniu.",
+        "confirm.acknowledge": "Rozumiem ryzyko i chcę kontynuować",
+        "confirm.cancel": "Anuluj",
+        "confirm.enable": "Włącz Full access"
+      }
+    },
+    {
+      "ns": "settings.permission",
+      "dict": {
+        "title": "Uprawnienia",
+        "description": "Wybierz domyślny tryb uprawnień dla nowych sesji",
+        "loading": "Wczytywanie",
+        "unavailable": "Niedostępne",
+        "confirm.title": "Włączyć Full access?",
+        "confirm.description": "Full access pozwala nowym sesjom ograniczyć liczbę potwierdzeń i wykonywać więcej działań bezpośrednio, w tym operacje wrażliwe, zmiany plików i polecenia zewnętrzne. Używaj go tylko wtedy, gdy ufasz kolejnym zadaniom.",
+        "confirm.acknowledge": "Rozumiem ryzyko i chcę kontynuować",
+        "confirm.cancel": "Anuluj",
+        "confirm.enable": "Włącz Full access"
+      }
+    }
+  ]
+}

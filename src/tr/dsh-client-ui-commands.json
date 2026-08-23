@@ -1,0 +1,18 @@
+{
+  "pkg": "dsh-client-ui-commands",
+  "entries": [
+    {
+      "ns": "command",
+      "dict": {
+        "search.placeholder": "Ara…",
+        "search.aria": "Seçenekleri filtrele",
+        "status.loading": "Seçenekler yükleniyor…",
+        "status.applying": "Uygulanıyor…",
+        "status.empty": "Seçenek yok",
+        "overlay.aria": "/{command} seçenekleri",
+        "listbox.aria": "/{command} eşleşmeleri",
+        "notice.imagesUnsupported": "/{command} does not accept image attachments; remove them first"
+      }
+    }
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "pkg": "dsh-client-ui-model-selection",
+  "entries": [
+    {
+      "ns": "model",
+      "dict": {
+        "command.description": "Chọn model cho cuộc trò chuyện này",
+        "option.loadError": "Tải danh mục thất bại: {message}",
+        "trigger.fallback": "Chọn model",
+        "trigger.selectAria": "Chọn model",
+        "trigger.aria": "Chọn model, hiện tại {model}",
+        "trigger.ariaEffort": "Chọn model, hiện tại {model}, mức suy luận {effort}",
+        "menu.aria": "Model và mức suy luận",
+        "menu.model": "Model",
+        "menu.effort": "Mức suy luận",
+        "effort.providerDefault": "Mặc định",
+        "status.loading": "Đang làm mới danh sách model…",
+        "error.action": "Thao tác với model thất bại: {message}",
+        "action.reload": "Tải lại",
+        "warning.groupLoad": "{name} tải thất bại: {message}",
+        "empty.models": "Không có model nào khả dụng.",
+        "blocked.composer": "Model này không khả dụng — hãy chọn một model khác để tiếp tục",
+        "empty.efforts": "Model này không cung cấp mức suy luận nào."
+      }
+    }
+  ]
+}

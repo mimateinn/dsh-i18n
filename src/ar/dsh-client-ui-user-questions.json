@@ -1,0 +1,25 @@
+{
+  "pkg": "dsh-client-ui-user-questions",
+  "entries": [
+    {
+      "ns": "question",
+      "dict": {
+        "error.incomplete": "‏Please complete this question first.",
+        "error.unanswered": "‏Please select an option or enter a custom answer.",
+        "nav.prev": "‏Previous question",
+        "nav.next": "‏Next question",
+        "nav.minimize": "‏Collapse the question card",
+        "nav.maximize": "‏Expand the question card",
+        "nav.cancel": "‏Dismiss all questions",
+        "option.recommended": "موصى به",
+        "custom.placeholder": "اكتب إجابتك",
+        "action.skip": "‏Skip this question",
+        "action.next": "التالي",
+        "plan.header": "مراجعة الخطة",
+        "plan.approve": "موافقة",
+        "plan.decline": "رفض",
+        "plan.discuss": "مناقشتها"
+      }
+    }
+  ]
+}

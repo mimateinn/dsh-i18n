@@ -1,0 +1,14 @@
+{
+  "pkg": "dsh-client-ui-theme",
+  "entries": [
+    {
+      "ns": "settings.theme",
+      "dict": {
+        "appearance.title": "Giao diện",
+        "appearance.light": "Sáng",
+        "appearance.dark": "Tối",
+        "appearance.system": "Theo hệ thống"
+      }
+    }
+  ]
+}

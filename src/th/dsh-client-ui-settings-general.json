@@ -1,0 +1,16 @@
+{
+  "pkg": "dsh-client-ui-settings-general",
+  "entries": [
+    {
+      "ns": "settings",
+      "dict": {
+        "trigger": "การตั้งค่า",
+        "title": "การตั้งค่า",
+        "close": "ปิด",
+        "openDocument": "แฟ้มการกำหนดค่า, แฟ้มการกำหนดค่า",
+        "openDocument.error": "ไม่สามารถเปิดไฟล์การกำหนดค่าได้",
+        "general.nav": "ทั่วไป"
+      }
+    }
+  ]
+}

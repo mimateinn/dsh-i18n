@@ -1,0 +1,16 @@
+{
+  "pkg": "dsh-client-ui-reference",
+  "entries": [
+    {
+      "ns": "reference",
+      "dict": {
+        "section.files": "Файли та теки",
+        "section.sessions": "Розмови сесій",
+        "candidate.file": "Файл",
+        "candidate.folder": "Тека",
+        "candidate.session": "Сесія",
+        "candidate.noCwd": "(немає робочої теки)"
+      }
+    }
+  ]
+}

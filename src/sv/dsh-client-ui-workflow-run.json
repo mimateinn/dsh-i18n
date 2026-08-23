@@ -1,0 +1,28 @@
+{
+  "pkg": "dsh-client-ui-workflow-run",
+  "entries": [
+    {
+      "ns": "workflowRun",
+      "dict": {
+        "run.title": "{name}",
+        "run.members.one": "{count} medlem",
+        "run.members.other": "{count} medlemmar",
+        "run.empty": "Inga medlemmar startades",
+        "phase.unassigned": "Utan fas",
+        "phase.empty": "Tomt fasnamn",
+        "statusCount.running": "Körs {count}",
+        "statusCount.completed": "Slutförda {count}",
+        "statusCount.failed": "Misslyckade {count}",
+        "statusCount.cancelled": "Avbrutna {count}",
+        "statusCount.interrupted": "Avbrutna av användare {count}",
+        "member.empty": "Tomt medlemsnamn",
+        "member.open": "Öppna {name}",
+        "status.running": "Körs",
+        "status.completed": "Slutförd",
+        "status.failed": "Misslyckades",
+        "status.cancelled": "Avbruten",
+        "status.interrupted": "Avbruten av användare"
+      }
+    }
+  ]
+}

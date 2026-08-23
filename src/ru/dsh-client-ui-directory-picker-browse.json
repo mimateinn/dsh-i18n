@@ -1,0 +1,23 @@
+{
+  "pkg": "dsh-client-ui-directory-picker-browse",
+  "entries": [
+    {
+      "ns": "directory-browser",
+      "dict": {
+        "browser.title": "Выберите каталог рабочей области",
+        "browser.home": "Дом",
+        "browser.newFolder": "Новая папка",
+        "browser.folderName": "Имя папки",
+        "browser.createIn": "Новая папка в \"{name}\"",
+        "browser.untitledFolder": "Папка без названия",
+        "browser.create": "Создавать",
+        "browser.cancel": "Отмена",
+        "browser.open": "Открыть",
+        "browser.editPath": "Изменить путь",
+        "browser.loading": "Загрузка…",
+        "browser.truncated": "Слишком много папок для перечисления; показано только начало.",
+        "browser.showHidden": "Показать скрытые файлы"
+      }
+    }
+  ]
+}

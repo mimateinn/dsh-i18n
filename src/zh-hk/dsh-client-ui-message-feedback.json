@@ -1,0 +1,22 @@
+{
+  "pkg": "dsh-client-ui-message-feedback",
+  "entries": [
+    {
+      "ns": "feedback",
+      "dict": {
+        "action.like": "好的回答",
+        "action.likeActive": "取消標記",
+        "action.dislike": "有問題的回答",
+        "action.dislikeActive": "取消標記",
+        "note.open": "補充說明",
+        "note.placeholder": "這條回答哪裡好，或哪裡有問題？（選填）",
+        "note.save": "儲存",
+        "note.cancel": "取消",
+        "note.aria": "意見反饋說明",
+        "error.conflict": "這條意見反饋已在其他地方變更，已顯示最新狀態",
+        "error.load": "意見反饋狀態載入失敗",
+        "error.generic": "意見反饋儲存失敗"
+      }
+    }
+  ]
+}

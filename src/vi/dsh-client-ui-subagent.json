@@ -1,0 +1,43 @@
+{
+  "pkg": "dsh-client-ui-subagent",
+  "entries": [
+    {
+      "ns": "subagent",
+      "dict": {
+        "diagnostic.corrupt": "bản ghi phiên bị hỏng",
+        "diagnostic.unsupported": "phiên bản bản ghi subagent không được hỗ trợ",
+        "diagnostic.unavailable": "bản ghi phiên tạm thời không khả dụng",
+        "duration.seconds": "{seconds} giây",
+        "duration.minutes": "{minutes} phút {seconds} giây",
+        "duration.hours": "{hours} giờ {minutes} phút {seconds} giây",
+        "duration.days": "{days} ngày",
+        "duration.daysHours": "{days} ngày {hours} giờ",
+        "duration.months": "~{months} tháng",
+        "duration.monthsDays": "~{months} tháng {days} ngày",
+        "duration.years": "~{years} năm",
+        "duration.yearsMonths": "~{years} năm {months} tháng",
+        "duration.exactDays": "{days} ngày {hours} giờ {minutes} phút {seconds} giây",
+        "duration.exactTitle": "Tổng thời gian hoạt động: {duration}",
+        "loading.label": "Đang tải subagent…",
+        "loading.aria": "Đang tải subagent",
+        "load.error": "Không thể tải subagent",
+        "retry": "Thử lại",
+        "mode.oneShot": "một lần",
+        "mode.continuable": "có thể tiếp tục",
+        "activity.running": "đang chạy",
+        "activity.inactive": "không chạy",
+        "branch.collapse": "Thu gọn các nhánh con của {label}",
+        "branch.expand": "Mở rộng các nhánh con của {label}",
+        "count.total.one": "{count} subagent",
+        "count.total.other": "{count} subagent",
+        "count.running.one": "{count} subagent đang chạy",
+        "count.running.other": "{count} subagent đang chạy",
+        "tree.aria": "Các phiên subagent",
+        "readonly.oneShot.title": "Bản ghi subagent chạy một lần",
+        "readonly.title": "Hiện tại subagent này ở chế độ chỉ đọc",
+        "readonly.oneShot.body": "Tác vụ chạy một lần không nhận thêm yêu cầu tiếp theo; bạn có thể xem toàn bộ bản ghi thực thi tại đây.",
+        "readonly.body": "Phiên cha đang ngoại tuyến; hãy mở lại phiên đó để tiếp tục gửi tin nhắn."
+      }
+    }
+  ]
+}

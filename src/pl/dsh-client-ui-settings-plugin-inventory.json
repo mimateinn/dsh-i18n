@@ -1,0 +1,28 @@
+{
+  "pkg": "dsh-client-ui-settings-plugin-inventory",
+  "entries": [
+    {
+      "ns": "settings.pluginInventory",
+      "dict": {
+        "tab": "Lista pluginów",
+        "loading": "Odczytywanie pluginów…",
+        "error": "Pluginy są chwilowo niedostępne.",
+        "retry": "Ponów",
+        "search": "Szukaj pluginów",
+        "catalog": "Lista pluginów",
+        "empty": "Brak dostępnych pluginów.",
+        "emptySearch": "Brak pasujących pluginów.",
+        "enabledTag": "Włączony",
+        "disabledTag": "Wyłączony",
+        "configuration": "Konfiguracja",
+        "cordis": "Stan Cordis",
+        "unobserved": "Niezamontowany",
+        "pending": "Oczekiwanie na zależności",
+        "loadingPhase": "Wczytywanie",
+        "active": "Zamontowany",
+        "failed": "Montowanie nie powiodło się",
+        "unloading": "Odładowywanie"
+      }
+    }
+  ]
+}

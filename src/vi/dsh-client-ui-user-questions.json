@@ -1,0 +1,25 @@
+{
+  "pkg": "dsh-client-ui-user-questions",
+  "entries": [
+    {
+      "ns": "question",
+      "dict": {
+        "error.incomplete": "Vui lòng hoàn tất câu hỏi này trước.",
+        "error.unanswered": "Vui lòng chọn một phương án hoặc nhập câu trả lời riêng.",
+        "nav.prev": "Câu hỏi trước",
+        "nav.next": "Câu hỏi tiếp theo",
+        "nav.minimize": "Thu gọn thẻ câu hỏi",
+        "nav.maximize": "Mở rộng thẻ câu hỏi",
+        "nav.cancel": "Bỏ qua tất cả câu hỏi",
+        "option.recommended": "Khuyến nghị",
+        "custom.placeholder": "Nhập câu trả lời của bạn",
+        "action.skip": "Bỏ qua câu hỏi này",
+        "action.next": "Tiếp",
+        "plan.header": "Duyệt kế hoạch",
+        "plan.approve": "Chấp thuận",
+        "plan.decline": "Từ chối",
+        "plan.discuss": "Trao đổi thêm"
+      }
+    }
+  ]
+}

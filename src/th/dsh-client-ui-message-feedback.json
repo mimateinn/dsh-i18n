@@ -1,0 +1,22 @@
+{
+  "pkg": "dsh-client-ui-message-feedback",
+  "entries": [
+    {
+      "ns": "feedback",
+      "dict": {
+        "action.like": "การตอบสนองที่ดี",
+        "action.likeActive": "ลบการให้คะแนน",
+        "action.dislike": "การตอบสนองไม่ดี",
+        "action.dislikeActive": "ลบการให้คะแนน",
+        "note.open": "เพิ่มโน้ต",
+        "note.placeholder": "มีอะไรดีหรือมีอะไรผิดพลาด (ไม่บังคับ)",
+        "note.save": "บันทึก",
+        "note.cancel": "ยกเลิก",
+        "note.aria": "หมายเหตุข้อเสนอแนะ",
+        "error.conflict": "ข้อเสนอแนะนี้มีการเปลี่ยนแปลงที่อื่นสถานะล่าสุดจะปรากฏขึ้น",
+        "error.load": "โหลดข้อเสนอแนะไม่ได้",
+        "error.generic": "บันทึกข้อเสนอแนะไม่ได้"
+      }
+    }
+  ]
+}

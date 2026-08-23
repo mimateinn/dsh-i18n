@@ -1,0 +1,17 @@
+{
+  "pkg": "dsh-session-log-export",
+  "entries": [
+    {
+      "ns": "session-log-download",
+      "dict": {
+        "dialog.preparingTitle": "جارٍ تصدير الجلسة",
+        "dialog.preparingDescription": "Preparing a ZIP containing this جلسة, its sub-Sessions, and attachments.",
+        "dialog.successTitle": "بدأ تنزيل الجلسة",
+        "dialog.successDescription": "The browser is downloading the جلسة ZIP.",
+        "dialog.errorTitle": "فشل تصدير الجلسة",
+        "dialog.close": "إغلاق",
+        "dialog.commandFailed": "Could not start the جلسة export."
+      }
+    }
+  ]
+}

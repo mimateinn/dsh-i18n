@@ -1,0 +1,15 @@
+{
+  "pkg": "dsh-client-ui-input-trigger",
+  "entries": [
+    {
+      "ns": "slash.menu",
+      "dict": {
+        "command": "Perintah",
+        "skill": "Keterampilan",
+        "subagent": "Subagen",
+        "loading": "Memuat…",
+        "suggestions.aria": "Memicu saran"
+      }
+    }
+  ]
+}

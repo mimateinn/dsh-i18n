@@ -1,0 +1,22 @@
+{
+  "pkg": "dsh-client-ui-message-feedback",
+  "entries": [
+    {
+      "ns": "feedback",
+      "dict": {
+        "action.like": "Boa resposta",
+        "action.likeActive": "Remover avaliação",
+        "action.dislike": "Resposta ruim",
+        "action.dislikeActive": "Remover avaliação",
+        "note.open": "Adicionar observação",
+        "note.placeholder": "O que ficou bom ou o que deu errado? (opcional)",
+        "note.save": "Salvar",
+        "note.cancel": "Cancelar",
+        "note.aria": "Observação de feedback",
+        "error.conflict": "Este feedback mudou em outro lugar; o estado mais recente está sendo exibido",
+        "error.load": "Não foi possível carregar o feedback",
+        "error.generic": "Não foi possível salvar o feedback"
+      }
+    }
+  ]
+}

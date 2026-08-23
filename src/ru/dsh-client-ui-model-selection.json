@@ -1,0 +1,27 @@
+{
+  "pkg": "dsh-client-ui-model-selection",
+  "entries": [
+    {
+      "ns": "model",
+      "dict": {
+        "command.description": "Выберите модель для этого разговора",
+        "option.loadError": "Не удалось загрузить каталог: {message}.",
+        "trigger.fallback": "Выберите модель",
+        "trigger.selectAria": "Выберите модель",
+        "trigger.aria": "Выберите модель, текущую {model}",
+        "trigger.ariaEffort": "Выберите модель, текущую модель {model}, обоснование {effort}",
+        "menu.aria": "Модель и рассуждения",
+        "menu.model": "Модель",
+        "menu.effort": "Усилие",
+        "effort.providerDefault": "По умолчанию",
+        "status.loading": "Обновление списка моделей…",
+        "error.action": "Не удалось выполнить операцию модели: {message}.",
+        "action.reload": "Перезагрузить",
+        "warning.groupLoad": "{name} не удалось загрузить: {message}.",
+        "empty.models": "Нет доступных моделей.",
+        "blocked.composer": "Эта модель недоступна — выберите одну, чтобы продолжить",
+        "empty.efforts": "Эта модель не обеспечивает обоснования уровней усилий."
+      }
+    }
+  ]
+}

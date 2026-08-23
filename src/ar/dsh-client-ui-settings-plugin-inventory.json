@@ -1,0 +1,28 @@
+{
+  "pkg": "dsh-client-ui-settings-plugin-inventory",
+  "entries": [
+    {
+      "ns": "settings.pluginInventory",
+      "dict": {
+        "tab": "قائمة الإضافات",
+        "loading": "جارٍ قراءة الإضافات…",
+        "error": "‏Plugins are temporarily unavailable.",
+        "retry": "إعادة المحاولة",
+        "search": "البحث في الإضافات",
+        "catalog": "قائمة الإضافات",
+        "empty": "‏No plugins are available.",
+        "emptySearch": "‏No matching plugins.",
+        "enabledTag": "مفعّلة",
+        "disabledTag": "معطّلة",
+        "configuration": "الإعداد",
+        "cordis": "‏Cordis status",
+        "unobserved": "‏Not mounted",
+        "pending": "‏Waiting for dependencies",
+        "loadingPhase": "جارٍ التحميل",
+        "active": "مركّبة",
+        "failed": "‏Mount failed",
+        "unloading": "جارٍ إلغاء التركيب"
+      }
+    }
+  ]
+}

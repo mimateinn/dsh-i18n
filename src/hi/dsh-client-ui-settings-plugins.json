@@ -1,0 +1,47 @@
+{
+  "pkg": "dsh-client-ui-settings-plugins",
+  "entries": [
+    {
+      "ns": "settings.plugins",
+      "dict": {
+        "nav": "प्लगिन",
+        "title": "प्लगिन",
+        "intro": "इस डिप्लॉयमेंट में स्थापित प्लगिन कॉन्फ़िगर करें और जाँचें।",
+        "tabs": "प्लगिन दृश्य",
+        "configurableTab": "प्लगिन कॉन्फ़िगरेशन",
+        "empty": "यह डिप्लॉयमेंट कोई प्लगिन सेटिंग नहीं दिखाता।",
+        "overridden": "अधिरोहित",
+        "reset": "डिफ़ॉल्ट पर लौटाएँ",
+        "readOnly": "यह डिप्लॉयमेंट सेटिंग्स केवल पढ़ने योग्य रूप में रखता है।",
+        "expand": "सेटिंग्स दिखाएँ",
+        "collapse": "सेटिंग्स छिपाएँ",
+        "save": "सहेजें",
+        "saving": "सहेजा जा रहा है…",
+        "discard": "छोड़ दें",
+        "unsaved": "असहेजा",
+        "saveFailed": "डिप्लॉयमेंट ने ये मान स्वीकार नहीं किए; इन्हें सुधार के लिए वैसे ही छोड़ दिया गया है।",
+        "invalidNumber": "कोई संख्या दर्ज करें, या डिफ़ॉल्ट उपयोग करने के लिए खाली छोड़ें।",
+        "bashTitle": "शेल",
+        "bashDescription": "एजेंट द्वारा चलाए गए हर कमांड को सीमित करता है।",
+        "bashTimeoutMs": "कमांड टाइमआउट (ms)",
+        "bashTimeoutMsHint": "समाप्त किए जाने से पहले एक कमांड कितनी देर चल सकता है।",
+        "bashMaxOutputBytes": "प्रति स्ट्रीम आउटपुट सीमा (बाइट)",
+        "bashMaxOutputBytesHint": "इससे अधिक आउटपुट खोने के बजाय एक अस्थायी फ़ाइल में चला जाता है।",
+        "agentLoopTitle": "एजेंट लूप",
+        "agentLoopDescription": "एजेंट टूल कॉल कैसे भेजता है।",
+        "agentLoopMaxParallel": "समानांतर टूल कॉल",
+        "agentLoopMaxParallelHint": "एक चरण में एक साथ चलने वाली समानांतर-सुरक्षित कॉल की अधिकतम सीमा।",
+        "webSearchTitle": "वेब खोज",
+        "webSearchDescription": "DeepSeek खोज प्रदाता।",
+        "webSearchApiKey": "API कुंजी",
+        "webSearchApiKeyHint": "सेटिंग्स फ़ाइल के बाहर संग्रहीत। मौजूदा कुंजी बनाए रखने के लिए खाली छोड़ें।",
+        "webSearchApiKeySet": "एक कुंजी कॉन्फ़िगर है।",
+        "webSearchApiKeyUnset": "कोई कुंजी कॉन्फ़िगर नहीं है; कुंजी मिलने तक खोज उपलब्ध नहीं।",
+        "webSearchBaseUrl": "एंडपॉइंट",
+        "webSearchBaseUrlHint": "प्रदाता का डिफ़ॉल्ट उपयोग करने के लिए खाली छोड़ें।",
+        "webSearchMaxUses": "प्रति अनुरोध अधिकतम खोजें",
+        "webSearchMaxUsesHint": "उत्तर देने से पहले एक अनुरोध कितनी बार खोज सकता है।"
+      }
+    }
+  ]
+}

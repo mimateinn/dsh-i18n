@@ -1,0 +1,21 @@
+{
+  "pkg": "dsh-client-ui-goal",
+  "entries": [
+    {
+      "ns": "goal",
+      "dict": {
+        "phase.active": "เป้าหมายที่ดำเนินอยู่",
+        "phase.paused": "เป้าหมายที่หยุดชั่วคราว",
+        "phase.blocked": "เป้าหมายที่ถูกบล็อก",
+        "objective.aria": "วัตถุประสงค์ของเป้าหมาย",
+        "commandInput.aria": "การป้อนคำสั่ง",
+        "action.save": "บันทึกเป้าหมาย",
+        "action.cancel": "ยกเลิกการแก้ไข",
+        "action.pause": "เป้าหมายที่หยุดชั่วคราว",
+        "action.resume": "ดำเนินการเป้าหมายต่อ",
+        "action.edit": "แก้ไขเป้าหมาย",
+        "action.clear": "ล้างเป้าหมาย"
+      }
+    }
+  ]
+}

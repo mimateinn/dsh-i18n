@@ -1,0 +1,25 @@
+{
+  "pkg": "dsh-client-ui-user-questions",
+  "entries": [
+    {
+      "ns": "question",
+      "dict": {
+        "error.incomplete": "कृपया पहले यह प्रश्न पूरा करें।",
+        "error.unanswered": "कृपया कोई विकल्प चुनें या अपना उत्तर लिखें।",
+        "nav.prev": "पिछला प्रश्न",
+        "nav.next": "अगला प्रश्न",
+        "nav.minimize": "प्रश्न कार्ड समेटें",
+        "nav.maximize": "प्रश्न कार्ड विस्तृत करें",
+        "nav.cancel": "सभी प्रश्न हटाएँ",
+        "option.recommended": "अनुशंसित",
+        "custom.placeholder": "अपना उत्तर लिखें",
+        "action.skip": "यह प्रश्न छोड़ें",
+        "action.next": "आगे",
+        "plan.header": "योजना समीक्षा",
+        "plan.approve": "स्वीकार करें",
+        "plan.decline": "अस्वीकार करें",
+        "plan.discuss": "इस पर चर्चा करें"
+      }
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "pkg": "dsh-client-ui-user-questions",
+  "entries": [
+    {
+      "ns": "question",
+      "dict": {
+        "error.incomplete": "Спочатку дайте відповідь на це запитання.",
+        "error.unanswered": "Виберіть варіант або введіть власну відповідь.",
+        "nav.prev": "Попереднє запитання",
+        "nav.next": "Наступне запитання",
+        "nav.minimize": "Згорнути картку запитання",
+        "nav.maximize": "Розгорнути картку запитання",
+        "nav.cancel": "Відхилити всі запитання",
+        "option.recommended": "Рекомендовано",
+        "custom.placeholder": "Введіть свою відповідь",
+        "action.skip": "Пропустити це запитання",
+        "action.next": "Далі",
+        "plan.header": "Перегляд плану",
+        "plan.approve": "Схвалити",
+        "plan.decline": "Відхилити",
+        "plan.discuss": "Обговорити"
+      }
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "pkg": "dsh-client-ui-theme",
+  "entries": [
+    {
+      "ns": "settings.theme",
+      "dict": {
+        "appearance.title": "Вигляд",
+        "appearance.light": "Світла",
+        "appearance.dark": "Темна",
+        "appearance.system": "Системна"
+      }
+    }
+  ]
+}

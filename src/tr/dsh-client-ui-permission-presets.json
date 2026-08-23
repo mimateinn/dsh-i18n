@@ -1,0 +1,29 @@
+{
+  "pkg": "dsh-client-ui-permission-presets",
+  "entries": [
+    {
+      "ns": "permission.access",
+      "dict": {
+        "confirm.title": "Tam erişim etkinleştirilsin mi?",
+        "confirm.description": "Tam erişim, onay adımlarını azaltır ve ajanın hassas işlemler, dosya değişiklikleri veya harici komutlar dahil daha fazla eylemi doğrudan gerçekleştirmesini sağlar. Yalnızca mevcut göreve güveniyorsanız kullanın.",
+        "confirm.acknowledge": "Riskleri anlıyorum ve devam etmek istiyorum",
+        "confirm.cancel": "İptal",
+        "confirm.enable": "Tam erişimi etkinleştir"
+      }
+    },
+    {
+      "ns": "settings.permission",
+      "dict": {
+        "title": "İzin",
+        "description": "Yeni oturumlar için varsayılan izin modunu seçin",
+        "loading": "Yükleniyor",
+        "unavailable": "Kullanılamıyor",
+        "confirm.title": "Tam erişim etkinleştirilsin mi?",
+        "confirm.description": "Tam erişim, yeni oturumların onay adımlarını azaltmasına ve hassas işlemler, dosya değişiklikleri veya harici komutlar dahil daha fazla eylemi doğrudan gerçekleştirmesine olanak tanır. Yalnızca sonraki görevlere güveniyorsanız kullanın.",
+        "confirm.acknowledge": "Riskleri anlıyorum ve devam etmek istiyorum",
+        "confirm.cancel": "İptal",
+        "confirm.enable": "Tam erişimi etkinleştir"
+      }
+    }
+  ]
+}

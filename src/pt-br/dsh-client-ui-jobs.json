@@ -1,0 +1,25 @@
+{
+  "pkg": "dsh-client-ui-jobs",
+  "entries": [
+    {
+      "ns": "job",
+      "dict": {
+        "count.live.one": "{count} tarefa em segundo plano em execução",
+        "count.live.other": "{count} tarefas em segundo plano em execução",
+        "count.idle.one": "{count} tarefa em segundo plano",
+        "count.idle.other": "{count} tarefas em segundo plano",
+        "list.aria": "Tarefas em segundo plano",
+        "status.running": "em execução",
+        "status.stopping": "parando",
+        "status.completed": "concluída",
+        "status.killed": "cancelada",
+        "status.failed": "falhou",
+        "duration.seconds": "{seconds}s",
+        "duration.minutes": "{minutes}min {seconds}s",
+        "duration.hours": "{hours}h {minutes}min",
+        "duration.title.live": "Em execução há {duration}",
+        "duration.title.done": "Levou {duration}"
+      }
+    }
+  ]
+}

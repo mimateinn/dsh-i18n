@@ -1,0 +1,27 @@
+{
+  "pkg": "dsh-client-ui-model-selection",
+  "entries": [
+    {
+      "ns": "model",
+      "dict": {
+        "command.description": "Wybierz model dla tej rozmowy",
+        "option.loadError": "Nie udało się wczytać katalogu: {message}",
+        "trigger.fallback": "Wybierz model",
+        "trigger.selectAria": "Wybierz model",
+        "trigger.aria": "Wybierz model, bieżący {model}",
+        "trigger.ariaEffort": "Wybierz model, bieżący {model}, poziom rozumowania {effort}",
+        "menu.aria": "Model i poziom rozumowania",
+        "menu.model": "Model",
+        "menu.effort": "Poziom",
+        "effort.providerDefault": "Domyślny",
+        "status.loading": "Odświeżanie listy modeli…",
+        "error.action": "Operacja na modelu nie powiodła się: {message}",
+        "action.reload": "Wczytaj ponownie",
+        "warning.groupLoad": "Nie udało się wczytać {name}: {message}",
+        "empty.models": "Brak dostępnych modeli.",
+        "blocked.composer": "Ten model jest niedostępny — wybierz inny, aby kontynuować",
+        "empty.efforts": "Ten model nie udostępnia poziomów rozumowania."
+      }
+    }
+  ]
+}

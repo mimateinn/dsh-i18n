@@ -1,0 +1,29 @@
+{
+  "pkg": "dsh-client-ui-permission-presets",
+  "entries": [
+    {
+      "ns": "permission.access",
+      "dict": {
+        "confirm.title": "Ativar acesso total?",
+        "confirm.description": "O acesso total reduz as etapas de confirmação e permite que o agente execute mais ações diretamente, incluindo operações sensíveis, alterações em arquivos ou comandos externos. Use apenas quando você confiar na tarefa atual.",
+        "confirm.acknowledge": "Entendo os riscos e quero continuar",
+        "confirm.cancel": "Cancelar",
+        "confirm.enable": "Ativar acesso total"
+      }
+    },
+    {
+      "ns": "settings.permission",
+      "dict": {
+        "title": "Permissão",
+        "description": "Escolha o modo de permissão padrão para novas sessões",
+        "loading": "Carregando",
+        "unavailable": "Indisponível",
+        "confirm.title": "Ativar acesso total?",
+        "confirm.description": "O acesso total permite que novas sessões reduzam as etapas de confirmação e executem mais ações diretamente, incluindo operações sensíveis, alterações em arquivos ou comandos externos. Use apenas quando você confiar nas tarefas seguintes.",
+        "confirm.acknowledge": "Entendo os riscos e quero continuar",
+        "confirm.cancel": "Cancelar",
+        "confirm.enable": "Ativar acesso total"
+      }
+    }
+  ]
+}

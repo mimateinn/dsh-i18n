@@ -1,0 +1,22 @@
+{
+  "pkg": "dsh-client-ui-message-feedback",
+  "entries": [
+    {
+      "ns": "feedback",
+      "dict": {
+        "action.like": "Bra svar",
+        "action.likeActive": "Ta bort omdöme",
+        "action.dislike": "Dåligt svar",
+        "action.dislikeActive": "Ta bort omdöme",
+        "note.open": "Lägg till en anteckning",
+        "note.placeholder": "Vad var bra, eller vad gick fel? (valfritt)",
+        "note.save": "Spara",
+        "note.cancel": "Avbryt",
+        "note.aria": "Anteckning om återkoppling",
+        "error.conflict": "Den här återkopplingen ändrades på annat håll; det senaste tillståndet visas",
+        "error.load": "Kunde inte läsa in återkopplingen",
+        "error.generic": "Kunde inte spara återkopplingen"
+      }
+    }
+  ]
+}

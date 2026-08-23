@@ -1,0 +1,25 @@
+{
+  "pkg": "dsh-client-ui-jobs",
+  "entries": [
+    {
+      "ns": "job",
+      "dict": {
+        "count.live.one": "{count} बैकग्राउंड जॉब चल रहा है",
+        "count.live.other": "{count} बैकग्राउंड जॉब चल रहे हैं",
+        "count.idle.one": "{count} बैकग्राउंड जॉब",
+        "count.idle.other": "{count} बैकग्राउंड जॉब",
+        "list.aria": "बैकग्राउंड जॉब",
+        "status.running": "चल रहा है",
+        "status.stopping": "रुक रहा है",
+        "status.completed": "पूरा हुआ",
+        "status.killed": "रद्द किया गया",
+        "status.failed": "विफल",
+        "duration.seconds": "{seconds}से",
+        "duration.minutes": "{minutes}मि {seconds}से",
+        "duration.hours": "{hours}घं {minutes}मि",
+        "duration.title.live": "{duration} से चल रहा है",
+        "duration.title.done": "{duration} लगे"
+      }
+    }
+  ]
+}

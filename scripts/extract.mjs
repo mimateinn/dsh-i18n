@@ -10,8 +10,15 @@
 import fs from "node:fs";
 import path from "node:path";
 
-const root = process.argv[2];
-if (!root) { console.error("usage: node extract.mjs <node_modules/@deepseek-ai root>"); process.exit(1); }
+const installed = process.argv[2];
+if (!installed) throw new Error("usage: node scripts/extract.mjs <installed DSH path>");
+const candidates = [
+  installed,
+  path.join(installed, "node_modules", "@deepseek-ai"),
+  path.join(installed, "resources", "app.asar.unpacked", "node_modules", "@deepseek-ai"),
+];
+const root = candidates.find((candidate) => fs.existsSync(path.join(candidate, "dsh-client-locale", "lib", "client.js")));
+if (!root) throw new Error(`No installed DSH locale packages found under: ${path.resolve(installed)}`);
 
 const PKGS = [
   "dsh-client-locale",
@@ -41,6 +48,7 @@ const PKGS = [
   "dsh-client-ui-skill",
   "dsh-session-log-export",
   "dsh-client-ui-plan",
+  "dsh-client-ui-reference",
 ];
 
 // ---------- 小工具 ----------
@@ -394,7 +402,7 @@ let totalKeys = 0;
 for (const pkg of PKGS) {
   process.stderr.write("extracting " + pkg + " ...\n");
   const file = path.join(root, pkg, "lib", "client.js");
-  if (!fs.existsSync(file)) { report.push({ pkg, error: "missing client.js" }); continue; }
+  if (!fs.existsSync(file)) throw new Error(`Missing installed DSH bundle: ${file}`);
   const text = fs.readFileSync(file, "utf8");
   const constMap = extractConsts(text);
   const entries = [];
@@ -470,7 +478,7 @@ for (const pkg of PKGS) {
     }
   }
 
-  if (entries.length === 0) { report.push({ pkg, error: "no entries extracted" }); continue; }
+  if (entries.length === 0) throw new Error(`No locale entries extracted from ${file}; installed DSH format may have changed`);
   const zhOut = { pkg, entries: entries.filter((e) => e.zh !== null).map((e) => ({ ns: e.ns, dict: e.zh })) };
   const enOut = { pkg, entries: entries.filter((e) => e.en !== null).map((e) => ({ ns: e.ns, dict: e.en })) };
   fs.writeFileSync(path.join(outDir, pkg + ".json"), JSON.stringify(zhOut, null, 2), "utf8");

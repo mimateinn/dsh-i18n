@@ -10,7 +10,8 @@
         "status.applying": "Aplicando…",
         "status.empty": "Sin opciones",
         "overlay.aria": "Opciones de /{command}",
-        "listbox.aria": "Coincidencias de /{command}"
+        "listbox.aria": "Coincidencias de /{command}",
+        "notice.imagesUnsupported": "/{command} no admite imágenes adjuntas; elimínalas primero"
       }
     }
   ]

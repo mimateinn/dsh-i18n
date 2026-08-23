@@ -1,0 +1,17 @@
+{
+  "pkg": "dsh-session-log-export",
+  "entries": [
+    {
+      "ns": "session-log-download",
+      "dict": {
+        "dialog.preparingTitle": "सत्र निर्यात हो रहा है",
+        "dialog.preparingDescription": "इस सत्र, इसके उप-सत्रों और अटैचमेंट वाली ZIP तैयार की जा रही है।",
+        "dialog.successTitle": "सत्र डाउनलोड शुरू हो गया",
+        "dialog.successDescription": "ब्राउज़र सत्र की ZIP डाउनलोड कर रहा है।",
+        "dialog.errorTitle": "सत्र निर्यात विफल रहा",
+        "dialog.close": "बंद करें",
+        "dialog.commandFailed": "सत्र निर्यात शुरू नहीं हो सका।"
+      }
+    }
+  ]
+}

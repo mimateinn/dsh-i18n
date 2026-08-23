@@ -1,0 +1,23 @@
+{
+  "pkg": "dsh-client-ui-directory-picker-browse",
+  "entries": [
+    {
+      "ns": "directory-browser",
+      "dict": {
+        "browser.title": "اختيار مساحة عمل Directory",
+        "browser.home": "الرئيسية",
+        "browser.newFolder": "مجلد جديد",
+        "browser.folderName": "اسم المجلد",
+        "browser.createIn": "جديد folder in \"{name}\"",
+        "browser.untitledFolder": "مجلد بلا اسم",
+        "browser.create": "إنشاء",
+        "browser.cancel": "إلغاء",
+        "browser.open": "فتح",
+        "browser.editPath": "تعديل المسار",
+        "browser.loading": "جارٍ التحميل…",
+        "browser.truncated": "‏Too many folders to list; only the beginning is shown.",
+        "browser.showHidden": "إظهار الملفات المخفية"
+      }
+    }
+  ]
+}

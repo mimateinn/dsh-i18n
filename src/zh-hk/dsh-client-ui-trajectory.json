@@ -1,0 +1,24 @@
+{
+  "pkg": "dsh-client-ui-trajectory",
+  "entries": [
+    {
+      "ns": "trajectory",
+      "dict": {
+        "view.trajectory": "軌跡",
+        "toolbar.aria": "軌跡工具列",
+        "toolbar.duration": "持續時間",
+        "toolbar.useActualDuration": "使用實際持續時間",
+        "toolbar.useEqualWidth": "操作使用相同寬度",
+        "toolbar.actualTime": "實際時間",
+        "toolbar.turns": "回合",
+        "toolbar.expandTurns": "展開回合",
+        "toolbar.collapseTurns": "收起回合",
+        "toolbar.calls": "呼叫",
+        "toolbar.expandCalls": "展開呼叫",
+        "toolbar.collapseCalls": "收起呼叫",
+        "toolbar.search": "搜尋軌跡",
+        "toolbar.searchPlaceholder": "搜尋"
+      }
+    }
+  ]
+}

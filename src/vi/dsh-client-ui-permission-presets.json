@@ -1,0 +1,29 @@
+{
+  "pkg": "dsh-client-ui-permission-presets",
+  "entries": [
+    {
+      "ns": "permission.access",
+      "dict": {
+        "confirm.title": "Bật Full access?",
+        "confirm.description": "Full access giảm bớt các bước xác nhận và cho phép agent thực hiện trực tiếp nhiều thao tác hơn, kể cả thao tác nhạy cảm, thay đổi tệp hay lệnh bên ngoài. Chỉ dùng khi bạn tin tưởng tác vụ hiện tại.",
+        "confirm.acknowledge": "Tôi hiểu rủi ro và muốn tiếp tục",
+        "confirm.cancel": "Hủy",
+        "confirm.enable": "Bật Full access"
+      }
+    },
+    {
+      "ns": "settings.permission",
+      "dict": {
+        "title": "Quyền",
+        "description": "Chọn chế độ quyền mặc định cho các phiên mới",
+        "loading": "Đang tải",
+        "unavailable": "Không khả dụng",
+        "confirm.title": "Bật Full access?",
+        "confirm.description": "Full access cho phép các phiên mới giảm bớt bước xác nhận và thực hiện trực tiếp nhiều thao tác hơn, kể cả thao tác nhạy cảm, thay đổi tệp hay lệnh bên ngoài. Chỉ dùng khi bạn tin tưởng các tác vụ sắp tới.",
+        "confirm.acknowledge": "Tôi hiểu rủi ro và muốn tiếp tục",
+        "confirm.cancel": "Hủy",
+        "confirm.enable": "Bật Full access"
+      }
+    }
+  ]
+}

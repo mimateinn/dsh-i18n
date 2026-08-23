@@ -1,0 +1,40 @@
+{
+  "pkg": "dsh-client-locale",
+  "entries": [
+    {
+      "ns": "common",
+      "dict": {
+        "ok": "ठीक है",
+        "cancel": "रद्द करें",
+        "close": "बंद करें",
+        "copy": "कॉपी करें",
+        "copied": "कॉपी हो गया",
+        "retry": "फिर कोशिश करें",
+        "loading": "लोड हो रहा है…",
+        "load.failed": "लोड नहीं हो सका",
+        "submit": "सबमिट करें",
+        "submitting": "सबमिट हो रहा है…",
+        "next": "आगे",
+        "previous": "पिछला",
+        "skip": "छोड़ें",
+        "delete": "हटाएँ",
+        "edit": "संपादित करें",
+        "save": "सहेजें",
+        "search": "खोजें",
+        "more": "और",
+        "collapse": "समेटें",
+        "expand": "विस्तृत करें",
+        "back": "वापस",
+        "unknown": "अज्ञात",
+        "none": "कोई नहीं",
+        "truncated": "छाँटा गया"
+      }
+    },
+    {
+      "ns": "settings.locale",
+      "dict": {
+        "language.title": "भाषा"
+      }
+    }
+  ]
+}

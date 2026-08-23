@@ -1,0 +1,27 @@
+{
+  "pkg": "dsh-client-ui-model-selection",
+  "entries": [
+    {
+      "ns": "model",
+      "dict": {
+        "command.description": "เลือกรุ่นสำหรับการสนทนานี้",
+        "option.loadError": "โหลดแค็ตตาล็อกไม่สำเร็จ: {message}",
+        "trigger.fallback": "เลือกรุ่น",
+        "trigger.selectAria": "เลือกรุ่น",
+        "trigger.aria": "เลือกรุ่น {model} ปัจจุบัน",
+        "trigger.ariaEffort": "เลือกรุ่น {model} ปัจจุบันพยายามให้เหตุผล {effort}",
+        "menu.aria": "แบบจำลองและความพยายามในการให้เหตุผล",
+        "menu.model": "รุ่นรถยนต์",
+        "menu.effort": "ความพยายาม",
+        "effort.providerDefault": "ค่าเริ่มต้น",
+        "status.loading": "กำลังรีเฟรชรายการโมเดล…",
+        "error.action": "การดำเนินการโมเดลล้มเหลว: {message}",
+        "action.reload": "โหลดใหม่",
+        "warning.groupLoad": "{name} โหลดไม่สำเร็จ: {message}",
+        "empty.models": "ไม่มีโมเดล",
+        "blocked.composer": "รุ่นนี้ไม่พร้อมใช้งาน — เลือกหนึ่งรายการเพื่อดำเนินการต่อ",
+        "empty.efforts": "โมเดลนี้ไม่ให้ระดับความพยายามที่สมเหตุสมผล"
+      }
+    }
+  ]
+}

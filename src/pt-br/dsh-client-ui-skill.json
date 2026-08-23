@@ -1,0 +1,15 @@
+{
+  "pkg": "dsh-client-ui-skill",
+  "entries": [
+    {
+      "ns": "skill",
+      "dict": {
+        "row.running": "Carregando habilidade",
+        "row.failed": "Falha ao carregar a habilidade",
+        "row.stopped": "Carregamento da habilidade interrompido",
+        "row.instructions": "Instruções",
+        "menu.userOnly": "somente usuário"
+      }
+    }
+  ]
+}

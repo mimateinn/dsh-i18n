@@ -1,0 +1,24 @@
+{
+  "pkg": "dsh-client-ui-trajectory",
+  "entries": [
+    {
+      "ns": "trajectory",
+      "dict": {
+        "view.trajectory": "Trajectory",
+        "toolbar.aria": "Trajectory toolbar",
+        "toolbar.duration": "Duration",
+        "toolbar.useActualDuration": "Use actual duration",
+        "toolbar.useEqualWidth": "Use equal-width operations",
+        "toolbar.actualTime": "Actual time",
+        "toolbar.turns": "Turns",
+        "toolbar.expandTurns": "Expand turns",
+        "toolbar.collapseTurns": "Collapse turns",
+        "toolbar.calls": "Calls",
+        "toolbar.expandCalls": "Expand calls",
+        "toolbar.collapseCalls": "Collapse calls",
+        "toolbar.search": "Search trajectory",
+        "toolbar.searchPlaceholder": "Search"
+      }
+    }
+  ]
+}

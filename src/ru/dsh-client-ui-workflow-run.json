@@ -1,0 +1,28 @@
+{
+  "pkg": "dsh-client-ui-workflow-run",
+  "entries": [
+    {
+      "ns": "workflowRun",
+      "dict": {
+        "run.title": "{name}",
+        "run.members.one": "{count} участник",
+        "run.members.other": "{count} участников",
+        "run.empty": "Участники не запущены",
+        "phase.unassigned": "Без фазы",
+        "phase.empty": "Пустое название фазы",
+        "statusCount.running": "Выполняется: {count}",
+        "statusCount.completed": "Завершено: {count}",
+        "statusCount.failed": "Ошибок: {count}",
+        "statusCount.cancelled": "Отменено: {count}",
+        "statusCount.interrupted": "Прервано: {count}",
+        "member.empty": "Пустое имя участника",
+        "member.open": "Открыть {name}",
+        "status.running": "Выполняется",
+        "status.completed": "Завершено",
+        "status.failed": "Ошибка",
+        "status.cancelled": "Отменено",
+        "status.interrupted": "Прервано"
+      }
+    }
+  ]
+}

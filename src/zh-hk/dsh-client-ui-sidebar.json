@@ -1,0 +1,14 @@
+{
+  "pkg": "dsh-client-ui-sidebar",
+  "entries": [
+    {
+      "ns": "sidebar",
+      "dict": {
+        "session.new": "新會話",
+        "session.new.label": "新增會話",
+        "toggle.open": "開啟側邊欄",
+        "toggle.collapse": "收起側邊欄"
+      }
+    }
+  ]
+}

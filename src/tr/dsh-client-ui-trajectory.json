@@ -1,0 +1,24 @@
+{
+  "pkg": "dsh-client-ui-trajectory",
+  "entries": [
+    {
+      "ns": "trajectory",
+      "dict": {
+        "view.trajectory": "Yörünge",
+        "toolbar.aria": "Yörünge araç çubuğu",
+        "toolbar.duration": "Süre",
+        "toolbar.useActualDuration": "Gerçek süreyi kullan",
+        "toolbar.useEqualWidth": "Eşit genişlikli işlemler kullan",
+        "toolbar.actualTime": "Gerçek zaman",
+        "toolbar.turns": "Turlar",
+        "toolbar.expandTurns": "Turları genişlet",
+        "toolbar.collapseTurns": "Turları daralt",
+        "toolbar.calls": "Çağrılar",
+        "toolbar.expandCalls": "Çağrıları genişlet",
+        "toolbar.collapseCalls": "Çağrıları daralt",
+        "toolbar.search": "Yörüngede ara",
+        "toolbar.searchPlaceholder": "Ara"
+      }
+    }
+  ]
+}

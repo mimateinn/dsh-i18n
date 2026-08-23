@@ -1,0 +1,43 @@
+{
+  "pkg": "dsh-client-ui-subagent",
+  "entries": [
+    {
+      "ns": "subagent",
+      "dict": {
+        "diagnostic.corrupt": "пошкоджений запис сесії",
+        "diagnostic.unsupported": "непідтримувана версія запису субагента",
+        "diagnostic.unavailable": "запис сесії тимчасово недоступний",
+        "duration.seconds": "{seconds} с",
+        "duration.minutes": "{minutes} хв {seconds} с",
+        "duration.hours": "{hours} год {minutes} хв {seconds} с",
+        "duration.days": "{days} д",
+        "duration.daysHours": "{days} д {hours} год",
+        "duration.months": "~{months} міс",
+        "duration.monthsDays": "~{months} міс {days} д",
+        "duration.years": "~{years} р",
+        "duration.yearsMonths": "~{years} р {months} міс",
+        "duration.exactDays": "{days} д {hours} год {minutes} хв {seconds} с",
+        "duration.exactTitle": "Загальна тривалість активності: {duration}",
+        "loading.label": "Завантаження субагентів…",
+        "loading.aria": "Завантаження субагентів",
+        "load.error": "Не вдалося завантажити субагентів",
+        "retry": "Повторити",
+        "mode.oneShot": "одноразовий",
+        "mode.continuable": "продовжуваний",
+        "activity.running": "виконується",
+        "activity.inactive": "не виконується",
+        "branch.collapse": "Згорнути нащадків {label}",
+        "branch.expand": "Розгорнути нащадків {label}",
+        "count.total.one": "{count} субагент",
+        "count.total.other": "{count} субагентів",
+        "count.running.one": "{count} субагент виконується",
+        "count.running.other": "{count} субагентів виконується",
+        "tree.aria": "Сесії субагентів",
+        "readonly.oneShot.title": "Запис одноразового субагента",
+        "readonly.title": "Наразі цей субагент доступний лише для читання",
+        "readonly.oneShot.body": "Одноразові завдання не приймають подальших повідомлень; тут можна переглянути повний запис виконання.",
+        "readonly.body": "Батьківська сесія офлайн; відкрийте її знову, щоб продовжити надсилати повідомлення."
+      }
+    }
+  ]
+}

@@ -1,7 +1,7 @@
 {
   "name": "dsh-multi-lang-ui",
-  "description": "DSH Web UI 多語言插件：新增繁體中文/日本語/한국어/Français/Deutsch/Español 語言選項，官方介面字串逐條精譯，英文內容保持英文",
-  "version": "0.1.0",
+  "version": "0.2.0",
+  "description": "Sustainable 20-locale internationalization for the DeepSeek Harness Web UI",
   "type": "module",
   "main": "./index.mjs",
   "types": "./index.d.ts",
@@ -15,6 +15,11 @@
     },
     "./cordis.patch.yml": "./cordis.patch.yml",
     "./package.json": "./package.json"
+  },
+  "scripts": {
+    "i18n:check": "node scripts/check.mjs",
+    "i18n:build": "node scripts/assemble.mjs",
+    "test": "npm run i18n:check && npm run i18n:build && node scripts/verify-converter.mjs"
   },
   "dsh": {
     "bundle": {
@@ -35,20 +40,13 @@
     "deepseek-harness",
     "dsh-plugin",
     "dsh",
-    "locale",
     "i18n",
     "localization",
     "multilingual",
+    "20-locales",
     "traditional-chinese",
-    "zh-TW",
-    "japanese",
-    "korean",
-    "french",
-    "german",
-    "spanish",
-    "日本語",
-    "한국어",
-    "繁體中文"
+    "rtl",
+    "arabic"
   ],
   "files": [
     "index.mjs",
@@ -56,14 +54,21 @@
     "lib/client.js",
     "cordis.patch.yml",
     "README.md",
-    "README.zh-TW.md",
-    "README.ja.md",
-    "README.ko.md",
-    "README.fr.md",
-    "README.de.md",
-    "README.es.md",
+    "README.*.md",
     "LICENSE",
-    "src"
+    "src",
+    "scripts/locales.mjs"
   ],
-  "license": "MIT"
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mimateinn/dsh-multi-lang-ui.git"
+  },
+  "homepage": "https://github.com/mimateinn/dsh-multi-lang-ui#readme",
+  "bugs": {
+    "url": "https://github.com/mimateinn/dsh-multi-lang-ui/issues"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
 }

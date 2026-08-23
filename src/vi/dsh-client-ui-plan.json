@@ -1,0 +1,14 @@
+{
+  "pkg": "dsh-client-ui-plan",
+  "entries": [
+    {
+      "ns": "plan",
+      "dict": {
+        "chip.on.aria": "Chế độ lập kế hoạch đang bật, nhấn để tắt",
+        "chip.on.title": "Chế độ lập kế hoạch đang bật — nhấn để tắt (/plan off)",
+        "chip.off.aria": "Chế độ lập kế hoạch đang tắt, nhấn để bật",
+        "chip.off.title": "Chế độ lập kế hoạch đang tắt — nhấn để bật (/plan)"
+      }
+    }
+  ]
+}

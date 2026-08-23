@@ -1,0 +1,27 @@
+{
+  "pkg": "dsh-client-ui-model-selection",
+  "entries": [
+    {
+      "ns": "model",
+      "dict": {
+        "command.description": "Bu konuşma için modeli seçin",
+        "option.loadError": "Katalog yüklenemedi: {message}",
+        "trigger.fallback": "Model seç",
+        "trigger.selectAria": "Model seç",
+        "trigger.aria": "Model seç, mevcut: {model}",
+        "trigger.ariaEffort": "Model seç, mevcut: {model}, akıl yürütme eforu: {effort}",
+        "menu.aria": "Model ve akıl yürütme eforu",
+        "menu.model": "Model",
+        "menu.effort": "Efor",
+        "effort.providerDefault": "Varsayılan",
+        "status.loading": "Model listesi yenileniyor…",
+        "error.action": "Model işlemi başarısız: {message}",
+        "action.reload": "Yeniden yükle",
+        "warning.groupLoad": "{name} yüklenemedi: {message}",
+        "empty.models": "Kullanılabilir model yok.",
+        "blocked.composer": "Bu model kullanılamıyor — devam etmek için başka bir model seçin",
+        "empty.efforts": "Bu model akıl yürütme eforu düzeyleri sunmuyor."
+      }
+    }
+  ]
+}

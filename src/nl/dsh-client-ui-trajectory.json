@@ -1,0 +1,24 @@
+{
+  "pkg": "dsh-client-ui-trajectory",
+  "entries": [
+    {
+      "ns": "trajectory",
+      "dict": {
+        "view.trajectory": "Traject",
+        "toolbar.aria": "Trajectwerkbalk",
+        "toolbar.duration": "Duur",
+        "toolbar.useActualDuration": "Use actual duration",
+        "toolbar.useEqualWidth": "Use equal-width operations",
+        "toolbar.actualTime": "Werkelijke tijd",
+        "toolbar.turns": "Beurten",
+        "toolbar.expandTurns": "Klap uit: turns",
+        "toolbar.collapseTurns": "Klap in: turns",
+        "toolbar.calls": "Aanroepen",
+        "toolbar.expandCalls": "Klap uit: calls",
+        "toolbar.collapseCalls": "Klap in: calls",
+        "toolbar.search": "Traject doorzoeken",
+        "toolbar.searchPlaceholder": "Search"
+      }
+    }
+  ]
+}

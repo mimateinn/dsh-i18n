@@ -1,0 +1,43 @@
+{
+  "pkg": "dsh-client-ui-subagent",
+  "entries": [
+    {
+      "ns": "subagent",
+      "dict": {
+        "diagnostic.corrupt": "क्षतिग्रस्त सत्र रिकॉर्ड",
+        "diagnostic.unsupported": "असमर्थित सबएजेंट रिकॉर्ड संस्करण",
+        "diagnostic.unavailable": "सत्र रिकॉर्ड फ़िलहाल उपलब्ध नहीं",
+        "duration.seconds": "{seconds}से",
+        "duration.minutes": "{minutes}मि {seconds}से",
+        "duration.hours": "{hours}घं {minutes}मि {seconds}से",
+        "duration.days": "{days}दि",
+        "duration.daysHours": "{days}दि {hours}घं",
+        "duration.months": "~{months}मा",
+        "duration.monthsDays": "~{months}मा {days}दि",
+        "duration.years": "~{years}व",
+        "duration.yearsMonths": "~{years}व {months}मा",
+        "duration.exactDays": "{days}दि {hours}घं {minutes}मि {seconds}से",
+        "duration.exactTitle": "कुल सक्रिय अवधि: {duration}",
+        "loading.label": "सबएजेंट लोड हो रहे हैं…",
+        "loading.aria": "सबएजेंट लोड हो रहे हैं",
+        "load.error": "सबएजेंट लोड नहीं हो सके",
+        "retry": "फिर कोशिश करें",
+        "mode.oneShot": "एक-बार",
+        "mode.continuable": "जारी रखने योग्य",
+        "activity.running": "चल रहा है",
+        "activity.inactive": "चल नहीं रहा",
+        "branch.collapse": "{label} के अधीनस्थ समेटें",
+        "branch.expand": "{label} के अधीनस्थ विस्तृत करें",
+        "count.total.one": "{count} सबएजेंट",
+        "count.total.other": "{count} सबएजेंट",
+        "count.running.one": "{count} सबएजेंट चल रहा है",
+        "count.running.other": "{count} सबएजेंट चल रहे हैं",
+        "tree.aria": "सबएजेंट सत्र",
+        "readonly.oneShot.title": "एक-बार वाला सबएजेंट रिकॉर्ड",
+        "readonly.title": "यह सबएजेंट फ़िलहाल केवल पढ़ने के लिए है",
+        "readonly.oneShot.body": "एक-बार वाले कार्य आगे के संदेश स्वीकार नहीं करते; पूरा निष्पादन रिकॉर्ड यहाँ देखें।",
+        "readonly.body": "मूल सत्र ऑफ़लाइन है; संदेश भेजते रहने के लिए उसे फिर से खोलें।"
+      }
+    }
+  ]
+}

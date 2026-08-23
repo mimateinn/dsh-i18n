@@ -1,0 +1,14 @@
+{
+  "pkg": "dsh-client-ui-plan",
+  "entries": [
+    {
+      "ns": "plan",
+      "dict": {
+        "chip.on.aria": "Planläge på, tryck för att stänga av",
+        "chip.on.title": "Planläge på — klicka för att stänga av (/plan off)",
+        "chip.off.aria": "Planläge av, tryck för att slå på",
+        "chip.off.title": "Planläge av — klicka för att slå på (/plan)"
+      }
+    }
+  ]
+}

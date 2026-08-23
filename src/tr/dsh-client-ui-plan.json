@@ -1,0 +1,14 @@
+{
+  "pkg": "dsh-client-ui-plan",
+  "entries": [
+    {
+      "ns": "plan",
+      "dict": {
+        "chip.on.aria": "Plan modu açık, kapatmak için basın",
+        "chip.on.title": "Plan modu açık — kapatmak için tıklayın (/plan off)",
+        "chip.off.aria": "Plan modu kapalı, açmak için basın",
+        "chip.off.title": "Plan modu kapalı — açmak için tıklayın (/plan)"
+      }
+    }
+  ]
+}

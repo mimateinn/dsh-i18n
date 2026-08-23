@@ -1,0 +1,16 @@
+{
+  "pkg": "dsh-client-ui-reference",
+  "entries": [
+    {
+      "ns": "reference",
+      "dict": {
+        "section.files": "Dateien und Ordner",
+        "section.sessions": "Session-Unterhaltungen",
+        "candidate.file": "Datei",
+        "candidate.folder": "Ordner",
+        "candidate.session": "Session",
+        "candidate.noCwd": "(kein Arbeitsverzeichnis)"
+      }
+    }
+  ]
+}

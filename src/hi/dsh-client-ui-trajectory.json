@@ -1,0 +1,24 @@
+{
+  "pkg": "dsh-client-ui-trajectory",
+  "entries": [
+    {
+      "ns": "trajectory",
+      "dict": {
+        "view.trajectory": "पथरेखा",
+        "toolbar.aria": "पथरेखा टूलबार",
+        "toolbar.duration": "अवधि",
+        "toolbar.useActualDuration": "वास्तविक अवधि दिखाएँ",
+        "toolbar.useEqualWidth": "सभी संचालन समान चौड़ाई में दिखाएँ",
+        "toolbar.actualTime": "वास्तविक समय",
+        "toolbar.turns": "टर्न",
+        "toolbar.expandTurns": "टर्न विस्तृत करें",
+        "toolbar.collapseTurns": "टर्न समेटें",
+        "toolbar.calls": "कॉल",
+        "toolbar.expandCalls": "कॉल विस्तृत करें",
+        "toolbar.collapseCalls": "कॉल समेटें",
+        "toolbar.search": "पथरेखा में खोजें",
+        "toolbar.searchPlaceholder": "खोजें"
+      }
+    }
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "pkg": "dsh-client-ui-workflow-run",
+  "entries": [
+    {
+      "ns": "workflowRun",
+      "dict": {
+        "run.title": "{name}",
+        "run.members.one": "‏{count} member",
+        "run.members.other": "‏{count} members",
+        "run.empty": "‏No members started",
+        "phase.unassigned": "Unphased",
+        "phase.empty": "فارغ phase name",
+        "statusCount.running": "قيد التشغيل {count}",
+        "statusCount.completed": "مكتمل {count}",
+        "statusCount.failed": "فشل {count}",
+        "statusCount.cancelled": "‏Cancelled {count}",
+        "statusCount.interrupted": "‏Interrupted {count}",
+        "member.empty": "فارغ member name",
+        "member.open": "فتح {name}",
+        "status.running": "قيد التشغيل",
+        "status.completed": "مكتمل",
+        "status.failed": "فشل",
+        "status.cancelled": "Cancelled",
+        "status.interrupted": "Interrupted"
+      }
+    }
+  ]
+}

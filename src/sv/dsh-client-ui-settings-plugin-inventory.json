@@ -1,0 +1,28 @@
+{
+  "pkg": "dsh-client-ui-settings-plugin-inventory",
+  "entries": [
+    {
+      "ns": "settings.pluginInventory",
+      "dict": {
+        "tab": "Plugin-lista",
+        "loading": "Läser plugins…",
+        "error": "Plugins är tillfälligt otillgängliga.",
+        "retry": "Försök igen",
+        "search": "Sök plugins",
+        "catalog": "Plugin-lista",
+        "empty": "Inga plugins är tillgängliga.",
+        "emptySearch": "Inga matchande plugins.",
+        "enabledTag": "Aktiverad",
+        "disabledTag": "Inaktiverad",
+        "configuration": "Konfiguration",
+        "cordis": "Cordis-status",
+        "unobserved": "Inte monterad",
+        "pending": "Väntar på beroenden",
+        "loadingPhase": "Läser in",
+        "active": "Monterad",
+        "failed": "Monteringen misslyckades",
+        "unloading": "Avlastar"
+      }
+    }
+  ]
+}

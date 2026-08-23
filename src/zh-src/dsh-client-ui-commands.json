@@ -10,7 +10,8 @@
         "status.applying": "正在应用…",
         "status.empty": "无选项",
         "overlay.aria": "/{command} 选项",
-        "listbox.aria": "/{command} 匹配项"
+        "listbox.aria": "/{command} 匹配项",
+        "notice.imagesUnsupported": "/{command} 不接受图片附件，请先移除图片"
       }
     }
   ]

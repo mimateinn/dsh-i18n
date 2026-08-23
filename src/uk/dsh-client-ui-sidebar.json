@@ -1,0 +1,14 @@
+{
+  "pkg": "dsh-client-ui-sidebar",
+  "entries": [
+    {
+      "ns": "sidebar",
+      "dict": {
+        "session.new": "Нова сесія",
+        "session.new.label": "Нова сесія",
+        "toggle.open": "Відкрити бічну панель",
+        "toggle.collapse": "Згорнути бічну панель"
+      }
+    }
+  ]
+}

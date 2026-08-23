@@ -1,0 +1,28 @@
+{
+  "pkg": "dsh-client-ui-settings-plugin-inventory",
+  "entries": [
+    {
+      "ns": "settings.pluginInventory",
+      "dict": {
+        "tab": "Pluginlijst",
+        "loading": "Reading plugins…",
+        "error": "Plugins zijn temporarily niet beschikbaar.",
+        "retry": "Retry",
+        "search": "Zoeken: plugins",
+        "catalog": "Pluginlijst",
+        "empty": "Geen plugins zijn beschikbaar.",
+        "emptySearch": "Geen matching plugins.",
+        "enabledTag": "Ingeschakeld",
+        "disabledTag": "Uitgeschakeld",
+        "configuration": "Configuratie",
+        "cordis": "Cordis-status",
+        "unobserved": "Niet gekoppeld",
+        "pending": "Wachten op afhankelijkheden",
+        "loadingPhase": "Laden",
+        "active": "Gekoppeld",
+        "failed": "Koppelen mislukt",
+        "unloading": "Ontkoppelen"
+      }
+    }
+  ]
+}

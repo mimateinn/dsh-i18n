@@ -1,0 +1,25 @@
+{
+  "pkg": "dsh-client-ui-jobs",
+  "entries": [
+    {
+      "ns": "job",
+      "dict": {
+        "count.live.one": "{count} lavoro IN background IN esecuzione",
+        "count.live.other": "Processi in background {count} in esecuzione",
+        "count.idle.one": "{count} lavoro IN background",
+        "count.idle.other": "Lavori in background {count}",
+        "list.aria": "Lavori in background",
+        "status.running": "running",
+        "status.stopping": "arresto",
+        "status.completed": "completato",
+        "status.killed": "annullato",
+        "status.failed": "fallito",
+        "duration.seconds": "{seconds}s",
+        "duration.minutes": "{minutes}m {seconds}s",
+        "duration.hours": "{hours}h {minutes}m",
+        "duration.title.live": "In esecuzione per {duration}",
+        "duration.title.done": "Preso {duration}"
+      }
+    }
+  ]
+}

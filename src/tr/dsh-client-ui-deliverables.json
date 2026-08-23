@@ -1,0 +1,15 @@
+{
+  "pkg": "dsh-client-ui-deliverables",
+  "entries": [
+    {
+      "ns": "deliverables",
+      "dict": {
+        "produced.label": "Oluşturuldu",
+        "produced.moreOne": "+ 1 dosya",
+        "produced.more": "+ {count} dosya",
+        "produced.open": "{name} dosyasını aç",
+        "produced.showInFolder": "Klasörde göster"
+      }
+    }
+  ]
+}

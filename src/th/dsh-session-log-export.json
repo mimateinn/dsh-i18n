@@ -1,0 +1,17 @@
+{
+  "pkg": "dsh-session-log-export",
+  "entries": [
+    {
+      "ns": "session-log-download",
+      "dict": {
+        "dialog.preparingTitle": "กำลังส่งออกเซสชัน",
+        "dialog.preparingDescription": "กำลังเตรียมไฟล์ ZIP ที่มีเซสชันนี้ เซสชันย่อย และไฟล์แนบ",
+        "dialog.successTitle": "เริ่มดาวน์โหลดเซสชันแล้ว",
+        "dialog.successDescription": "เบราว์เซอร์กำลังดาวน์โหลดไฟล์ ZIP ของเซสชัน",
+        "dialog.errorTitle": "ส่งออกเซสชันไม่สำเร็จ",
+        "dialog.close": "ปิด",
+        "dialog.commandFailed": "เริ่มส่งออกเซสชันไม่ได้"
+      }
+    }
+  ]
+}

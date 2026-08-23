@@ -1,0 +1,16 @@
+{
+  "pkg": "dsh-client-ui-reference",
+  "entries": [
+    {
+      "ns": "reference",
+      "dict": {
+        "section.files": "Arquivos e pastas",
+        "section.sessions": "Conversas da sessão",
+        "candidate.file": "Arquivo",
+        "candidate.folder": "Pasta",
+        "candidate.session": "Sessão",
+        "candidate.noCwd": "(sem cwd)"
+      }
+    }
+  ]
+}

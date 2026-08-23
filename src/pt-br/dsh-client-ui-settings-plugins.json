@@ -1,0 +1,47 @@
+{
+  "pkg": "dsh-client-ui-settings-plugins",
+  "entries": [
+    {
+      "ns": "settings.plugins",
+      "dict": {
+        "nav": "Plugins",
+        "title": "Plugins",
+        "intro": "Configure e inspecione os plugins instalados nesta implantação.",
+        "tabs": "Visualizações de plugins",
+        "configurableTab": "Configuração de plugins",
+        "empty": "Esta implantação não expõe configurações de plugin.",
+        "overridden": "Substituído",
+        "reset": "Restaurar o padrão",
+        "readOnly": "Esta implantação armazena as configurações como somente leitura.",
+        "expand": "Mostrar configurações",
+        "collapse": "Ocultar configurações",
+        "save": "Salvar",
+        "saving": "Salvando…",
+        "discard": "Descartar",
+        "unsaved": "Não salvo",
+        "saveFailed": "A implantação não aceitou estes valores; eles foram mantidos para você corrigir.",
+        "invalidNumber": "Digite um número ou deixe em branco para usar o padrão.",
+        "bashTitle": "Shell",
+        "bashDescription": "Limita todos os comandos que o agente executa.",
+        "bashTimeoutMs": "Tempo limite do comando (ms)",
+        "bashTimeoutMsHint": "Por quanto tempo um comando pode rodar antes de ser encerrado.",
+        "bashMaxOutputBytes": "Limite de saída por fluxo (bytes)",
+        "bashMaxOutputBytesHint": "A saída acima disso vai para um arquivo temporário em vez de ser perdida.",
+        "agentLoopTitle": "Loop do agente",
+        "agentLoopDescription": "Como o agente despacha as chamadas de ferramentas.",
+        "agentLoopMaxParallel": "Chamadas de ferramentas em paralelo",
+        "agentLoopMaxParallelHint": "Limite máximo de chamadas seguras para paralelismo em execução simultânea dentro de uma etapa.",
+        "webSearchTitle": "Busca na web",
+        "webSearchDescription": "O provedor de busca DeepSeek.",
+        "webSearchApiKey": "Chave de API",
+        "webSearchApiKeyHint": "Armazenada fora do arquivo de configurações. Deixe em branco para manter a chave atual.",
+        "webSearchApiKeySet": "Há uma chave configurada.",
+        "webSearchApiKeyUnset": "Nenhuma chave configurada; a busca fica indisponível até que haja uma.",
+        "webSearchBaseUrl": "Endpoint",
+        "webSearchBaseUrlHint": "Deixe em branco para usar o padrão do provedor.",
+        "webSearchMaxUses": "Máximo de buscas por solicitação",
+        "webSearchMaxUsesHint": "Quantas vezes uma solicitação pode buscar antes de precisar responder."
+      }
+    }
+  ]
+}

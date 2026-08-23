@@ -1,0 +1,25 @@
+{
+  "pkg": "dsh-client-ui-user-questions",
+  "entries": [
+    {
+      "ns": "question",
+      "dict": {
+        "error.incomplete": "Сначала ответьте на этот вопрос.",
+        "error.unanswered": "Выберите вариант или введите свой ответ.",
+        "nav.prev": "Предыдущий вопрос",
+        "nav.next": "Следующий вопрос",
+        "nav.minimize": "Свернуть карточку вопроса",
+        "nav.maximize": "Развернуть карточку вопроса",
+        "nav.cancel": "Закрыть все вопросы",
+        "option.recommended": "Рекомендуется",
+        "custom.placeholder": "Введите свой ответ",
+        "action.skip": "Пропустить вопрос",
+        "action.next": "Далее",
+        "plan.header": "Проверка плана",
+        "plan.approve": "Утвердить",
+        "plan.decline": "Отклонить",
+        "plan.discuss": "Обсудить"
+      }
+    }
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "pkg": "dsh-client-ui-model-selection",
+  "entries": [
+    {
+      "ns": "model",
+      "dict": {
+        "command.description": "Kies the model for this conversation",
+        "option.loadError": "Catalog mislukt to load: {message}",
+        "trigger.fallback": "Model kiezen",
+        "trigger.selectAria": "Model kiezen",
+        "trigger.aria": "Kies model, current {model}",
+        "trigger.ariaEffort": "Kies model, current {model}, reasoning effort {effort}",
+        "menu.aria": "Model and reasoning effort",
+        "menu.model": "Model",
+        "menu.effort": "Inspanning",
+        "effort.providerDefault": "Standaard",
+        "status.loading": "Refreshing model list…",
+        "error.action": "Model operation mislukt: {message}",
+        "action.reload": "Herladen",
+        "warning.groupLoad": "{name} mislukt to load: {message}",
+        "empty.models": "Geen modellen beschikbaar.",
+        "blocked.composer": "Deze model is niet beschikbaar — select one to continue",
+        "empty.efforts": "Deze model provides no reasoning effort levels."
+      }
+    }
+  ]
+}

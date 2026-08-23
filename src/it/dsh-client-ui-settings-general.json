@@ -1,0 +1,16 @@
+{
+  "pkg": "dsh-client-ui-settings-general",
+  "entries": [
+    {
+      "ns": "settings",
+      "dict": {
+        "trigger": "Impostazioni",
+        "title": "Impostazioni",
+        "close": "Chiudi",
+        "openDocument": "Apri file di configurazione",
+        "openDocument.error": "Impossibile aprire il file di configurazione",
+        "general.nav": "Generale"
+      }
+    }
+  ]
+}

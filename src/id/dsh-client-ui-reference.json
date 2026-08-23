@@ -1,0 +1,16 @@
+{
+  "pkg": "dsh-client-ui-reference",
+  "entries": [
+    {
+      "ns": "reference",
+      "dict": {
+        "section.files": "Berkas & folder",
+        "section.sessions": "Percakapan sesi",
+        "candidate.file": "Berkas",
+        "candidate.folder": "Folder",
+        "candidate.session": "Sesi",
+        "candidate.noCwd": "(tanpa direktori kerja)"
+      }
+    }
+  ]
+}

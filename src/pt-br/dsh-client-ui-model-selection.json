@@ -1,0 +1,27 @@
+{
+  "pkg": "dsh-client-ui-model-selection",
+  "entries": [
+    {
+      "ns": "model",
+      "dict": {
+        "command.description": "Selecione o modelo para esta conversa",
+        "option.loadError": "Falha ao carregar o catálogo: {message}",
+        "trigger.fallback": "Selecionar modelo",
+        "trigger.selectAria": "Selecionar modelo",
+        "trigger.aria": "Selecionar modelo, atual {model}",
+        "trigger.ariaEffort": "Selecionar modelo, atual {model}, esforço de raciocínio {effort}",
+        "menu.aria": "Modelo e esforço de raciocínio",
+        "menu.model": "Modelo",
+        "menu.effort": "Esforço",
+        "effort.providerDefault": "Padrão",
+        "status.loading": "Atualizando a lista de modelos…",
+        "error.action": "A operação do modelo falhou: {message}",
+        "action.reload": "Recarregar",
+        "warning.groupLoad": "Falha ao carregar {name}: {message}",
+        "empty.models": "Nenhum modelo disponível.",
+        "blocked.composer": "Este modelo está indisponível — selecione outro para continuar",
+        "empty.efforts": "Este modelo não oferece níveis de esforço de raciocínio."
+      }
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "pkg": "dsh-client-ui-directory-picker-browse",
+  "entries": [
+    {
+      "ns": "directory-browser",
+      "dict": {
+        "browser.title": "Pilih Direktori Workspace",
+        "browser.home": "Beranda",
+        "browser.newFolder": "Folder baru",
+        "browser.folderName": "Nama folder",
+        "browser.createIn": "Folder baru di \"{name}\"",
+        "browser.untitledFolder": "Folder tanpa judul",
+        "browser.create": "Buat",
+        "browser.cancel": "Batalkan",
+        "browser.open": "Buka",
+        "browser.editPath": "Sunting jalur",
+        "browser.loading": "Memuat…",
+        "browser.truncated": "Terlalu banyak folder untuk ditampilkan; hanya bagian awal yang ditunjukkan.",
+        "browser.showHidden": "Tampilkan file tersembunyi"
+      }
+    }
+  ]
+}

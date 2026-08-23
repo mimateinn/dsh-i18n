@@ -1,0 +1,18 @@
+{
+  "pkg": "dsh-client-ui-commands",
+  "entries": [
+    {
+      "ns": "command",
+      "dict": {
+        "search.placeholder": "Поиск…",
+        "search.aria": "Параметры фильтра",
+        "status.loading": "Загрузка параметров…",
+        "status.applying": "Применение…",
+        "status.empty": "Нет вариантов",
+        "overlay.aria": "/{command} параметры",
+        "listbox.aria": "/{command} совпадений",
+        "notice.imagesUnsupported": "/{command} не принимает вложения изображений; сначала удали их"
+      }
+    }
+  ]
+}

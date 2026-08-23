@@ -1,0 +1,28 @@
+{
+  "pkg": "dsh-client-ui-workflow-run",
+  "entries": [
+    {
+      "ns": "workflowRun",
+      "dict": {
+        "run.title": "{name}",
+        "run.members.one": "{count} member",
+        "run.members.other": "{count} members",
+        "run.empty": "Geen leden gestart",
+        "phase.unassigned": "Zonder fase",
+        "phase.empty": "Lege fasenaam",
+        "statusCount.running": "Running {count}",
+        "statusCount.completed": "Completed {count}",
+        "statusCount.failed": "Failed {count}",
+        "statusCount.cancelled": "Cancelled {count}",
+        "statusCount.interrupted": "Interrupted {count}",
+        "member.empty": "Lege ledennaam",
+        "member.open": "Open {name}",
+        "status.running": "Actief",
+        "status.completed": "Voltooid",
+        "status.failed": "Mislukt",
+        "status.cancelled": "Geannuleerd",
+        "status.interrupted": "Onderbroken"
+      }
+    }
+  ]
+}

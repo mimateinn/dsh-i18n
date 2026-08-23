@@ -1,0 +1,15 @@
+{
+  "pkg": "dsh-client-ui-deliverables",
+  "entries": [
+    {
+      "ns": "deliverables",
+      "dict": {
+        "produced.label": "Đã tạo ra",
+        "produced.moreOne": "+ 1 tệp",
+        "produced.more": "+ {count} tệp",
+        "produced.open": "Mở {name}",
+        "produced.showInFolder": "Hiện trong thư mục"
+      }
+    }
+  ]
+}

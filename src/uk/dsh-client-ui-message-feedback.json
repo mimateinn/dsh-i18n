@@ -1,0 +1,22 @@
+{
+  "pkg": "dsh-client-ui-message-feedback",
+  "entries": [
+    {
+      "ns": "feedback",
+      "dict": {
+        "action.like": "Гарна відповідь",
+        "action.likeActive": "Скасувати оцінку",
+        "action.dislike": "Погана відповідь",
+        "action.dislikeActive": "Скасувати оцінку",
+        "note.open": "Додати примітку",
+        "note.placeholder": "Що було добре, а що пішло не так? (необов'язково)",
+        "note.save": "Зберегти",
+        "note.cancel": "Скасувати",
+        "note.aria": "Примітка до відгуку",
+        "error.conflict": "Цей відгук змінено в іншому місці; показано найновіший стан",
+        "error.load": "Не вдалося завантажити відгук",
+        "error.generic": "Не вдалося зберегти відгук"
+      }
+    }
+  ]
+}

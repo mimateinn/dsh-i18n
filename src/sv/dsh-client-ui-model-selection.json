@@ -1,0 +1,27 @@
+{
+  "pkg": "dsh-client-ui-model-selection",
+  "entries": [
+    {
+      "ns": "model",
+      "dict": {
+        "command.description": "Välj modell för den här konversationen",
+        "option.loadError": "Katalogen kunde inte läsas in: {message}",
+        "trigger.fallback": "Välj modell",
+        "trigger.selectAria": "Välj modell",
+        "trigger.aria": "Välj modell, nuvarande {model}",
+        "trigger.ariaEffort": "Välj modell, nuvarande {model}, resonemangsnivå {effort}",
+        "menu.aria": "Modell och resonemangsnivå",
+        "menu.model": "Modell",
+        "menu.effort": "Nivå",
+        "effort.providerDefault": "Standard",
+        "status.loading": "Uppdaterar modellistan…",
+        "error.action": "Modellåtgärden misslyckades: {message}",
+        "action.reload": "Läs in igen",
+        "warning.groupLoad": "{name} kunde inte läsas in: {message}",
+        "empty.models": "Inga modeller tillgängliga.",
+        "blocked.composer": "Den här modellen är inte tillgänglig — välj en för att fortsätta",
+        "empty.efforts": "Den här modellen erbjuder inga resonemangsnivåer."
+      }
+    }
+  ]
+}

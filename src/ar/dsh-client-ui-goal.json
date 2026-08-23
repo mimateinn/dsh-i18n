@@ -1,0 +1,21 @@
+{
+  "pkg": "dsh-client-ui-goal",
+  "entries": [
+    {
+      "ns": "goal",
+      "dict": {
+        "phase.active": "هدف جارٍ",
+        "phase.paused": "هدف متوقف مؤقتًا",
+        "phase.blocked": "هدف معطّل",
+        "objective.aria": "هدف المهمة",
+        "commandInput.aria": "إدخال الأمر",
+        "action.save": "حفظ الهدف",
+        "action.cancel": "إلغاء التعديل",
+        "action.pause": "إيقاف الهدف مؤقتًا",
+        "action.resume": "استئناف الهدف",
+        "action.edit": "تعديل الهدف",
+        "action.clear": "مسح الهدف"
+      }
+    }
+  ]
+}

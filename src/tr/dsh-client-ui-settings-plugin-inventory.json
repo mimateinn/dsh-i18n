@@ -1,0 +1,28 @@
+{
+  "pkg": "dsh-client-ui-settings-plugin-inventory",
+  "entries": [
+    {
+      "ns": "settings.pluginInventory",
+      "dict": {
+        "tab": "Eklenti listesi",
+        "loading": "Eklentiler okunuyor…",
+        "error": "Eklentiler geçici olarak kullanılamıyor.",
+        "retry": "Yeniden dene",
+        "search": "Eklentilerde ara",
+        "catalog": "Eklenti listesi",
+        "empty": "Kullanılabilir eklenti yok.",
+        "emptySearch": "Eşleşen eklenti yok.",
+        "enabledTag": "Etkin",
+        "disabledTag": "Devre dışı",
+        "configuration": "Yapılandırma",
+        "cordis": "Cordis durumu",
+        "unobserved": "Bağlanmadı",
+        "pending": "Bağımlılıklar bekleniyor",
+        "loadingPhase": "Yükleniyor",
+        "active": "Bağlandı",
+        "failed": "Bağlama başarısız",
+        "unloading": "Kaldırılıyor"
+      }
+    }
+  ]
+}

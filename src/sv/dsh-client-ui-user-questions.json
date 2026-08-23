@@ -1,0 +1,25 @@
+{
+  "pkg": "dsh-client-ui-user-questions",
+  "entries": [
+    {
+      "ns": "question",
+      "dict": {
+        "error.incomplete": "Slutför den här frågan först.",
+        "error.unanswered": "Välj ett alternativ eller skriv ett eget svar.",
+        "nav.prev": "Föregående fråga",
+        "nav.next": "Nästa fråga",
+        "nav.minimize": "Fäll ihop frågekortet",
+        "nav.maximize": "Expandera frågekortet",
+        "nav.cancel": "Avfärda alla frågor",
+        "option.recommended": "Rekommenderas",
+        "custom.placeholder": "Skriv ditt svar",
+        "action.skip": "Hoppa över den här frågan",
+        "action.next": "Nästa",
+        "plan.header": "Plangranskning",
+        "plan.approve": "Godkänn",
+        "plan.decline": "Avslå",
+        "plan.discuss": "Diskutera den"
+      }
+    }
+  ]
+}

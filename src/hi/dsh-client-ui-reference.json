@@ -1,0 +1,16 @@
+{
+  "pkg": "dsh-client-ui-reference",
+  "entries": [
+    {
+      "ns": "reference",
+      "dict": {
+        "section.files": "फ़ाइलें और फ़ोल्डर",
+        "section.sessions": "सत्र की बातचीत",
+        "candidate.file": "फ़ाइल",
+        "candidate.folder": "फ़ोल्डर",
+        "candidate.session": "सत्र",
+        "candidate.noCwd": "(कोई cwd नहीं)"
+      }
+    }
+  ]
+}

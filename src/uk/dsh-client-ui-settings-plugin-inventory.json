@@ -1,0 +1,28 @@
+{
+  "pkg": "dsh-client-ui-settings-plugin-inventory",
+  "entries": [
+    {
+      "ns": "settings.pluginInventory",
+      "dict": {
+        "tab": "Список плагінів",
+        "loading": "Читання плагінів…",
+        "error": "Плагіни тимчасово недоступні.",
+        "retry": "Повторити",
+        "search": "Пошук плагінів",
+        "catalog": "Список плагінів",
+        "empty": "Немає доступних плагінів.",
+        "emptySearch": "Немає збігів серед плагінів.",
+        "enabledTag": "Увімкнено",
+        "disabledTag": "Вимкнено",
+        "configuration": "Конфігурація",
+        "cordis": "Стан Cordis",
+        "unobserved": "Не змонтовано",
+        "pending": "Очікування залежностей",
+        "loadingPhase": "Завантаження",
+        "active": "Змонтовано",
+        "failed": "Не вдалося змонтувати",
+        "unloading": "Вивантаження"
+      }
+    }
+  ]
+}

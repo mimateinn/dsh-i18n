@@ -10,7 +10,8 @@
         "status.applying": "Wird angewendet…",
         "status.empty": "Keine Optionen",
         "overlay.aria": "/{command} Optionen",
-        "listbox.aria": "/{command} Treffer"
+        "listbox.aria": "/{command} Treffer",
+        "notice.imagesUnsupported": "/{command} akzeptiert keine Bildanhänge; entfernen Sie diese zuerst"
       }
     }
   ]

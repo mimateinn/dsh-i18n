@@ -1,0 +1,14 @@
+{
+  "pkg": "dsh-client-ui-sidebar",
+  "entries": [
+    {
+      "ns": "sidebar",
+      "dict": {
+        "session.new": "Phiên mới",
+        "session.new.label": "Phiên mới",
+        "toggle.open": "Mở thanh bên",
+        "toggle.collapse": "Thu gọn thanh bên"
+      }
+    }
+  ]
+}

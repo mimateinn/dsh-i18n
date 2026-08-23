@@ -1,0 +1,14 @@
+{
+  "pkg": "dsh-client-ui-sidebar",
+  "entries": [
+    {
+      "ns": "sidebar",
+      "dict": {
+        "session.new": "جلسة جديدة",
+        "session.new.label": "جلسة جديدة",
+        "toggle.open": "فتح الشريط الجانبي",
+        "toggle.collapse": "طي الشريط الجانبي"
+      }
+    }
+  ]
+}

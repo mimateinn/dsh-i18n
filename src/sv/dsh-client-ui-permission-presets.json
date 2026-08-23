@@ -1,0 +1,29 @@
+{
+  "pkg": "dsh-client-ui-permission-presets",
+  "entries": [
+    {
+      "ns": "permission.access",
+      "dict": {
+        "confirm.title": "Aktivera fullständig åtkomst?",
+        "confirm.description": "Fullständig åtkomst minskar antalet bekräftelsesteg och låter agenten utföra fler åtgärder direkt, inklusive känsliga operationer, filändringar eller externa kommandon. Använd det bara när du litar på den aktuella uppgiften.",
+        "confirm.acknowledge": "Jag förstår riskerna och vill fortsätta",
+        "confirm.cancel": "Avbryt",
+        "confirm.enable": "Aktivera fullständig åtkomst"
+      }
+    },
+    {
+      "ns": "settings.permission",
+      "dict": {
+        "title": "Behörighet",
+        "description": "Välj standardläge för behörigheter i nya sessioner",
+        "loading": "Läser in",
+        "unavailable": "Inte tillgängligt",
+        "confirm.title": "Aktivera fullständig åtkomst?",
+        "confirm.description": "Fullständig åtkomst låter nya sessioner minska antalet bekräftelsesteg och utföra fler åtgärder direkt, inklusive känsliga operationer, filändringar eller externa kommandon. Använd det bara när du litar på kommande uppgifter.",
+        "confirm.acknowledge": "Jag förstår riskerna och vill fortsätta",
+        "confirm.cancel": "Avbryt",
+        "confirm.enable": "Aktivera fullständig åtkomst"
+      }
+    }
+  ]
+}

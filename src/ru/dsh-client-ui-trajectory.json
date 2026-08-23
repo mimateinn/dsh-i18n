@@ -1,0 +1,24 @@
+{
+  "pkg": "dsh-client-ui-trajectory",
+  "entries": [
+    {
+      "ns": "trajectory",
+      "dict": {
+        "view.trajectory": "Траектория",
+        "toolbar.aria": "Панель инструментов траектории",
+        "toolbar.duration": "Длительность",
+        "toolbar.useActualDuration": "Использовать фактическую длительность",
+        "toolbar.useEqualWidth": "Одинаковая ширина операций",
+        "toolbar.actualTime": "Фактическое время",
+        "toolbar.turns": "Ходы",
+        "toolbar.expandTurns": "Развернуть ходы",
+        "toolbar.collapseTurns": "Свернуть ходы",
+        "toolbar.calls": "Вызовы",
+        "toolbar.expandCalls": "Развернуть вызовы",
+        "toolbar.collapseCalls": "Свернуть вызовы",
+        "toolbar.search": "Поиск по траектории",
+        "toolbar.searchPlaceholder": "Поиск"
+      }
+    }
+  ]
+}

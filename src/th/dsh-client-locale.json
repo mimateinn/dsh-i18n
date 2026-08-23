@@ -1,0 +1,40 @@
+{
+  "pkg": "dsh-client-locale",
+  "entries": [
+    {
+      "ns": "common",
+      "dict": {
+        "ok": "ตกลง",
+        "cancel": "ยกเลิก",
+        "close": "ปิด",
+        "copy": "คัดลอก",
+        "copied": "คัดลอกแล้ว",
+        "retry": "ลองใหม่",
+        "loading": "กำลังโหลด...",
+        "load.failed": "โหลดไม่สำเร็จ",
+        "submit": "ส่ง",
+        "submitting": "กำลังส่ง…",
+        "next": "ถัดไป",
+        "previous": "ก่อนหน้า",
+        "skip": "ข้าม",
+        "delete": "ลบ",
+        "edit": "แก้ไข",
+        "save": "บันทึก",
+        "search": "ค้นหา",
+        "more": "มีอีก",
+        "collapse": "ย่อ",
+        "expand": "ขยาย",
+        "back": "ย้อนกลับ",
+        "unknown": "ไม่ทราบ",
+        "none": "ไม่รับ",
+        "truncated": "ถูกตัดปลาย"
+      }
+    },
+    {
+      "ns": "settings.locale",
+      "dict": {
+        "language.title": "ภาษา"
+      }
+    }
+  ]
+}

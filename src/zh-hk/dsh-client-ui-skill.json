@@ -1,0 +1,15 @@
+{
+  "pkg": "dsh-client-ui-skill",
+  "entries": [
+    {
+      "ns": "skill",
+      "dict": {
+        "row.running": "正在載入 skill",
+        "row.failed": "skill 載入失敗",
+        "row.stopped": "skill 載入已中止",
+        "row.instructions": "說明",
+        "menu.userOnly": "僅限使用者"
+      }
+    }
+  ]
+}

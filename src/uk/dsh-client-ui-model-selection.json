@@ -1,0 +1,27 @@
+{
+  "pkg": "dsh-client-ui-model-selection",
+  "entries": [
+    {
+      "ns": "model",
+      "dict": {
+        "command.description": "Виберіть модель для цієї розмови",
+        "option.loadError": "Не вдалося завантажити каталог: {message}",
+        "trigger.fallback": "Вибрати модель",
+        "trigger.selectAria": "Вибрати модель",
+        "trigger.aria": "Вибрати модель, поточна {model}",
+        "trigger.ariaEffort": "Вибрати модель, поточна {model}, рівень міркування {effort}",
+        "menu.aria": "Модель і рівень міркування",
+        "menu.model": "Модель",
+        "menu.effort": "Рівень",
+        "effort.providerDefault": "Типовий",
+        "status.loading": "Оновлення списку моделей…",
+        "error.action": "Не вдалося виконати операцію з моделлю: {message}",
+        "action.reload": "Перезавантажити",
+        "warning.groupLoad": "Не вдалося завантажити {name}: {message}",
+        "empty.models": "Немає доступних моделей.",
+        "blocked.composer": "Ця модель недоступна — виберіть іншу, щоб продовжити",
+        "empty.efforts": "Ця модель не має рівнів міркування."
+      }
+    }
+  ]
+}

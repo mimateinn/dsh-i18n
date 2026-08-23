@@ -1,0 +1,17 @@
+{
+  "pkg": "dsh-session-log-export",
+  "entries": [
+    {
+      "ns": "session-log-download",
+      "dict": {
+        "dialog.preparingTitle": "Экспорт сессии",
+        "dialog.preparingDescription": "Подготовка ZIP с этой сессией, её подсессиями и вложениями.",
+        "dialog.successTitle": "Загрузка сессии начата",
+        "dialog.successDescription": "Браузер загружает ZIP-архив сессии.",
+        "dialog.errorTitle": "Не удалось экспортировать сессию",
+        "dialog.close": "Закрыть",
+        "dialog.commandFailed": "Не удалось запустить экспорт сессии."
+      }
+    }
+  ]
+}

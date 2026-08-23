@@ -1,0 +1,16 @@
+{
+  "pkg": "dsh-client-ui-reference",
+  "entries": [
+    {
+      "ns": "reference",
+      "dict": {
+        "section.files": "Файлы и папки",
+        "section.sessions": "Сеансовые беседы",
+        "candidate.file": "Файл",
+        "candidate.folder": "Папка",
+        "candidate.session": "Сессия",
+        "candidate.noCwd": "(без КДВ)"
+      }
+    }
+  ]
+}

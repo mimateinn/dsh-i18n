@@ -1,0 +1,24 @@
+{
+  "pkg": "dsh-client-ui-trajectory",
+  "entries": [
+    {
+      "ns": "trajectory",
+      "dict": {
+        "view.trajectory": "Lộ trình",
+        "toolbar.aria": "Thanh công cụ lộ trình",
+        "toolbar.duration": "Thời lượng",
+        "toolbar.useActualDuration": "Dùng thời lượng thực tế",
+        "toolbar.useEqualWidth": "Dùng bề rộng bằng nhau cho mỗi thao tác",
+        "toolbar.actualTime": "Thời gian thực tế",
+        "toolbar.turns": "Lượt",
+        "toolbar.expandTurns": "Mở rộng các lượt",
+        "toolbar.collapseTurns": "Thu gọn các lượt",
+        "toolbar.calls": "Lượt gọi",
+        "toolbar.expandCalls": "Mở rộng lượt gọi",
+        "toolbar.collapseCalls": "Thu gọn lượt gọi",
+        "toolbar.search": "Tìm trong lộ trình",
+        "toolbar.searchPlaceholder": "Tìm kiếm"
+      }
+    }
+  ]
+}

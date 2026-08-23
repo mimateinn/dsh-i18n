@@ -1,0 +1,16 @@
+{
+  "pkg": "dsh-client-ui-settings-general",
+  "entries": [
+    {
+      "ns": "settings",
+      "dict": {
+        "trigger": "Ayarlar",
+        "title": "Ayarlar",
+        "close": "Kapat",
+        "openDocument": "Yapılandırma dosyasını aç",
+        "openDocument.error": "Yapılandırma dosyası açılamadı",
+        "general.nav": "Genel"
+      }
+    }
+  ]
+}

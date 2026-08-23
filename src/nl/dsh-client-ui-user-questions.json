@@ -1,0 +1,25 @@
+{
+  "pkg": "dsh-client-ui-user-questions",
+  "entries": [
+    {
+      "ns": "question",
+      "dict": {
+        "error.incomplete": "Please complete this vraag first.",
+        "error.unanswered": "Please select an option or enter a custom antwoord.",
+        "nav.prev": "Previous vraag",
+        "nav.next": "Next vraag",
+        "nav.minimize": "Klap in: the vraag card",
+        "nav.maximize": "Klap uit: the vraag card",
+        "nav.cancel": "Dismiss all vraags",
+        "option.recommended": "Aanbevolen",
+        "custom.placeholder": "Typ je antwoord",
+        "action.skip": "Skip this vraag",
+        "action.next": "Next",
+        "plan.header": "Planbeoordeling",
+        "plan.approve": "Goedkeuren",
+        "plan.decline": "Weigeren",
+        "plan.discuss": "Erover chatten"
+      }
+    }
+  ]
+}

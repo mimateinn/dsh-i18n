@@ -1,0 +1,15 @@
+{
+  "pkg": "dsh-client-ui-input-trigger",
+  "entries": [
+    {
+      "ns": "slash.menu",
+      "dict": {
+        "command": "Lệnh",
+        "skill": "Skill",
+        "subagent": "Subagent",
+        "loading": "Đang tải…",
+        "suggestions.aria": "Gợi ý kích hoạt"
+      }
+    }
+  ]
+}

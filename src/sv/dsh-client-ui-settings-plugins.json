@@ -1,0 +1,47 @@
+{
+  "pkg": "dsh-client-ui-settings-plugins",
+  "entries": [
+    {
+      "ns": "settings.plugins",
+      "dict": {
+        "nav": "Plugins",
+        "title": "Plugins",
+        "intro": "Konfigurera och granska de plugins som är installerade i den här distributionen.",
+        "tabs": "Plugin-vyer",
+        "configurableTab": "Plugin-konfiguration",
+        "empty": "Den här distributionen exponerar inga plugin-inställningar.",
+        "overridden": "Åsidosatt",
+        "reset": "Återställ till standard",
+        "readOnly": "Den här distributionen lagrar inställningar skrivskyddat.",
+        "expand": "Visa inställningar",
+        "collapse": "Dölj inställningar",
+        "save": "Spara",
+        "saving": "Sparar…",
+        "discard": "Kasta",
+        "unsaved": "Osparat",
+        "saveFailed": "Distributionen godtog inte de här värdena; de lämnades kvar för dig att korrigera.",
+        "invalidNumber": "Ange ett tal, eller lämna tomt för att använda standardvärdet.",
+        "bashTitle": "Skal",
+        "bashDescription": "Begränsar varje kommando som agenten kör.",
+        "bashTimeoutMs": "Tidsgräns för kommando (ms)",
+        "bashTimeoutMsHint": "Hur länge ett kommando får köra innan det avslutas.",
+        "bashMaxOutputBytes": "Utdatagräns per ström (byte)",
+        "bashMaxOutputBytesHint": "Utdata utöver detta skrivs till en temporär fil i stället för att gå förlorad.",
+        "agentLoopTitle": "Agentloop",
+        "agentLoopDescription": "Hur agenten fördelar verktygsanrop.",
+        "agentLoopMaxParallel": "Parallella verktygsanrop",
+        "agentLoopMaxParallelHint": "Övre gräns för hur många parallellsäkra anrop som körs samtidigt inom ett steg.",
+        "webSearchTitle": "Webbsökning",
+        "webSearchDescription": "Sökleverantören från DeepSeek.",
+        "webSearchApiKey": "API-nyckel",
+        "webSearchApiKeyHint": "Lagras utanför inställningsfilen. Lämna tomt för att behålla den nuvarande nyckeln.",
+        "webSearchApiKeySet": "En nyckel är konfigurerad.",
+        "webSearchApiKeyUnset": "Ingen nyckel är konfigurerad; sökning är otillgänglig tills en finns.",
+        "webSearchBaseUrl": "Slutpunkt",
+        "webSearchBaseUrlHint": "Lämna tomt för att använda leverantörens standardvärde.",
+        "webSearchMaxUses": "Max antal sökningar per begäran",
+        "webSearchMaxUsesHint": "Hur många gånger en begäran får söka innan den måste svara."
+      }
+    }
+  ]
+}

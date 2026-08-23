@@ -1,0 +1,47 @@
+{
+  "pkg": "dsh-client-ui-settings-plugins",
+  "entries": [
+    {
+      "ns": "settings.plugins",
+      "dict": {
+        "nav": "Pluginy",
+        "title": "Pluginy",
+        "intro": "Konfiguruj i przeglądaj pluginy zainstalowane w tym wdrożeniu.",
+        "tabs": "Widoki pluginów",
+        "configurableTab": "Konfiguracja pluginów",
+        "empty": "To wdrożenie nie udostępnia żadnych ustawień pluginów.",
+        "overridden": "Nadpisane",
+        "reset": "Przywróć domyślne",
+        "readOnly": "To wdrożenie przechowuje ustawienia tylko do odczytu.",
+        "expand": "Pokaż ustawienia",
+        "collapse": "Ukryj ustawienia",
+        "save": "Zapisz",
+        "saving": "Zapisywanie…",
+        "discard": "Odrzuć",
+        "unsaved": "Niezapisane",
+        "saveFailed": "Wdrożenie nie przyjęło tych wartości; pozostawiono je do poprawienia.",
+        "invalidNumber": "Wpisz liczbę lub pozostaw puste, aby użyć wartości domyślnej.",
+        "bashTitle": "Powłoka",
+        "bashDescription": "Ogranicza każde polecenie uruchamiane przez agenta.",
+        "bashTimeoutMs": "Limit czasu polecenia (ms)",
+        "bashTimeoutMsHint": "Jak długo jedno polecenie może działać, zanim zostanie zakończone.",
+        "bashMaxOutputBytes": "Limit wyjścia na strumień (bajty)",
+        "bashMaxOutputBytesHint": "Wyjście powyżej tego limitu trafia do pliku tymczasowego, zamiast zostać utracone.",
+        "agentLoopTitle": "Pętla agenta",
+        "agentLoopDescription": "Sposób, w jaki agent zleca wywołania narzędzi.",
+        "agentLoopMaxParallel": "Równoległe wywołania narzędzi",
+        "agentLoopMaxParallelHint": "Górny limit bezpiecznych równoległych wywołań działających jednocześnie w jednym kroku.",
+        "webSearchTitle": "Wyszukiwanie w sieci",
+        "webSearchDescription": "Dostawca wyszukiwania DeepSeek.",
+        "webSearchApiKey": "Klucz API",
+        "webSearchApiKeyHint": "Przechowywany poza plikiem ustawień. Pozostaw puste, aby zachować bieżący klucz.",
+        "webSearchApiKeySet": "Klucz jest skonfigurowany.",
+        "webSearchApiKeyUnset": "Nie skonfigurowano klucza; wyszukiwanie będzie niedostępne, dopóki go nie dodasz.",
+        "webSearchBaseUrl": "Punkt końcowy",
+        "webSearchBaseUrlHint": "Pozostaw puste, aby użyć domyślnego ustawienia dostawcy.",
+        "webSearchMaxUses": "Maks. wyszukiwań na żądanie",
+        "webSearchMaxUsesHint": "Ile razy jedno żądanie może wyszukiwać, zanim musi udzielić odpowiedzi."
+      }
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "pkg": "dsh-client-ui-reference",
+  "entries": [
+    {
+      "ns": "reference",
+      "dict": {
+        "section.files": "文件与文件夹",
+        "section.sessions": "Session 对话",
+        "candidate.file": "文件",
+        "candidate.folder": "文件夹",
+        "candidate.session": "Session",
+        "candidate.noCwd": "（无工作目录）"
+      }
+    }
+  ]
+}

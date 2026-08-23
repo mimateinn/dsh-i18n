@@ -1,0 +1,15 @@
+{
+  "pkg": "dsh-client-ui-skill",
+  "entries": [
+    {
+      "ns": "skill",
+      "dict": {
+        "row.running": "Wczytywanie umiejętności",
+        "row.failed": "Nie udało się wczytać umiejętności",
+        "row.stopped": "Wczytywanie umiejętności przerwane",
+        "row.instructions": "Instrukcje",
+        "menu.userOnly": "tylko użytkownik"
+      }
+    }
+  ]
+}

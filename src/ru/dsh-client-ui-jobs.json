@@ -1,0 +1,25 @@
+{
+  "pkg": "dsh-client-ui-jobs",
+  "entries": [
+    {
+      "ns": "job",
+      "dict": {
+        "count.live.one": "{count} выполняется фоновое задание",
+        "count.live.other": "{count} выполняются фоновые задания",
+        "count.idle.one": "{count} фоновое задание",
+        "count.idle.other": "{count} фоновые задания",
+        "list.aria": "Фоновые задания",
+        "status.running": "Бег",
+        "status.stopping": "остановка",
+        "status.completed": "Завершенный",
+        "status.killed": "отменен",
+        "status.failed": "Неуспешный",
+        "duration.seconds": "{seconds}s",
+        "duration.minutes": "{minutes}m {seconds}s",
+        "duration.hours": "{hours}h {minutes}m",
+        "duration.title.live": "Бегу за {duration}",
+        "duration.title.done": "Взял {duration}"
+      }
+    }
+  ]
+}

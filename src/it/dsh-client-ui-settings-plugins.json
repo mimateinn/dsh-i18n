@@ -1,0 +1,47 @@
+{
+  "pkg": "dsh-client-ui-settings-plugins",
+  "entries": [
+    {
+      "ns": "settings.plugins",
+      "dict": {
+        "nav": "Plugin",
+        "title": "Plugin",
+        "intro": "Configura e ispeziona i plugin installati in questa distribuzione.",
+        "tabs": "Visualizzazioni plugin",
+        "configurableTab": "Configurazione plugin",
+        "empty": "Questa distribuzione non espone alcuna impostazione del plugin.",
+        "overridden": "Sovrascritto",
+        "reset": "Ripristina predefiniti",
+        "readOnly": "Questa distribuzione memorizza le impostazioni di sola lettura.",
+        "expand": "Mostra impostazioni",
+        "collapse": "Nascondi impostazioni",
+        "save": "Salva",
+        "saving": "Salvataggio in corso...",
+        "discard": "Elimina",
+        "unsaved": "Non salvato",
+        "saveFailed": "La distribuzione non ha accettato questi valori; sono stati lasciati per la correzione.",
+        "invalidNumber": "Inserisci un numero o lascia vuoto per utilizzare il valore predefinito.",
+        "bashTitle": "Shell",
+        "bashDescription": "Limita ogni comando eseguito dall'agente.",
+        "bashTimeoutMs": "Timeout comando (ms)",
+        "bashTimeoutMsHint": "Per quanto tempo un comando può essere eseguito prima di essere terminato.",
+        "bashMaxOutputBytes": "Limite di uscita per flusso (byte)",
+        "bashMaxOutputBytesHint": "L'output oltre questo si riversa in un file temporaneo piuttosto che andare perso.",
+        "agentLoopTitle": "Loop agente",
+        "agentLoopDescription": "Come l'agente invia le chiamate allo strumento.",
+        "agentLoopMaxParallel": "Richiami paralleli dello strumento",
+        "agentLoopMaxParallelHint": "Limite superiore sulle chiamate sicure in parallelo in esecuzione contemporaneamente entro un passaggio.",
+        "webSearchTitle": "Ricerca sul web",
+        "webSearchDescription": "Il provider di ricerca DeepSeek.",
+        "webSearchApiKey": "Chiave API",
+        "webSearchApiKeyHint": "Memorizzato al di fuori del file delle impostazioni. Lasciare vuoto per mantenere la chiave corrente.",
+        "webSearchApiKeySet": "È configurato un tasto.",
+        "webSearchApiKeyUnset": "Nessuna chiave è configurata; la ricerca non è disponibile fino a quando non lo è.",
+        "webSearchBaseUrl": "Endpoint",
+        "webSearchBaseUrlHint": "Lasciare vuoto per utilizzare il provider predefinito.",
+        "webSearchMaxUses": "Numero massimo di ricerche per richiesta",
+        "webSearchMaxUsesHint": "Quante volte una richiesta può cercare prima di dover rispondere."
+      }
+    }
+  ]
+}

@@ -1,0 +1,40 @@
+{
+  "pkg": "dsh-client-locale",
+  "entries": [
+    {
+      "ns": "common",
+      "dict": {
+        "ok": "OK",
+        "cancel": "Avbryt",
+        "close": "Stäng",
+        "copy": "Kopiera",
+        "copied": "Kopierat",
+        "retry": "Försök igen",
+        "loading": "Läser in…",
+        "load.failed": "Kunde inte läsas in",
+        "submit": "Skicka",
+        "submitting": "Skickar…",
+        "next": "Nästa",
+        "previous": "Föregående",
+        "skip": "Hoppa över",
+        "delete": "Ta bort",
+        "edit": "Redigera",
+        "save": "Spara",
+        "search": "Sök",
+        "more": "Mer",
+        "collapse": "Fäll ihop",
+        "expand": "Expandera",
+        "back": "Tillbaka",
+        "unknown": "Okänd",
+        "none": "Ingen",
+        "truncated": "Avkortad"
+      }
+    },
+    {
+      "ns": "settings.locale",
+      "dict": {
+        "language.title": "Språk"
+      }
+    }
+  ]
+}

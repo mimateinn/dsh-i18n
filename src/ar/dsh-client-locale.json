@@ -1,0 +1,40 @@
+{
+  "pkg": "dsh-client-locale",
+  "entries": [
+    {
+      "ns": "common",
+      "dict": {
+        "ok": "موافق",
+        "cancel": "إلغاء",
+        "close": "إغلاق",
+        "copy": "نسخ",
+        "copied": "تم النسخ",
+        "retry": "إعادة المحاولة",
+        "loading": "جارٍ التحميل…",
+        "load.failed": "فشل التحميل",
+        "submit": "إرسال",
+        "submitting": "جارٍ الإرسال…",
+        "next": "التالي",
+        "previous": "السابق",
+        "skip": "تخطي",
+        "delete": "حذف",
+        "edit": "تعديل",
+        "save": "حفظ",
+        "search": "بحث",
+        "more": "المزيد",
+        "collapse": "طي",
+        "expand": "توسيع",
+        "back": "رجوع",
+        "unknown": "غير معروف",
+        "none": "لا شيء",
+        "truncated": "مقتطع"
+      }
+    },
+    {
+      "ns": "settings.locale",
+      "dict": {
+        "language.title": "اللغة"
+      }
+    }
+  ]
+}

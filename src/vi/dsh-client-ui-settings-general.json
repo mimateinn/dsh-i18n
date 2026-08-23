@@ -1,0 +1,16 @@
+{
+  "pkg": "dsh-client-ui-settings-general",
+  "entries": [
+    {
+      "ns": "settings",
+      "dict": {
+        "trigger": "Cài đặt",
+        "title": "Cài đặt",
+        "close": "Đóng",
+        "openDocument": "Mở tệp cấu hình",
+        "openDocument.error": "Không thể mở tệp cấu hình",
+        "general.nav": "Chung"
+      }
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "pkg": "dsh-client-ui-jobs",
+  "entries": [
+    {
+      "ns": "job",
+      "dict": {
+        "count.live.one": "{count} zadanie w tle w toku",
+        "count.live.other": "Zadania w tle w toku: {count}",
+        "count.idle.one": "{count} zadanie w tle",
+        "count.idle.other": "Zadania w tle: {count}",
+        "list.aria": "Zadania w tle",
+        "status.running": "w toku",
+        "status.stopping": "zatrzymywanie",
+        "status.completed": "ukończone",
+        "status.killed": "anulowane",
+        "status.failed": "nieudane",
+        "duration.seconds": "{seconds} s",
+        "duration.minutes": "{minutes} min {seconds} s",
+        "duration.hours": "{hours} godz. {minutes} min",
+        "duration.title.live": "Trwa od {duration}",
+        "duration.title.done": "Trwało {duration}"
+      }
+    }
+  ]
+}

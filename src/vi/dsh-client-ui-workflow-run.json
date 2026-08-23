@@ -1,0 +1,28 @@
+{
+  "pkg": "dsh-client-ui-workflow-run",
+  "entries": [
+    {
+      "ns": "workflowRun",
+      "dict": {
+        "run.title": "{name}",
+        "run.members.one": "{count} thành viên",
+        "run.members.other": "{count} thành viên",
+        "run.empty": "Chưa khởi động thành viên nào",
+        "phase.unassigned": "Không thuộc giai đoạn nào",
+        "phase.empty": "Tên giai đoạn để trống",
+        "statusCount.running": "Đang chạy {count}",
+        "statusCount.completed": "Đã hoàn tất {count}",
+        "statusCount.failed": "Thất bại {count}",
+        "statusCount.cancelled": "Đã hủy {count}",
+        "statusCount.interrupted": "Bị gián đoạn {count}",
+        "member.empty": "Tên thành viên để trống",
+        "member.open": "Mở {name}",
+        "status.running": "Đang chạy",
+        "status.completed": "Đã hoàn tất",
+        "status.failed": "Thất bại",
+        "status.cancelled": "Đã hủy",
+        "status.interrupted": "Bị gián đoạn"
+      }
+    }
+  ]
+}

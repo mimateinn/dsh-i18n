@@ -1,0 +1,24 @@
+{
+  "pkg": "dsh-client-ui-trajectory",
+  "entries": [
+    {
+      "ns": "trajectory",
+      "dict": {
+        "view.trajectory": "مسار التنفيذ",
+        "toolbar.aria": "‏Trajectory toolbar",
+        "toolbar.duration": "المدة",
+        "toolbar.useActualDuration": "‏Use actual duration",
+        "toolbar.useEqualWidth": "‏Use equal-width operations",
+        "toolbar.actualTime": "الوقت الفعلي",
+        "toolbar.turns": "الجولات",
+        "toolbar.expandTurns": "‏Expand turns",
+        "toolbar.collapseTurns": "‏Collapse turns",
+        "toolbar.calls": "الاستدعاءات",
+        "toolbar.expandCalls": "‏Expand calls",
+        "toolbar.collapseCalls": "‏Collapse calls",
+        "toolbar.search": "بحث trajectory",
+        "toolbar.searchPlaceholder": "بحث"
+      }
+    }
+  ]
+}

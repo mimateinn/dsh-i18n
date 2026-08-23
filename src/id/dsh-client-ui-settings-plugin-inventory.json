@@ -1,0 +1,28 @@
+{
+  "pkg": "dsh-client-ui-settings-plugin-inventory",
+  "entries": [
+    {
+      "ns": "settings.pluginInventory",
+      "dict": {
+        "tab": "Daftar plugin",
+        "loading": "Membaca plugin…",
+        "error": "Plugin sementara tidak tersedia.",
+        "retry": "Coba lagi",
+        "search": "Cari plugin",
+        "catalog": "Daftar plugin",
+        "empty": "Tidak ada plugin yang tersedia.",
+        "emptySearch": "Tidak ada plugin yang cocok.",
+        "enabledTag": "Diaktifkan",
+        "disabledTag": "Nonaktif",
+        "configuration": "Konfigurasi",
+        "cordis": "Status Cordis",
+        "unobserved": "Tidak terpasang",
+        "pending": "Menunggu dependensi",
+        "loadingPhase": "Memuat",
+        "active": "Dipasang",
+        "failed": "Mount gagal",
+        "unloading": "Membongkar"
+      }
+    }
+  ]
+}

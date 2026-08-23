@@ -1,0 +1,15 @@
+{
+  "pkg": "dsh-client-ui-input-trigger",
+  "entries": [
+    {
+      "ns": "slash.menu",
+      "dict": {
+        "command": "Komutlar",
+        "skill": "Beceriler",
+        "subagent": "Alt ajanlar",
+        "loading": "Yükleniyor…",
+        "suggestions.aria": "Tetikleyici önerileri"
+      }
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "pkg": "dsh-client-ui-settings-general",
+  "entries": [
+    {
+      "ns": "settings",
+      "dict": {
+        "trigger": "Instellingen",
+        "title": "Instellingen",
+        "close": "Close",
+        "openDocument": "Configuratiebestand openen",
+        "openDocument.error": "Kon niet open configuratie bestand",
+        "general.nav": "Algemeen"
+      }
+    }
+  ]
+}

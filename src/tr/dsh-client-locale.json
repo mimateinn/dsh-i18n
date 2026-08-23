@@ -1,0 +1,40 @@
+{
+  "pkg": "dsh-client-locale",
+  "entries": [
+    {
+      "ns": "common",
+      "dict": {
+        "ok": "Tamam",
+        "cancel": "İptal",
+        "close": "Kapat",
+        "copy": "Kopyala",
+        "copied": "Kopyalandı",
+        "retry": "Yeniden dene",
+        "loading": "Yükleniyor…",
+        "load.failed": "Yüklenemedi",
+        "submit": "Gönder",
+        "submitting": "Gönderiliyor…",
+        "next": "Sonraki",
+        "previous": "Önceki",
+        "skip": "Atla",
+        "delete": "Sil",
+        "edit": "Düzenle",
+        "save": "Kaydet",
+        "search": "Ara",
+        "more": "Daha fazla",
+        "collapse": "Daralt",
+        "expand": "Genişlet",
+        "back": "Geri",
+        "unknown": "Bilinmiyor",
+        "none": "Yok",
+        "truncated": "Kısaltıldı"
+      }
+    },
+    {
+      "ns": "settings.locale",
+      "dict": {
+        "language.title": "Dil"
+      }
+    }
+  ]
+}

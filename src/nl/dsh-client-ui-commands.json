@@ -1,0 +1,18 @@
+{
+  "pkg": "dsh-client-ui-commands",
+  "entries": [
+    {
+      "ns": "command",
+      "dict": {
+        "search.placeholder": "Zoeken…",
+        "search.aria": "Opties filteren",
+        "status.loading": "Opties laden…",
+        "status.applying": "Toepassen…",
+        "status.empty": "Geen opties",
+        "overlay.aria": "Opties voor /{command}",
+        "listbox.aria": "Overeenkomsten voor /{command}",
+        "notice.imagesUnsupported": "/{command} accepteert geen afbeeldingsbijlagen; verwijder ze eerst"
+      }
+    }
+  ]
+}

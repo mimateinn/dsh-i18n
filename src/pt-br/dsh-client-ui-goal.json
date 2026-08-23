@@ -1,0 +1,21 @@
+{
+  "pkg": "dsh-client-ui-goal",
+  "entries": [
+    {
+      "ns": "goal",
+      "dict": {
+        "phase.active": "Meta em andamento",
+        "phase.paused": "Meta pausada",
+        "phase.blocked": "Meta bloqueada",
+        "objective.aria": "Objetivo da meta",
+        "commandInput.aria": "Entrada de comando",
+        "action.save": "Salvar meta",
+        "action.cancel": "Cancelar edição",
+        "action.pause": "Pausar meta",
+        "action.resume": "Retomar meta",
+        "action.edit": "Editar meta",
+        "action.clear": "Limpar meta"
+      }
+    }
+  ]
+}

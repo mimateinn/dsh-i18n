@@ -1,0 +1,21 @@
+{
+  "pkg": "dsh-client-ui-goal",
+  "entries": [
+    {
+      "ns": "goal",
+      "dict": {
+        "phase.active": "Devam Eden Hedef",
+        "phase.paused": "Duraklatılmış Hedef",
+        "phase.blocked": "Engellenmiş Hedef",
+        "objective.aria": "Hedef amacı",
+        "commandInput.aria": "Komut girişi",
+        "action.save": "Hedefi kaydet",
+        "action.cancel": "Düzenlemeyi iptal et",
+        "action.pause": "Hedefi duraklat",
+        "action.resume": "Hedefi sürdür",
+        "action.edit": "Hedefi düzenle",
+        "action.clear": "Hedefi temizle"
+      }
+    }
+  ]
+}

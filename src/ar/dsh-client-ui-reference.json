@@ -1,0 +1,16 @@
+{
+  "pkg": "dsh-client-ui-reference",
+  "entries": [
+    {
+      "ns": "reference",
+      "dict": {
+        "section.files": "الملفات والمجلدات",
+        "section.sessions": "محادثات الجلسة",
+        "candidate.file": "ملف",
+        "candidate.folder": "مجلد",
+        "candidate.session": "جلسة",
+        "candidate.noCwd": "(لا يوجد دليل عمل)"
+      }
+    }
+  ]
+}

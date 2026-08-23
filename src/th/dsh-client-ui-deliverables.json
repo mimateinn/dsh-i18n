@@ -1,0 +1,15 @@
+{
+  "pkg": "dsh-client-ui-deliverables",
+  "entries": [
+    {
+      "ns": "deliverables",
+      "dict": {
+        "produced.label": "ผลิตแล้ว",
+        "produced.moreOne": "+ 1 ไฟล์",
+        "produced.more": "+ {count} ไฟล์",
+        "produced.open": "เปิด {name}",
+        "produced.showInFolder": "แสดงในโฟลเดอร์"
+      }
+    }
+  ]
+}

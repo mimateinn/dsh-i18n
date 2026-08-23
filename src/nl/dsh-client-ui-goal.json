@@ -1,0 +1,21 @@
+{
+  "pkg": "dsh-client-ui-goal",
+  "entries": [
+    {
+      "ns": "goal",
+      "dict": {
+        "phase.active": "Actief doel",
+        "phase.paused": "Gepauzeerd doel",
+        "phase.blocked": "Geblokkeerd doel",
+        "objective.aria": "Doelstelling",
+        "commandInput.aria": "Opdrachtinvoer",
+        "action.save": "Doel opslaan",
+        "action.cancel": "Bewerken annuleren",
+        "action.pause": "Doel pauzeren",
+        "action.resume": "Doel hervatten",
+        "action.edit": "Doel bewerken",
+        "action.clear": "Doel wissen"
+      }
+    }
+  ]
+}

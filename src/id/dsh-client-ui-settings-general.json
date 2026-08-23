@@ -1,0 +1,16 @@
+{
+  "pkg": "dsh-client-ui-settings-general",
+  "entries": [
+    {
+      "ns": "settings",
+      "dict": {
+        "trigger": "Pengaturan",
+        "title": "Pengaturan",
+        "close": "Tutup",
+        "openDocument": "Buka file konfigurasi",
+        "openDocument.error": "Tidak dapat membuka file konfigurasi",
+        "general.nav": "Umum"
+      }
+    }
+  ]
+}

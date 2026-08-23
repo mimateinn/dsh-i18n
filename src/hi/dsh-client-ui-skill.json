@@ -1,0 +1,15 @@
+{
+  "pkg": "dsh-client-ui-skill",
+  "entries": [
+    {
+      "ns": "skill",
+      "dict": {
+        "row.running": "स्किल लोड हो रही है",
+        "row.failed": "स्किल लोड विफल",
+        "row.stopped": "स्किल लोड रोकी गई",
+        "row.instructions": "निर्देश",
+        "menu.userOnly": "केवल उपयोगकर्ता"
+      }
+    }
+  ]
+}

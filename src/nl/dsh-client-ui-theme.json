@@ -1,0 +1,14 @@
+{
+  "pkg": "dsh-client-ui-theme",
+  "entries": [
+    {
+      "ns": "settings.theme",
+      "dict": {
+        "appearance.title": "Weergave",
+        "appearance.light": "Licht",
+        "appearance.dark": "Donker",
+        "appearance.system": "Systeem"
+      }
+    }
+  ]
+}

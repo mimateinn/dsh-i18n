@@ -1,0 +1,15 @@
+{
+  "pkg": "dsh-client-ui-skill",
+  "entries": [
+    {
+      "ns": "skill",
+      "dict": {
+        "row.running": "Завантаження навички",
+        "row.failed": "Не вдалося завантажити навичку",
+        "row.stopped": "Завантаження навички зупинено",
+        "row.instructions": "Інструкції",
+        "menu.userOnly": "лише для користувача"
+      }
+    }
+  ]
+}

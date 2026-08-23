@@ -1,0 +1,43 @@
+{
+  "pkg": "dsh-client-ui-subagent",
+  "entries": [
+    {
+      "ns": "subagent",
+      "dict": {
+        "diagnostic.corrupt": "ระเบียนเซสชันเสียหาย",
+        "diagnostic.unsupported": "ไม่รองรับเวอร์ชันระเบียน subagent นี้",
+        "diagnostic.unavailable": "ระเบียนเซสชันใช้ไม่ได้ชั่วคราว",
+        "duration.seconds": "{seconds} วินาที",
+        "duration.minutes": "{minutes} นาที {seconds} วินาที",
+        "duration.hours": "{hours} ชม. {minutes} นาที {seconds} วินาที",
+        "duration.days": "{days} วัน",
+        "duration.daysHours": "{days} วัน {hours} ชม.",
+        "duration.months": "ประมาณ {months} เดือน",
+        "duration.monthsDays": "ประมาณ {months} เดือน {days} วัน",
+        "duration.years": "ประมาณ {years} ปี",
+        "duration.yearsMonths": "ประมาณ {years} ปี {months} เดือน",
+        "duration.exactDays": "{days} วัน {hours} ชม. {minutes} นาที {seconds} วินาที",
+        "duration.exactTitle": "ระยะเวลาที่ทำงานทั้งหมด: {duration}",
+        "loading.label": "กำลังโหลด subagent…",
+        "loading.aria": "กำลังโหลด subagent",
+        "load.error": "โหลด subagent ไม่ได้",
+        "retry": "ลองอีกครั้ง",
+        "mode.oneShot": "ครั้งเดียว",
+        "mode.continuable": "ทำต่อได้",
+        "activity.running": "กำลังทำงาน",
+        "activity.inactive": "ไม่ได้ทำงาน",
+        "branch.collapse": "ยุบรายการย่อยของ {label}",
+        "branch.expand": "ขยายรายการย่อยของ {label}",
+        "count.total.one": "subagent {count} ตัว",
+        "count.total.other": "subagent {count} ตัว",
+        "count.running.one": "subagent {count} ตัวกำลังทำงาน",
+        "count.running.other": "subagent {count} ตัวกำลังทำงาน",
+        "tree.aria": "เซสชัน subagent",
+        "readonly.oneShot.title": "ระเบียน subagent แบบครั้งเดียว",
+        "readonly.title": "ขณะนี้ subagent นี้เป็นแบบอ่านอย่างเดียว",
+        "readonly.oneShot.body": "งานแบบครั้งเดียวไม่รับข้อความติดตาม โปรดตรวจสอบระเบียนการทำงานฉบับเต็มที่นี่",
+        "readonly.body": "เซสชันหลักออฟไลน์อยู่ โปรดเปิดอีกครั้งเพื่อส่งข้อความต่อ"
+      }
+    }
+  ]
+}

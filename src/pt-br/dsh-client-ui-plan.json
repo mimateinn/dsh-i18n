@@ -1,0 +1,14 @@
+{
+  "pkg": "dsh-client-ui-plan",
+  "entries": [
+    {
+      "ns": "plan",
+      "dict": {
+        "chip.on.aria": "Modo de planejamento ativado, pressione para desativar",
+        "chip.on.title": "Modo de planejamento ativado — clique para desativar (/plan off)",
+        "chip.off.aria": "Modo de planejamento desativado, pressione para ativar",
+        "chip.off.title": "Modo de planejamento desativado — clique para ativar (/plan)"
+      }
+    }
+  ]
+}

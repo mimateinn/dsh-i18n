@@ -1,0 +1,43 @@
+{
+  "pkg": "dsh-client-ui-subagent",
+  "entries": [
+    {
+      "ns": "subagent",
+      "dict": {
+        "diagnostic.corrupt": "поврежденная запись сеанса",
+        "diagnostic.unsupported": "неподдерживаемая версия записи субагента",
+        "diagnostic.unavailable": "запись сеанса временно недоступна",
+        "duration.seconds": "{seconds}s",
+        "duration.minutes": "{minutes}m {seconds}s",
+        "duration.hours": "{hours}h {minutes}m {seconds}s",
+        "duration.days": "{days}d",
+        "duration.daysHours": "{days}d {hours}h",
+        "duration.months": "~{months}mo",
+        "duration.monthsDays": "~{months}mo {days}d",
+        "duration.years": "~{years}y",
+        "duration.yearsMonths": "~{years}y {months}mo",
+        "duration.exactDays": "{days}d {hours}h {minutes}m {seconds}s",
+        "duration.exactTitle": "Общая активная продолжительность: {duration}",
+        "loading.label": "Загрузка субагентов…",
+        "loading.aria": "Загрузка субагентов",
+        "load.error": "Невозможно загрузить субагенты",
+        "retry": "Повторить попытку",
+        "mode.oneShot": "одноразовый",
+        "mode.continuable": "продолжаемый",
+        "activity.running": "Бег",
+        "activity.inactive": "не работает",
+        "branch.collapse": "Свернуть потомков {label}",
+        "branch.expand": "Развернуть потомков {label}",
+        "count.total.one": "Субагент {count}",
+        "count.total.other": "Субагенты {count}",
+        "count.running.one": "Субагент {count} работает",
+        "count.running.other": "Субагенты {count} работают",
+        "tree.aria": "Сеансы субагента",
+        "readonly.oneShot.title": "Разовая запись субагента",
+        "readonly.title": "Этот субагент пока доступен только для чтения.",
+        "readonly.oneShot.body": "Одноразовые задачи не допускают последующих действий; просмотреть полную запись выполнения можно здесь.",
+        "readonly.body": "Родительский сеанс находится в автономном режиме; откройте его повторно, чтобы продолжить отправку сообщений."
+      }
+    }
+  ]
+}

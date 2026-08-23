@@ -1,0 +1,15 @@
+{
+  "pkg": "dsh-client-ui-skill",
+  "entries": [
+    {
+      "ns": "skill",
+      "dict": {
+        "row.running": "Beceri yükleniyor",
+        "row.failed": "Beceri yüklenemedi",
+        "row.stopped": "Beceri yüklemesi durduruldu",
+        "row.instructions": "Talimatlar",
+        "menu.userOnly": "yalnızca kullanıcı"
+      }
+    }
+  ]
+}

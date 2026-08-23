@@ -1,0 +1,43 @@
+{
+  "pkg": "dsh-client-ui-subagent",
+  "entries": [
+    {
+      "ns": "subagent",
+      "dict": {
+        "diagnostic.corrupt": "uszkodzony rekord sesji",
+        "diagnostic.unsupported": "nieobsługiwana wersja rekordu subagenta",
+        "diagnostic.unavailable": "rekord sesji chwilowo niedostępny",
+        "duration.seconds": "{seconds} s",
+        "duration.minutes": "{minutes} min {seconds} s",
+        "duration.hours": "{hours} godz. {minutes} min {seconds} s",
+        "duration.days": "{days} dni",
+        "duration.daysHours": "{days} dni {hours} godz.",
+        "duration.months": "~{months} mies.",
+        "duration.monthsDays": "~{months} mies. {days} dni",
+        "duration.years": "~{years} lat",
+        "duration.yearsMonths": "~{years} lat {months} mies.",
+        "duration.exactDays": "{days} dni {hours} godz. {minutes} min {seconds} s",
+        "duration.exactTitle": "Łączny czas aktywności: {duration}",
+        "loading.label": "Wczytywanie subagentów…",
+        "loading.aria": "Wczytywanie subagentów",
+        "load.error": "Nie można wczytać subagentów",
+        "retry": "Ponów",
+        "mode.oneShot": "jednorazowy",
+        "mode.continuable": "kontynuowalny",
+        "activity.running": "w toku",
+        "activity.inactive": "nieaktywny",
+        "branch.collapse": "Zwiń elementy podrzędne {label}",
+        "branch.expand": "Rozwiń elementy podrzędne {label}",
+        "count.total.one": "{count} subagent",
+        "count.total.other": "Subagenci: {count}",
+        "count.running.one": "{count} subagent w toku",
+        "count.running.other": "Subagenci w toku: {count}",
+        "tree.aria": "Sesje subagentów",
+        "readonly.oneShot.title": "Rekord subagenta jednorazowego",
+        "readonly.title": "Ten subagent jest na razie tylko do odczytu",
+        "readonly.oneShot.body": "Zadania jednorazowe nie przyjmują dalszych wiadomości; tutaj możesz przejrzeć pełny zapis wykonania.",
+        "readonly.body": "Sesja nadrzędna jest offline; otwórz ją ponownie, aby dalej wysyłać wiadomości."
+      }
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "pkg": "dsh-client-ui-reference",
+  "entries": [
+    {
+      "ns": "reference",
+      "dict": {
+        "section.files": "Pliki i foldery",
+        "section.sessions": "Rozmowy w sesjach",
+        "candidate.file": "Plik",
+        "candidate.folder": "Folder",
+        "candidate.session": "Sesja",
+        "candidate.noCwd": "(brak katalogu roboczego)"
+      }
+    }
+  ]
+}

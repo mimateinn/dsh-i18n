@@ -1,0 +1,23 @@
+{
+  "pkg": "dsh-client-ui-directory-picker-browse",
+  "entries": [
+    {
+      "ns": "directory-browser",
+      "dict": {
+        "browser.title": "選擇工作區目錄",
+        "browser.home": "主目錄",
+        "browser.newFolder": "新增文件夾",
+        "browser.folderName": "文件夾名稱",
+        "browser.createIn": "在\"{name}\"中新增文件夾",
+        "browser.untitledFolder": "未命名文件夾",
+        "browser.create": "建立",
+        "browser.cancel": "取消",
+        "browser.open": "開啟",
+        "browser.editPath": "編輯路徑",
+        "browser.loading": "載入中…",
+        "browser.truncated": "文件夾過多，僅顯示開頭部分。",
+        "browser.showHidden": "顯示隱藏檔案"
+      }
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "pkg": "dsh-client-ui-message-feedback",
+  "entries": [
+    {
+      "ns": "feedback",
+      "dict": {
+        "action.like": "Respons yang baik",
+        "action.likeActive": "Hapus penilaian",
+        "action.dislike": "Respons buruk",
+        "action.dislikeActive": "Hapus penilaian",
+        "note.open": "Tambahkan catatan",
+        "note.placeholder": "Apa yang baik, atau apa yang salah? (opsional)",
+        "note.save": "Simpan",
+        "note.cancel": "Batalkan",
+        "note.aria": "Catatan umpan balik",
+        "error.conflict": "Umpan balik ini diubah di tempat lain; status terbaru ditampilkan",
+        "error.load": "Tidak dapat memuat umpan balik",
+        "error.generic": "Tidak dapat menyimpan umpan balik"
+      }
+    }
+  ]
+}

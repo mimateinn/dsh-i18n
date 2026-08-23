@@ -10,7 +10,8 @@
         "status.applying": "Applying…",
         "status.empty": "No options",
         "overlay.aria": "/{command} options",
-        "listbox.aria": "/{command} matches"
+        "listbox.aria": "/{command} matches",
+        "notice.imagesUnsupported": "/{command} does not accept image attachments; remove them first"
       }
     }
   ]

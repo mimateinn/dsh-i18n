@@ -1,0 +1,24 @@
+{
+  "pkg": "dsh-client-ui-trajectory",
+  "entries": [
+    {
+      "ns": "trajectory",
+      "dict": {
+        "view.trajectory": "Förlopp",
+        "toolbar.aria": "Verktygsfält för förlopp",
+        "toolbar.duration": "Varaktighet",
+        "toolbar.useActualDuration": "Använd faktisk varaktighet",
+        "toolbar.useEqualWidth": "Använd lika breda operationer",
+        "toolbar.actualTime": "Faktisk tid",
+        "toolbar.turns": "Turer",
+        "toolbar.expandTurns": "Expandera turer",
+        "toolbar.collapseTurns": "Fäll ihop turer",
+        "toolbar.calls": "Anrop",
+        "toolbar.expandCalls": "Expandera anrop",
+        "toolbar.collapseCalls": "Fäll ihop anrop",
+        "toolbar.search": "Sök i förloppet",
+        "toolbar.searchPlaceholder": "Sök"
+      }
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "pkg": "dsh-client-ui-commands",
+  "entries": [
+    {
+      "ns": "command",
+      "dict": {
+        "search.placeholder": "ค้นหา…",
+        "search.aria": "ตัวเลือกตัวกรอง",
+        "status.loading": "กำลังโหลดตัวเลือก…",
+        "status.applying": "กำลังใช้ …",
+        "status.empty": "ไม่มีตัวเลือก",
+        "overlay.aria": "/ ตัวเลือก {command}",
+        "listbox.aria": "/ ตัวเลือก {command} ที่ตรงกัน",
+        "notice.imagesUnsupported": "/{command} ไม่รองรับไฟล์แนบรูปภาพ โปรดนำรูปภาพออกก่อน"
+      }
+    }
+  ]
+}

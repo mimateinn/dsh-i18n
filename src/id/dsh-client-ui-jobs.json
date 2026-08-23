@@ -1,0 +1,25 @@
+{
+  "pkg": "dsh-client-ui-jobs",
+  "entries": [
+    {
+      "ns": "job",
+      "dict": {
+        "count.live.one": "Pekerjaan latar belakang {count} sedang berjalan",
+        "count.live.other": "Pekerjaan latar belakang {count} sedang berjalan",
+        "count.idle.one": "Pekerjaan latar belakang {count}",
+        "count.idle.other": "Pekerjaan latar belakang {count}",
+        "list.aria": "Pekerjaan latar belakang",
+        "status.running": "berlari",
+        "status.stopping": "berhenti",
+        "status.completed": "selesai",
+        "status.killed": "dibatalkan",
+        "status.failed": "gagal",
+        "duration.seconds": "{seconds}s",
+        "duration.minutes": "{minutes}m {seconds}s",
+        "duration.hours": "{hours}h {minutes}m",
+        "duration.title.live": "Berlari untuk {duration}",
+        "duration.title.done": "Mengambil {duration}"
+      }
+    }
+  ]
+}

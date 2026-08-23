@@ -1,0 +1,14 @@
+{
+  "pkg": "dsh-client-ui-sidebar",
+  "entries": [
+    {
+      "ns": "sidebar",
+      "dict": {
+        "session.new": "Ny session",
+        "session.new.label": "Ny session",
+        "toggle.open": "Öppna sidofältet",
+        "toggle.collapse": "Fäll ihop sidofältet"
+      }
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "pkg": "dsh-client-ui-plan",
+  "entries": [
+    {
+      "ns": "plan",
+      "dict": {
+        "chip.on.aria": "Modalità piano attivata, premere per spegnere",
+        "chip.on.title": "Modalità piano attivata — fare clic per disattivare (/Plan OFF)",
+        "chip.off.aria": "Modalità piano disattivata, premere per attivare",
+        "chip.off.title": "Modalità piano disattivata: fai clic per attivare (/plan)"
+      }
+    }
+  ]
+}

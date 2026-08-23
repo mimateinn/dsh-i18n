@@ -1,0 +1,14 @@
+{
+  "pkg": "dsh-client-ui-sidebar",
+  "entries": [
+    {
+      "ns": "sidebar",
+      "dict": {
+        "session.new": "Nieuwe sessie",
+        "session.new.label": "Nieuwe sessie",
+        "toggle.open": "Zijbalk openen",
+        "toggle.collapse": "Zijbalk inklappen"
+      }
+    }
+  ]
+}

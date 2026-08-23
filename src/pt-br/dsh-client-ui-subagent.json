@@ -1,0 +1,43 @@
+{
+  "pkg": "dsh-client-ui-subagent",
+  "entries": [
+    {
+      "ns": "subagent",
+      "dict": {
+        "diagnostic.corrupt": "registro de sessão corrompido",
+        "diagnostic.unsupported": "versão de registro de subagente não suportada",
+        "diagnostic.unavailable": "registro de sessão temporariamente indisponível",
+        "duration.seconds": "{seconds}s",
+        "duration.minutes": "{minutes}min {seconds}s",
+        "duration.hours": "{hours}h {minutes}min {seconds}s",
+        "duration.days": "{days}d",
+        "duration.daysHours": "{days}d {hours}h",
+        "duration.months": "~{months}m",
+        "duration.monthsDays": "~{months}m {days}d",
+        "duration.years": "~{years}a",
+        "duration.yearsMonths": "~{years}a {months}m",
+        "duration.exactDays": "{days}d {hours}h {minutes}min {seconds}s",
+        "duration.exactTitle": "Duração ativa total: {duration}",
+        "loading.label": "Carregando subagentes…",
+        "loading.aria": "Carregando subagentes",
+        "load.error": "Não foi possível carregar os subagentes",
+        "retry": "Tentar novamente",
+        "mode.oneShot": "execução única",
+        "mode.continuable": "continuável",
+        "activity.running": "em execução",
+        "activity.inactive": "parado",
+        "branch.collapse": "Recolher os descendentes de {label}",
+        "branch.expand": "Expandir os descendentes de {label}",
+        "count.total.one": "{count} subagente",
+        "count.total.other": "{count} subagentes",
+        "count.running.one": "{count} subagente em execução",
+        "count.running.other": "{count} subagentes em execução",
+        "tree.aria": "Sessões de subagentes",
+        "readonly.oneShot.title": "Registro de subagente de execução única",
+        "readonly.title": "Este subagente está somente leitura por enquanto",
+        "readonly.oneShot.body": "Tarefas de execução única não aceitam continuações; consulte aqui o registro completo da execução.",
+        "readonly.body": "A sessão pai está offline; reabra-a para continuar enviando mensagens."
+      }
+    }
+  ]
+}

@@ -1,0 +1,40 @@
+{
+  "pkg": "dsh-client-locale",
+  "entries": [
+    {
+      "ns": "common",
+      "dict": {
+        "ok": "OK",
+        "cancel": "Annuleren",
+        "close": "Sluiten",
+        "copy": "Kopiëren",
+        "copied": "Gekopieerd",
+        "retry": "Opnieuw proberen",
+        "loading": "Laden…",
+        "load.failed": "Laden mislukt",
+        "submit": "Indienen",
+        "submitting": "Indienen…",
+        "next": "Volgende",
+        "previous": "Vorige",
+        "skip": "Overslaan",
+        "delete": "Verwijderen",
+        "edit": "Bewerken",
+        "save": "Opslaan",
+        "search": "Zoeken",
+        "more": "Meer",
+        "collapse": "Inklappen",
+        "expand": "Uitklappen",
+        "back": "Terug",
+        "unknown": "Onbekend",
+        "none": "Geen",
+        "truncated": "Afgekapt"
+      }
+    },
+    {
+      "ns": "settings.locale",
+      "dict": {
+        "language.title": "Taal"
+      }
+    }
+  ]
+}

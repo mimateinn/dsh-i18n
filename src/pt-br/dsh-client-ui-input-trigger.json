@@ -1,0 +1,15 @@
+{
+  "pkg": "dsh-client-ui-input-trigger",
+  "entries": [
+    {
+      "ns": "slash.menu",
+      "dict": {
+        "command": "Comandos",
+        "skill": "Habilidades",
+        "subagent": "Subagentes",
+        "loading": "Carregando…",
+        "suggestions.aria": "Sugestões de gatilho"
+      }
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "pkg": "dsh-client-ui-plan",
+  "entries": [
+    {
+      "ns": "plan",
+      "dict": {
+        "chip.on.aria": "خطة mode on, press to turn off",
+        "chip.on.title": "خطة mode on — click to turn off (/plan off)",
+        "chip.off.aria": "خطة mode off, press to turn on",
+        "chip.off.title": "خطة mode off — click to turn on (/plan)"
+      }
+    }
+  ]
+}

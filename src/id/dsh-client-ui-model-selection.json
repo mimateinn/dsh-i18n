@@ -1,0 +1,27 @@
+{
+  "pkg": "dsh-client-ui-model-selection",
+  "entries": [
+    {
+      "ns": "model",
+      "dict": {
+        "command.description": "Pilih model untuk percakapan ini",
+        "option.loadError": "Katalog gagal dimuat: {message}",
+        "trigger.fallback": "Pilih model",
+        "trigger.selectAria": "Pilih model",
+        "trigger.aria": "Pilih model, {model} saat ini",
+        "trigger.ariaEffort": "Pilih model, {model} saat ini, upaya penalaran {effort}",
+        "menu.aria": "Upaya model dan penalaran",
+        "menu.model": "Model",
+        "menu.effort": "Usaha",
+        "effort.providerDefault": "Default",
+        "status.loading": "Menyegarkan daftar model…",
+        "error.action": "Operasi model gagal: {message}",
+        "action.reload": "Muat ulang",
+        "warning.groupLoad": "{name} gagal dimuat: {message}",
+        "empty.models": "Tidak ada model yang tersedia.",
+        "blocked.composer": "Model ini tidak tersedia — pilih satu untuk melanjutkan",
+        "empty.efforts": "Model ini tidak menyediakan tingkat usaha penalaran."
+      }
+    }
+  ]
+}

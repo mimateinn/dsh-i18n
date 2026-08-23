@@ -1,0 +1,16 @@
+{
+  "pkg": "dsh-client-ui-settings-general",
+  "entries": [
+    {
+      "ns": "settings",
+      "dict": {
+        "trigger": "Настройки",
+        "title": "Настройки",
+        "close": "Закрывать",
+        "openDocument": "Открыть файл конфигурации",
+        "openDocument.error": "Не удалось открыть файл конфигурации",
+        "general.nav": "Общий"
+      }
+    }
+  ]
+}

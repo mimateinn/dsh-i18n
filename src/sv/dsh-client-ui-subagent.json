@@ -1,0 +1,43 @@
+{
+  "pkg": "dsh-client-ui-subagent",
+  "entries": [
+    {
+      "ns": "subagent",
+      "dict": {
+        "diagnostic.corrupt": "skadad sessionspost",
+        "diagnostic.unsupported": "versionen av underagentposten stöds inte",
+        "diagnostic.unavailable": "sessionsposten är tillfälligt otillgänglig",
+        "duration.seconds": "{seconds}s",
+        "duration.minutes": "{minutes}m {seconds}s",
+        "duration.hours": "{hours}h {minutes}m {seconds}s",
+        "duration.days": "{days}d",
+        "duration.daysHours": "{days}d {hours}h",
+        "duration.months": "~{months}mån",
+        "duration.monthsDays": "~{months}mån {days}d",
+        "duration.years": "~{years}å",
+        "duration.yearsMonths": "~{years}å {months}mån",
+        "duration.exactDays": "{days}d {hours}h {minutes}m {seconds}s",
+        "duration.exactTitle": "Total aktiv tid: {duration}",
+        "loading.label": "Läser in underagenter…",
+        "loading.aria": "Läser in underagenter",
+        "load.error": "Kunde inte läsa in underagenter",
+        "retry": "Försök igen",
+        "mode.oneShot": "engångs",
+        "mode.continuable": "fortsättningsbar",
+        "activity.running": "körs",
+        "activity.inactive": "körs inte",
+        "branch.collapse": "Fäll ihop underliggande noder för {label}",
+        "branch.expand": "Expandera underliggande noder för {label}",
+        "count.total.one": "{count} underagent",
+        "count.total.other": "{count} underagenter",
+        "count.running.one": "{count} underagent körs",
+        "count.running.other": "{count} underagenter körs",
+        "tree.aria": "Underagentsessioner",
+        "readonly.oneShot.title": "Post för engångsunderagent",
+        "readonly.title": "Den här underagenten är skrivskyddad tills vidare",
+        "readonly.oneShot.body": "Engångsuppgifter tar inte emot uppföljningar; granska hela körningsposten här.",
+        "readonly.body": "Föräldrasessionen är offline; öppna den igen för att fortsätta skicka meddelanden."
+      }
+    }
+  ]
+}

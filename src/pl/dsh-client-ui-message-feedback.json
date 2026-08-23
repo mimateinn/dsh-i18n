@@ -1,0 +1,22 @@
+{
+  "pkg": "dsh-client-ui-message-feedback",
+  "entries": [
+    {
+      "ns": "feedback",
+      "dict": {
+        "action.like": "Dobra odpowiedź",
+        "action.likeActive": "Usuń ocenę",
+        "action.dislike": "Zła odpowiedź",
+        "action.dislikeActive": "Usuń ocenę",
+        "note.open": "Dodaj notatkę",
+        "note.placeholder": "Co było dobre, a co poszło nie tak? (opcjonalnie)",
+        "note.save": "Zapisz",
+        "note.cancel": "Anuluj",
+        "note.aria": "Notatka do opinii",
+        "error.conflict": "Ta opinia zmieniła się w innym miejscu; wyświetlono najnowszy stan",
+        "error.load": "Nie można wczytać opinii",
+        "error.generic": "Nie można zapisać opinii"
+      }
+    }
+  ]
+}

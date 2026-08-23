@@ -1,0 +1,18 @@
+{
+  "pkg": "dsh-client-ui-commands",
+  "entries": [
+    {
+      "ns": "command",
+      "dict": {
+        "search.placeholder": "Cerca…",
+        "search.aria": "Opzioni filtro",
+        "status.loading": "Caricamento opzioni in corso...",
+        "status.applying": "Applicazione in corso...",
+        "status.empty": "Nessuna opzione",
+        "overlay.aria": "/{command} opzioni",
+        "listbox.aria": "/{command} corrispondenze",
+        "notice.imagesUnsupported": "/{command} non accetta allegati immagine; rimuovili prima"
+      }
+    }
+  ]
+}

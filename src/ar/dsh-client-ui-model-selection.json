@@ -1,0 +1,27 @@
+{
+  "pkg": "dsh-client-ui-model-selection",
+  "entries": [
+    {
+      "ns": "model",
+      "dict": {
+        "command.description": "اختيار the model for this conversation",
+        "option.loadError": "‏Catalog failed to load: {message}",
+        "trigger.fallback": "اختيار النموذج",
+        "trigger.selectAria": "اختيار النموذج",
+        "trigger.aria": "اختيار model, current {model}",
+        "trigger.ariaEffort": "اختيار model, current {model}, reasoning effort {effort}",
+        "menu.aria": "نموذج and reasoning effort",
+        "menu.model": "النموذج",
+        "menu.effort": "مستوى الجهد",
+        "effort.providerDefault": "افتراضي",
+        "status.loading": "‏Refreshing model list…",
+        "error.action": "نموذج operation failed: {message}",
+        "action.reload": "إعادة التحميل",
+        "warning.groupLoad": "‏{name} failed to load: {message}",
+        "empty.models": "لا توجد نماذج متاحة.",
+        "blocked.composer": "‏This model is unavailable — select one to continue",
+        "empty.efforts": "‏This model provides no reasoning effort levels."
+      }
+    }
+  ]
+}

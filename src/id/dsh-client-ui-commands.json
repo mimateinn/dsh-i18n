@@ -1,0 +1,18 @@
+{
+  "pkg": "dsh-client-ui-commands",
+  "entries": [
+    {
+      "ns": "command",
+      "dict": {
+        "search.placeholder": "Cari…",
+        "search.aria": "Opsi filter",
+        "status.loading": "Memuat opsi…",
+        "status.applying": "Menerapkan…",
+        "status.empty": "Tidak ada opsi",
+        "overlay.aria": "opsi /{command}",
+        "listbox.aria": "/{command} cocok",
+        "notice.imagesUnsupported": "/{command} tidak menerima lampiran gambar; hapus terlebih dahulu"
+      }
+    }
+  ]
+}

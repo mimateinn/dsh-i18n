@@ -1,0 +1,15 @@
+{
+  "pkg": "dsh-client-ui-input-trigger",
+  "entries": [
+    {
+      "ns": "slash.menu",
+      "dict": {
+        "command": "คำสั่ง",
+        "skill": "ทักษะ",
+        "subagent": "ตัวแทนย่อย",
+        "loading": "กำลังโหลด…",
+        "suggestions.aria": "ทริกเกอร์คำแนะนำ"
+      }
+    }
+  ]
+}

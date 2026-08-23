@@ -1,0 +1,18 @@
+{
+  "pkg": "dsh-client-ui-commands",
+  "entries": [
+    {
+      "ns": "command",
+      "dict": {
+        "search.placeholder": "Пошук…",
+        "search.aria": "Фільтрувати параметри",
+        "status.loading": "Завантаження параметрів…",
+        "status.applying": "Застосування…",
+        "status.empty": "Немає параметрів",
+        "overlay.aria": "Параметри /{command}",
+        "listbox.aria": "Збіги /{command}",
+        "notice.imagesUnsupported": "/{command} не приймає вкладені зображення; спочатку вилучіть їх"
+      }
+    }
+  ]
+}

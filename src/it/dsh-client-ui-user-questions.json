@@ -1,0 +1,25 @@
+{
+  "pkg": "dsh-client-ui-user-questions",
+  "entries": [
+    {
+      "ns": "question",
+      "dict": {
+        "error.incomplete": "Completa prima questa domanda.",
+        "error.unanswered": "Seleziona un'opzione o inserisci una risposta personalizzata.",
+        "nav.prev": "Domanda precedente",
+        "nav.next": "Domanda successiva",
+        "nav.minimize": "Comprimi la scheda delle domande",
+        "nav.maximize": "Espandi la scheda delle domande",
+        "nav.cancel": "Ignora tutte le domande",
+        "option.recommended": "Consigliato",
+        "custom.placeholder": "Digita la tua risposta",
+        "action.skip": "Salta questa domanda",
+        "action.next": "Avanti",
+        "plan.header": "Revisione del piano",
+        "plan.approve": "Approva",
+        "plan.decline": "Rifiuta",
+        "plan.discuss": "Parlane"
+      }
+    }
+  ]
+}

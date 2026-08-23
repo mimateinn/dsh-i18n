@@ -1,0 +1,47 @@
+{
+  "pkg": "dsh-client-ui-settings-plugins",
+  "entries": [
+    {
+      "ns": "settings.plugins",
+      "dict": {
+        "nav": "Eklentiler",
+        "title": "Eklentiler",
+        "intro": "Configure and inspect the eklentis installed in this deployment.",
+        "tabs": "Eklenti views",
+        "configurableTab": "Eklenti configuration",
+        "empty": "This deployment exposes no eklenti ayarlar.",
+        "overridden": "Overridden",
+        "reset": "Reset to varsayılan",
+        "readOnly": "This deployment stores ayarlar read-only.",
+        "expand": "Göster ayarlar",
+        "collapse": "Hide ayarlar",
+        "save": "Kaydet",
+        "saving": "Saving…",
+        "discard": "Vazgeç",
+        "unsaved": "Kaydedilmedi",
+        "saveFailed": "The deployment did not accept these values; they were left for you to correct.",
+        "invalidNumber": "Enter a number, or leave blank to use the varsayılan.",
+        "bashTitle": "Kabuk",
+        "bashDescription": "Limits every komut the agent runs.",
+        "bashTimeoutMs": "Komut timeout (ms)",
+        "bashTimeoutMsHint": "How long one komut may run before it is terminated.",
+        "bashMaxOutputBytes": "Output cap per stream (bytes)",
+        "bashMaxOutputBytesHint": "Output beyond this spills to a temporary dosya rather than being lost.",
+        "agentLoopTitle": "Ajan döngüsü",
+        "agentLoopDescription": "How the agent dispatches araç calls.",
+        "agentLoopMaxParallel": "Parallel araç calls",
+        "agentLoopMaxParallelHint": "Upper bound on parallel-safe calls running at once within one step.",
+        "webSearchTitle": "Web araması",
+        "webSearchDescription": "The DeepSeek search provider.",
+        "webSearchApiKey": "API anahtarı",
+        "webSearchApiKeyHint": "Stored outside the ayarlar dosya. Leave blank to keep the mevcut key.",
+        "webSearchApiKeySet": "A key is configured.",
+        "webSearchApiKeyUnset": "Hiç key is configured; search is unkullanılabilir until one is.",
+        "webSearchBaseUrl": "Uç nokta",
+        "webSearchBaseUrlHint": "Leave blank to use the provider varsayılan.",
+        "webSearchMaxUses": "Max searches per request",
+        "webSearchMaxUsesHint": "How many times one request may search before it must answer."
+      }
+    }
+  ]
+}

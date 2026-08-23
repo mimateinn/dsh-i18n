@@ -1,0 +1,16 @@
+{
+  "pkg": "dsh-client-ui-reference",
+  "entries": [
+    {
+      "ns": "reference",
+      "dict": {
+        "section.files": "Tệp và thư mục",
+        "section.sessions": "Trò chuyện trong phiên",
+        "candidate.file": "Tệp",
+        "candidate.folder": "Thư mục",
+        "candidate.session": "Phiên",
+        "candidate.noCwd": "(không có cwd)"
+      }
+    }
+  ]
+}

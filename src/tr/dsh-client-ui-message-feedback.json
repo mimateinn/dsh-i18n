@@ -1,0 +1,22 @@
+{
+  "pkg": "dsh-client-ui-message-feedback",
+  "entries": [
+    {
+      "ns": "feedback",
+      "dict": {
+        "action.like": "İyi yanıt",
+        "action.likeActive": "Değerlendirmeyi kaldır",
+        "action.dislike": "Kötü yanıt",
+        "action.dislikeActive": "Değerlendirmeyi kaldır",
+        "note.open": "Not ekle",
+        "note.placeholder": "Ne iyiydi veya ne ters gitti? (isteğe bağlı)",
+        "note.save": "Kaydet",
+        "note.cancel": "İptal",
+        "note.aria": "Geri bildirim notu",
+        "error.conflict": "Bu geri bildirim başka yerde değiştirildi; en güncel durum gösteriliyor",
+        "error.load": "Geri bildirim yüklenemedi",
+        "error.generic": "Geri bildirim kaydedilemedi"
+      }
+    }
+  ]
+}

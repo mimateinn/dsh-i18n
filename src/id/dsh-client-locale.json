@@ -1,0 +1,40 @@
+{
+  "pkg": "dsh-client-locale",
+  "entries": [
+    {
+      "ns": "common",
+      "dict": {
+        "ok": "Oke",
+        "cancel": "Batalkan",
+        "close": "Tutup",
+        "copy": "Salin",
+        "copied": "Disalin",
+        "retry": "Coba lagi",
+        "loading": "Memuat…",
+        "load.failed": "Gagal memuat",
+        "submit": "Kirim",
+        "submitting": "Mengirim…",
+        "next": "Berikutnya",
+        "previous": "Sebelumnya",
+        "skip": "Lewati",
+        "delete": "Hapus",
+        "edit": "Sunting",
+        "save": "Simpan",
+        "search": "Cari",
+        "more": "Lebih",
+        "collapse": "Runtuh",
+        "expand": "Perluas",
+        "back": "Kembali",
+        "unknown": "Tidak diketahui",
+        "none": "Tidak ada",
+        "truncated": "Terpotong"
+      }
+    },
+    {
+      "ns": "settings.locale",
+      "dict": {
+        "language.title": "Bahasa"
+      }
+    }
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "pkg": "dsh-client-ui-goal",
+  "entries": [
+    {
+      "ns": "goal",
+      "dict": {
+        "phase.active": "Текущая цель",
+        "phase.paused": "Приостановленная цель",
+        "phase.blocked": "Заблокированная цель",
+        "objective.aria": "Цель Цель",
+        "commandInput.aria": "Ввод команды",
+        "action.save": "Сохранить цель",
+        "action.cancel": "Отменить редактирование",
+        "action.pause": "Приостановить цель",
+        "action.resume": "Возобновить цель",
+        "action.edit": "Изменить цель",
+        "action.clear": "Четкая цель"
+      }
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "pkg": "dsh-client-ui-directory-picker-browse",
+  "entries": [
+    {
+      "ns": "directory-browser",
+      "dict": {
+        "browser.title": "Välj katalog för arbetsyta",
+        "browser.home": "Hem",
+        "browser.newFolder": "Ny mapp",
+        "browser.folderName": "Mappnamn",
+        "browser.createIn": "Ny mapp i \"{name}\"",
+        "browser.untitledFolder": "Namnlös mapp",
+        "browser.create": "Skapa",
+        "browser.cancel": "Avbryt",
+        "browser.open": "Öppna",
+        "browser.editPath": "Redigera sökväg",
+        "browser.loading": "Läser in…",
+        "browser.truncated": "För många mappar för att listas; endast början visas.",
+        "browser.showHidden": "Visa dolda filer"
+      }
+    }
+  ]
+}

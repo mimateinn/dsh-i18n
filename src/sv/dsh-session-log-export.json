@@ -1,0 +1,17 @@
+{
+  "pkg": "dsh-session-log-export",
+  "entries": [
+    {
+      "ns": "session-log-download",
+      "dict": {
+        "dialog.preparingTitle": "Exporterar session",
+        "dialog.preparingDescription": "Förbereder en ZIP med den här sessionen, dess undersessioner och bilagor.",
+        "dialog.successTitle": "Nedladdningen av sessionen har startat",
+        "dialog.successDescription": "Webbläsaren laddar ner sessionens ZIP.",
+        "dialog.errorTitle": "Sessionsexporten misslyckades",
+        "dialog.close": "Stäng",
+        "dialog.commandFailed": "Kunde inte starta sessionsexporten."
+      }
+    }
+  ]
+}

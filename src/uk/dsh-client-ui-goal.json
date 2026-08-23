@@ -1,0 +1,21 @@
+{
+  "pkg": "dsh-client-ui-goal",
+  "entries": [
+    {
+      "ns": "goal",
+      "dict": {
+        "phase.active": "Поточна ціль",
+        "phase.paused": "Призупинена ціль",
+        "phase.blocked": "Заблокована ціль",
+        "objective.aria": "Завдання цілі",
+        "commandInput.aria": "Введення команди",
+        "action.save": "Зберегти ціль",
+        "action.cancel": "Скасувати редагування",
+        "action.pause": "Призупинити ціль",
+        "action.resume": "Відновити ціль",
+        "action.edit": "Редагувати ціль",
+        "action.clear": "Очистити ціль"
+      }
+    }
+  ]
+}

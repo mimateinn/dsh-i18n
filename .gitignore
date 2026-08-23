@@ -6,6 +6,11 @@ verify/*.png
 verify/*.txt
 src/zh-tw-parts/collected-chars.txt
 
+# 機器翻譯暫存（本地 venv / 模型 / 腳本，唔入 repo）
+src/*/.mt/
+src/*/.translate.py
+translate_*.py
+
 # 編輯器 / 系統
 .DS_Store
 Thumbs.db

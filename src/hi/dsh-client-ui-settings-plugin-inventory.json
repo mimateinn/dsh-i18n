@@ -1,0 +1,28 @@
+{
+  "pkg": "dsh-client-ui-settings-plugin-inventory",
+  "entries": [
+    {
+      "ns": "settings.pluginInventory",
+      "dict": {
+        "tab": "प्लगिन सूची",
+        "loading": "प्लगिन पढ़े जा रहे हैं…",
+        "error": "प्लगिन फ़िलहाल उपलब्ध नहीं हैं।",
+        "retry": "फिर कोशिश करें",
+        "search": "प्लगिन खोजें",
+        "catalog": "प्लगिन सूची",
+        "empty": "कोई प्लगिन उपलब्ध नहीं है।",
+        "emptySearch": "कोई मेल खाता प्लगिन नहीं।",
+        "enabledTag": "सक्षम",
+        "disabledTag": "अक्षम",
+        "configuration": "कॉन्फ़िगरेशन",
+        "cordis": "Cordis स्थिति",
+        "unobserved": "माउंट नहीं हुआ",
+        "pending": "निर्भरताओं की प्रतीक्षा में",
+        "loadingPhase": "लोड हो रहा है",
+        "active": "माउंट हो गया",
+        "failed": "माउंट विफल",
+        "unloading": "अनलोड हो रहा है"
+      }
+    }
+  ]
+}

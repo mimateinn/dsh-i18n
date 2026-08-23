@@ -1,0 +1,15 @@
+{
+  "pkg": "dsh-client-ui-skill",
+  "entries": [
+    {
+      "ns": "skill",
+      "dict": {
+        "row.running": "Skill laden",
+        "row.failed": "Laden van skill mislukt",
+        "row.stopped": "Laden van skill gestopt",
+        "row.instructions": "Instructies",
+        "menu.userOnly": "user-only"
+      }
+    }
+  ]
+}
