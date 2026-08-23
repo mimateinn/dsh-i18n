@@ -77,8 +77,8 @@ window.__ModuleLoader__.load({
     // 单字简→繁字元表（zh-TW 运行时兜底；scripts/verify-converter.mjs 校验）
     const CHARS = ${CHARS_JSON};
 
-    const name = "multi-lang-ui";
-    const inject = [];
+    const name = "dsh-i18n";
+    const inject = ["connection"];
 
     // 纯单字简→繁转换（不做術語片語；{佔位符} 内无汉字，天然安全）。
     // fast-path：先扫一遍有没有需要转换的字，没有就直接返回原串（避免热路径分配）。
@@ -203,7 +203,14 @@ window.__ModuleLoader__.load({
         document.documentElement.lang = lang?.id ?? document.documentElement.lang;
         document.documentElement.dir = lang?.rtl ? "rtl" : "ltr";
       } catch { /* document may not be ready */ }
+      if (mtRefresh) mtRefresh();
     }
+
+    // ---- 沉浸式翻譯（LLM）----
+    // 當 active 係我哋嘅非繁中語言（ja/ko/fr/... 18 種）時，用 MutationObserver 捉
+    // 英文長文本（市場描述等），批量經 /dsh-i18n RPC 翻譯做目標語言。快取 + 冪等，
+    // 頂住 React re-render 覆寫；預設語言（en/zh）唔翻譯，繁中保留簡轉繁。
+    let mtRefresh = null;
 
     function apply(ctx) {
       const locale = ctx.get("locale");
@@ -300,6 +307,113 @@ window.__ModuleLoader__.load({
           syncDocumentLocale(locale.getLocale().active);
         };
       }
+
+      // 5) 沉浸式翻譯：英文長文本 → 用戶語言（經 /dsh-i18n RPC，預設主模型）
+      const connection = (() => { try { return ctx.get("connection"); } catch { return null; } })();
+      if (connection && connection.rpc && typeof connection.rpc.call === "function") {
+        const MT_CONFIG_KEY = "dsh-i18n.mt";
+        const translateCache = new Map();
+        const pendingTexts = new Set();
+        let mtTimer = null;
+        let mtObserver = null;
+
+        const mtActiveLang = () => locale.getLocale().active;
+        const mtIsTarget = (id) => {
+          const l = LANGUAGES.find((x) => x.id === id);
+          return Boolean(l && !l.useConvert);
+        };
+        const mtLooksTranslatable = (text) => {
+          const t = (text || "").trim();
+          if (t.length < 24 || t.length > 2000) return false;
+          const words = t.split(/\s+/).filter((w) => /[A-Za-z]/.test(w));
+          if (words.length < 6) return false;
+          let ascii = 0;
+          for (const ch of t) if (ch.charCodeAt(0) < 128) ascii++;
+          return ascii / t.length > 0.7;
+        };
+        const mtSkip = (node) => {
+          let el = node.parentElement;
+          while (el) {
+            if (el.matches && el.matches(DOM_SKIP_SELECTOR)) return true;
+            el = el.parentElement;
+          }
+          return false;
+        };
+        const mtHandleNode = (node) => {
+          if (node.nodeType !== 3 || mtSkip(node)) return;
+          const text = node.nodeValue;
+          if (!text || !mtLooksTranslatable(text)) return;
+          const cached = translateCache.get(text);
+          if (cached !== undefined) {
+            if (node.nodeValue !== cached) node.nodeValue = cached;
+            return;
+          }
+          if (!pendingTexts.has(text)) {
+            pendingTexts.add(text);
+            if (!mtTimer) mtTimer = window.setTimeout(flushMt, 250);
+          }
+        };
+        const mtWalk = (root) => {
+          if (root.nodeType === 3) { mtHandleNode(root); return; }
+          if (root.nodeType !== 1) return;
+          const walker = document.createTreeWalker(root, NodeFilter.SHOW_TEXT);
+          let n;
+          while ((n = walker.nextNode())) mtHandleNode(n);
+        };
+        function flushMt() {
+          mtTimer = null;
+          if (!pendingTexts.size) return;
+          if (!mtIsTarget(mtActiveLang())) { pendingTexts.clear(); return; }
+          const texts = [...pendingTexts].slice(0, 12);
+          for (const t of texts) pendingTexts.delete(t);
+          const targetLang = (LANGUAGES.find((l) => l.id === mtActiveLang()) || {}).label;
+          const cfg = (() => { try { return JSON.parse(window.localStorage.getItem(MT_CONFIG_KEY)) || {}; } catch { return {}; } })();
+          const payload = { texts, targetLang };
+          if (cfg.provider && cfg.model) {
+            payload.provider = cfg.provider;
+            payload.model = cfg.model;
+            if (cfg.reasoningEffort) payload.reasoningEffort = cfg.reasoningEffort;
+          }
+          connection.rpc.call("/dsh-i18n", "translate", payload).then((result) => {
+            if (!result || !result.ok) return;
+            if (!mtIsTarget(mtActiveLang())) return;
+            const translations = result.value && result.value.translations;
+            if (!Array.isArray(translations)) return;
+            texts.forEach((t, i) => {
+              const tr = translations[i];
+              if (typeof tr === "string" && tr && tr !== t) translateCache.set(t, tr);
+            });
+            mtWalk(document.body);
+          }).catch(() => { /* 翻譯失敗靜默 */ });
+          if (pendingTexts.size) mtTimer = window.setTimeout(flushMt, 250);
+        }
+        function startMt() {
+          if (mtObserver) return;
+          mtWalk(document.body);
+          mtObserver = new MutationObserver((mutations) => {
+            for (const m of mutations) {
+              if (m.type === "characterData") mtHandleNode(m.target);
+              else if (m.type === "childList") {
+                for (const added of m.addedNodes) {
+                  if (added.nodeType === 3) mtHandleNode(added);
+                  else if (added.nodeType === 1) mtWalk(added);
+                }
+              }
+            }
+          });
+          mtObserver.observe(document.body, { childList: true, subtree: true, characterData: true });
+        }
+        function stopMt() {
+          if (mtObserver) { mtObserver.disconnect(); mtObserver = null; }
+          if (mtTimer) { window.clearTimeout(mtTimer); mtTimer = null; }
+          pendingTexts.clear();
+        }
+        mtRefresh = () => {
+          if (mtIsTarget(mtActiveLang())) startMt();
+          else stopMt();
+        };
+      }
+
       activateIfPreferred();
       syncDocumentLocale(locale.getLocale().active);
       // 启动后 DOM 可能未渲染完，延后几拍再补一轮兜底转换
