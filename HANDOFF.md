@@ -3,19 +3,18 @@
 # HANDOFF
 
 ## 進行中
-**任務**：將含品質修正嘅 commit `22a1a3a` 裝入 desktop profile 並做 GUI 驗收。
-**做到邊步**：code 全部改完、`npm test` EXIT=0、已 push 上 fork。安裝**卡住**。
-**卡喺邊**：`dsh plugin add` 報 `another plugin install recovery transaction is pending`。
-成因（已實證）：上一次成功安裝 `87b6b11` 留低嘅 WAL 仲喺 `phase: awaiting-restart`
-（`%APPDATA%/DSH Desktop/plugin-install-recovery/state.json`，profileName=desktop，同 active 一致）。
-DSH Desktop 要**重啟一次並跑到 renderer healthy**，`commitHealthy()` 先會 `markHealthy`→`clear`，
-之後先收得下一單 install。冇 UI 可以跳過。
-**仲未做**：
-- [ ] 重啟 DSH Desktop（重啟會 finalize `87b6b11` 嘅 WAL；現時裝住嘅仍係 `87b6b11`，未含本輪品質修正）
-- [ ] 重啟後行 `C:\Users\dicks\Workspace\dsh-upgrade-multi-lang-ui.cmd` 升去 `fe9c8a4`
-- [ ] 再重啟一次，喺 Settings → General → Language 逐個語言肉眼驗（至少 zh-HK/zh-TW/ar(RTL)/ja/nl）
-**重要狀態**：desktop profile 依賴而家仍然係 `#87b6b113`；`22a1a3a` 未落地。
-兩個 commit 嘅 `lib/client.js` sha256 唔同（6FC3D427… vs 102AFFF8…），可以用嚟確認升級成功。
+（空）
+
+## 安裝落地狀態（2026-08-24 最update）
+desktop profile 依賴已升級到 `github:mimateinn/dsh-multi-lang-ui#8fd52f0`（含全部品質修正），
+node_modules 內 `lib/client.js` sha256 = EB95DF6B…，同 repo HEAD `8fd52f0` 一致（逐 byte 相同）。
+`--dump-config` 確認 `- id: multi-lang-ui / name: dsh-multi-lang-ui` 喺 compose 樹尾，EXIT=0。
+profile 備份喺 `C:\Users\dicks\Workspace\dsh-desktop-profile-backup-20260824-005219`。
+
+**剩返：用戶重啟 DSH Desktop 一次，再喺 Settings → General → Language 揀語言做 GUI 驗收。**
+（現時 running 嗰個 renderer 係安裝前嘅舊 composition，重啟先會載入新 bundle。）
+之前留低嘅 install-recovery WAL 仍在 `phase: awaiting-restart`（profileName=desktop），
+重啟跑到 renderer healthy 就會 `markHealthy`→`clear`；唔會再 block。
 
 ## 目前狀態
 - 2026-08-24：**安裝版本問題已解決**。20 個 locale 全部補齊，`npm test` 全綠，fork 已推上
