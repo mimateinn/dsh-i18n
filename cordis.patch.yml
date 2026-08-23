@@ -1,3 +1,5 @@
 - insert:
     - id: dsh-i18n
-      name: dsh-i18n
+      # Node-resolvable package name — must stay in sync with package.json "name".
+      # Quoted because "@" is a reserved indicator in YAML and cannot open a plain scalar.
+      name: '@mimateinn/dsh-i18n'
