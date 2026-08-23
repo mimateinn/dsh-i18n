@@ -1,7 +1,7 @@
 {
   "name": "dsh-i18n",
   "version": "0.2.0",
-  "description": "20-locale internationalization with immersive translation for the DeepSeek Harness Web UI",
+  "description": "20-locale internationalization with automatic translation for the DeepSeek Harness Web UI",
   "type": "module",
   "main": "./index.mjs",
   "types": "./index.d.ts",

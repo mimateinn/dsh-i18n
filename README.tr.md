@@ -18,7 +18,7 @@ DeepSeek Harness Web UI için sürdürülebilir bir uluslararasılaştırma ekle
 - İngilizce tabanından, her resmî yerel ayar ad alanı için dil başına elle cilalanmış çeviriler (her biri 715 dize).
 - Çalışma zamanı yedeği: yeni/güncellenen/üçüncü taraf dizeler İngilizceye yedeklenir (zh-HK/zh-TW için Basitleştirilmiş→Geleneksel dönüştürme), böylece üst akıştaki kullanıcı arayüzü güncellemeleri ve diğer eklentiler, her dili yeniden çevirmeden kapsanır.
 - Dil tercihi tarayıcı `localStorage`'ında saklanır; yenilemeye dayanıklıdır.
-- **Sürükleyici çeviri**: Çince olmayan bir yerel ayar etkinken, uzun İngilizce metinler (eklenti pazarı açıklamaları, üçüncü taraf arayüzler, hata metinleri) yapılandırdığınız model aracılığıyla otomatik olarak dilinize çevrilir — önbelleğe alınır ve idempotenttir, böylece React yeniden render'ları bununla çakışmaz. Varsayılan dil (en/zh) olduğu gibi bırakılır; Geleneksel Çince, bir model çağırmak yerine yerleşik Basitleştirilmiş→Geleneksel dönüştürmeyi kullanmaya devam eder.
+- **Otomatik çeviri**: Çince olmayan bir yerel ayar etkinken, uzun İngilizce metinler (eklenti pazarı açıklamaları, üçüncü taraf arayüzler, hata metinleri) yapılandırdığınız model aracılığıyla otomatik olarak dilinize çevrilir — önbelleğe alınır ve idempotenttir, böylece React yeniden render'ları bununla çakışmaz. Varsayılan dil (en/zh) olduğu gibi bırakılır; Geleneksel Çince, bir model çağırmak yerine yerleşik Basitleştirilmiş→Geleneksel dönüştürmeyi kullanmaya devam eder.
 - Sıfır müdahale: saf istemci eklentisi, üst akış paketlerinde değişiklik yok, yerel ayar hizmeti eksikse sessizce işlevini yitirir.
 
 ## Kurulum
@@ -56,7 +56,7 @@ npm paketi; çalışma zamanı girdilerini, oluşturulan istemciyi, yerel ayar v
 ## Güvenlik ve gizlilik
 
 - Eklenti kendisi hiçbir ağ çağrısı yapmaz, telemetrisi yoktur ve yalnızca iki tarayıcı localStorage anahtarını okur/yazar: seçilen yerel ayar kimliği ve çeviri modeli geçersiz kılması.
-- Sürükleyici çeviri, üçüncü taraf bir API üzerinden değil, DSH'nin yerleşik LLM hizmeti (yapılandırdığınız model) üzerinden çalışır. Yalnızca Çince olmayan bir yerel ayar etkinken uzun İngilizce metinler için tetiklenir; varsayılan dil asla çeviriye gönderilmez.
+- Otomatik çeviri, üçüncü taraf bir API üzerinden değil, DSH'nin yerleşik LLM hizmeti (yapılandırdığınız model) üzerinden çalışır. Yalnızca Çince olmayan bir yerel ayar etkinken uzun İngilizce metinler için tetiklenir; varsayılan dil asla çeviriye gönderilmez.
 - Dosya sistemi erişimi yok, kimlik bilgisi işleme yok.
 
 ## Lisans

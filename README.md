@@ -18,7 +18,7 @@ A sustainable internationalization plugin for the DeepSeek Harness Web UI. Versi
 - Per-language hand-polished translations for every official locale namespace (715 strings each), from an English baseline.
 - Runtime fallback: new/updated/third-party strings fall back to English (or Simplified→Traditional conversion for zh-HK/zh-TW), so upstream UI updates and other plugins are covered without re-translating every language.
 - Language preference persisted in browser `localStorage`; reload-proof.
-- **Immersive translation**: with a non-Chinese locale active, long English text (plugin-market descriptions, third-party UI, error prose) is auto-translated to your language through your configured model, and cached so re-renders don't undo it. The default language (en/zh) is left untouched; Traditional Chinese keeps the built-in Simplified→Traditional conversion instead of calling a model.
+- **Auto-translate**: with a non-Chinese locale active, long English text (plugin-market descriptions, third-party UI, error prose) is auto-translated to your language through your configured model, and cached so re-renders don't undo it. The default language (en/zh) is left untouched; Traditional Chinese keeps the built-in Simplified→Traditional conversion instead of calling a model.
 - Zero intrusion on dictionaries: no upstream package changes, silent degradation if the locale service is missing.
 
 ## Install
@@ -62,7 +62,7 @@ The npm package includes runtime entries, the generated client, locale data, and
 ## Security and privacy
 
 - The plugin makes no network calls itself, has no telemetry, and reads/writes only two browser localStorage keys: the selected locale id and the translate-model override.
-- Immersive translate runs through DSH's built-in LLM service (your configured model), not a third-party API. It only fires for long English prose when a non-Chinese locale is active; the default language is never sent for translation.
+- Auto-translate runs through DSH's built-in LLM service (your configured model), not a third-party API. It only fires for long English prose when a non-Chinese locale is active; the default language is never sent for translation.
 - No filesystem access, no credential handling.
 
 ## License

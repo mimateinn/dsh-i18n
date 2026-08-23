@@ -1,7 +1,7 @@
 // index.mjs — dsh-i18n 插件（Host 側）
 //
 // 提供 /dsh-i18n RPC：translate({texts, targetLang, provider?, model?, reasoningEffort?})
-// → { translations }。用 ctx.llm.stream 做單次批量翻譯，供 client 側「沉浸式翻譯」使用。
+// → { translations }。用 ctx.llm.stream 做單次批量翻譯，供 client 側「自動翻譯」使用。
 // 預設用 agentDefaultModel（用戶主要模型），client 可傳 provider/model 覆寫。
 
 import { BlockAssembler, createUserMessage } from "@deepseek-ai/dsh-llm";

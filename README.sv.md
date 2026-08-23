@@ -18,7 +18,7 @@ Ett hållbart internationaliseringsplugin för DeepSeek Harness webbgränssnitt.
 - Handslipade översättningar per språk för varje officiell språknamespace (715 strängar vardera), utifrån en engelsk baslinje.
 - Runtime-fallback: nya/uppdaterade/tredjepartssträngar faller tillbaka på engelska (eller förenklad→traditionell konvertering för zh-HK/zh-TW), så att uppströms UI-uppdateringar och andra plugins täcks utan att varje språk översätts på nytt.
 - Språkpreferensen sparas i webbläsarens `localStorage`; överlever omladdning.
-- **Uppslukande översättning**: när en icke-kinesisk språkversion är aktiv översätts lång engelsk text (beskrivningar på plugin-marknaden, tredjepartsgränssnitt, felprosa) automatiskt till ditt språk via din konfigurerade modell — cachad och idempotent så att React-omrenderingar inte bråkar med den. Standardspråket (en/zh) lämnas orört; traditionell kinesiska behåller den inbyggda förenklad→traditionell-konverteringen i stället för att anropa en modell.
+- **Automatisk översättning**: när en icke-kinesisk språkversion är aktiv översätts lång engelsk text (beskrivningar på plugin-marknaden, tredjepartsgränssnitt, felprosa) automatiskt till ditt språk via din konfigurerade modell — cachad och idempotent så att React-omrenderingar inte bråkar med den. Standardspråket (en/zh) lämnas orört; traditionell kinesiska behåller den inbyggda förenklad→traditionell-konverteringen i stället för att anropa en modell.
 - Noll intrång: rent klientplugin, inga ändringar av uppströms paket, tyst degradering om språktjänsten saknas.
 
 ## Installation
@@ -62,7 +62,7 @@ npm-paketet innehåller runtime-poster, den genererade klienten, språkdata och 
 ## Säkerhet och integritet
 
 - Plugin:et gör inga nätverksanrop självt, har ingen telemetri och läser/skriver endast två webbläsar-localStorage-nycklar: det valda språk-id:t och översättningsmodell-överskridningen.
-- Uppslukande översättning körs via DSH:s inbyggda LLM-tjänst (din konfigurerade modell), inte ett tredjeparts-API. Den aktiveras endast för lång engelsk prosa när en icke-kinesisk språkversion är aktiv; standardspråket skickas aldrig för översättning.
+- Automatisk översättning körs via DSH:s inbyggda LLM-tjänst (din konfigurerade modell), inte ett tredjeparts-API. Den aktiveras endast för lång engelsk prosa när en icke-kinesisk språkversion är aktiv; standardspråket skickas aldrig för översättning.
 - Ingen filsystemåtkomst, ingen hantering av autentiseringsuppgifter.
 
 ## Licens

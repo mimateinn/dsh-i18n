@@ -18,7 +18,7 @@ Un plugin de internacionalización sostenible para la interfaz web de DeepSeek H
 - Traducciones pulidas a mano por idioma para cada espacio de nombres de locale oficial (715 cadenas cada uno), partiendo de una base en inglés.
 - Respaldo en tiempo de ejecución: las cadenas nuevas, actualizadas o de terceros recurren al inglés (o a la conversión de simplificado→tradicional para zh-HK/zh-TW), de modo que las actualizaciones de la interfaz y otros plugins quedan cubiertos sin necesidad de retraducir todos los idiomas.
 - La preferencia de idioma se guarda en el `localStorage` del navegador; resiste las recargas.
-- **Traducción inmersiva**: cuando hay un idioma no chino activo, los textos largos en inglés (descripciones del mercado de plugins, UI de terceros, prosa de errores) se traducen automáticamente a tu idioma mediante tu modelo configurado — almacenados en caché e idempotentes, de modo que los re-renderizados de React no interfieren. El idioma predeterminado (en/zh) se deja intacto; el chino tradicional mantiene la conversión integrada de simplificado→tradicional en lugar de llamar a un modelo.
+- **Traducción automática**: cuando hay un idioma no chino activo, los textos largos en inglés (descripciones del mercado de plugins, UI de terceros, prosa de errores) se traducen automáticamente a tu idioma mediante tu modelo configurado — almacenados en caché e idempotentes, de modo que los re-renderizados de React no interfieren. El idioma predeterminado (en/zh) se deja intacto; el chino tradicional mantiene la conversión integrada de simplificado→tradicional en lugar de llamar a un modelo.
 - Cero intrusión: plugin de cliente puro, sin cambios en paquetes ascendentes, degradación silenciosa si falta el servicio de locales.
 
 ## Instalación
@@ -56,7 +56,7 @@ El paquete npm incluye los puntos de entrada en tiempo de ejecución, el cliente
 ## Seguridad y privacidad
 
 - El plugin no realiza llamadas de red por sí mismo, no tiene telemetría y solo lee/escribe dos claves del localStorage del navegador: el id del locale seleccionado y la sustitución del modelo de traducción.
-- La traducción inmersiva se ejecuta a través del servicio LLM integrado de DSH (tu modelo configurado), no de una API de terceros. Solo se activa para prosa larga en inglés cuando hay un idioma no chino activo; el idioma predeterminado nunca se envía para traducción.
+- La traducción automática se ejecuta a través del servicio LLM integrado de DSH (tu modelo configurado), no de una API de terceros. Solo se activa para prosa larga en inglés cuando hay un idioma no chino activo; el idioma predeterminado nunca se envía para traducción.
 - Sin acceso al sistema de archivos, sin manejo de credenciales.
 
 ## Licencia

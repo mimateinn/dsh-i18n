@@ -18,7 +18,7 @@ Plugin internasionalisasi yang berkelanjutan untuk DeepSeek Harness Web UI. Vers
 - Terjemahan yang dipoles secara manual untuk setiap bahasa pada setiap namespace locale resmi (masing-masing 715 string), dari baseline bahasa Inggris.
 - Fallback runtime: string baru/diperbarui/pihak ketiga melakukan fallback ke bahasa Inggris (atau konversi Sederhana→Tradisional untuk zh-HK/zh-TW), sehingga pembaruan UI upstream dan plugin lain tercakup tanpa harus menerjemahkan ulang setiap bahasa.
 - Preferensi bahasa disimpan di `localStorage` peramban; tahan terhadap muat ulang.
-- **Terjemahan imersif**: saat locale non-Tionghoa aktif, teks bahasa Inggris yang panjang (deskripsi pasar plugin, UI pihak ketiga, prosa error) otomatis diterjemahkan ke bahasa Anda melalui model yang Anda konfigurasi — di-cache dan idempoten sehingga React re-render tidak berbenturan dengannya. Bahasa default (en/zh) dibiarkan apa adanya; Tionghoa Tradisional tetap memakai konversi Sederhana→Tradisional bawaan alih-alih memanggil model.
+- **Terjemahan otomatis**: saat locale non-Tionghoa aktif, teks bahasa Inggris yang panjang (deskripsi pasar plugin, UI pihak ketiga, prosa error) otomatis diterjemahkan ke bahasa Anda melalui model yang Anda konfigurasi — di-cache dan idempoten sehingga React re-render tidak berbenturan dengannya. Bahasa default (en/zh) dibiarkan apa adanya; Tionghoa Tradisional tetap memakai konversi Sederhana→Tradisional bawaan alih-alih memanggil model.
 - Tanpa intrusi: plugin klien murni, tanpa perubahan paket upstream, degradasi senyap jika layanan locale tidak tersedia.
 
 ## Instalasi
@@ -62,7 +62,7 @@ Paket npm mencakup entri runtime, klien yang dihasilkan, data locale, dan regist
 ## Keamanan dan privasi
 
 - Plugin tidak melakukan panggilan jaringan sendiri, tidak memiliki telemetri, dan hanya membaca/menulis dua kunci localStorage peramban: id locale yang dipilih dan override model terjemahan.
-- Terjemahan imersif berjalan melalui layanan LLM bawaan DSH (model yang Anda konfigurasi), bukan API pihak ketiga. Ia hanya terpicu untuk prosa bahasa Inggris yang panjang saat locale non-Tionghoa aktif; bahasa default tidak pernah dikirim untuk diterjemahkan.
+- Terjemahan otomatis berjalan melalui layanan LLM bawaan DSH (model yang Anda konfigurasi), bukan API pihak ketiga. Ia hanya terpicu untuk prosa bahasa Inggris yang panjang saat locale non-Tionghoa aktif; bahasa default tidak pernah dikirim untuk diterjemahkan.
 - Tanpa akses filesystem, tanpa penanganan kredensial.
 
 ## Lisensi

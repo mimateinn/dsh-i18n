@@ -18,7 +18,7 @@ Trwała wtyczka internacjonalizacyjna dla interfejsu DeepSeek Harness Web UI. We
 - Starannie dopracowane tłumaczenia dla każdego języka, dla każdej oficjalnej przestrzeni nazw (namespace) (715 ciągów każda), oparte na bazie angielskiej.
 - Awaryjne przełączanie w czasie działania (runtime fallback): nowe/zaktualizowane/pochodzące od stron trzecich ciągi przełączają się awaryjnie na angielski (lub konwersję uproszczony→tradycyjny dla zh-HK/zh-TW), dzięki czemu aktualizacje UI i inne wtyczki są obsługiwane bez ponownego tłumaczenia każdego języka.
 - Preferencja językowa zapisywana w przeglądarkowym `localStorage`; odporna na przeładowanie.
-- **Tłumaczenie immersyjne**: gdy aktywny jest język inny niż chiński, długie teksty w języku angielskim (opisy na rynku wtyczek, UI stron trzecich, treść komunikatów o błędach) są automatycznie tłumaczone na Twój język przez skonfigurowany model — z pamięcią podręczną i idempotentnością, dzięki czemu ponowne renderowanie Reacta nie wchodzi w konflikt. Język domyślny (en/zh) pozostaje nietknięty; chiński tradycyjny zachowuje wbudowaną konwersję uproszczony→tradycyjny zamiast wywoływania modelu.
+- **Tłumaczenie automatyczne**: gdy aktywny jest język inny niż chiński, długie teksty w języku angielskim (opisy na rynku wtyczek, UI stron trzecich, treść komunikatów o błędach) są automatycznie tłumaczone na Twój język przez skonfigurowany model — z pamięcią podręczną i idempotentnością, dzięki czemu ponowne renderowanie Reacta nie wchodzi w konflikt. Język domyślny (en/zh) pozostaje nietknięty; chiński tradycyjny zachowuje wbudowaną konwersję uproszczony→tradycyjny zamiast wywoływania modelu.
 - Zero ingerencji: czysto kliencka wtyczka, bez zmian w pakietach źródłowych, cicha degradacja, jeśli usługa języków (locale service) jest niedostępna.
 
 ## Instalacja
@@ -56,7 +56,7 @@ Pakiet npm zawiera wpisy środowiska uruchomieniowego (runtime), wygenerowanego 
 ## Bezpieczeństwo i prywatność
 
 - Wtyczka sama nie wykonuje wywołań sieciowych, nie ma telemetrii i odczytuje/zapisuje tylko dwa klucze przeglądarkowego localStorage: identyfikator wybranego języka i nadpisanie modelu tłumaczenia.
-- Tłumaczenie immersyjne działa przez wbudowaną usługę LLM DSH (Twój skonfigurowany model), a nie przez API strony trzeciej. Uruchamia się tylko dla długiej prozy angielskiej, gdy aktywny jest język inny niż chiński; język domyślny nigdy nie jest wysyłany do tłumaczenia.
+- Tłumaczenie automatyczne działa przez wbudowaną usługę LLM DSH (Twój skonfigurowany model), a nie przez API strony trzeciej. Uruchamia się tylko dla długiej prozy angielskiej, gdy aktywny jest język inny niż chiński; język domyślny nigdy nie jest wysyłany do tłumaczenia.
 - Brak dostępu do systemu plików, brak obsługi poświadczeń.
 
 ## Licencja

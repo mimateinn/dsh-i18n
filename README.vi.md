@@ -18,7 +18,7 @@ Một plugin quốc tế hóa bền vững cho DeepSeek Harness Web UI. Phiên b
 - Bản dịch được trau chuốt thủ công cho từng ngôn ngữ, phủ mọi namespace locale chính thức (715 chuỗi mỗi ngôn ngữ), dựa trên bản gốc tiếng Anh.
 - Fallback thời gian chạy: các chuỗi mới / cập nhật / từ bên thứ ba fallback về tiếng Anh (hoặc chuyển đổi Giản thể → Phồn thể cho zh-HK/zh-TW), nhờ đó các cập nhật UI từ upstream và các plugin khác đều được bao phủ mà không cần dịch lại mọi ngôn ngữ.
 - Tùy chọn ngôn ngữ được lưu trong `localStorage` của trình duyệt; không mất khi tải lại trang.
-- **Dịch đắm chìm**: khi một locale không phải tiếng Trung đang hoạt động, các văn bản tiếng Anh dài (mô tả chợ plugin, UI bên thứ ba, đoạn văn lỗi) được tự động dịch sang ngôn ngữ của bạn thông qua model bạn đã cấu hình — được cache và idempotent nên các lần re-render của React không xung đột với nó. Ngôn ngữ mặc định (en/zh) được giữ nguyên; tiếng Trung Phồn thể vẫn dùng chuyển đổi Giản thể → Phồn thể tích hợp sẵn thay vì gọi model.
+- **Dịch tự động**: khi một locale không phải tiếng Trung đang hoạt động, các văn bản tiếng Anh dài (mô tả chợ plugin, UI bên thứ ba, đoạn văn lỗi) được tự động dịch sang ngôn ngữ của bạn thông qua model bạn đã cấu hình — được cache và idempotent nên các lần re-render của React không xung đột với nó. Ngôn ngữ mặc định (en/zh) được giữ nguyên; tiếng Trung Phồn thể vẫn dùng chuyển đổi Giản thể → Phồn thể tích hợp sẵn thay vì gọi model.
 - Không xâm lấn: plugin thuần client, không thay đổi package upstream, tự suy giảm im lặng nếu thiếu dịch vụ locale.
 
 ## Cài đặt
@@ -56,7 +56,7 @@ Package npm bao gồm các mục runtime, client đã sinh, dữ liệu locale v
 ## Bảo mật và quyền riêng tư
 
 - Plugin không tự thực hiện lời gọi mạng, không có telemetry, và chỉ đọc/ghi hai khóa localStorage của trình duyệt: id locale đã chọn và giá trị ghi đè model dịch.
-- Dịch đắm chìm chạy qua dịch vụ LLM tích hợp sẵn của DSH (model bạn đã cấu hình), không phải API bên thứ ba. Nó chỉ kích hoạt cho đoạn văn tiếng Anh dài khi một locale không phải tiếng Trung đang hoạt động; ngôn ngữ mặc định không bao giờ bị gửi đi để dịch.
+- Dịch tự động chạy qua dịch vụ LLM tích hợp sẵn của DSH (model bạn đã cấu hình), không phải API bên thứ ba. Nó chỉ kích hoạt cho đoạn văn tiếng Anh dài khi một locale không phải tiếng Trung đang hoạt động; ngôn ngữ mặc định không bao giờ bị gửi đi để dịch.
 - Không truy cập filesystem, không xử lý thông tin xác thực.
 
 ## Giấy phép
