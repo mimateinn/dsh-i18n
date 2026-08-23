@@ -17,6 +17,11 @@ profile 備份喺 `C:\Users\dicks\Workspace\dsh-desktop-profile-backup-20260824-
 重啟跑到 renderer healthy 就會 `markHealthy`→`clear`；唔會再 block。
 
 ## 目前狀態
+- 2026-08-24：**npm 已發布 `@mimateinn/dsh-i18n@0.2.0`**（scoped 名，因為 `dsh-i18n` 俾 dushaobindoudou 搶注）。desktop profile 重裝成 npm 版（`@mimateinn/dsh-i18n: 0.2.0`），Market「更新」路徑打通（Market 走 external install 只收 exact npm version，github 插件永遠失敗）。
+  - npm backlink 驗證通過：`repository.url` = mimateinn/dsh-i18n，probe-npm.mjs 會自動連結 npm。
+  - registry PR #2926（awesome-dsh-plugin）：等 repo 滿 1 天（UTC 08-24 14:47）→ regate 自動重檢（每 6 小時 cron）→ maintainer merge。
+  - files 字段已精簡（排除 src/.mt 203MB venv），npm 包 268KB / 28 檔。
+  - ⚠️ npm token 貼過出對話，要 revoke（npmjs.com → Access Tokens）。
 - 2026-08-24：**自動翻譯（LLM）已實現**。host 側 `index.mjs` 註冊 `/dsh-i18n` RPC（`translate({texts,targetLang,provider?,model?})` → `{translations}`，用 `ctx.llm.stream` + `BlockAssembler`，預設 `agentDefaultModel` 主模型）；client 側 `lib/client.js` 用 MutationObserver 捉英文長文本 → RPC 批量翻譯 → 快取 + 冪等。預設語言（en/zh）唔翻譯、繁中保留簡轉繁。模型覆寫存 `localStorage["dsh-i18n.mt"]`。
   - **未驗證**：RPC 註冊 + 實際翻譯要重啟 DSH Desktop 先跑到（host 插件要重新載入）。靜態驗證：`node --check` 過、`npm test` EXIT=0、`@deepseek-ai/dsh-llm` 喺共享 node_modules、import 模式同 `dsh-plugin-subscriptions` 一致。
 - 2026-08-24：**安裝版本問題已解決 + 改名 dsh-i18n + 上 GitHub + README 20 語言導覽**。
