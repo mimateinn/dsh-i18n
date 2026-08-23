@@ -3,7 +3,19 @@
 # HANDOFF
 
 ## 進行中
-（空）
+**任務**：將含品質修正嘅 commit `22a1a3a` 裝入 desktop profile 並做 GUI 驗收。
+**做到邊步**：code 全部改完、`npm test` EXIT=0、已 push 上 fork。安裝**卡住**。
+**卡喺邊**：`dsh plugin add` 報 `another plugin install recovery transaction is pending`。
+成因（已實證）：上一次成功安裝 `87b6b11` 留低嘅 WAL 仲喺 `phase: awaiting-restart`
+（`%APPDATA%/DSH Desktop/plugin-install-recovery/state.json`，profileName=desktop，同 active 一致）。
+DSH Desktop 要**重啟一次並跑到 renderer healthy**，`commitHealthy()` 先會 `markHealthy`→`clear`，
+之後先收得下一單 install。冇 UI 可以跳過。
+**仲未做**：
+- [ ] 重啟 DSH Desktop（現時裝住嘅係 `87b6b11`，重啟後即刻會載入，但係**未含**本輪品質修正）
+- [ ] 重啟後行 `C:\Users\dicks\Workspace\dsh-upgrade-multi-lang-ui.cmd` 升去 `22a1a3a`
+- [ ] 再重啟一次，喺 Settings → General → Language 逐個語言肉眼驗（至少 zh-HK/zh-TW/ar(RTL)/ja/nl）
+**重要狀態**：desktop profile 依賴而家仍然係 `#87b6b113`；`22a1a3a` 未落地。
+兩個 commit 嘅 `lib/client.js` sha256 唔同（6FC3D427… vs 102AFFF8…），可以用嚟確認升級成功。
 
 ## 目前狀態
 - 2026-08-24：**安裝版本問題已解決**。20 個 locale 全部補齊，`npm test` 全綠，fork 已推上
@@ -49,9 +61,18 @@
       有 npm 身份先發，發咗之後 Market 路徑先會通。
 
 ## 獨立審查
-- review ID: `d67b4e39`｜reviewer: sub-agent（read-only）｜frozen revision: `87b6b113e07af81765863d9fd738596874667405`
+- review ID: `d67b4e39`｜reviewer: sub-agent（read-only）｜frozen revision: `87b6b11`
 - scope: gate 完整性、英文殘留量化、簡體殘留、生成 bundle 結構安全、RTL/fallback 宣稱對唔對得上 code
-- verdict: **PENDING**（本 session 未收到結果前唔准當通過）
+- verdict: **FAIL**（blocker × 2、major × 1、minor × 2）
+- findings 同處理：
+  1. **[blocker] 守門只查結構，兩道內容閘完全冇實作** → 已補英文殘留閘同簡體殘留閘（見 DECISIONS）。
+  2. **[blocker] nl/tr/id/th 各有 65–100 條英文原文散文** → 四個 locale 逐值重譯：
+     nl 265→46、tr 227→83、id 214→28、th 241→74（餘數全部係 pkg/ns metadata、純格式串、專有名詞）。
+     順手揪出 th 一條被機翻污染嘅值（QUERY LENGTH LIMIT EXCEEDED…）。
+  3. **[major] zh-HK 94.4% 抄 zh-TW** → 相同值 679→610，有 HK 用詞嘅檔 6→20（密鑰/地址/後台/超時/列表/歸檔/循環/計劃、「」引號）。
+  4. **[minor] zh-HK+zh-TW 精譯值有簡體「占」** → 改「佔」；已入守門，同類再犯即紅。
+  5. **[minor] DECISIONS 講 zh-HK 同 zh-TW 都用轉換器，冇講明淨係得 zh-TW 字表** → 屬實，記入下一步。
+- re-review：**未派**（本輪修正未經第二次獨立審查，唔可以當已驗證）
 
 ## 文件地圖
 | File | Read method | Purpose |
@@ -71,4 +92,11 @@
   抽取就會靜靜少一個檔，而 check.mjs 只同 `src/en` 比，所以完全唔會報。加新 upstream package 要記得手動加。
 - **機器翻譯嘅 venv 唔好放 repo 入面。** `src/uk/.mt` 有 203 MB 兼有 permission denied 目錄，令 `git status` 洗版。
 
-守門統計：本 session 守門紅 3 次（154 → 147 → 141 issue，最後 0），無卡關，無返工；獨立審查 PENDING。
+## 下一步（審查衍生）
+- [ ] 為 `22a1a3a` 派**第二次獨立審查**（本輪修正未被獨立驗過）。
+- [ ] DECISIONS「Runtime fallbacks」條要講明：只有 zh-TW 字表，zh-HK 嘅 fallback 同 DOM 轉換都行台灣正規化，
+      而且 startDomConversion() 硬寫 document.documentElement.lang = "zh-TW"。
+- [ ] 考慮令 useConvert 唔好連 zh-HK 一齊硬綁 zh-TW 字表（架構問題，唔喺本 session scope）。
+
+守門統計：本 session 守門紅 5 次（154 → 147 → 141 → 312 → 308，最後 0），
+獨立審查判 FAIL 一次並已修正（re-review 未派），卡關 1 次（install-recovery WAL 要重啟先清），返工 1 輪（4 個 locale 重譯）。
