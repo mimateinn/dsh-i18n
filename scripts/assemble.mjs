@@ -42,7 +42,7 @@ const DICTS_JSON = JSON.stringify(dicts);
 const CHARS_JSON = JSON.stringify(CHARS);
 
 const clientJs = `/* global window */
-// lib/client.js — dsh-multi-lang-ui 的 Browser 侧 bundle（手写 CJS factory，供 dsh web
+// lib/client.js — dsh-i18n 的 Browser 侧 bundle（手写 CJS factory，供 dsh web
 // 客户端 ModuleLoader 注入）。
 //
 // 职责：
@@ -60,16 +60,16 @@ const clientJs = `/* global window */
 // 依赖注入：@deepseek-ai/dsh-client-locale（locale 服务）；locale 服务缺失时
 // 静默降级（不注册字典、不改语言行），不破坏其他插件。
 window.__ModuleLoader__.load({
-  id: "dsh-multi-lang-ui",
+  id: "dsh-i18n",
   factory: (require) => {
     var module = { exports: {} };
     var exports = module.exports;
     Object.defineProperty(exports, Symbol.toStringTag, { value: "Module" });
 
     const LANGUAGES = ${LANGUAGES_JSON};
-    const STORAGE_KEY = "dsh-multi-lang-ui.preference";
-    // 舊包名遷移鏈：dsh-zh-tw-ui → dsh-locale-zh-tw
-    const LEGACY_STORAGE_KEYS = ["dsh-zh-tw-ui.preference", "dsh-locale-zh-tw.preference"];
+    const STORAGE_KEY = "dsh-i18n.preference";
+    // 舊包名遷移鏈：dsh-multi-lang-ui → dsh-zh-tw-ui → dsh-locale-zh-tw
+    const LEGACY_STORAGE_KEYS = ["dsh-multi-lang-ui.preference", "dsh-zh-tw-ui.preference", "dsh-locale-zh-tw.preference"];
 
     // 全部语言的精译字典（由 scripts/assemble.mjs 生成；质量基准）
     const DICTS = ${DICTS_JSON};
@@ -208,7 +208,7 @@ window.__ModuleLoader__.load({
     function apply(ctx) {
       const locale = ctx.get("locale");
       if (!locale || typeof locale.register !== "function" || typeof locale.getLocale !== "function") {
-        console.warn("[dsh-multi-lang-ui] locale 服务不可用，插件静默降级");
+        console.warn("[dsh-i18n] locale 服务不可用，插件静默降级");
         return;
       }
 
@@ -216,9 +216,9 @@ window.__ModuleLoader__.load({
       for (const [langId, perNs] of Object.entries(DICTS)) {
         for (const [ns, dict] of Object.entries(perNs)) {
           try {
-            ctx.effect(() => locale.register(ns, langId, dict), "multi-lang-ui: " + langId + "/" + ns);
+            ctx.effect(() => locale.register(ns, langId, dict), "dsh-i18n: " + langId + "/" + ns);
           } catch (error) {
-            console.error("[dsh-multi-lang-ui] register", langId, ns, error);
+            console.error("[dsh-i18n] register", langId, ns, error);
           }
         }
       }
@@ -263,7 +263,7 @@ window.__ModuleLoader__.load({
         });
         locale.publish(snapshot.active, true);
       } catch (error) {
-        console.error("[dsh-multi-lang-ui] patch snapshot", error);
+        console.error("[dsh-i18n] patch snapshot", error);
       }
 
       // 3) 包装 setLocale：我们语言的 id 走自有路径，其余（zh/en）走原逻辑并清除偏好

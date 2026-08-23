@@ -1,7 +1,7 @@
 {
-  "name": "dsh-multi-lang-ui",
+  "name": "dsh-i18n",
   "version": "0.2.0",
-  "description": "Sustainable 20-locale internationalization for the DeepSeek Harness Web UI",
+  "description": "20-locale internationalization for the DeepSeek Harness Web UI",
   "type": "module",
   "main": "./index.mjs",
   "types": "./index.d.ts",
@@ -63,11 +63,11 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/mimateinn/dsh-multi-lang-ui.git"
+    "url": "git+https://github.com/mimateinn/dsh-i18n.git"
   },
-  "homepage": "https://github.com/mimateinn/dsh-multi-lang-ui#readme",
+  "homepage": "https://github.com/mimateinn/dsh-i18n#readme",
   "bugs": {
-    "url": "https://github.com/mimateinn/dsh-multi-lang-ui/issues"
+    "url": "https://github.com/mimateinn/dsh-i18n/issues"
   },
   "publishConfig": {
     "access": "public"

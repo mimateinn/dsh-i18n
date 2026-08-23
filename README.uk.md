@@ -1,0 +1,67 @@
+# dsh-i18n
+
+**[繁體中文（香港）](README.zh-HK.md)** · **[繁體中文（台灣）](README.zh-TW.md)** · [English](README.md) · [日本語](README.ja.md) · [한국어](README.ko.md) · [Français](README.fr.md) · [Deutsch](README.de.md) · [Español](README.es.md) · [Português (Brasil)](README.pt-BR.md) · [Italiano](README.it.md) · [Русский](README.ru.md) · [Українська](README.uk.md) · [Polski](README.pl.md) · [Nederlands](README.nl.md) · [Türkçe](README.tr.md) · [العربية](README.ar.md) · [हिन्दी](README.hi.md) · [Bahasa Indonesia](README.id.md) · [Tiếng Việt](README.vi.md) · [ไทย](README.th.md) · [Svenska](README.sv.md)
+
+Сталий плагін інтернаціоналізації для DeepSeek Harness Web UI. Версія 0.2.0 реєструє **20 локалей** з одного реєстру, зберігаючи наявну інтеграцію DSH з клієнтським ModuleLoader, службу локалей, міграцію налаштувань та поведінку резервного переходу під час виконання.
+
+## Локалі
+
+繁體中文（香港、台灣）, 日本語, 한국어, Français, Deutsch, Español, Português (Brasil), Italiano, Русский, Українська, Polski, Nederlands, Türkçe, العربية, हिन्दी, Bahasa Indonesia, Tiếng Việt, ไทย, та Svenska.
+
+- Традиційні китайські локалі (zh-HK, zh-TW) відступають до вбудованих словників спрощеної китайської через наявний конвертер символів.
+- Арабська встановлює мову та напрямок документа як `ar` / `rtl`; інші керовані локалі використовують `ltr`.
+- Неперекладені значення, що не належать до китайської, відступають до англійської.
+
+## Можливості
+
+- Додає всі 20 локалей до **Settings → General → Language** поруч із вбудованими 中文 / English.
+- Ретельно вичитані переклади для кожної мови в кожному офіційному просторі імен локалі (по 715 рядків), від базової англійської.
+- Резервний перехід під час виконання: нові/оновлені/сторонні рядки відступають до англійської (або конвертація спрощеної→традиційної для zh-HK/zh-TW), тож оновлення інтерфейсу від upstream та інших плагінів покриваються без повторного перекладу кожної мови.
+- Мовні налаштування зберігаються в браузерному `localStorage`; стійкі до перезавантаження.
+- Нульове втручання: чисто клієнтський плагін, без змін upstream-пакетів, тиха деградація, якщо службу локалей не знайдено.
+
+## Встановлення
+
+Встановлюйте у профіль, який ваш хост насправді завантажує, і закріплюйте коміт:
+
+```bash
+dsh plugin --profile <active-profile> add github:mimateinn/dsh-i18n#<commit>
+```
+
+Для DSH Desktop активним профілем є значення `active` у
+`%APPDATA%/DSH Desktop/profile-selection/state.json` (зазвичай `desktop`). Прокладка для кожного профілю
+`host-commands/<profile>/bin/dsh.cmd` запікає власну назву профілю в команду, тому запуск
+прокладки `web` встановлює плагін у профіль `web`, навіть якщо Desktop показує `desktop` — встановлення
+завершується успішно, але плагін ніколи не завантажується. Явно передавайте `--profile`, щоб бути впевненим.
+
+Шляхи встановлення з Market у DSH Desktop приймають лише точну опубліковану версію npm, тому специфікацію GitHub потрібно
+проводити через вбудований термінал `dsh plugin add`, який передає специфікатор у pnpm без перевірки.
+
+Перезапустіть хост, потім оберіть мову в **Settings → General → Language**. Видалення виконується командою
+`dsh plugin --profile <active-profile> remove dsh-i18n`.
+
+## Конвеєр обслуговування
+
+Реєстр локалей — це `scripts/locales.mjs`. Дані перекладів залишаються в `src/<locale>/`; згенерований браузерний код — `lib/client.js`.
+
+```bash
+npm run i18n:check     # file, namespace/key, stale, placeholder, empty, English-residue, Simplified-residue parity
+npm run i18n:build     # assemble registry locales into lib/client.js
+npm test               # check + build + converter verification + runtime harness
+
+node scripts/extract.mjs <installed-dsh-path>
+```
+
+Витягування приймає встановлений корінь DSH, його каталог пакета `@deepseek-ai` або шлях розпакованого настільного застосунку.
+
+## Публікація
+
+Пакет npm містить записи часу виконання, згенерований клієнт, дані локалей і реєстр локалей. Вихідний репозиторій: https://github.com/mimateinn/dsh-i18n
+
+## Безпека та конфіденційність
+
+Плагін не має залежностей часу виконання, мережевих викликів, телеметрії чи доступу до файлової системи. Він зберігає лише ідентифікатор обраної локалі в браузерному localStorage.
+
+## Ліцензія
+
+MIT

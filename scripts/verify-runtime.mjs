@@ -37,7 +37,7 @@ win.document = documentMock;
 vm.createContext(sandbox);
 vm.runInContext(clientSrc, sandbox);
 const spec = win.__spec;
-if (!spec || spec.id !== "dsh-multi-lang-ui" || typeof spec.factory !== "function") {
+if (!spec || spec.id !== "dsh-i18n" || typeof spec.factory !== "function") {
   console.error("FAIL: bundle did not register expected module");
   process.exit(1);
 }

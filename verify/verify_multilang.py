@@ -56,7 +56,7 @@ with sync_playwright() as p:
     print("ko:", {k: v for k, v in results.items() if k.startswith("ko_")})
 
     # localStorage 持久化
-    pref = page.evaluate("() => window.localStorage.getItem('dsh-multi-lang-ui.preference')")
+    pref = page.evaluate("() => window.localStorage.getItem('dsh-i18n.preference')")
     results["pref"] = pref
     print("pref:", pref)
 

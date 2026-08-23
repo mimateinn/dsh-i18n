@@ -62,7 +62,7 @@ with sync_playwright() as p:
     print("chat-import buttons:", [t for t in btn_texts if "导入" in t or "匯入" in t])
 
     # localStorage 持久化
-    pref = page.evaluate("() => window.localStorage.getItem('dsh-multi-lang-ui.preference')")
+    pref = page.evaluate("() => window.localStorage.getItem('dsh-i18n.preference')")
     results["localStorage_pref"] = pref
     print("localStorage pref:", pref)
 
@@ -90,7 +90,7 @@ with sync_playwright() as p:
     if zh_opt.count() > 0:
         zh_opt.first.click()
         page.wait_for_timeout(1000)
-        pref2 = page.evaluate("() => window.localStorage.getItem('dsh-multi-lang-ui.preference')")
+        pref2 = page.evaluate("() => window.localStorage.getItem('dsh-i18n.preference')")
         results["pref_cleared_after_zh"] = (pref2 is None)
         print("pref after switching back to 中文:", pref2)
 

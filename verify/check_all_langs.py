@@ -21,7 +21,7 @@ with sync_playwright() as p:
 
     all_ok = True
     for lid, sig in LANGS:
-        page.evaluate("(k) => window.localStorage.setItem('dsh-multi-lang-ui.preference', k)", lid)
+        page.evaluate("(k) => window.localStorage.setItem('dsh-i18n.preference', k)", lid)
         page.reload(wait_until="domcontentloaded", timeout=30000)
         page.wait_for_timeout(6000)
         body = page.locator("body").inner_text()

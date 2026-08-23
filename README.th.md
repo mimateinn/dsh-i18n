@@ -1,0 +1,61 @@
+# dsh-i18n
+
+**[繁體中文（香港）](README.zh-HK.md)** · **[繁體中文（台灣）](README.zh-TW.md)** · [English](README.md) · [日本語](README.ja.md) · [한국어](README.ko.md) · [Français](README.fr.md) · [Deutsch](README.de.md) · [Español](README.es.md) · [Português (Brasil)](README.pt-BR.md) · [Italiano](README.it.md) · [Русский](README.ru.md) · [Українська](README.uk.md) · [Polski](README.pl.md) · [Nederlands](README.nl.md) · [Türkçe](README.tr.md) · [العربية](README.ar.md) · [हिन्दी](README.hi.md) · [Bahasa Indonesia](README.id.md) · [Tiếng Việt](README.vi.md) · [ไทย](README.th.md) · [Svenska](README.sv.md)
+
+ปลั๊กอินทำอินเทอร์เนชันแนลไลเซชัน (internationalization) ที่ยั่งยืนสำหรับ DeepSeek Harness Web UI เวอร์ชัน 0.2.0 ลงทะเบียน **20 โลแคล** จากรีจิสทรีเดียว พร้อมทั้งรักษาการผสานรวม ModuleLoader ฝั่งไคลเอนต์ บริการโลแคล การโยกย้ายค่ากำหนด และพฤติกรรม fallback ณ รันไทม์ที่มีอยู่เดิมของ DSH
+
+## โลแคล
+
+繁體中文（香港、台灣）, 日本語, 한국어, Français, Deutsch, Español, Português (Brasil), Italiano, Русский, Українська, Polski, Nederlands, Türkçe, العربية, हिन्दी, Bahasa Indonesia, Tiếng Việt, ไทย, และ Svenska.
+
+- โลแคลภาษาจีนตัวเต็ม (zh-HK, zh-TW) จะ fallback จากพจนานุกรมภาษาจีนตัวย่อที่ติดตั้งมาในตัว ผ่านตัวแปลงอักขระที่มีอยู่เดิม
+- ภาษาอาหรับตั้งค่าภาษาและทิศทางของเอกสารเป็น `ar` / `rtl` ส่วนโลแคลอื่นที่จัดการอยู่ใช้ `ltr`
+- ค่าที่ยังไม่ได้รับการแปลที่ไม่ใช่ภาษาจีนจะ fallback ไปเป็นภาษาอังกฤษ
+
+## คุณสมบัติ
+
+- เพิ่มโลแคลทั้ง 20 ภาษาเข้าไปใน **Settings → General → Language** ควบคู่กับ 中文 / English ที่ติดตั้งมาในตัว
+- การแปลที่ขัดเกลาด้วยมือสำหรับแต่ละภาษา ครอบคลุมทุก namespace ของโลแคลทางการ (ภาษาละ 715 สตริง) โดยอ้างอิงจากภาษาอังกฤษเป็นหลัก
+- Fallback ณ รันไทม์: สตริงใหม่ สตริงที่อัปเดต หรือสตริงจากบุคคลที่สาม จะ fallback ไปเป็นภาษาอังกฤษ (หรือแปลงจากตัวย่อ→ตัวเต็มสำหรับ zh-HK/zh-TW) ทำให้การอัปเดต UI จากต้นทางและปลั๊กอินอื่นได้รับการครอบคลุมโดยไม่ต้องแปลใหม่ทุกภาษา
+- ค่ากำหนดภาษาถูกบันทึกไว้ใน `localStorage` ของเบราว์เซอร์ คงอยู่แม้รีโหลดหน้า
+- ไม่รุกล้ำระบบ: เป็นปลั๊กอินฝั่งไคลเอนต์ล้วน ๆ ไม่มีการแก้ไขแพ็กเกจต้นทาง และลดระดับการทำงานอย่างเงียบ ๆ หากไม่มีบริการโลแคล
+
+## การติดตั้ง
+
+ติดตั้งลงในโปรไฟล์ที่โฮสต์ของคุณบูตใช้งานจริง และปักหมุด commit:
+
+```bash
+dsh plugin --profile <active-profile> add github:mimateinn/dsh-i18n#<commit>
+```
+
+สำหรับ DSH Desktop โปรไฟล์ที่ใช้งานอยู่คือค่า `active` ใน `%APPDATA%/DSH Desktop/profile-selection/state.json` (โดยปกติคือ `desktop`) ตัว shim รายโปรไฟล์ `host-commands/<profile>/bin/dsh.cmd` ฝังชื่อโปรไฟล์ของตัวเองลงในคำสั่ง ดังนั้นการรัน shim ของ `web` จะติดตั้งลงในโปรไฟล์ `web` แม้ในขณะที่ Desktop แสดงเป็น `desktop` — การติดตั้งจะสำเร็จแต่ปลั๊กอินจะไม่มีวันถูกโหลด ระบุ `--profile` อย่างชัดเจนเพื่อความแน่ใจ
+
+เส้นทางการติดตั้งผ่าน Market ของ DSH Desktop ยอมรับเฉพาะเวอร์ชัน npm ที่เผยแพร่แล้วแบบตรงตัวเท่านั้น ดังนั้นสเปกจาก GitHub ต้องผ่านเทอร์มินัลในตัว `dsh plugin add` ซึ่งส่งต่อ specifier ไปยัง pnpm โดยไม่มีการตรวจสอบ
+
+รีสตาร์ทโฮสต์ แล้วเลือกภาษาใน **Settings → General → Language** ถอดออกด้วย `dsh plugin --profile <active-profile> remove dsh-i18n`
+
+## ไปป์ไลน์การบำรุงรักษา
+
+รีจิสทรีโลแคลคือ `scripts/locales.mjs` ข้อมูลการแปลอยู่ใน `src/<locale>/` ส่วนโค้ดเบราว์เซอร์ที่สร้างขึ้นคือ `lib/client.js`
+
+```bash
+npm run i18n:check     # file, namespace/key, stale, placeholder, empty, English-residue, Simplified-residue parity
+npm run i18n:build     # assemble registry locales into lib/client.js
+npm test               # check + build + converter verification + runtime harness
+
+node scripts/extract.mjs <installed-dsh-path>
+```
+
+การสกัดยอมรับ root ของ DSH ที่ติดตั้งไว้ ไดเรกทอรีแพ็กเกจ `@deepseek-ai` หรือเส้นทางของแอปพลิเคชันเดสก์ท็อปที่คลายแพ็กแล้ว
+
+## การเผยแพร่
+
+แพ็กเกจ npm ประกอบด้วยรายการรันไทม์ ไคลเอนต์ที่สร้างขึ้น ข้อมูลโลแคล และรีจิสทรีโลแคล ที่เก็บซอร์สโค้ด: https://github.com/mimateinn/dsh-i18n
+
+## ความปลอดภัยและความเป็นส่วนตัว
+
+ปลั๊กอินนี้ไม่มี dependency ณ รันไทม์ ไม่มีการเรียกผ่านเครือข่าย ไม่มี telemetry และไม่มีการเข้าถึงระบบไฟล์ โดยเก็บเฉพาะรหัสโลแคลที่เลือกไว้ใน localStorage ของเบราว์เซอร์
+
+## สัญญาอนุญาต
+
+MIT

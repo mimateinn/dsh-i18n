@@ -1,6 +1,6 @@
-url: https://github.com/asd13006/dsh-multi-lang-ui
-name: asd13006/dsh-multi-lang-ui
+url: https://github.com/mimateinn/dsh-i18n
+name: mimateinn/dsh-i18n
 category: ui
 description:
-  en: Add multiple languages (繁體中文, 日本語, 한국어, Français, Deutsch, Español) to the DeepSeek Harness Web UI, with hand-polished translations per language and automatic fallbacks (Simplified-to-Traditional conversion for zh-TW, English for others) covering upstream updates and third-party plugins.
-  zh: 為 DeepSeek Harness Web UI 新增多種語言（繁體中文、日本語、한국어、Français、Deutsch、Español）：各語言逐條精譯，缺字串自動兜底（繁中即時簡轉繁、其他語言回退英文），官方更新與第三方插件都能覆蓋。
+  en: Add 20 locales (繁體中文, 日本語, 한국어, Français, Deutsch, Español, Português, Italiano, Русский, Українська, Polski, Nederlands, Türkçe, العربية, हिन्दी, Bahasa Indonesia, Tiếng Việt, ไทย, Svenska) to the DeepSeek Harness Web UI, with hand-polished translations per language and automatic fallbacks (Simplified-to-Traditional conversion for zh-HK/zh-TW, English for others) covering upstream updates and third-party plugins.
+  zh: 為 DeepSeek Harness Web UI 新增 20 種語言（繁體中文、日本語、한국어、Français、Deutsch、Español、Português、Italiano、Русский、Українська、Polski、Nederlands、Türkçe、العربية、हिन्दी、Bahasa Indonesia、Tiếng Việt、ไทย、Svenska）：各語言逐條精譯，缺字串自動兜底（繁中即時簡轉繁、其他語言回退英文），官方更新與第三方插件都能覆蓋。

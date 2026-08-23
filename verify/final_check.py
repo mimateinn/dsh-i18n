@@ -11,7 +11,7 @@ with sync_playwright() as p:
     page = ctx.new_page()
     page.goto(BASE, wait_until="domcontentloaded", timeout=30000)
     page.wait_for_timeout(4000)
-    page.evaluate("() => window.localStorage.setItem('dsh-multi-lang-ui.preference', 'zh-TW')")
+    page.evaluate("() => window.localStorage.setItem('dsh-i18n.preference', 'zh-TW')")
     page.reload(wait_until="domcontentloaded", timeout=30000)
     page.wait_for_timeout(5000)
     page.get_by_role("button", name="設定", exact=False).first.wait_for(state="visible", timeout=15000)
