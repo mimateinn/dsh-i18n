@@ -18,7 +18,7 @@ A sustainable internationalization plugin for the DeepSeek Harness Web UI. Versi
 - Per-language hand-polished translations for every official locale namespace (715 strings each), from an English baseline.
 - Runtime fallback: new/updated/third-party strings fall back to English (or Simplified→Traditional conversion for zh-HK/zh-TW), so upstream UI updates and other plugins are covered without re-translating every language.
 - Language preference persisted in browser `localStorage`; reload-proof.
-- **Immersive translate**: when a non-Chinese locale is active, long English text (plugin-market descriptions, third-party UI, error prose) is auto-translated to your language via your configured model — cached and idempotent so React re-renders don't fight it. The default language (en/zh) is left untouched; Traditional Chinese keeps the built-in Simplified→Traditional conversion instead of calling a model.
+- **Immersive translation**: with a non-Chinese locale active, long English text (plugin-market descriptions, third-party UI, error prose) is auto-translated to your language through your configured model, and cached so re-renders don't undo it. The default language (en/zh) is left untouched; Traditional Chinese keeps the built-in Simplified→Traditional conversion instead of calling a model.
 - Zero intrusion on dictionaries: no upstream package changes, silent degradation if the locale service is missing.
 
 ## Install
