@@ -11,8 +11,8 @@
 DSH Desktop 要**重啟一次並跑到 renderer healthy**，`commitHealthy()` 先會 `markHealthy`→`clear`，
 之後先收得下一單 install。冇 UI 可以跳過。
 **仲未做**：
-- [ ] 重啟 DSH Desktop（現時裝住嘅係 `87b6b11`，重啟後即刻會載入，但係**未含**本輪品質修正）
-- [ ] 重啟後行 `C:\Users\dicks\Workspace\dsh-upgrade-multi-lang-ui.cmd` 升去 `22a1a3a`
+- [ ] 重啟 DSH Desktop（重啟會 finalize `87b6b11` 嘅 WAL；現時裝住嘅仍係 `87b6b11`，未含本輪品質修正）
+- [ ] 重啟後行 `C:\Users\dicks\Workspace\dsh-upgrade-multi-lang-ui.cmd` 升去 `fe9c8a4`
 - [ ] 再重啟一次，喺 Settings → General → Language 逐個語言肉眼驗（至少 zh-HK/zh-TW/ar(RTL)/ja/nl）
 **重要狀態**：desktop profile 依賴而家仍然係 `#87b6b113`；`22a1a3a` 未落地。
 兩個 commit 嘅 `lib/client.js` sha256 唔同（6FC3D427… vs 102AFFF8…），可以用嚟確認升級成功。
@@ -72,7 +72,11 @@ DSH Desktop 要**重啟一次並跑到 renderer healthy**，`commitHealthy()` �
   3. **[major] zh-HK 94.4% 抄 zh-TW** → 相同值 679→610，有 HK 用詞嘅檔 6→20（密鑰/地址/後台/超時/列表/歸檔/循環/計劃、「」引號）。
   4. **[minor] zh-HK+zh-TW 精譯值有簡體「占」** → 改「佔」；已入守門，同類再犯即紅。
   5. **[minor] DECISIONS 講 zh-HK 同 zh-TW 都用轉換器，冇講明淨係得 zh-TW 字表** → 屬實，記入下一步。
-- re-review：**未派**（本輪修正未經第二次獨立審查，唔可以當已驗證）
+- re-review：**已做**（review ID `968ebdaf`，frozen `b3e2d7b`）verdict = **PASS WITH FINDINGS**：
+  兩道內容閘實證有效（fault injection 5/6 中，除「重寫過嘅英文」外全中）、0 個 locale 有 ≥3 字英文殘留、
+  zh-HK 610/715 屬實、build 逐 byte 可重現。新 findings 已處理：runtime harness（`scripts/verify-runtime.mjs`）已入 test 鏈、
+  ar 23 條狀態動詞 + sv/hi 模式名 + 零星短字串已譯、th 省略號已補。已知限制：1–2 字英文殘留（技術詞/loandword）喺閘之下，
+  靠人工睇，唔會自動紅。
 
 ## 文件地圖
 | File | Read method | Purpose |
