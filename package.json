@@ -58,7 +58,6 @@
     "README.md",
     "README.*.md",
     "LICENSE",
-    "src",
     "scripts/locales.mjs"
   ],
   "license": "MIT",
