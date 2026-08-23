@@ -4,8 +4,8 @@
     {
       "ns": "sidebar",
       "dict": {
-        "session.new": "新會話",
-        "session.new.label": "新增會話",
+        "session.new": "新對話",
+        "session.new.label": "新增對話",
         "toggle.open": "開啟側邊欄",
         "toggle.collapse": "收起側邊欄"
       }

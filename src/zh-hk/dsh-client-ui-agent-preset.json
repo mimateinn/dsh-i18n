@@ -5,14 +5,14 @@
       "ns": "settings.agentPreset",
       "dict": {
         "title": "Agent 預設",
-        "description": "對之後新增的會話生效。執行中的會話保持它開始時的預設。",
+        "description": "對之後新增的對話生效。執行中的對話保持它開始時的預設。",
         "loading": "正在載入預設…",
         "error": "無法載入 Agent 預設。",
         "userTrust": "自訂",
-        "seatHint": "即將開始的這個會話所用的 Agent 預設",
-        "headerHint": "本會話執行的 Agent 預設，開始時即固定",
+        "seatHint": "即將開始的這個對話所用的 Agent 預設",
+        "headerHint": "本對話執行的 Agent 預設，開始時即固定",
         "nav": "Agent 預設",
-        "sectionIntro": "預設即一個會話的 Agent 所執行的插件組裝 —— 它的工具、提示詞與能力。複製一份既有預設改成自己的，或用「創造模式」讓 Agent 幫你建立。",
+        "sectionIntro": "預設即一個對話的 Agent 所執行的插件組裝 —— 它的工具、提示詞與能力。複製一份既有預設改成自己的，或用「創造模式」讓 Agent 幫你建立。",
         "builtIn": "內建",
         "setDefault": "設為預設",
         "view": "檢視",
@@ -54,7 +54,7 @@
         "idInvalid": "只能使用小寫字母、數字與連字號，且以字母或數字開頭。",
         "idTaken": "該識別碼已被佔用。",
         "deleteTitle": "刪除該預設？",
-        "deleteDescription": "預設目錄將被刪除。已在其上執行的會話不受影響；新會話將無法再選擇它。",
+        "deleteDescription": "預設目錄將被刪除。已在其上執行的對話不受影響；新對話將無法再選擇它。",
         "deleteConfirm": "刪除",
         "deleting": "正在刪除…"
       }

@@ -4,7 +4,7 @@
     {
       "ns": "model",
       "dict": {
-        "command.description": "選擇本會話使用的模型",
+        "command.description": "選擇本對話使用的模型",
         "option.loadError": "目錄載入失敗：{message}",
         "trigger.fallback": "選擇模型",
         "trigger.selectAria": "選擇模型",
