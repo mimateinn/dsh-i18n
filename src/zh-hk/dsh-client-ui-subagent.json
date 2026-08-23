@@ -4,9 +4,9 @@
     {
       "ns": "subagent",
       "dict": {
-        "diagnostic.corrupt": "會話紀錄損壞",
-        "diagnostic.unsupported": "子代理紀錄版本不受支援",
-        "diagnostic.unavailable": "會話紀錄暫時無法使用",
+        "diagnostic.corrupt": "會話記錄損壞",
+        "diagnostic.unsupported": "子代理記錄版本不受支援",
+        "diagnostic.unavailable": "會話記錄暫時無法使用",
         "duration.seconds": "{seconds}秒",
         "duration.minutes": "{minutes}分{seconds}秒",
         "duration.hours": "{hours}小時{minutes}分{seconds}秒",
@@ -33,10 +33,10 @@
         "count.running.one": "{count} 個子代理，正在執行",
         "count.running.other": "{count} 個子代理，正在執行",
         "tree.aria": "子代理會話",
-        "readonly.oneShot.title": "一次性子代理紀錄",
+        "readonly.oneShot.title": "一次性子代理記錄",
         "readonly.title": "此子代理暫時唯讀",
-        "readonly.oneShot.body": "一次性任務不支援後續訊息，可以在這裡查看完整的執行紀錄。",
-        "readonly.body": "父會話目前不在線上，重新開啟父會話後即可繼續傳送訊息。"
+        "readonly.oneShot.body": "一次性任務不支援後續訊息，可以在這裡查看完整的執行記錄。",
+        "readonly.body": "父會話目前不在線，重新開啟父會話後即可繼續傳送訊息。"
       }
     }
   ]

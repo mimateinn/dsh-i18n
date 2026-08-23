@@ -6,19 +6,19 @@
       "dict": {
         "count.live.one": "{count} background job actief",
         "count.live.other": "{count} background jobs actief",
-        "count.idle.one": "{count} background job",
-        "count.idle.other": "{count} background jobs",
+        "count.idle.one": "{count} achtergrondtaak",
+        "count.idle.other": "{count} achtergrondtaken",
         "list.aria": "Achtergrondtaken",
-        "status.running": "running",
-        "status.stopping": "stopping",
-        "status.completed": "completed",
-        "status.killed": "cancelled",
-        "status.failed": "failed",
+        "status.running": "actief",
+        "status.stopping": "wordt gestopt",
+        "status.completed": "voltooid",
+        "status.killed": "geannuleerd",
+        "status.failed": "mislukt",
         "duration.seconds": "{seconds}s",
         "duration.minutes": "{minutes}m {seconds}s",
         "duration.hours": "{hours}h {minutes}m",
-        "duration.title.live": "Running for {duration}",
-        "duration.title.done": "Took {duration}"
+        "duration.title.live": "Loopt al {duration}",
+        "duration.title.done": "Duurde {duration}"
       }
     }
   ]

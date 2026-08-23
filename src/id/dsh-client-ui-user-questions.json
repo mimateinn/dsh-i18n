@@ -4,21 +4,21 @@
     {
       "ns": "question",
       "dict": {
-        "error.incomplete": "Please complete this question first.",
-        "error.unanswered": "Please select an option or enter a custom answer.",
-        "nav.prev": "Previous question",
-        "nav.next": "Next question",
-        "nav.minimize": "Collapse the question card",
-        "nav.maximize": "Expand the question card",
-        "nav.cancel": "Dismiss all questions",
-        "option.recommended": "Recommended",
-        "custom.placeholder": "Type your answer",
-        "action.skip": "Skip this question",
-        "action.next": "Next",
-        "plan.header": "Plan review",
-        "plan.approve": "Approve",
-        "plan.decline": "Refuse",
-        "plan.discuss": "Chat about it"
+        "error.incomplete": "Harap lengkapi pertanyaan ini terlebih dahulu.",
+        "error.unanswered": "Harap pilih salah satu opsi atau masukkan jawaban kustom.",
+        "nav.prev": "Pertanyaan sebelumnya",
+        "nav.next": "Pertanyaan berikutnya",
+        "nav.minimize": "Ciutkan kartu pertanyaan",
+        "nav.maximize": "Perluas kartu pertanyaan",
+        "nav.cancel": "Tutup semua pertanyaan",
+        "option.recommended": "Disarankan",
+        "custom.placeholder": "Ketik jawaban Anda",
+        "action.skip": "Lewati pertanyaan ini",
+        "action.next": "Berikutnya",
+        "plan.header": "Tinjauan rencana",
+        "plan.approve": "Setujui",
+        "plan.decline": "Tolak",
+        "plan.discuss": "Bahas dulu"
       }
     }
   ]

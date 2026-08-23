@@ -4,10 +4,10 @@
     {
       "ns": "settings.theme",
       "dict": {
-        "appearance.title": "Appearance",
-        "appearance.light": "Light",
-        "appearance.dark": "Dark",
-        "appearance.system": "System"
+        "appearance.title": "ลักษณะที่ปรากฏ",
+        "appearance.light": "สว่าง",
+        "appearance.dark": "มืด",
+        "appearance.system": "ตามระบบ"
       }
     }
   ]

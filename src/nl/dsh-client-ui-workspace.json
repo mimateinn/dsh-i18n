@@ -27,7 +27,7 @@
         "search.pending": "Searching sessie history…",
         "search.unavailable": "Content search is temporarily niet beschikbaar. Showing naam matches.",
         "search.noMatches": "Geen matching sessies",
-        "search.hasMore": "Showing the first {n} results. Narrow your search.",
+        "search.hasMore": "De eerste {n} resultaten worden getoond. Verfijn je zoekopdracht.",
         "menu.addWorkspace": "Voeg toe: werkruimte…",
         "picker.loading": "Laden: werkruimtes…",
         "conflict.named": "A werkruimte naamd “{name}” already exists.",
@@ -45,8 +45,8 @@
         "menu.archiveSession": "Sessie archiveren",
         "sessions.count.one": "{n} sessie",
         "sessions.count.other": "{n} sessies",
-        "actions.workspace.aria": "Workspace actions for {name}",
-        "actions.session.aria": "Session actions for {name}",
+        "actions.workspace.aria": "Werkruimteacties voor {name}",
+        "actions.session.aria": "Sessieacties voor {name}",
         "actions.newSession.aria": "New sessie in {name}",
         "status.running": "Actief",
         "status.subagentsRunning.one": "{n} subagent actief",
@@ -56,16 +56,16 @@
         "status.planReview": "Plan wacht op beoordeling",
         "status.waitingAnswer": "Wachten op antwoord",
         "status.completed": "Voltooid",
-        "hover.created": "Created {time}",
-        "hover.copied": "Copied",
+        "hover.created": "Gemaakt {time}",
+        "hover.copied": "Gekopieerd",
         "date.ymd": "{y}-{m}-{d}",
-        "time.now": "now",
+        "time.now": "nu",
         "time.minutes": "{n}min",
         "time.hours": "{n}h",
         "time.days": "{n}d",
         "time.months": "{n}mo",
         "time.years": "{n}y",
-        "time.ago": "{t} ago"
+        "time.ago": "{t} geleden"
       }
     }
   ]

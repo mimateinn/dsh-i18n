@@ -4,20 +4,20 @@
     {
       "ns": "trajectory",
       "dict": {
-        "view.trajectory": "Trajectory",
-        "toolbar.aria": "Trajectory toolbar",
-        "toolbar.duration": "Duration",
-        "toolbar.useActualDuration": "Use actual duration",
-        "toolbar.useEqualWidth": "Use equal-width operations",
-        "toolbar.actualTime": "Actual time",
-        "toolbar.turns": "Turns",
-        "toolbar.expandTurns": "Expand turns",
-        "toolbar.collapseTurns": "Collapse turns",
-        "toolbar.calls": "Calls",
-        "toolbar.expandCalls": "Expand calls",
-        "toolbar.collapseCalls": "Collapse calls",
-        "toolbar.search": "Search trajectory",
-        "toolbar.searchPlaceholder": "Search"
+        "view.trajectory": "เส้นทางการทำงาน",
+        "toolbar.aria": "แถบเครื่องมือเส้นทางการทำงาน",
+        "toolbar.duration": "ระยะเวลา",
+        "toolbar.useActualDuration": "ใช้ระยะเวลาจริง",
+        "toolbar.useEqualWidth": "ใช้ความกว้างเท่ากันทุกการดำเนินการ",
+        "toolbar.actualTime": "เวลาจริง",
+        "toolbar.turns": "เทิร์น",
+        "toolbar.expandTurns": "ขยายเทิร์น",
+        "toolbar.collapseTurns": "ยุบเทิร์น",
+        "toolbar.calls": "การเรียกใช้",
+        "toolbar.expandCalls": "ขยายการเรียกใช้",
+        "toolbar.collapseCalls": "ยุบการเรียกใช้",
+        "toolbar.search": "ค้นหาในเส้นทางการทำงาน",
+        "toolbar.searchPlaceholder": "ค้นหา"
       }
     }
   ]

@@ -14,7 +14,7 @@
         "menu.model": "模型",
         "menu.effort": "推理等級",
         "effort.providerDefault": "Default",
-        "status.loading": "正在重新整理模型清單…",
+        "status.loading": "正在刷新模型列表…",
         "error.action": "模型操作失敗：{message}",
         "action.reload": "重新載入",
         "warning.groupLoad": "{name} 載入失敗：{message}",

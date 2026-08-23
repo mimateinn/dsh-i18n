@@ -9,4 +9,6 @@
 | Upstream extraction | Installed DSH client bundles | `src/en`, `src/zh-src` | Extractor fails on missing/changed bundles |
 | Traditional fallback | `src/zh-tw-parts/chars.json` | Runtime converter for zh-HK/zh-TW | `verify-converter.mjs` |
 | Arabic direction | Locale registry `rtl` flag | Document `lang` and `dir` | Generated client behavior |
+| Untranslated-English detection | `scripts/check.mjs` `englishWordCount` | — | `npm run i18n:check` |
+| Simplified residue in zh-HK/zh-TW | `src/zh-tw-parts/chars.json` keys | — | `npm run i18n:check` |
 | Package release metadata | `package.json` | npm/GitHub metadata | `npm test` |

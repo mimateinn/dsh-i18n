@@ -7,7 +7,7 @@
         "produced.label": "Geproduceerd",
         "produced.moreOne": "+ 1 bestand",
         "produced.more": "+ {count} bestands",
-        "produced.open": "Open {name}",
+        "produced.open": "{name} openen",
         "produced.showInFolder": "Toon in map"
       }
     }

@@ -10,11 +10,11 @@
         "browser.folderName": "Mapnaam",
         "browser.createIn": "New map in \"{name}\"",
         "browser.untitledFolder": "Untitled map",
-        "browser.create": "Create",
-        "browser.cancel": "Cancel",
+        "browser.create": "Maken",
+        "browser.cancel": "Annuleren",
         "browser.open": "Openen",
         "browser.editPath": "Pad bewerken",
-        "browser.loading": "Loading…",
+        "browser.loading": "Laden…",
         "browser.truncated": "Too many maps to list; only the beginning is shown.",
         "browser.showHidden": "Verborgen bestanden tonen"
       }

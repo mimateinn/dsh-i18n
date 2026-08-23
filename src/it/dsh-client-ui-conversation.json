@@ -50,7 +50,7 @@
         "context.messages": "Messaggi",
         "stats.counts": "{turns} giri · {steps} passi",
         "stats.llm": "LLM {duration}",
-        "stats.toolCall": "Tool call {duration}",
+        "stats.toolCall": "Chiamata strumento {duration}",
         "stats.ttftAverage": "TTFT media {duration}",
         "stats.tokensPerSecond": "Tok/s {throughput}",
         "stats.cacheHit": "Cache colpita {percent}%",

@@ -6,7 +6,7 @@
       "dict": {
         "trigger": "Instellingen",
         "title": "Instellingen",
-        "close": "Close",
+        "close": "Sluiten",
         "openDocument": "Configuratiebestand openen",
         "openDocument.error": "Kon niet open configuratie bestand",
         "general.nav": "Algemeen"

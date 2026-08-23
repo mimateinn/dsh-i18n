@@ -16,13 +16,13 @@
         "builtIn": "ในตัว",
         "setDefault": "ตั้งค่าเป็นดั้งเดิม",
         "view": "จำนวนเข้าชม",
-        "presetStandardName": "Standard mode",
+        "presetStandardName": "โหมด Standard",
         "presetStandardDescription": "ตัวแทนการเข้ารหัสเต็มรูปแบบพร้อมการแก้ไขไฟล์เชลล์การค้นหาไฟล์และเว็บทักษะการวางแผนเป้าหมายตัวแทนย่อยและเวิร์กโฟลว์",
-        "presetCodeName": "PTC mode",
+        "presetCodeName": "โหมด PTC",
         "presetCodeDescription": "ความสามารถทั้งหมดของ Standard mode ด้วยเครื่องมือที่สัมผัสผ่าน Code Mode SDK เพื่อให้โมเดลสามารถรวมการทำงานแบบหลายขั้นตอนในโปรแกรม TypeScript หนึ่งโปรแกรม",
-        "presetMinimalName": "Minimal mode",
+        "presetMinimalName": "โหมด Minimal",
         "presetMinimalDescription": "สารกำหนดรหัสทูทูลที่มี bash และ str_replace_editor แบบถาวร",
-        "presetCordisName": "Creator mode",
+        "presetCordisName": "โหมด Creator",
         "presetCordisDescription": "สร้างขึ้นสำหรับการสร้างพรีเซ็ตตัวแทนที่กำหนดเองด้วยความสามารถทั้งหมดของ Standard mode รวมถึงการตรวจสอบรันไทม์การทดลองปลั๊กอินและคำแนะนำในการเขียนพรีเซ็ต",
         "duplicate": "ทำซ้ำ",
         "duplicateUnavailable": "การปรับใช้นี้ไม่มีไดเรกทอรีที่ตั้งไว้ล่วงหน้าที่เขียนได้",
@@ -55,7 +55,7 @@
         "idTaken": "มีพรีเซ็ตที่มีตัวระบุนี้อยู่แล้ว",
         "deleteTitle": "ลบพรีเซ็ตนี้ใช่ไหม?",
         "deleteDescription": "ไดเรกทอรีที่ตั้งไว้ล่วงหน้าถูกลบเซสชั่นทำงานอยู่แล้วทำงานต่อไปเซสชั่นใหม่ไม่สามารถเลือกได้",
-        "deleteConfirm": "Delete",
+        "deleteConfirm": "ลบ",
         "deleting": "กำลังลบ…"
       }
     }

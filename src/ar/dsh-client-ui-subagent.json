@@ -22,7 +22,7 @@
         "loading.aria": "جارٍ التحميل subagents",
         "load.error": "‏Unable to load subagents",
         "retry": "إعادة المحاولة",
-        "mode.oneShot": "one-shot",
+        "mode.oneShot": "تنفيذ واحد",
         "mode.continuable": "continuable",
         "activity.running": "running",
         "activity.inactive": "‏not running",

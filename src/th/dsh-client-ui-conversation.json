@@ -123,7 +123,7 @@
         "message.tokensPerSecond": "{tps} tok/s",
         "duration.seconds": "{seconds}s",
         "duration.minutes": "{minutes}m {seconds}s",
-        "command.running": "Running…",
+        "command.running": "กำลังทำงาน…",
         "command.failed": "คำสั่งล้มเหลว",
         "command.done": "เสร็จสมบูรณ์",
         "command.title": "คำสั่ง",

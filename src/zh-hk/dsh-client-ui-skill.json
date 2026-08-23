@@ -8,7 +8,7 @@
         "row.failed": "skill 載入失敗",
         "row.stopped": "skill 載入已中止",
         "row.instructions": "說明",
-        "menu.userOnly": "僅限使用者"
+        "menu.userOnly": "僅限用戶"
       }
     }
   ]

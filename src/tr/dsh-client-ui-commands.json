@@ -11,7 +11,7 @@
         "status.empty": "Seçenek yok",
         "overlay.aria": "/{command} seçenekleri",
         "listbox.aria": "/{command} eşleşmeleri",
-        "notice.imagesUnsupported": "/{command} does not accept image attachments; remove them first"
+        "notice.imagesUnsupported": "/{command} görsel eklerini kabul etmez; önce bunları kaldırın"
       }
     }
   ]

@@ -53,7 +53,7 @@
         "stats.toolCall": "Alat panggil {duration}",
         "stats.ttftAverage": "TTFT rata-rata {duration}",
         "stats.tokensPerSecond": "{throughput} tok/dtk",
-        "stats.cacheHit": "Cache hit {percent}%",
+        "stats.cacheHit": "Cache terpakai {percent}%",
         "stats.tokens": "Masukkan {input} tok · Keluaran {output} tok",
         "settings.enter.title": "Masukkan perilaku saat sibuk",
         "settings.enter.description": "Hanya sibuk; Cmd/Ctrl+Enter menggunakan perilaku lain",

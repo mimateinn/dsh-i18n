@@ -4,10 +4,10 @@
     {
       "ns": "sidebar",
       "dict": {
-        "session.new": "New Session",
-        "session.new.label": "New session",
-        "toggle.open": "Open sidebar",
-        "toggle.collapse": "Collapse sidebar"
+        "session.new": "เซสชันใหม่",
+        "session.new.label": "เซสชันใหม่",
+        "toggle.open": "เปิดแถบด้านข้าง",
+        "toggle.collapse": "ยุบแถบด้านข้าง"
       }
     }
   ]

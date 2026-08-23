@@ -4,10 +4,10 @@
     {
       "ns": "settings.theme",
       "dict": {
-        "appearance.title": "Appearance",
-        "appearance.light": "Light",
-        "appearance.dark": "Dark",
-        "appearance.system": "System"
+        "appearance.title": "Tampilan",
+        "appearance.light": "Terang",
+        "appearance.dark": "Gelap",
+        "appearance.system": "Sistem"
       }
     }
   ]

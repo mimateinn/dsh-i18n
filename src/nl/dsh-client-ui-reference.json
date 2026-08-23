@@ -5,11 +5,11 @@
       "ns": "reference",
       "dict": {
         "section.files": "Files & maps",
-        "section.sessions": "Session conversations",
-        "candidate.file": "File",
-        "candidate.folder": "Folder",
-        "candidate.session": "Session",
-        "candidate.noCwd": "(no cwd)"
+        "section.sessions": "Sessiegesprekken",
+        "candidate.file": "Bestand",
+        "candidate.folder": "Map",
+        "candidate.session": "Sessie",
+        "candidate.noCwd": "(geen cwd)"
       }
     }
   ]

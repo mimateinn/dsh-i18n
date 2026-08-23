@@ -4,10 +4,10 @@
     {
       "ns": "sidebar",
       "dict": {
-        "session.new": "New Session",
-        "session.new.label": "New session",
-        "toggle.open": "Open sidebar",
-        "toggle.collapse": "Collapse sidebar"
+        "session.new": "Sesi Baru",
+        "session.new.label": "Sesi baru",
+        "toggle.open": "Buka bilah sisi",
+        "toggle.collapse": "Ciutkan bilah sisi"
       }
     }
   ]

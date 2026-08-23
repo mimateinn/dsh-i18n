@@ -4,12 +4,12 @@
     {
       "ns": "reference",
       "dict": {
-        "section.files": "Files & folders",
-        "section.sessions": "Session conversations",
-        "candidate.file": "File",
-        "candidate.folder": "Folder",
-        "candidate.session": "Session",
-        "candidate.noCwd": "(no cwd)"
+        "section.files": "Dosyalar ve klasörler",
+        "section.sessions": "Oturum konuşmaları",
+        "candidate.file": "Dosya",
+        "candidate.folder": "Klasör",
+        "candidate.session": "Oturum",
+        "candidate.noCwd": "(cwd yok)"
       }
     }
   ]

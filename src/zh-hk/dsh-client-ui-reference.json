@@ -4,10 +4,10 @@
     {
       "ns": "reference",
       "dict": {
-        "section.files": "檔案與資料夾",
+        "section.files": "檔案與文件夾",
         "section.sessions": "Session 對話",
         "candidate.file": "檔案",
-        "candidate.folder": "資料夾",
+        "candidate.folder": "文件夾",
         "candidate.session": "Session",
         "candidate.noCwd": "（無工作目錄）"
       }

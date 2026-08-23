@@ -4,21 +4,21 @@
     {
       "ns": "question",
       "dict": {
-        "error.incomplete": "Please complete this question first.",
-        "error.unanswered": "Please select an option or enter a custom answer.",
-        "nav.prev": "Previous question",
-        "nav.next": "Next question",
-        "nav.minimize": "Collapse the question card",
-        "nav.maximize": "Expand the question card",
-        "nav.cancel": "Dismiss all questions",
-        "option.recommended": "Recommended",
-        "custom.placeholder": "Type your answer",
-        "action.skip": "Skip this question",
-        "action.next": "Next",
-        "plan.header": "Plan review",
-        "plan.approve": "Approve",
-        "plan.decline": "Refuse",
-        "plan.discuss": "Chat about it"
+        "error.incomplete": "โปรดตอบคำถามนี้ให้ครบก่อน",
+        "error.unanswered": "โปรดเลือกตัวเลือก หรือป้อนคำตอบของคุณเอง",
+        "nav.prev": "คำถามก่อนหน้า",
+        "nav.next": "คำถามถัดไป",
+        "nav.minimize": "ยุบการ์ดคำถาม",
+        "nav.maximize": "ขยายการ์ดคำถาม",
+        "nav.cancel": "ปิดคำถามทั้งหมด",
+        "option.recommended": "แนะนำ",
+        "custom.placeholder": "พิมพ์คำตอบของคุณ",
+        "action.skip": "ข้ามคำถามนี้",
+        "action.next": "ถัดไป",
+        "plan.header": "ตรวจทานแผน",
+        "plan.approve": "อนุมัติ",
+        "plan.decline": "ปฏิเสธ",
+        "plan.discuss": "พูดคุยเพิ่มเติม"
       }
     }
   ]

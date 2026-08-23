@@ -2,6 +2,28 @@
 
 # DECISIONS
 
+## 2026-08-24 — The gate must check content, not only structure
+
+**Decision:** `scripts/check.mjs` also fails on (a) a value byte-identical to English that still contains at least
+3 English words after stripping placeholders, slash commands, file names and a literal-term whitelist, and
+(b) any Simplified character (keys of `src/zh-tw-parts/chars.json`) appearing in a `traditional` locale.
+
+**Why:** an independent review found the structural-only gate reported `i18n check passed: 20 locales × 28 files`
+while `nl`/`tr`/`id`/`th` shipped 65–100 untranslated English sentences each, and both Traditional locales
+shipped 占 instead of 佔. A green gate that cannot fail on the plugin's actual purpose certifies nothing.
+
+**Why a word threshold rather than plain equality:** plain equality produces false positives on legitimate values —
+pure format strings (`{y}-{m}-{d}`, `{tps} tok/s`), retained proper nouns (DSH, JSON, Cordis), and single words
+that genuinely coincide (Polish "Model", Swedish "Standard mode"). The 3-word threshold catches English prose
+without punishing correct translations.
+
+**Why the Simplified check cannot be delegated to `verify-converter.mjs`:** the runtime applies `convertZhTw`
+only on the fallback branch (`lib/client.js`, `const fallbackLang = lang.useConvert ? "zh" : "en"`). A curated
+value is returned as-is, so Simplified residue in curated data reaches the UI while the converter test stays green.
+
+**Not chosen:** a language-detection library or a translation-quality metric — non-deterministic, and a gate that
+cannot be reproduced offline is not a gate.
+
 ## 2026-08-24 — Install path: terminal `dsh plugin add` with a pinned github spec
 
 **Decision:** the fork is installed into the **active** DSH Desktop profile with

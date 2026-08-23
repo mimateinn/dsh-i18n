@@ -13,7 +13,7 @@
         "menu.aria": "Upaya model dan penalaran",
         "menu.model": "Model",
         "menu.effort": "Usaha",
-        "effort.providerDefault": "Default",
+        "effort.providerDefault": "Bawaan",
         "status.loading": "Menyegarkan daftar model…",
         "error.action": "Operasi model gagal: {message}",
         "action.reload": "Muat ulang",

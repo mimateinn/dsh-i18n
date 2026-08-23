@@ -4,11 +4,11 @@
     {
       "ns": "job",
       "dict": {
-        "count.live.one": "{count} 個背景任務執行中",
-        "count.live.other": "{count} 個背景任務執行中",
-        "count.idle.one": "{count} 個背景任務",
-        "count.idle.other": "{count} 個背景任務",
-        "list.aria": "背景任務",
+        "count.live.one": "{count} 個後台任務執行中",
+        "count.live.other": "{count} 個後台任務執行中",
+        "count.idle.one": "{count} 個後台任務",
+        "count.idle.other": "{count} 個後台任務",
+        "list.aria": "後台任務",
         "status.running": "執行中",
         "status.stopping": "正在停止",
         "status.completed": "已完成",

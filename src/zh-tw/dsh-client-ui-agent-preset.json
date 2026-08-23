@@ -52,7 +52,7 @@
         "revealedPathLabel": "預設檔案：",
         "idRequired": "請填寫識別碼。",
         "idInvalid": "只能使用小寫字母、數字與連字號，且以字母或數字開頭。",
-        "idTaken": "該識別碼已被占用。",
+        "idTaken": "該識別碼已被佔用。",
         "deleteTitle": "刪除該預設？",
         "deleteDescription": "預設目錄將被刪除。已在其上執行的會話不受影響；新會話將無法再選擇它。",
         "deleteConfirm": "刪除",

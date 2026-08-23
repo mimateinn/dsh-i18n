@@ -5,9 +5,9 @@
       "ns": "settings.pluginInventory",
       "dict": {
         "tab": "Pluginlijst",
-        "loading": "Reading plugins…",
+        "loading": "Plugins lezen…",
         "error": "Plugins zijn temporarily niet beschikbaar.",
-        "retry": "Retry",
+        "retry": "Opnieuw proberen",
         "search": "Zoeken: plugins",
         "catalog": "Pluginlijst",
         "empty": "Geen plugins zijn beschikbaar.",

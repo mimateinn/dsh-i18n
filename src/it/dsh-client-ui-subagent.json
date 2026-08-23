@@ -22,7 +22,7 @@
         "loading.aria": "Caricamento subagenti",
         "load.error": "Impossibile caricare i subagenti",
         "retry": "Riprova",
-        "mode.oneShot": "one-shot",
+        "mode.oneShot": "esecuzione singola",
         "mode.continuable": "continuabile",
         "activity.running": "running",
         "activity.inactive": "non in esecuzione",

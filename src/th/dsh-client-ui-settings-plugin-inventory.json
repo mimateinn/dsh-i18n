@@ -4,24 +4,24 @@
     {
       "ns": "settings.pluginInventory",
       "dict": {
-        "tab": "Plugin list",
-        "loading": "Reading plugins…",
-        "error": "Plugins are temporarily unavailable.",
-        "retry": "Retry",
-        "search": "Search plugins",
-        "catalog": "Plugin list",
-        "empty": "No plugins are available.",
-        "emptySearch": "No matching plugins.",
-        "enabledTag": "Enabled",
-        "disabledTag": "Disabled",
-        "configuration": "Configuration",
-        "cordis": "Cordis status",
-        "unobserved": "Not mounted",
-        "pending": "Waiting for dependencies",
-        "loadingPhase": "Loading",
-        "active": "Mounted",
-        "failed": "Mount failed",
-        "unloading": "Unloading"
+        "tab": "รายการปลั๊กอิน",
+        "loading": "กำลังอ่านปลั๊กอิน…",
+        "error": "ปลั๊กอินไม่พร้อมใช้งานชั่วคราว",
+        "retry": "ลองใหม่",
+        "search": "ค้นหาปลั๊กอิน",
+        "catalog": "รายการปลั๊กอิน",
+        "empty": "ไม่มีปลั๊กอินที่ใช้ได้",
+        "emptySearch": "ไม่พบปลั๊กอินที่ตรงกัน",
+        "enabledTag": "เปิดใช้งาน",
+        "disabledTag": "ปิดใช้งาน",
+        "configuration": "การกำหนดค่า",
+        "cordis": "สถานะ Cordis",
+        "unobserved": "ยังไม่ได้เมานต์",
+        "pending": "กำลังรอการพึ่งพา",
+        "loadingPhase": "กำลังโหลด",
+        "active": "เมานต์แล้ว",
+        "failed": "เมานต์ไม่สำเร็จ",
+        "unloading": "กำลังยกเลิกการโหลด"
       }
     }
   ]

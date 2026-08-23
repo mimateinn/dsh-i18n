@@ -4,13 +4,13 @@
     {
       "ns": "session-log-download",
       "dict": {
-        "dialog.preparingTitle": "Exporting Session",
-        "dialog.preparingDescription": "Preparing a ZIP containing this Session, its sub-Sessions, and attachments.",
-        "dialog.successTitle": "Session download started",
-        "dialog.successDescription": "The browser is downloading the Session ZIP.",
-        "dialog.errorTitle": "Session export failed",
-        "dialog.close": "Close",
-        "dialog.commandFailed": "Could not start the Session export."
+        "dialog.preparingTitle": "Mengekspor Sesi",
+        "dialog.preparingDescription": "Menyiapkan ZIP yang berisi Sesi ini, sub-Sesinya, dan lampirannya.",
+        "dialog.successTitle": "Unduhan Sesi dimulai",
+        "dialog.successDescription": "Peramban sedang mengunduh ZIP Sesi.",
+        "dialog.errorTitle": "Ekspor Sesi gagal",
+        "dialog.close": "Tutup",
+        "dialog.commandFailed": "Tidak dapat memulai ekspor Sesi."
       }
     }
   ]

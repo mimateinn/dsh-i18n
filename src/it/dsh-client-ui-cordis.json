@@ -41,7 +41,7 @@
         "action.stop": "Stop",
         "action.remove": "Rimuovi",
         "action.retry": "Riprova",
-        "action.rollback": "Roll back",
+        "action.rollback": "Ripristina",
         "render.failedAbdicated": "Rendering non riuscito in {slot}; è stata ripristinata l'interfaccia utente predefinita:",
         "render.failedHeld": "Rendering non riuscito in {slot}:",
         "a11y.defining": "Definizione del plugin",
