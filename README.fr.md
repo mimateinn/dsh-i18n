@@ -18,6 +18,7 @@ Un plugin d'internationalisation durable pour l'interface Web de DeepSeek Harnes
 - Des traductions soignées à la main pour chaque langue, couvrant chaque espace de noms de locale officiel (715 chaînes chacune), à partir d'une base en anglais.
 - Repli à l'exécution : les chaînes nouvelles, mises à jour ou tierces utilisent l'anglais comme repli (ou la conversion simplifié → traditionnel pour zh-HK/zh-TW), de sorte que les mises à jour de l'interface amont et les autres plugins sont couverts sans retraduire chaque langue.
 - Préférence de langue conservée dans le `localStorage` du navigateur ; résistante au rechargement.
+- **Traduction immersive** : lorsqu'une locale non chinoise est active, les longs textes en anglais (descriptions du marché des plugins, UI tierce, prose d'erreur) sont traduits automatiquement dans votre langue via votre modèle configuré — mis en cache et idempotent, de sorte que les re-rendus de React n'entrent pas en conflit. La langue par défaut (en/zh) n'est pas modifiée ; le chinois traditionnel conserve la conversion simplifié → traditionnel intégrée au lieu d'appeler un modèle.
 - Zéro intrusion : plugin purement client, aucune modification des paquets amont, dégradation silencieuse si le service de locales est absent.
 
 ## Installation
@@ -54,7 +55,9 @@ Le paquet npm inclut les entrées d'exécution, le client généré, les donnée
 
 ## Sécurité et confidentialité
 
-Le plugin n'a aucune dépendance d'exécution, aucun appel réseau, aucune télémétrie ni accès au système de fichiers. Il stocke uniquement l'identifiant de locale sélectionné dans le localStorage du navigateur.
+- Le plugin n'effectue lui-même aucun appel réseau, n'a aucune télémétrie, et ne lit/écrit que deux clés du localStorage du navigateur : l'identifiant de locale sélectionné et la substitution du modèle de traduction.
+- La traduction immersive passe par le service LLM intégré de DSH (votre modèle configuré), et non par une API tierce. Elle ne se déclenche que pour de longs textes en anglais lorsqu'une locale non chinoise est active ; la langue par défaut n'est jamais envoyée à la traduction.
+- Aucun accès au système de fichiers, aucune gestion d'identifiants.
 
 ## Licence
 

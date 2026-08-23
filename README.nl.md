@@ -18,6 +18,7 @@ Een duurzame internationalisatie-plugin voor de DeepSeek Harness Web UI. Versie 
 - Per taal handmatig verfijnde vertalingen voor elke officiële locale-naamruimte (715 strings elk), vanuit een Engelse basis.
 - Runtime-fallback: nieuwe/bijgewerkte/third-party strings vallen terug op het Engels (of vereenvoudigd→traditioneel-conversie voor zh-HK/zh-TW), zodat upstream UI-updates en andere plugins gedekt zijn zonder elke taal opnieuw te vertalen.
 - Taalvoorkeur wordt opgeslagen in de browser-`localStorage`; bestand tegen herladen.
+- **Meeslepende vertaling**: wanneer een niet-Chinese locale actief is, wordt lange Engelse tekst (beschrijvingen op de pluginmarkt, UI van derden, fouttekst) automatisch naar jouw taal vertaald via je geconfigureerde model — gecachet en idempotent, zodat React-re-renders er niet mee vechten. De standaardtaal (en/zh) blijft onaangeroerd; traditioneel Chinees behoudt de ingebouwde vereenvoudigd→traditioneel-conversie in plaats van een model aan te roepen.
 - Nul intrusie: pure client-plugin, geen wijzigingen aan upstream-pakketten, stille degradatie als de locale-service ontbreekt.
 
 ## Installeren
@@ -54,7 +55,9 @@ Het npm-pakket bevat runtime-entries, de gegenereerde client, locale-data en de 
 
 ## Beveiliging en privacy
 
-De plugin heeft geen runtime-afhankelijkheden, netwerkoproepen, telemetrie of bestandssysteemtoegang. Hij slaat alleen de geselecteerde locale-id op in de browser-localStorage.
+- De plugin doet zelf geen netwerkoproepen, heeft geen telemetrie en leest/schrijft alleen twee browser-localStorage-sleutels: de geselecteerde locale-id en de vertaalmodel-overschrijving.
+- Meeslepende vertaling loopt via DSH's ingebouwde LLM-service (je geconfigureerde model), niet via een API van derden. Het vuurt alleen voor lange Engelse tekst wanneer een niet-Chinese locale actief is; de standaardtaal wordt nooit ter vertaling verstuurd.
+- Geen bestandssysteemtoegang, geen verwerking van inloggegevens.
 
 ## Licentie
 

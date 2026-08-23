@@ -18,6 +18,7 @@ Un plugin di internazionalizzazione sostenibile per la Web UI di DeepSeek Harnes
 - Traduzioni rifinite a mano per ogni lingua, per ogni namespace di locale ufficiale (715 stringhe ciascuno), a partire da una base inglese.
 - Fallback a runtime: le stringhe nuove, aggiornate o di terze parti ricadono sull'inglese (o sulla conversione Semplificato→Tradizionale per zh-HK/zh-TW), così gli aggiornamenti dell'interfaccia upstream e gli altri plugin restano coperti senza dover ritradurre ogni lingua.
 - La preferenza di lingua viene salvata nel `localStorage` del browser; resiste al ricaricamento.
+- **Traduzione immersiva**: quando è attiva una lingua non cinese, i testi lunghi in inglese (descrizioni del marketplace dei plugin, UI di terze parti, prosa degli errori) vengono tradotti automaticamente nella tua lingua tramite il tuo modello configurato — con cache e idempotenza, così i re-render di React non entrano in conflitto. La lingua predefinita (en/zh) resta invariata; il cinese tradizionale mantiene la conversione integrata Semplificato→Tradizionale invece di chiamare un modello.
 - Zero intrusioni: plugin puramente client, nessuna modifica ai pacchetti upstream, degradazione silenziosa se il servizio di localizzazione manca.
 
 ## Installazione
@@ -60,7 +61,9 @@ Il pacchetto npm include le voci runtime, il client generato, i dati di locale e
 
 ## Sicurezza e privacy
 
-Il plugin non ha dipendenze runtime, chiamate di rete, telemetria né accesso al filesystem. Salva solo l'id della lingua selezionata nel localStorage del browser.
+- Il plugin non effettua chiamate di rete in proprio, non ha telemetria e legge/scrive solo due chiavi del localStorage del browser: l'id della lingua selezionata e l'override del modello di traduzione.
+- La traduzione immersiva passa dal servizio LLM integrato di DSH (il tuo modello configurato), non da un'API di terze parti. Si attiva solo per prosa lunga in inglese quando è attiva una lingua non cinese; la lingua predefinita non viene mai inviata per la traduzione.
+- Nessun accesso al filesystem, nessuna gestione delle credenziali.
 
 ## Licenza
 

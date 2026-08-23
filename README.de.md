@@ -18,6 +18,7 @@ Ein nachhaltiges Internationalisierungs-Plugin für die DeepSeek Harness Web UI.
 - Handgepflegte, sprachspezifische Übersetzungen für jeden offiziellen Locale-Namespace (je 715 Zeichenketten), ausgehend von einer englischen Basis.
 - Runtime-Fallback: neue, aktualisierte oder von Drittanbietern stammende Zeichenketten fallen auf Englisch zurück (bzw. auf die Konvertierung von vereinfachtem zu traditionellem Chinesisch für zh-HK/zh-TW), sodass Upstream-UI-Updates und andere Plugins abgedeckt sind, ohne jede Sprache neu zu übersetzen.
 - Die Sprachpräferenz wird im Browser-`localStorage` gespeichert und übersteht ein Neuladen.
+- **Immersive Übersetzung**: Wenn eine nicht-chinesische Locale aktiv ist, werden lange englische Texte (Plugin-Market-Beschreibungen, Drittanbieter-UI, Fehlerprosa) über dein konfiguriertes Modell automatisch in deine Sprache übersetzt — zwischengespeichert und idempotent, sodass React-Neu-Renderings nicht dagegen ankämpfen. Die Standardsprache (en/zh) bleibt unangetastet; traditionelles Chinesisch behält die eingebaute Konvertierung von vereinfachtem zu traditionellem Chinesisch bei, statt ein Modell aufzurufen.
 - Kein Eingriff: reines Client-Plugin, keine Änderungen an Upstream-Paketen, stille Degradierung, falls der Locale-Dienst fehlt.
 
 ## Installation
@@ -54,7 +55,9 @@ Das npm-Paket enthält Laufzeit-Einträge, den generierten Client, die Locale-Da
 
 ## Sicherheit und Datenschutz
 
-Das Plugin hat keine Laufzeit-Abhängigkeiten, Netzwerkaufrufe, Telemetrie oder Dateisystemzugriffe. Es speichert nur die gewählte Locale-ID im Browser-localStorage.
+- Das Plugin führt selbst keine Netzwerkaufrufe aus, hat keine Telemetrie und liest/schreibt nur zwei Browser-localStorage-Schlüssel: die gewählte Locale-ID und die Übersetzungsmodell-Überschreibung.
+- Die immersive Übersetzung läuft über DSHs eingebauten LLM-Dienst (dein konfiguriertes Modell), nicht über eine Drittanbieter-API. Sie wird nur für lange englische Prosa ausgelöst, wenn eine nicht-chinesische Locale aktiv ist; die Standardsprache wird niemals zur Übersetzung gesendet.
+- Kein Dateisystemzugriff, keine Verarbeitung von Anmeldedaten.
 
 ## Lizenz
 
