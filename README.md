@@ -23,7 +23,13 @@ A sustainable internationalization plugin for the DeepSeek Harness Web UI. Versi
 
 ## Install
 
-Install into the profile your host actually boots, and pin the commit:
+Install from npm (exact version — this is what DSH Desktop's Market update button needs):
+
+```bash
+dsh plugin --profile <active-profile> add @mimateinn/dsh-i18n@0.2.0
+```
+
+Or from GitHub, pinned to a commit:
 
 ```bash
 dsh plugin --profile <active-profile> add github:mimateinn/dsh-i18n#<commit>

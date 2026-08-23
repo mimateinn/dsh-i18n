@@ -23,7 +23,13 @@
 
 ## 安裝
 
-安裝到主機實際啟動嘅設定檔，並固定 commit：
+由 npm 安裝（精確版本——DSH Desktop 嘅 Market「更新」按鈕需要呢個）：
+
+```bash
+dsh plugin --profile <active-profile> add @mimateinn/dsh-i18n@0.2.0
+```
+
+或者由 GitHub 安裝，固定 commit：
 
 ```bash
 dsh plugin --profile <active-profile> add github:mimateinn/dsh-i18n#<commit>
