@@ -17,10 +17,14 @@ profile 備份喺 `C:\Users\dicks\Workspace\dsh-desktop-profile-backup-20260824-
 重啟跑到 renderer healthy 就會 `markHealthy`→`clear`；唔會再 block。
 
 ## 目前狀態
-- 2026-08-24：**安裝版本問題已解決 + 改名 dsh-i18n**。20 個 locale 全部補齊，`npm test` 全綠。
-  GitHub repo 已由 `mimateinn/dsh-multi-lang-ui` 改名做 `mimateinn/dsh-i18n`（舊名有 redirect），
-  package/runtime id/storage key 全部改做 dsh-i18n，舊 key 入 legacy 遷移鏈。
-- 20 份 README（繁中香港/台灣置頂導覽 + 18 種其他語言）已生成。
+- 2026-08-24：**安裝版本問題已解決 + 改名 dsh-i18n + 上 GitHub + README 20 語言導覽**。
+  - GitHub repo 改名做 `mimateinn/dsh-i18n`（public，舊名有 redirect），topic 已加 `dsh-plugin`。
+  - package/runtime id/storage key 全部改 dsh-i18n，舊 key 入 legacy 遷移鏈。
+  - 20 份 README，導覽列繁中香港/台灣置頂，click 即跳去該語言 README。
+  - desktop profile 已重裝做 dsh-i18n（node_modules 內 client.js sha256 同 repo 一致），`--dump-config` 見 `- id: dsh-i18n`。
+- 市場提交：條目檔備好喺 `C:\Users\dicks\Workspace\awesome-dsh-plugin-entry.yml`；
+  要 PR 去 `awesome-dsh-plugin/awesome-dsh-plugin`（data/plugins/mimateinn__dsh-i18n.yml）。
+  限制：repo 要 ≥1 日（而家約 13 小時）先過 CI age check。
 - 本 session 改咗：
   - `src/hi`、`src/pt-br`、`src/sv`、`src/uk`、`src/vi`、`src/pl` — 6 個全新語言，各 28 檔 / 715 key（sub-agent 翻譯）。
   - `src/ru` — 補 5 個缺檔 + 修 `conversation.ask.waiting` 空值。
