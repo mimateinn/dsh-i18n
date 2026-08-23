@@ -17,8 +17,10 @@ profile 備份喺 `C:\Users\dicks\Workspace\dsh-desktop-profile-backup-20260824-
 重啟跑到 renderer healthy 就會 `markHealthy`→`clear`；唔會再 block。
 
 ## 目前狀態
-- 2026-08-24：**安裝版本問題已解決**。20 個 locale 全部補齊，`npm test` 全綠，fork 已推上
-  `mimateinn/dsh-multi-lang-ui`（HEAD `87b6b11`），並用 pinned commit 裝入 **active desktop profile**。
+- 2026-08-24：**安裝版本問題已解決 + 改名 dsh-i18n**。20 個 locale 全部補齊，`npm test` 全綠。
+  GitHub repo 已由 `mimateinn/dsh-multi-lang-ui` 改名做 `mimateinn/dsh-i18n`（舊名有 redirect），
+  package/runtime id/storage key 全部改做 dsh-i18n，舊 key 入 legacy 遷移鏈。
+- 20 份 README（繁中香港/台灣置頂導覽 + 18 種其他語言）已生成。
 - 本 session 改咗：
   - `src/hi`、`src/pt-br`、`src/sv`、`src/uk`、`src/vi`、`src/pl` — 6 個全新語言，各 28 檔 / 715 key（sub-agent 翻譯）。
   - `src/ru` — 補 5 個缺檔 + 修 `conversation.ask.waiting` 空值。
