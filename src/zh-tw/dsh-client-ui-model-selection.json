@@ -13,7 +13,7 @@
         "menu.aria": "模型與推理等級",
         "menu.model": "模型",
         "menu.effort": "推理等級",
-        "effort.providerDefault": "Default",
+        "effort.providerDefault": "預設",
         "status.loading": "正在重新整理模型清單…",
         "error.action": "模型操作失敗：{message}",
         "action.reload": "重新載入",

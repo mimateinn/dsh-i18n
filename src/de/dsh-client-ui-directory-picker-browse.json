@@ -5,7 +5,7 @@
       "ns": "directory-browser",
       "dict": {
         "browser.title": "Arbeitsbereichsverzeichnis auswählen",
-        "browser.home": "Home",
+        "browser.home": "Start",
         "browser.newFolder": "Neuer Ordner",
         "browser.folderName": "Ordnername",
         "browser.createIn": "Neuer Ordner in „{name}“",

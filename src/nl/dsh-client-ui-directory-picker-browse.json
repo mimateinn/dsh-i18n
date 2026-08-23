@@ -5,7 +5,7 @@
       "ns": "directory-browser",
       "dict": {
         "browser.title": "Kies Workspace Directory",
-        "browser.home": "Start",
+        "browser.home": "Thuis",
         "browser.newFolder": "Nieuwe map",
         "browser.folderName": "Mapnaam",
         "browser.createIn": "New map in \"{name}\"",

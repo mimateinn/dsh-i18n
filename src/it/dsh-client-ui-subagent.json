@@ -24,7 +24,7 @@
         "retry": "Riprova",
         "mode.oneShot": "esecuzione singola",
         "mode.continuable": "continuabile",
-        "activity.running": "running",
+        "activity.running": "in esecuzione",
         "activity.inactive": "non in esecuzione",
         "branch.collapse": "Comprimi discendenti {label}",
         "branch.expand": "Espandi discendenti {label}",

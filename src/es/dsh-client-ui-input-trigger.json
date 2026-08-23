@@ -5,7 +5,7 @@
       "ns": "slash.menu",
       "dict": {
         "command": "Comandos",
-        "skill": "Skills",
+        "skill": "Habilidades",
         "subagent": "Subagentes",
         "loading": "Cargando…",
         "suggestions.aria": "Sugerencias de activación"

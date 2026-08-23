@@ -46,7 +46,7 @@
         "context.aria": "{percent} van de context gebruikt",
         "context.used": "van de context gebruikt",
         "context.system": "Systeemprompt",
-        "context.tools": "Tools",
+        "context.tools": "Gereedschappen",
         "context.messages": "Berichten",
         "stats.counts": "{turns} beurten · {steps} stappen",
         "stats.llm": "LLM {duration}",

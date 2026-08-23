@@ -5,7 +5,7 @@
       "ns": "slash.menu",
       "dict": {
         "command": "Opdrachten",
-        "skill": "Skills",
+        "skill": "Vaardigheden",
         "subagent": "Subagents",
         "loading": "Laden…",
         "suggestions.aria": "Triggersuggesties"

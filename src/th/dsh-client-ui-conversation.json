@@ -31,7 +31,7 @@
         "image.original": "ภาพต้นฉบับ:",
         "image.label": "รูปภาพ",
         "image.loadFailed": "โหลดรูปภาพไม่สำเร็จคลิกเพื่อลองใหม่",
-        "image.loading": "กำลังโหลดภาพ",
+        "image.loading": "กำลังโหลดภาพ…",
         "image.preview": "ตัวอย่างภาพต้นฉบับ",
         "image.closePreview": "ปิดการแสดงตัวอย่างภาพต้นฉบับ",
         "image.serviceUnavailable": "บริการโหลดรูปภาพไม่พร้อมใช้งาน",

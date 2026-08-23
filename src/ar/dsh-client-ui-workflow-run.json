@@ -8,7 +8,7 @@
         "run.members.one": "‏{count} member",
         "run.members.other": "‏{count} members",
         "run.empty": "‏No members started",
-        "phase.unassigned": "Unphased",
+        "phase.unassigned": "بلا مرحلة",
         "phase.empty": "فارغ phase name",
         "statusCount.running": "قيد التشغيل {count}",
         "statusCount.completed": "مكتمل {count}",
@@ -20,8 +20,8 @@
         "status.running": "قيد التشغيل",
         "status.completed": "مكتمل",
         "status.failed": "فشل",
-        "status.cancelled": "Cancelled",
-        "status.interrupted": "Interrupted"
+        "status.cancelled": "ملغى",
+        "status.interrupted": "متقطع"
       }
     }
   ]

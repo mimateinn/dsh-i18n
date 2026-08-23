@@ -19,7 +19,8 @@
   "scripts": {
     "i18n:check": "node scripts/check.mjs",
     "i18n:build": "node scripts/assemble.mjs",
-    "test": "npm run i18n:check && npm run i18n:build && node scripts/verify-converter.mjs"
+    "verify:runtime": "node scripts/verify-runtime.mjs",
+    "test": "npm run i18n:check && npm run i18n:build && node scripts/verify-converter.mjs && npm run verify:runtime"
   },
   "dsh": {
     "bundle": {

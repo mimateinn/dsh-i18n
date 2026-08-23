@@ -46,7 +46,7 @@
         "context.aria": "{percent} des Kontexts verwendet",
         "context.used": "des Kontexts verwendet",
         "context.system": "System-Prompt",
-        "context.tools": "Tools",
+        "context.tools": "Werkzeuge",
         "context.messages": "Nachrichten",
         "stats.counts": "{turns} Runden · {steps} Schritte",
         "stats.llm": "LLM {duration}",

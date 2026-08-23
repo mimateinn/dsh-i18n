@@ -10,7 +10,7 @@
         "tabs": "إضافة views",
         "configurableTab": "إضافة configuration",
         "empty": "‏This deployment exposes no plugin settings.",
-        "overridden": "Overridden",
+        "overridden": "تم التجاوز",
         "reset": "إعادة الضبط إلى الافتراضي",
         "readOnly": "‏This deployment stores settings read-only.",
         "expand": "إظهار الإعدادات",

@@ -14,7 +14,7 @@ const fail = [];
 // 判準：剝走佔位符同技術詞之後，仲剩 >= ENGLISH_WORD_THRESHOLD 個英文字 => 當缺譯。
 // 單字／短標籤（例如波蘭文 "Model"）唔會中，整句英文散文一定中。
 const ENGLISH_WORD_THRESHOLD = 3;
-const LITERAL_TERMS = /\b(?:DeepSeek Harness|DSH|JSON|YAML|YML|npm|pnpm|MCP|API|URL|URI|CLI|GUI|SDK|LLM|TTFT|GPU|CPU|RAM|ZIP|PNG|JPG|JPEG|WebP|GIF|SVG|PDF|CSV|HTML|CSS|JS|TS|HTTP|HTTPS|SSH|OAuth|UUID|ID|IDs|Cordis|Electron|Node|TypeScript|JavaScript|Python|Markdown|Git|GitHub|GitLab|Docker|Linux|macOS|Windows|OK|tok\/s|str_replace_editor)\b/g;
+const LITERAL_TERMS = /\b(?:DeepSeek Harness|DSH|JSON|YAML|YML|npm|pnpm|MCP|API|URL|URI|CLI|GUI|SDK|LLM|TTFT|GPU|CPU|RAM|ZIP|PNG|JPG|JPEG|WebP|GIF|SVG|PDF|CSV|HTML|CSS|JS|TS|HTTP|HTTPS|SSH|OAuth|UUID|ID|IDs|Cordis|Electron|Node|TypeScript|JavaScript|Python|Markdown|Git|GitHub|GitLab|Docker|Linux|macOS|Windows|OK|tok\/s|str_replace_editor|Standard mode|PTC mode|Minimal mode|Creator mode|Code Mode SDK|Base URL)\b/g;
 const englishWordCount = (value) => String(value)
   .replace(/\{[^{}]*\}/g, " ")        // 佔位符
   .replace(/\/[A-Za-z][\w-]*/g, " ")   // slash command，例如 /plan
@@ -22,6 +22,10 @@ const englishWordCount = (value) => String(value)
   .replace(LITERAL_TERMS, " ")
   .split(/[^A-Za-z']+/)
   .filter((word) => word.length >= 2).length;
+
+// 注意：英文殘留閘只對「同 src/en 逐字節相同」嘅值生效。重寫過嘅英文散文（改咗
+// 一兩個字）冇得可靠咁同其他拉丁系語言區分（法文/德文/西文詞一樣係拉丁字母），
+// 所以唔強行偵測——呢個係已知限制，靠翻譯者自己唔好漏譯。
 
 // --- 簡體殘留閘 ---
 // 只查 traditional locale。chars.json 嘅 key 全部係簡體專用字（0 個 identity mapping），

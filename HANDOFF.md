@@ -67,7 +67,7 @@ DSH Desktop 要**重啟一次並跑到 renderer healthy**，`commitHealthy()` �
 - findings 同處理：
   1. **[blocker] 守門只查結構，兩道內容閘完全冇實作** → 已補英文殘留閘同簡體殘留閘（見 DECISIONS）。
   2. **[blocker] nl/tr/id/th 各有 65–100 條英文原文散文** → 四個 locale 逐值重譯：
-     nl 265→46、tr 227→83、id 214→28、th 241→74（餘數全部係 pkg/ns metadata、純格式串、專有名詞）。
+     nl 265→46、tr 227→25、id 214→28、th 241→16（餘數全部係 pkg/ns metadata、純格式串、專有名詞；第二次獨立審查實測）。
      順手揪出 th 一條被機翻污染嘅值（QUERY LENGTH LIMIT EXCEEDED…）。
   3. **[major] zh-HK 94.4% 抄 zh-TW** → 相同值 679→610，有 HK 用詞嘅檔 6→20（密鑰/地址/後台/超時/列表/歸檔/循環/計劃、「」引號）。
   4. **[minor] zh-HK+zh-TW 精譯值有簡體「占」** → 改「佔」；已入守門，同類再犯即紅。

@@ -21,7 +21,7 @@
         "close": "ปิด",
         "cancel": "ยกเลิก",
         "apply": "สมัคร",
-        "applying": "กำลังใช้",
+        "applying": "กำลังใช้…",
         "savedProvider": "บันทึก {provider} แล้ว",
         "credentialConfigured": "กำหนดค่าคีย์ API แล้ว",
         "credentialMissing": "ไม่มีคีย์ API",

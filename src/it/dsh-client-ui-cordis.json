@@ -38,7 +38,7 @@
         "action.approvePlugin": "Consenti versioni future di questo plugin",
         "action.decline": "Rifiuta",
         "action.run": "Corri",
-        "action.stop": "Stop",
+        "action.stop": "Ferma",
         "action.remove": "Rimuovi",
         "action.retry": "Riprova",
         "action.rollback": "Ripristina",

@@ -49,7 +49,7 @@
         "contextWindowPlaceholder": "‏Uses the provider default",
         "maxTokens": "الحد الأقصى لرموز الإخراج",
         "maxTokensPlaceholder": "‏Uses the provider default",
-        "modelAdvanced": "Capacities",
+        "modelAdvanced": "القدرات",
         "addModel": "إضافة نموذج",
         "removeModel": "حذف النموذج",
         "modelsEmpty": "‏No models will be shown in the selector. Unlisted IDs can still be sent directly.",

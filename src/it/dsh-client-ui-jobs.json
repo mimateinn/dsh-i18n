@@ -9,7 +9,7 @@
         "count.idle.one": "{count} lavoro IN background",
         "count.idle.other": "Lavori in background {count}",
         "list.aria": "Lavori in background",
-        "status.running": "running",
+        "status.running": "in esecuzione",
         "status.stopping": "arresto",
         "status.completed": "completato",
         "status.killed": "annullato",
