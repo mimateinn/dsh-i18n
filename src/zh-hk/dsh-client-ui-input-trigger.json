@@ -6,7 +6,7 @@
       "dict": {
         "command": "命令",
         "skill": "技能",
-        "subagent": "子智能體",
+        "subagent": "子代理",
         "loading": "正在載入…",
         "suggestions.aria": "觸發候選建議"
       }
