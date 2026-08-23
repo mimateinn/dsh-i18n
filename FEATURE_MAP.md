@@ -12,3 +12,4 @@
 | Untranslated-English detection | `scripts/check.mjs` `englishWordCount` | — | `npm run i18n:check` |
 | Simplified residue in zh-HK/zh-TW | `src/zh-tw-parts/chars.json` keys | — | `npm run i18n:check` |
 | Package release metadata | `package.json` | npm/GitHub metadata | `npm test` |
+| Client ModuleLoader id | `package.json` `name` | `lib/client.js` `__ModuleLoader__.load({ id })` | `scripts/verify-runtime.mjs` |

@@ -6,6 +6,10 @@ import { locales } from "./locales.mjs";
 
 const root = path.join(import.meta.dirname, "..");
 const outFile = path.join(root, "lib", "client.js");
+const PACKAGE_NAME = JSON.parse(fs.readFileSync(path.join(root, "package.json"), "utf8")).name;
+if (typeof PACKAGE_NAME !== "string" || !PACKAGE_NAME) {
+  throw new Error("package.json name is required — it is the client ModuleLoader id");
+}
 
 // 语言注册表：dir 为 src/ 下的字典目录（小写），id 为 locale id，label 为语言行显示名。
 // useConvert=true 表示该语言支持「简中字元表即时转换」兜底（目前只有 zh-TW 同源可行）；
@@ -60,7 +64,7 @@ const clientJs = `/* global window */
 // 依赖注入：@deepseek-ai/dsh-client-locale（locale 服务）；locale 服务缺失时
 // 静默降级（不注册字典、不改语言行），不破坏其他插件。
 window.__ModuleLoader__.load({
-  id: "dsh-i18n",
+  id: ${JSON.stringify(PACKAGE_NAME)},
   factory: (require) => {
     var module = { exports: {} };
     var exports = module.exports;

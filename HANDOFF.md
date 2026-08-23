@@ -3,7 +3,9 @@
 # HANDOFF
 
 ## 進行中
-（空）
+ModuleLoader id 已改由 `package.json` name 產出（`@mimateinn/dsh-i18n`），`verify-runtime` 會閘住。
+版本已 bump 到 `0.2.1`。未 commit、未 publish、未重裝 desktop profile。
+重啟 DSH Desktop 驗收前，要先把新 `lib/client.js` 裝入 desktop profile（npm 0.2.1 或本機覆蓋）。
 
 ## 安裝落地狀態（2026-08-24 最update）
 desktop profile 依賴已升級到 `github:mimateinn/dsh-multi-lang-ui#8fd52f0`（含全部品質修正），
@@ -17,6 +19,7 @@ profile 備份喺 `C:\Users\dicks\Workspace\dsh-desktop-profile-backup-20260824-
 重啟跑到 renderer healthy 就會 `markHealthy`→`clear`；唔會再 block。
 
 ## 目前狀態
+- 2026-08-24：**0.2.0 client bundle 註冊錯 ModuleLoader id。** host 等 `@mimateinn/dsh-i18n`，bundle 仍註冊 `dsh-i18n`，Desktop 報 `loaded without registering "@mimateinn/dsh-i18n"`。已改 `assemble.mjs` 由 `package.json` name 產出 id，`verify-runtime.mjs` 對住同一 id 閘。版本 `0.2.1`。cordis `id`、storage、RPC 路徑維持 `dsh-i18n`。
 - 2026-08-24：**npm 已發布 `@mimateinn/dsh-i18n@0.2.0`**（scoped 名，因為 `dsh-i18n` 俾 dushaobindoudou 搶注）。desktop profile 重裝成 npm 版（`@mimateinn/dsh-i18n: 0.2.0`），Market「更新」路徑打通（Market 走 external install 只收 exact npm version，github 插件永遠失敗）。
   - npm backlink 驗證通過：`repository.url` = mimateinn/dsh-i18n，probe-npm.mjs 會自動連結 npm。
   - registry PR #2926（awesome-dsh-plugin）：等 repo 滿 1 天（UTC 08-24 14:47）→ regate 自動重檢（每 6 小時 cron）→ maintainer merge。
@@ -104,6 +107,7 @@ profile 備份喺 `C:\Users\dicks\Workspace\dsh-desktop-profile-backup-20260824-
 - **install-recovery WAL 係全機一份**（`plugin-install-recovery/state.json`），唔係 per-profile。用非 active profile 嘅
   shim 裝嘢，會留低一個對唔上嘅 WAL，之後每次開機都 log `profile-mismatch`，而且**永遠阻住下一次 managed install**，
   又冇 UI 可以撤銷 — 唯一出路係用返 WAL 入面嗰個 profile 開機一次。
+- **`__ModuleLoader__.load({ id })` 必須等於 `package.json` name。** host 用 package name 做 loader entry（`/plugins/@mimateinn/dsh-i18n/client.js`）。scoped 改名後如果 banner 仍寫舊 bare id，node 半邊正常、browser 整板 plugin 死。`npm test` 綠唔代表呢條 contract 過，除非 `verify-runtime` 對住 package name 查。
 - **`scripts/extract.mjs` 嘅 PKGS 係手寫白名單。** 漏一個 package（今次係 `dsh-client-ui-reference`），
   抽取就會靜靜少一個檔，而 check.mjs 只同 `src/en` 比，所以完全唔會報。加新 upstream package 要記得手動加。
 - **機器翻譯嘅 venv 唔好放 repo 入面。** `src/uk/.mt` 有 203 MB 兼有 permission denied 目錄，令 `git status` 洗版。

@@ -2,6 +2,16 @@
 
 # DECISIONS
 
+## 2026-08-24 — Client ModuleLoader id is package.json name
+
+**Decision:** `scripts/assemble.mjs` writes `window.__ModuleLoader__.load({ id })` from `package.json` `"name"`. `verify-runtime.mjs` fails if the executed bundle registers any other id.
+
+**Why:** after the scoped rename to `@mimateinn/dsh-i18n`, the host keys the client graph by the package name (`/plugins/@mimateinn/dsh-i18n/client.js`) and asserts the factory registered under that same id. The 0.2.0 bundle still registered the pre-scope id `dsh-i18n`, so Desktop logged `loaded without registering "@mimateinn/dsh-i18n"`. The same class of bug shipped in dsh-sentinel (prefixed `@dsh-external/…`) and dsh-agent-teams (hardcoded PLUGIN_ID after rename).
+
+**Not changed:** cordis compose `id: dsh-i18n`, storage keys, RPC path `/dsh-i18n`, and the client `name` export stay unscoped — those are not the loader entry.
+
+**Not chosen:** hardcoding `@mimateinn/dsh-i18n` in the banner, because a later rename would desync again.
+
 ## 2026-08-24 — The gate must check content, not only structure
 
 **Decision:** `scripts/check.mjs` also fails on (a) a value byte-identical to English that still contains at least

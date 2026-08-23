@@ -4,6 +4,7 @@ import vm from "node:vm";
 import { pathToFileURL } from "node:url";
 
 const root = path.join(import.meta.dirname, "..");
+const PACKAGE_NAME = JSON.parse(fs.readFileSync(path.join(root, "package.json"), "utf8")).name;
 const clientSrc = fs.readFileSync(path.join(root, "lib", "client.js"), "utf8");
 
 // ---- minimal DOM/window mocks ----
@@ -37,8 +38,8 @@ win.document = documentMock;
 vm.createContext(sandbox);
 vm.runInContext(clientSrc, sandbox);
 const spec = win.__spec;
-if (!spec || spec.id !== "dsh-i18n" || typeof spec.factory !== "function") {
-  console.error("FAIL: bundle did not register expected module");
+if (!spec || spec.id !== PACKAGE_NAME || typeof spec.factory !== "function") {
+  console.error("FAIL: bundle registered", JSON.stringify(spec?.id), "expected", JSON.stringify(PACKAGE_NAME));
   process.exit(1);
 }
 const mod = spec.factory(() => { throw new Error("require not used"); });
