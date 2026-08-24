@@ -3,7 +3,7 @@
 # HANDOFF
 
 ## 進行中
-（空）
+- 2026-08-24：Desktop 2.0.2 開唔到，錯係 client bundle `__ModuleLoader__.load({ id: "dsh-i18n" })`，host 等嘅係 package name `@mimateinn/dsh-i18n`。assemble / verify-runtime 已改讀 `package.json` name；version bump `0.2.1`。installed profile 嘅 `lib/client.js` 已改 id。準備 push `0.2.1`、npm publish，並等 awesome-dsh-plugin #2926 過 1 日 age gate。
 
 ## 安裝落地狀態（2026-08-24 最update）
 desktop profile 依賴已升級到 `github:mimateinn/dsh-multi-lang-ui#8fd52f0`（含全部品質修正），

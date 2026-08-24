@@ -26,7 +26,7 @@
 由 npm 安裝（精確版本——DSH Desktop 嘅 Market「更新」按鈕需要呢個）：
 
 ```bash
-dsh plugin --profile <active-profile> add @mimateinn/dsh-i18n@0.2.0
+dsh plugin --profile <active-profile> add @mimateinn/dsh-i18n@0.2.1
 ```
 
 或者由 GitHub 安裝，固定 commit：

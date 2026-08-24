@@ -1,6 +1,6 @@
 {
   "name": "@mimateinn/dsh-i18n",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "20-locale internationalization with automatic translation for the DeepSeek Harness Web UI",
   "type": "module",
   "main": "./index.mjs",

@@ -6,6 +6,14 @@ import { locales } from "./locales.mjs";
 
 const root = path.join(import.meta.dirname, "..");
 const outFile = path.join(root, "lib", "client.js");
+const pkg = JSON.parse(fs.readFileSync(path.join(root, "package.json"), "utf8"));
+// DSH client-modules keys the graph row by package.json "name". Registering
+// the old unscoped id ("dsh-i18n") makes Desktop fail the whole plugin table:
+// bundle loaded without registering "@mimateinn/dsh-i18n" via __ModuleLoader__.load
+const CLIENT_MODULE_ID = pkg.name;
+if (typeof CLIENT_MODULE_ID !== "string" || CLIENT_MODULE_ID.length === 0) {
+  throw new Error("package.json name is required as the ModuleLoader id");
+}
 
 // 语言注册表：dir 为 src/ 下的字典目录（小写），id 为 locale id，label 为语言行显示名。
 // useConvert=true 表示该语言支持「简中字元表即时转换」兜底（目前只有 zh-TW 同源可行）；
@@ -60,7 +68,7 @@ const clientJs = `/* global window */
 // 依赖注入：@deepseek-ai/dsh-client-locale（locale 服务）；locale 服务缺失时
 // 静默降级（不注册字典、不改语言行），不破坏其他插件。
 window.__ModuleLoader__.load({
-  id: "dsh-i18n",
+  id: ${JSON.stringify(CLIENT_MODULE_ID)},
   factory: (require) => {
     var module = { exports: {} };
     var exports = module.exports;
