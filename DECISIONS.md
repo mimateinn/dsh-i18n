@@ -2,6 +2,39 @@
 
 # DECISIONS
 
+## 2026-08-27 — Peer ranges must name the current 0.1.1-rc tuple
+
+**Decision:** `peerDependencies` use an explicit prerelease branch for the current
+harness line, and Cordis is declared as `@deepseek-ai/cordis` (not unscoped `cordis`):
+
+```json
+"@deepseek-ai/cordis": "^4.0.1",
+"@deepseek-ai/dsh-client-locale": ">=0.1.0-rc.6 <0.1.1 || >=0.1.1-rc.1 <0.2.0-0",
+"@deepseek-ai/dsh-llm": ">=0.1.0-rc.2 <0.1.1 || >=0.1.1-rc.1 <0.2.0-0"
+```
+
+`engines.node` is `^22.19.0 || >=24.0.0`. The contract is asserted by
+`scripts/verify-peers.mjs`.
+
+**Why:** npm `@deepseek-ai/dsh` `latest`/`next` is `0.1.1-rc.2` (tag `dsh-v0.1.1-rc.2`).
+node-semver only lets a prerelease satisfy a range when some comparator shares that
+exact `major.minor.patch` tuple and itself carries a prerelease tag. The previous
+`>=0.1.0-rc.6` range matched `0.1.0-rc.*` and stable `0.1.1`, but silently excluded
+`0.1.1-rc.2` — the version users actually install. awesome-dsh-plugin contributing
+documents this and requires the `|| >=0.1.1-rc.1 <0.2.0-0` shape.
+
+Host packages in 0.1.1-rc.2 depend on `@deepseek-ai/cordis@^4.0.1`, not `cordis`.
+`dsh-llm@0.1.1-rc.2` still exports `BlockAssembler` and `createUserMessage`; no API
+rewrite was needed.
+
+**Not chosen:** pinning only `^0.1.1-rc.2` (drops Desktop / rc.6–rc.8 installs);
+keeping unscoped `cordis` (host no longer supplies that name).
+
+**Sources:**
+- https://github.com/deepseek-ai/deepseek-harness/blob/dsh-v0.1.1-rc.2/package.json
+- https://github.com/awesome-dsh-plugin/awesome-dsh-plugin/blob/main/contributing.md
+- https://www.npmjs.com/package/@deepseek-ai/dsh
+
 ## 2026-08-24 — The gate must check content, not only structure
 
 **Decision:** `scripts/check.mjs` also fails on (a) a value byte-identical to English that still contains at least

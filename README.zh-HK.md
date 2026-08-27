@@ -2,7 +2,7 @@
 
 **[繁體中文（香港）](README.zh-HK.md)** · **[繁體中文（台灣）](README.zh-TW.md)** · [English](README.md) · [日本語](README.ja.md) · [한국어](README.ko.md) · [Français](README.fr.md) · [Deutsch](README.de.md) · [Español](README.es.md) · [Português (Brasil)](README.pt-BR.md) · [Italiano](README.it.md) · [Русский](README.ru.md) · [Українська](README.uk.md) · [Polski](README.pl.md) · [Nederlands](README.nl.md) · [Türkçe](README.tr.md) · [العربية](README.ar.md) · [हिन्दी](README.hi.md) · [Bahasa Indonesia](README.id.md) · [Tiếng Việt](README.vi.md) · [ไทย](README.th.md) · [Svenska](README.sv.md)
 
-一個可持續嘅 DeepSeek Harness Web UI 國際化插件。版本 0.2.0 從單一註冊表註冊 **20 個地區語言**，同時保留 DSH 現有嘅客戶端 ModuleLoader 整合、地區語言服務、偏好遷移同埋執行期回退行為。
+一個可持續嘅 DeepSeek Harness Web UI 國際化插件。版本 0.2.2 從單一註冊表註冊 **20 個地區語言**，同時保留 DSH 現有嘅客戶端 ModuleLoader 整合、地區語言服務、偏好遷移同埋執行期回退行為。
 
 ## 地區語言
 
@@ -26,7 +26,7 @@
 由 npm 安裝（精確版本——DSH Desktop 嘅 Market「更新」按鈕需要呢個）：
 
 ```bash
-dsh plugin --profile <active-profile> add @mimateinn/dsh-i18n@0.2.1
+dsh plugin --profile <active-profile> add @mimateinn/dsh-i18n@0.2.2
 ```
 
 或者由 GitHub 安裝，固定 commit：
@@ -40,6 +40,12 @@ dsh plugin --profile <active-profile> add github:mimateinn/dsh-i18n#<commit>
 DSH Desktop 嘅 Market 安裝路徑只接受精確嘅已發佈 npm 版本，因此 GitHub 指定格式必須經內建終端機 `dsh plugin add`，佢會將指定符原樣轉交俾 pnpm，唔做驗證。
 
 重新啟動主機，然後喺 **Settings → General → Language** 揀選語言。用 `dsh plugin --profile <active-profile> remove dsh-i18n` 移除。
+
+## 相容性
+
+- DeepSeek Harness **0.1.0-rc.6 或更新**，包括而家已發布嘅 **0.1.1-rc.2**（`@deepseek-ai/dsh` npm `latest` / `next`，2026-08-27）。
+- Node.js **`^22.19.0 || >=24.0.0`**（官方 harness `engines.node`，見 [dsh-v0.1.1-rc.2](https://github.com/deepseek-ai/deepseek-harness/blob/dsh-v0.1.1-rc.2/package.json)）。
+- Host 套件用 `peerDependencies`，並顯式寫 `0.1.1-rc.*` 分支，避免 node-semver 靜默排除 harness 預發布版（[awesome-dsh-plugin contributing](https://github.com/awesome-dsh-plugin/awesome-dsh-plugin/blob/main/contributing.md)）。
 
 ## 維護流程
 

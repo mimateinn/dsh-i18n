@@ -3,7 +3,15 @@
 # HANDOFF
 
 ## 進行中
-- 2026-08-24：Desktop 2.0.2 開唔到，錯係 client bundle `__ModuleLoader__.load({ id: "dsh-i18n" })`，host 等嘅係 package name `@mimateinn/dsh-i18n`。assemble / verify-runtime 已改讀 `package.json` name；version bump `0.2.1`。installed profile 嘅 `lib/client.js` 已改 id。已 push `715027e` 並發布 `@mimateinn/dsh-i18n@0.2.1`。市場條目係 [awesome-dsh-plugin#2926](https://github.com/awesome-dsh-plugin/awesome-dsh-plugin/pull/2926)，等 repo 滿 1 日（created 2026-08-23T14:47:38Z）再重跑 Submission gate。npm 唔使寫入 yml，probe-npm 會靠 repository backlink 自動掛上。
+- 2026-08-27：**符合目前 DSH 版本要求（未 commit、未發 npm）**。官方 `@deepseek-ai/dsh` `latest`/`next` = **0.1.1-rc.2**；舊 peer `>=0.1.0-rc.6` 按 node-semver 會靜默排除 `0.1.1-rc.2`。已改：
+  - `package.json` version `0.2.2`；`engines.node` = `^22.19.0 || >=24.0.0`（官方 root engines）。
+  - peers：`@deepseek-ai/cordis@^4.0.1`（取代 unscoped `cordis`）；locale/llm 加 `|| >=0.1.1-rc.1 <0.2.0-0`。
+  - 新守門 `scripts/verify-peers.mjs` 已入 `npm test`。
+  - LLM API（`BlockAssembler` / `createUserMessage`）喺 `dsh-llm@0.1.1-rc.2` 仍在，冇改 runtime。
+  - **未做**：發 npm `0.2.2`；18 份非 en/zh-HK README 開頭仍寫 0.2.0；HANDOFF 所列 14 個 upstream 新 key（715→729）唔屬版本約束。
+  - 來源：https://github.com/deepseek-ai/deepseek-harness/blob/dsh-v0.1.1-rc.2/package.json ；https://github.com/awesome-dsh-plugin/awesome-dsh-plugin/blob/main/contributing.md
+  - 驗證（2026-08-27 實跑）：`npm test` EXIT=0（verify:peers + i18n check 20×28 + assemble 715 keys + converter + runtime）。`node --check` index.mjs / verify-peers.mjs 過。未重啟 Desktop 做 GUI 驗（今次只改 manifest／文件，冇改 client UI）。未 commit。
+- 2026-08-24：Desktop 2.0.2 開唔到，錯係 client bundle `__ModuleLoader__.load({ id: "dsh-i18n" })`，host 等嘅係 package name `@mimateinn/dsh-i18n`。assemble / verify-runtime 已改讀 `package.json` name；version bump `0.2.1`。installed profile 嘅 `lib/client.js` 已改 id。已 push `715027e` 並發布 `@mimateinn/dsh-i18n@0.2.1`。市場條目係 [awesome-dsh-plugin#2926](https://github.com/awesome-dsh-plugin/awesome-dsh-plugin/pull/2926)，已於 2026-08-25 merge。
 
 ## 安裝落地狀態（2026-08-24 最update）
 desktop profile 依賴已升級到 `github:mimateinn/dsh-multi-lang-ui#8fd52f0`（含全部品質修正），

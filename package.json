@@ -1,6 +1,6 @@
 {
   "name": "@mimateinn/dsh-i18n",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "description": "20-locale internationalization with automatic translation for the DeepSeek Harness Web UI",
   "type": "module",
   "main": "./index.mjs",
@@ -20,7 +20,8 @@
     "i18n:check": "node scripts/check.mjs",
     "i18n:build": "node scripts/assemble.mjs",
     "verify:runtime": "node scripts/verify-runtime.mjs",
-    "test": "npm run i18n:check && npm run i18n:build && node scripts/verify-converter.mjs && npm run verify:runtime"
+    "verify:peers": "node scripts/verify-peers.mjs",
+    "test": "npm run verify:peers && npm run i18n:check && npm run i18n:build && node scripts/verify-converter.mjs && npm run verify:runtime"
   },
   "dsh": {
     "bundle": {
@@ -40,10 +41,13 @@
       }
     }
   },
+  "engines": {
+    "node": "^22.19.0 || >=24.0.0"
+  },
   "peerDependencies": {
-    "cordis": ">=4.0.0-rc.8 <5.0.0",
-    "@deepseek-ai/dsh-client-locale": ">=0.1.0-rc.6",
-    "@deepseek-ai/dsh-llm": ">=0.1.0-rc.2"
+    "@deepseek-ai/cordis": "^4.0.1",
+    "@deepseek-ai/dsh-client-locale": ">=0.1.0-rc.6 <0.1.1 || >=0.1.1-rc.1 <0.2.0-0",
+    "@deepseek-ai/dsh-llm": ">=0.1.0-rc.2 <0.1.1 || >=0.1.1-rc.1 <0.2.0-0"
   },
   "keywords": [
     "deepseek-harness",
