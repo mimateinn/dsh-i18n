@@ -3,7 +3,7 @@
 # HANDOFF
 
 ## In progress
-- 2026-09-09: Multi-agent UI lag / “model running but text does not paint” was this plugin’s `document.body` MutationObservers (`characterData: true` on every token). Fix is in `scripts/assemble.mjs` (skip conversation/composer/AgentTeams surfaces, drop `characterData`, rAF-coalesce `childList`, TreeWalker `FILTER_REJECT`). Version **0.2.3**. Pushed to `origin/master`. **Not** npm-published — Market / `@mimateinn/dsh-i18n@0.2.2` is stale vs git. Desktop profile still pins `github:mimateinn/dsh-i18n#2a6d039…` unless re-added. A patched `lib/client.js` is already in `~\.dsh\profiles\desktop\node_modules\@mimateinn\dsh-i18n\lib\client.js`. **Restart DSH Desktop** if that renderer is still on the old bundle.
+- 2026-09-09: Multi-agent UI lag / “model running but text does not paint” was this plugin’s `document.body` MutationObservers (`characterData: true` on every token). Fix is in `scripts/assemble.mjs` (skip conversation/composer/AgentTeams surfaces, drop `characterData`, rAF-coalesce `childList`, TreeWalker `FILTER_REJECT`). Version **0.2.3**. On `origin/master` as `5220902`. **Not** npm-published — Market / `@mimateinn/dsh-i18n@0.2.2` is stale vs git. Desktop profile still pins `github:mimateinn/dsh-i18n#2a6d039…` unless re-added. A patched `lib/client.js` is already in `~\.dsh\profiles\desktop\node_modules\@mimateinn\dsh-i18n\lib\client.js`. **Restart DSH Desktop** if that renderer is still on the old bundle.
 - Desktop FileVersion still **2.0.3**. `@nanmicoder/dsh-agent-teams` still **0.1.14**. Do not bump to 0.1.15.
 - 2026-09-08: Desktop recovery (`Renderer boot failed for 1 plugin(s)`) was `@nanmicoder/dsh-agent-teams@0.1.15`. Evidence: `%APPDATA%\DSH Desktop\logs\dsh-2026-09-08.error.log`.
 - Published `@mimateinn/dsh-i18n@0.2.2` to npm (`latest`). URL: https://www.npmjs.com/package/@mimateinn/dsh-i18n/v/0.2.2 .
@@ -11,7 +11,7 @@
 
 ## Next
 - Owner **Restart DSH Desktop**, then re-run many concurrent agents and confirm tokens paint.
-- Optionally re-pin the desktop profile to the new git SHA: `dsh plugin --profile desktop add github:mimateinn/dsh-i18n#<commit>`.
+- Optionally re-pin the desktop profile: `dsh plugin --profile desktop add github:mimateinn/dsh-i18n#5220902`.
 - Publish `@mimateinn/dsh-i18n@0.2.3` only when the owner asks (Market stays on 0.2.2 until then).
 - Harvest the 14 upstream locale keys (715 → 729) across 20 locales.
 
