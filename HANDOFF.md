@@ -2,6 +2,28 @@
 
 # HANDOFF
 
+## In progress
+- 2026-09-09: Multi-agent UI lag / “model running but text does not paint” was this plugin’s `document.body` MutationObservers (`characterData: true` on every token). Fix is in `scripts/assemble.mjs` (skip conversation/composer/AgentTeams surfaces, drop `characterData`, rAF-coalesce `childList`, TreeWalker `FILTER_REJECT`). Version **0.2.3**. Pushed to `origin/master`. **Not** npm-published — Market / `@mimateinn/dsh-i18n@0.2.2` is stale vs git. Desktop profile still pins `github:mimateinn/dsh-i18n#2a6d039…` unless re-added. A patched `lib/client.js` is already in `~\.dsh\profiles\desktop\node_modules\@mimateinn\dsh-i18n\lib\client.js`. **Restart DSH Desktop** if that renderer is still on the old bundle.
+- Desktop FileVersion still **2.0.3**. `@nanmicoder/dsh-agent-teams` still **0.1.14**. Do not bump to 0.1.15.
+- 2026-09-08: Desktop recovery (`Renderer boot failed for 1 plugin(s)`) was `@nanmicoder/dsh-agent-teams@0.1.15`. Evidence: `%APPDATA%\DSH Desktop\logs\dsh-2026-09-08.error.log`.
+- Published `@mimateinn/dsh-i18n@0.2.2` to npm (`latest`). URL: https://www.npmjs.com/package/@mimateinn/dsh-i18n/v/0.2.2 .
+- Desktop installer follow-up is closed by the owner.
+
+## Next
+- Owner **Restart DSH Desktop**, then re-run many concurrent agents and confirm tokens paint.
+- Optionally re-pin the desktop profile to the new git SHA: `dsh plugin --profile desktop add github:mimateinn/dsh-i18n#<commit>`.
+- Publish `@mimateinn/dsh-i18n@0.2.3` only when the owner asks (Market stays on 0.2.2 until then).
+- Harvest the 14 upstream locale keys (715 → 729) across 20 locales.
+
+## Gotchas
+- npm `latest` is still **0.2.2**. Git `master` is **0.2.3**. Market update installs the old observers until 0.2.3 is published.
+- zh-TW live convert / auto-MT no longer rewrite streaming bubbles (chrome/settings still convert via `childList`).
+- Residual lag risk: wallpaper WebGL `requestAnimationFrame`, AgentTeams 1s activity poll, packaged web-app itself. Those are secondary; they do not walk every token.
+- `@nanmicoder/dsh-agent-teams@0.1.15` fails renderer boot on this Desktop. Stay on `0.1.14`.
+- Community Market accepts only an exact published npm version. GitHub specs install only via `dsh plugin add`.
+- Always pass `--profile` (read `%APPDATA%/DSH Desktop/profile-selection/state.json` `active`). The web shim will install into `web` and Desktop will never load it.
+- Do not put `src/*/.mt/` in the repo (203 MB venv).
+
 ## 進行中
 - 2026-08-27：**符合目前 DSH 版本要求（未 commit、未發 npm）**。官方 `@deepseek-ai/dsh` `latest`/`next` = **0.1.1-rc.2**；舊 peer `>=0.1.0-rc.6` 按 node-semver 會靜默排除 `0.1.1-rc.2`。已改：
   - `package.json` version `0.2.2`；`engines.node` = `^22.19.0 || >=24.0.0`（官方 root engines）。

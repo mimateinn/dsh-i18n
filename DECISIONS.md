@@ -2,6 +2,14 @@
 
 # DECISIONS
 
+## 2026-09-09 — Do not convert streaming conversation text
+
+**Decision:** zh-TW DOM conversion and auto-MT observers ignore `characterData`, skip conversation / composer / AgentTeams live surfaces (`[data-conversation-scroll]`, `[data-composer-input]`, `[data-composer-card]`, `[data-composer-seat]`, `[data-team-id]`, `[data-agent-teams-panel-open]`, `[data-agent-teams-collapsed]`), coalesce leftover `childList` work onto `requestAnimationFrame`, and never re-walk those trees after an MT RPC. Chrome and settings still convert via `childList`.
+
+**Why:** both observers used `{ childList, subtree, characterData: true }` on `document.body`. Streaming tokens are `characterData` inside the conversation scrollport. With many concurrent agents that callback walks and rewrites text on every token, which stalls the renderer so inference stays alive while glyphs do not paint. Desktop 2.0.3 logs show the same pressure as `renderer process gone (reason: killed)` plus GPU/Network/Audio child kills.
+
+**Not chosen:** patching packaged `dsh-plugin-desktop` / `@deepseek-ai/dsh-web-app` in the asar (Desktop will not load the local harness checkout); hiding or limiting agents; upgrading `@nanmicoder/dsh-agent-teams` past 0.1.14 (0.1.15 fails renderer boot).
+
 ## 2026-08-27 — Peer ranges must name the current 0.1.1-rc tuple
 
 **Decision:** `peerDependencies` use an explicit prerelease branch for the current

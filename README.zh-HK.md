@@ -2,7 +2,7 @@
 
 **[繁體中文（香港）](README.zh-HK.md)** · **[繁體中文（台灣）](README.zh-TW.md)** · [English](README.md) · [日本語](README.ja.md) · [한국어](README.ko.md) · [Français](README.fr.md) · [Deutsch](README.de.md) · [Español](README.es.md) · [Português (Brasil)](README.pt-BR.md) · [Italiano](README.it.md) · [Русский](README.ru.md) · [Українська](README.uk.md) · [Polski](README.pl.md) · [Nederlands](README.nl.md) · [Türkçe](README.tr.md) · [العربية](README.ar.md) · [हिन्दी](README.hi.md) · [Bahasa Indonesia](README.id.md) · [Tiếng Việt](README.vi.md) · [ไทย](README.th.md) · [Svenska](README.sv.md)
 
-一個可持續嘅 DeepSeek Harness Web UI 國際化插件。版本 0.2.2 從單一註冊表註冊 **20 個地區語言**，同時保留 DSH 現有嘅客戶端 ModuleLoader 整合、地區語言服務、偏好遷移同埋執行期回退行為。
+一個可持續嘅 DeepSeek Harness Web UI 國際化插件。版本 0.2.3 從單一註冊表註冊 **20 個地區語言**，同時保留 DSH 現有嘅客戶端 ModuleLoader 整合、地區語言服務、偏好遷移同埋執行期回退行為。
 
 ## 地區語言
 

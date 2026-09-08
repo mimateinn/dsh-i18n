@@ -31,7 +31,7 @@ const win = {
 const sandbox = {
   window: win,
   document: documentMock,
-  NodeFilter: { SHOW_TEXT: 4 },
+  NodeFilter: { SHOW_ELEMENT: 1, SHOW_TEXT: 4, FILTER_ACCEPT: 1, FILTER_REJECT: 2, FILTER_SKIP: 3 },
   console,
 };
 win.document = documentMock;
@@ -86,6 +86,10 @@ for (const L of locales) {
   else totalReg++;
 }
 ok(totalReg === 20, "all 20 locales registered with 715 keys", totalReg + "/20");
+ok(clientSrc.includes("characterData: false"), "observers omit characterData");
+ok(!clientSrc.includes("characterData: true"), "no characterData:true observers");
+ok(clientSrc.includes("[data-conversation-scroll]"), "skip conversation scrollport");
+ok(clientSrc.includes("[data-agent-teams-panel-open]"), "skip AgentTeams panel");
 
 // 2) curated translate for a sample across locales
 locale.setLocale("fr");
