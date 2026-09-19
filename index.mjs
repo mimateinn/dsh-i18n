@@ -59,7 +59,10 @@ async function translate(ctx, texts, targetLang, route, signal) {
 }
 
 function apply(ctx) {
-  ctx.inject(["connection"], (connectionCtx) => {
+  // Harness 0.1.5-rc.2: connection.rpc.handle registers on owner.webServer.
+  // Inject webServer on the same fiber or handle() throws
+  // "cannot get property \"webServer\" without inject".
+  ctx.inject(["connection", "webServer"], (connectionCtx) => {
     const connection = connectionCtx.get("connection");
     connectionCtx.effect(() => connection.rpc.handle(CHANNEL, async (endpoint, payload, signal) => {
       try {

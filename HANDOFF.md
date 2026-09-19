@@ -3,23 +3,18 @@
 # HANDOFF
 
 ## In progress
-- 2026-09-09: Multi-agent UI lag / “model running but text does not paint” was this plugin’s `document.body` MutationObservers (`characterData: true` on every token). Fix is in `scripts/assemble.mjs` (skip conversation/composer/AgentTeams surfaces, drop `characterData`, rAF-coalesce `childList`, TreeWalker `FILTER_REJECT`). Version **0.2.3**. On `origin/master` as `5220902`. **Not** npm-published — Market / `@mimateinn/dsh-i18n@0.2.2` is stale vs git. Desktop profile still pins `github:mimateinn/dsh-i18n#2a6d039…` unless re-added. A patched `lib/client.js` is already in `~\.dsh\profiles\desktop\node_modules\@mimateinn\dsh-i18n\lib\client.js`. **Restart DSH Desktop** if that renderer is still on the old bundle.
-- Desktop FileVersion still **2.0.3**. `@nanmicoder/dsh-agent-teams` still **0.1.14**. Do not bump to 0.1.15.
-- 2026-09-08: Desktop recovery (`Renderer boot failed for 1 plugin(s)`) was `@nanmicoder/dsh-agent-teams@0.1.15`. Evidence: `%APPDATA%\DSH Desktop\logs\dsh-2026-09-08.error.log`.
-- Published `@mimateinn/dsh-i18n@0.2.2` to npm (`latest`). URL: https://www.npmjs.com/package/@mimateinn/dsh-i18n/v/0.2.2 .
-- Desktop installer follow-up is closed by the owner.
+- 2026-09-19: Desktop upgraded to **2.0.11** (Harness **0.1.5-rc.2**). Host `connection.rpc.handle` now needs `webServer` on the same fiber. Version **0.2.4** injects `["connection","webServer"]` so auto-translate RPC registers. Desktop profile uses `github:mimateinn/dsh-i18n`. npm `latest` is still **0.2.2**.
+- 2026-09-09: Multi-agent UI lag / “model running but text does not paint” was this plugin’s `document.body` MutationObservers. Fix is in `scripts/assemble.mjs` (skip conversation/composer/AgentTeams surfaces, drop `characterData`, rAF-coalesce `childList`, TreeWalker `FILTER_REJECT`). That observer fix shipped as **0.2.3** (`5220902`).
 
 ## Next
-- Owner **Restart DSH Desktop**, then re-run many concurrent agents and confirm tokens paint.
-- Optionally re-pin the desktop profile: `dsh plugin --profile desktop add github:mimateinn/dsh-i18n#5220902`.
-- Publish `@mimateinn/dsh-i18n@0.2.3` only when the owner asks (Market stays on 0.2.2 until then).
+- Restart DSH Desktop after pulling 0.2.4 so the Host reloads `index.mjs`.
+- Publish `@mimateinn/dsh-i18n@0.2.4` only when the owner asks (Market stays on 0.2.2 until then).
 - Harvest the 14 upstream locale keys (715 → 729) across 20 locales.
 
 ## Gotchas
-- npm `latest` is still **0.2.2**. Git `master` is **0.2.3**. Market update installs the old observers until 0.2.3 is published.
+- npm `latest` is still **0.2.2**. Git `master` is **0.2.4**. Market update installs the old observers until 0.2.4 is published.
 - zh-TW live convert / auto-MT no longer rewrite streaming bubbles (chrome/settings still convert via `childList`).
-- Residual lag risk: wallpaper WebGL `requestAnimationFrame`, AgentTeams 1s activity poll, packaged web-app itself. Those are secondary; they do not walk every token.
-- `@nanmicoder/dsh-agent-teams@0.1.15` fails renderer boot on this Desktop. Stay on `0.1.14`.
+- Isolated Host RPC times out at 120s if MCP servers (OpenViking / wincu) stall; launch with `DSH_DESKTOP_ISOLATED_HOST=0` when that happens.
 - Community Market accepts only an exact published npm version. GitHub specs install only via `dsh plugin add`.
 - Always pass `--profile` (read `%APPDATA%/DSH Desktop/profile-selection/state.json` `active`). The web shim will install into `web` and Desktop will never load it.
 - Do not put `src/*/.mt/` in the repo (203 MB venv).
