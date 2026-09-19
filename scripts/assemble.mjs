@@ -420,7 +420,7 @@ window.__ModuleLoader__.load({
             payload.model = cfg.model;
             if (cfg.reasoningEffort) payload.reasoningEffort = cfg.reasoningEffort;
           }
-          connection.rpc.call("/dsh-i18n", "translate", payload).then((result) => {
+          connection.rpc.call("/api", "dsh-i18n.translate", payload).then((result) => {
             if (!result || !result.ok) return;
             if (!mtIsTarget(mtActiveLang())) return;
             const translations = result.value && result.value.translations;

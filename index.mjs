@@ -8,7 +8,7 @@ import { BlockAssembler, createUserMessage } from "@deepseek-ai/dsh-llm";
 
 const name = "dsh-i18n";
 const inject = ["llm"];
-const CHANNEL = "/dsh-i18n";
+const API_METHOD = "dsh-i18n.translate";
 
 const ok = (value) => ({ ok: true, value });
 const failure = (error) => ({
@@ -58,13 +58,26 @@ async function translate(ctx, texts, targetLang, route, signal) {
   return parseTranslations(text, texts.length);
 }
 
+function readEnvelope(body) {
+  if (typeof body !== "object" || body === null) return undefined;
+  const record = body;
+  if (record.type !== "client-request" || typeof record.rpcId !== "string" || typeof record.method !== "string") {
+    return undefined;
+  }
+  return { rpcId: record.rpcId, method: record.method, payload: record.payload };
+}
+
+function serverResponse(rpcId, result) {
+  return Response.json({ type: "server-response", rpcId, result });
+}
+
 function apply(ctx) {
-  // Harness 0.1.5-rc.2: connection.rpc.handle registers on owner.webServer.
-  // Inject webServer on the same fiber or handle() throws
-  // "cannot get property \"webServer\" without inject".
-  ctx.inject(["connection", "webServer"], (connectionCtx) => {
+  // Harness 0.1.5-rc.2: connection.rpc.handle uses the connection fiber's
+  // webServer, which that plugin no longer injects. Mount an exact /api
+  // Fetch route instead (same pattern as dsh-plugin-subscriptions 0.9.2).
+  ctx.inject(["connection"], (connectionCtx) => {
     const connection = connectionCtx.get("connection");
-    connectionCtx.effect(() => connection.rpc.handle(CHANNEL, async (endpoint, payload, signal) => {
+    const handler = async (endpoint, payload, signal) => {
       try {
         if (endpoint !== "translate") return failure(new Error("unknown endpoint " + endpoint));
         const { texts, targetLang } = payload || {};
@@ -88,7 +101,42 @@ function apply(ctx) {
       } catch (error) {
         return failure(error);
       }
-    }, { authority: "loopback" }), "dsh-i18n: /dsh-i18n rpc channel");
+    };
+    connectionCtx.effect(() => connection.fetch.register({
+      path: `/api/${API_METHOD}`,
+      methods: ["POST"],
+      requestBody: "buffered",
+      fetch: async (request) => {
+        if (request.headers.get("content-type")?.split(";", 1)[0]?.trim().toLowerCase() !== "application/json") {
+          return new Response("content type must be application/json", { status: 415 });
+        }
+        let body;
+        try {
+          body = await request.json();
+        } catch {
+          return new Response("body is not JSON", { status: 400 });
+        }
+        const envelope = readEnvelope(body);
+        if (envelope === undefined) {
+          const rawId = body?.rpcId;
+          return serverResponse(typeof rawId === "string" ? rawId : "invalid-request", {
+            ok: false,
+            error: { code: "gateway/bad-request", message: "invalid client-request message", details: { issues: [] } },
+          });
+        }
+        if (envelope.method !== API_METHOD) {
+          return serverResponse(envelope.rpcId, {
+            ok: false,
+            error: {
+              code: "gateway/bad-request",
+              message: `method ${JSON.stringify(envelope.method)} does not match endpoint ${JSON.stringify(API_METHOD)}`,
+              details: { issues: [] },
+            },
+          });
+        }
+        return serverResponse(envelope.rpcId, await handler("translate", envelope.payload, request.signal));
+      },
+    }), "dsh-i18n: /api/dsh-i18n.translate route");
   });
 }
 

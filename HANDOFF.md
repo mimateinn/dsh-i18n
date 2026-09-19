@@ -3,16 +3,16 @@
 # HANDOFF
 
 ## In progress
-- 2026-09-19: Desktop upgraded to **2.0.11** (Harness **0.1.5-rc.2**). Host `connection.rpc.handle` now needs `webServer` on the same fiber. Version **0.2.4** injects `["connection","webServer"]` so auto-translate RPC registers. Desktop profile uses `github:mimateinn/dsh-i18n`. npm `latest` is still **0.2.2**.
+- 2026-09-19: Desktop upgraded to **2.0.11** (Harness **0.1.5-rc.2**). `connection.rpc.handle` cannot mount a dedicated channel anymore. Version **0.2.5** registers `/api/dsh-i18n.translate` via `connection.fetch.register`. Desktop profile uses `github:mimateinn/dsh-i18n`. npm `latest` is still **0.2.2**.
 - 2026-09-09: Multi-agent UI lag / “model running but text does not paint” was this plugin’s `document.body` MutationObservers. Fix is in `scripts/assemble.mjs` (skip conversation/composer/AgentTeams surfaces, drop `characterData`, rAF-coalesce `childList`, TreeWalker `FILTER_REJECT`). That observer fix shipped as **0.2.3** (`5220902`).
 
 ## Next
-- Restart DSH Desktop after pulling 0.2.4 so the Host reloads `index.mjs`.
-- Publish `@mimateinn/dsh-i18n@0.2.4` only when the owner asks (Market stays on 0.2.2 until then).
+- Restart DSH Desktop after pulling 0.2.5 so the Host reloads `index.mjs`.
+- Publish `@mimateinn/dsh-i18n@0.2.5` only when the owner asks (Market stays on 0.2.2 until then).
 - Harvest the 14 upstream locale keys (715 → 729) across 20 locales.
 
 ## Gotchas
-- npm `latest` is still **0.2.2**. Git `master` is **0.2.4**. Market update installs the old observers until 0.2.4 is published.
+- npm `latest` is still **0.2.2**. Git `master` is **0.2.5**. Market update installs the old observers until 0.2.5 is published.
 - zh-TW live convert / auto-MT no longer rewrite streaming bubbles (chrome/settings still convert via `childList`).
 - Isolated Host RPC times out at 120s if MCP servers (OpenViking / wincu) stall; launch with `DSH_DESKTOP_ISOLATED_HOST=0` when that happens.
 - Community Market accepts only an exact published npm version. GitHub specs install only via `dsh plugin add`.
