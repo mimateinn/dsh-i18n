@@ -2,15 +2,46 @@
 
 # DECISIONS
 
-## 2026-08-24 — Client ModuleLoader id is package.json name
+## 2026-09-09 — Do not convert streaming conversation text
 
-**Decision:** `scripts/assemble.mjs` writes `window.__ModuleLoader__.load({ id })` from `package.json` `"name"`. `verify-runtime.mjs` fails if the executed bundle registers any other id.
+**Decision:** zh-TW DOM conversion and auto-MT observers ignore `characterData`, skip conversation / composer / AgentTeams live surfaces (`[data-conversation-scroll]`, `[data-composer-input]`, `[data-composer-card]`, `[data-composer-seat]`, `[data-team-id]`, `[data-agent-teams-panel-open]`, `[data-agent-teams-collapsed]`), coalesce leftover `childList` work onto `requestAnimationFrame`, and never re-walk those trees after an MT RPC. Chrome and settings still convert via `childList`.
 
-**Why:** after the scoped rename to `@mimateinn/dsh-i18n`, the host keys the client graph by the package name (`/plugins/@mimateinn/dsh-i18n/client.js`) and asserts the factory registered under that same id. The 0.2.0 bundle still registered the pre-scope id `dsh-i18n`, so Desktop logged `loaded without registering "@mimateinn/dsh-i18n"`. The same class of bug shipped in dsh-sentinel (prefixed `@dsh-external/…`) and dsh-agent-teams (hardcoded PLUGIN_ID after rename).
+**Why:** both observers used `{ childList, subtree, characterData: true }` on `document.body`. Streaming tokens are `characterData` inside the conversation scrollport. With many concurrent agents that callback walks and rewrites text on every token, which stalls the renderer so inference stays alive while glyphs do not paint. Desktop 2.0.3 logs show the same pressure as `renderer process gone (reason: killed)` plus GPU/Network/Audio child kills.
 
-**Not changed:** cordis compose `id: dsh-i18n`, storage keys, RPC path `/dsh-i18n`, and the client `name` export stay unscoped — those are not the loader entry.
+**Not chosen:** patching packaged `dsh-plugin-desktop` / `@deepseek-ai/dsh-web-app` in the asar (Desktop will not load the local harness checkout); hiding or limiting agents; upgrading `@nanmicoder/dsh-agent-teams` past 0.1.14 (0.1.15 fails renderer boot).
 
-**Not chosen:** hardcoding `@mimateinn/dsh-i18n` in the banner, because a later rename would desync again.
+## 2026-08-27 — Peer ranges must name the current 0.1.1-rc tuple
+
+**Decision:** `peerDependencies` use an explicit prerelease branch for the current
+harness line, and Cordis is declared as `@deepseek-ai/cordis` (not unscoped `cordis`):
+
+```json
+"@deepseek-ai/cordis": "^4.0.1",
+"@deepseek-ai/dsh-client-locale": ">=0.1.0-rc.6 <0.1.1 || >=0.1.1-rc.1 <0.2.0-0",
+"@deepseek-ai/dsh-llm": ">=0.1.0-rc.2 <0.1.1 || >=0.1.1-rc.1 <0.2.0-0"
+```
+
+`engines.node` is `^22.19.0 || >=24.0.0`. The contract is asserted by
+`scripts/verify-peers.mjs`.
+
+**Why:** npm `@deepseek-ai/dsh` `latest`/`next` is `0.1.1-rc.2` (tag `dsh-v0.1.1-rc.2`).
+node-semver only lets a prerelease satisfy a range when some comparator shares that
+exact `major.minor.patch` tuple and itself carries a prerelease tag. The previous
+`>=0.1.0-rc.6` range matched `0.1.0-rc.*` and stable `0.1.1`, but silently excluded
+`0.1.1-rc.2` — the version users actually install. awesome-dsh-plugin contributing
+documents this and requires the `|| >=0.1.1-rc.1 <0.2.0-0` shape.
+
+Host packages in 0.1.1-rc.2 depend on `@deepseek-ai/cordis@^4.0.1`, not `cordis`.
+`dsh-llm@0.1.1-rc.2` still exports `BlockAssembler` and `createUserMessage`; no API
+rewrite was needed.
+
+**Not chosen:** pinning only `^0.1.1-rc.2` (drops Desktop / rc.6–rc.8 installs);
+keeping unscoped `cordis` (host no longer supplies that name).
+
+**Sources:**
+- https://github.com/deepseek-ai/deepseek-harness/blob/dsh-v0.1.1-rc.2/package.json
+- https://github.com/awesome-dsh-plugin/awesome-dsh-plugin/blob/main/contributing.md
+- https://www.npmjs.com/package/@deepseek-ai/dsh
 
 ## 2026-08-24 — The gate must check content, not only structure
 

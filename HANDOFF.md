@@ -2,10 +2,38 @@
 
 # HANDOFF
 
+## In progress
+- 2026-09-09: Multi-agent UI lag / “model running but text does not paint” was this plugin’s `document.body` MutationObservers (`characterData: true` on every token). Fix is in `scripts/assemble.mjs` (skip conversation/composer/AgentTeams surfaces, drop `characterData`, rAF-coalesce `childList`, TreeWalker `FILTER_REJECT`). Version **0.2.3**. On `origin/master` as `5220902`. **Not** npm-published — Market / `@mimateinn/dsh-i18n@0.2.2` is stale vs git. Desktop profile still pins `github:mimateinn/dsh-i18n#2a6d039…` unless re-added. A patched `lib/client.js` is already in `~\.dsh\profiles\desktop\node_modules\@mimateinn\dsh-i18n\lib\client.js`. **Restart DSH Desktop** if that renderer is still on the old bundle.
+- Desktop FileVersion still **2.0.3**. `@nanmicoder/dsh-agent-teams` still **0.1.14**. Do not bump to 0.1.15.
+- 2026-09-08: Desktop recovery (`Renderer boot failed for 1 plugin(s)`) was `@nanmicoder/dsh-agent-teams@0.1.15`. Evidence: `%APPDATA%\DSH Desktop\logs\dsh-2026-09-08.error.log`.
+- Published `@mimateinn/dsh-i18n@0.2.2` to npm (`latest`). URL: https://www.npmjs.com/package/@mimateinn/dsh-i18n/v/0.2.2 .
+- Desktop installer follow-up is closed by the owner.
+
+## Next
+- Owner **Restart DSH Desktop**, then re-run many concurrent agents and confirm tokens paint.
+- Optionally re-pin the desktop profile: `dsh plugin --profile desktop add github:mimateinn/dsh-i18n#5220902`.
+- Publish `@mimateinn/dsh-i18n@0.2.3` only when the owner asks (Market stays on 0.2.2 until then).
+- Harvest the 14 upstream locale keys (715 → 729) across 20 locales.
+
+## Gotchas
+- npm `latest` is still **0.2.2**. Git `master` is **0.2.3**. Market update installs the old observers until 0.2.3 is published.
+- zh-TW live convert / auto-MT no longer rewrite streaming bubbles (chrome/settings still convert via `childList`).
+- Residual lag risk: wallpaper WebGL `requestAnimationFrame`, AgentTeams 1s activity poll, packaged web-app itself. Those are secondary; they do not walk every token.
+- `@nanmicoder/dsh-agent-teams@0.1.15` fails renderer boot on this Desktop. Stay on `0.1.14`.
+- Community Market accepts only an exact published npm version. GitHub specs install only via `dsh plugin add`.
+- Always pass `--profile` (read `%APPDATA%/DSH Desktop/profile-selection/state.json` `active`). The web shim will install into `web` and Desktop will never load it.
+- Do not put `src/*/.mt/` in the repo (203 MB venv).
+
 ## 進行中
-ModuleLoader id 已改由 `package.json` name 產出（`@mimateinn/dsh-i18n`），`verify-runtime` 會閘住。
-版本已 bump 到 `0.2.1`。未 commit、未 publish、未重裝 desktop profile。
-重啟 DSH Desktop 驗收前，要先把新 `lib/client.js` 裝入 desktop profile（npm 0.2.1 或本機覆蓋）。
+- 2026-08-27：**符合目前 DSH 版本要求（未 commit、未發 npm）**。官方 `@deepseek-ai/dsh` `latest`/`next` = **0.1.1-rc.2**；舊 peer `>=0.1.0-rc.6` 按 node-semver 會靜默排除 `0.1.1-rc.2`。已改：
+  - `package.json` version `0.2.2`；`engines.node` = `^22.19.0 || >=24.0.0`（官方 root engines）。
+  - peers：`@deepseek-ai/cordis@^4.0.1`（取代 unscoped `cordis`）；locale/llm 加 `|| >=0.1.1-rc.1 <0.2.0-0`。
+  - 新守門 `scripts/verify-peers.mjs` 已入 `npm test`。
+  - LLM API（`BlockAssembler` / `createUserMessage`）喺 `dsh-llm@0.1.1-rc.2` 仍在，冇改 runtime。
+  - **未做**：發 npm `0.2.2`；18 份非 en/zh-HK README 開頭仍寫 0.2.0；HANDOFF 所列 14 個 upstream 新 key（715→729）唔屬版本約束。
+  - 來源：https://github.com/deepseek-ai/deepseek-harness/blob/dsh-v0.1.1-rc.2/package.json ；https://github.com/awesome-dsh-plugin/awesome-dsh-plugin/blob/main/contributing.md
+  - 驗證（2026-08-27 實跑）：`npm test` EXIT=0（verify:peers + i18n check 20×28 + assemble 715 keys + converter + runtime）。`node --check` index.mjs / verify-peers.mjs 過。未重啟 Desktop 做 GUI 驗（今次只改 manifest／文件，冇改 client UI）。未 commit。
+- 2026-08-24：Desktop 2.0.2 開唔到，錯係 client bundle `__ModuleLoader__.load({ id: "dsh-i18n" })`，host 等嘅係 package name `@mimateinn/dsh-i18n`。assemble / verify-runtime 已改讀 `package.json` name；version bump `0.2.1`。installed profile 嘅 `lib/client.js` 已改 id。已 push `715027e` 並發布 `@mimateinn/dsh-i18n@0.2.1`。市場條目係 [awesome-dsh-plugin#2926](https://github.com/awesome-dsh-plugin/awesome-dsh-plugin/pull/2926)，已於 2026-08-25 merge。
 
 ## 安裝落地狀態（2026-08-24 最update）
 desktop profile 依賴已升級到 `github:mimateinn/dsh-multi-lang-ui#8fd52f0`（含全部品質修正），

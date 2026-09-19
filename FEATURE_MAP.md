@@ -8,8 +8,9 @@
 | Translation dictionaries | `src/en`, `src/<locale>` | `lib/client.js` DICTS | `npm run i18n:check` |
 | Upstream extraction | Installed DSH client bundles | `src/en`, `src/zh-src` | Extractor fails on missing/changed bundles |
 | Traditional fallback | `src/zh-tw-parts/chars.json` | Runtime converter for zh-HK/zh-TW | `verify-converter.mjs` |
+| Streaming DOM skip | `scripts/assemble.mjs` (`DOM_SKIP_SELECTOR`, observers) | Do not walk conversation tokens | `verify-runtime.mjs` |
 | Arabic direction | Locale registry `rtl` flag | Document `lang` and `dir` | Generated client behavior |
 | Untranslated-English detection | `scripts/check.mjs` `englishWordCount` | — | `npm run i18n:check` |
 | Simplified residue in zh-HK/zh-TW | `src/zh-tw-parts/chars.json` keys | — | `npm run i18n:check` |
 | Package release metadata | `package.json` | npm/GitHub metadata | `npm test` |
-| Client ModuleLoader id | `package.json` `name` | `lib/client.js` `__ModuleLoader__.load({ id })` | `scripts/verify-runtime.mjs` |
+| Host version contract | `package.json` `engines` + `peerDependencies` | — | `npm run verify:peers` |

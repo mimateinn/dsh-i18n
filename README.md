@@ -2,7 +2,7 @@
 
 **[繁體中文（香港）](README.zh-HK.md)** · **[繁體中文（台灣）](README.zh-TW.md)** · [English](README.md) · [日本語](README.ja.md) · [한국어](README.ko.md) · [Français](README.fr.md) · [Deutsch](README.de.md) · [Español](README.es.md) · [Português (Brasil)](README.pt-BR.md) · [Italiano](README.it.md) · [Русский](README.ru.md) · [Українська](README.uk.md) · [Polski](README.pl.md) · [Nederlands](README.nl.md) · [Türkçe](README.tr.md) · [العربية](README.ar.md) · [हिन्दी](README.hi.md) · [Bahasa Indonesia](README.id.md) · [Tiếng Việt](README.vi.md) · [ไทย](README.th.md) · [Svenska](README.sv.md)
 
-A sustainable internationalization plugin for the DeepSeek Harness Web UI. Version 0.2.0 registers **20 locales** from one registry while preserving DSH's existing client ModuleLoader integration, locale service, preference migration, and runtime fallback behavior.
+A sustainable internationalization plugin for the DeepSeek Harness Web UI. Version 0.2.3 registers **20 locales** from one registry while preserving DSH's existing client ModuleLoader integration, locale service, preference migration, and runtime fallback behavior.
 
 ## Locales
 
@@ -26,7 +26,7 @@ A sustainable internationalization plugin for the DeepSeek Harness Web UI. Versi
 Install from npm (exact version — this is what DSH Desktop's Market update button needs):
 
 ```bash
-dsh plugin --profile <active-profile> add @mimateinn/dsh-i18n@0.2.0
+dsh plugin --profile <active-profile> add @mimateinn/dsh-i18n@0.2.2
 ```
 
 Or from GitHub, pinned to a commit:
@@ -46,6 +46,12 @@ go through the built-in terminal `dsh plugin add`, which forwards the specifier 
 
 Restart the host, then choose a language in **Settings → General → Language**. Remove with
 `dsh plugin --profile <active-profile> remove dsh-i18n`.
+
+## Compatibility
+
+- DeepSeek Harness **0.1.0-rc.6 or newer**, including the current published line **0.1.1-rc.2** (`@deepseek-ai/dsh` npm `latest` / `next`, 2026-08-27).
+- Node.js **`^22.19.0 || >=24.0.0`** (official harness `engines.node` at [dsh-v0.1.1-rc.2](https://github.com/deepseek-ai/deepseek-harness/blob/dsh-v0.1.1-rc.2/package.json)).
+- Host packages are `peerDependencies` with an explicit `0.1.1-rc.*` branch so node-semver does not silently exclude harness prereleases ([awesome-dsh-plugin contributing](https://github.com/awesome-dsh-plugin/awesome-dsh-plugin/blob/main/contributing.md)).
 
 ## Maintenance pipeline
 
