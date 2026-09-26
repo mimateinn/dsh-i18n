@@ -1,7 +1,8 @@
 // index.mjs — dsh-i18n 插件（Host 側）
 //
-// 提供 /dsh-i18n RPC：translate({texts, targetLang, provider?, model?, reasoningEffort?})
-// → { translations }。用 ctx.llm.stream 做單次批量翻譯，供 client 側「自動翻譯」使用。
+// 提供 /api/dsh-i18n.translate Fetch 路由（Harness 0.1.5+）：
+// translate({texts, targetLang, provider?, model?, reasoningEffort?}) → { translations }。
+// 用 ctx.llm.stream 做單次批量翻譯，供 client 側「自動翻譯」使用。
 // 預設用 agentDefaultModel（用戶主要模型），client 可傳 provider/model 覆寫。
 
 import { BlockAssembler, createUserMessage } from "@deepseek-ai/dsh-llm";
@@ -71,10 +72,28 @@ function serverResponse(rpcId, result) {
   return Response.json({ type: "server-response", rpcId, result });
 }
 
+function resolveModelRoute(ctx, payload) {
+  if (payload?.provider && payload?.model) {
+    return { provider: payload.provider, model: payload.model, reasoningEffort: payload.reasoningEffort };
+  }
+  const tryRead = (getter) => {
+    try {
+      return getter()?.currentSelection?.() ?? null;
+    } catch {
+      return null;
+    }
+  };
+  return (
+    tryRead(() => ctx.get("agentDefaultModel")) ??
+    tryRead(() => ctx.agentDefaultModel) ??
+    null
+  );
+}
+
 function apply(ctx) {
   // Harness 0.1.5-rc.2: connection.rpc.handle uses the connection fiber's
   // webServer, which that plugin no longer injects. Mount an exact /api
-  // Fetch route instead (same pattern as dsh-plugin-subscriptions 0.9.2).
+  // Fetch route instead (same pattern as dsh-plugin-subscriptions).
   ctx.inject(["connection"], (connectionCtx) => {
     const connection = connectionCtx.get("connection");
     const handler = async (endpoint, payload, signal) => {
@@ -84,21 +103,18 @@ function apply(ctx) {
         if (!Array.isArray(texts) || texts.length === 0 || typeof targetLang !== "string") {
           return failure(new Error("invalid translate payload"));
         }
-        let route;
-        if (payload.provider && payload.model) {
-          route = { provider: payload.provider, model: payload.model, reasoningEffort: payload.reasoningEffort };
-        } else {
-          try {
-            route = ctx.get("agentDefaultModel")?.currentSelection?.() ?? null;
-          } catch {
-            route = null;
-          }
+        const route = resolveModelRoute(ctx, payload);
+        if (!route || !route.provider || !route.model) {
+          try { connectionCtx.logger?.warn?.("[dsh-i18n] no model route for auto-translate"); } catch { /* ignore */ }
+          return failure(new Error("no model route"));
         }
-        if (!route || !route.provider || !route.model) return failure(new Error("no model route"));
         const translations = await translate(ctx, texts, targetLang, route, signal);
         if (translations.length !== texts.length) return failure(new Error("translation length mismatch"));
         return ok({ translations });
       } catch (error) {
+        try {
+          connectionCtx.logger?.warn?.("[dsh-i18n] translate error: " + (error instanceof Error ? error.message : String(error)));
+        } catch { /* ignore */ }
         return failure(error);
       }
     };
@@ -137,6 +153,7 @@ function apply(ctx) {
         return serverResponse(envelope.rpcId, await handler("translate", envelope.payload, request.signal));
       },
     }), "dsh-i18n: /api/dsh-i18n.translate route");
+    try { connectionCtx.logger?.info?.("[dsh-i18n] mounted /api/dsh-i18n.translate"); } catch { /* ignore */ }
   });
 }
 

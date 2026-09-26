@@ -86,7 +86,13 @@ window.__ModuleLoader__.load({
     const CHARS = ${CHARS_JSON};
 
     const name = "dsh-i18n";
-    const inject = ["connection"];
+    // locale is required for dictionary registration; connection is optional for LLM auto-MT.
+    const inject = ["locale", "connection"];
+
+    // Match dsh-client-locale's case-insensitive Map key (value.toLowerCase()).
+    function localeKey(value) {
+      return String(value).toLowerCase();
+    }
 
     // 纯单字简→繁转换（不做術語片語；{佔位符} 内无汉字，天然安全）。
     // fast-path：先扫一遍有没有需要转换的字，没有就直接返回原串（避免热路径分配）。
@@ -105,6 +111,13 @@ window.__ModuleLoader__.load({
     function applyParams(template, params) {
       if (!params) return template;
       return template.replace(/\\{(\\w+)\\}/g, (match, name) => name in params ? String(params[name]) : match);
+    }
+
+    function dictLookup(dicts, ns, langId, key) {
+      if (!dicts || typeof dicts.get !== "function") return undefined;
+      const locales = dicts.get(ns);
+      if (!locales || typeof locales.get !== "function") return undefined;
+      return locales.get(localeKey(langId))?.[key];
     }
 
     function readPref() {
@@ -211,11 +224,11 @@ window.__ModuleLoader__.load({
       let n;
       while ((n = walker.nextNode())) fn(n);
     }
-    function startDomConversion() {
+    function startDomConversion(activeId) {
       if (domObserver) return;
       try {
         domOriginalLang = domOriginalLang ?? document.documentElement.lang;
-        document.documentElement.lang = "zh-TW";
+        document.documentElement.lang = activeId || "zh-TW";
       } catch { /* 忽略 */ }
       domWalk(document.body, domConvertText);
       if (typeof MutationObserver !== "undefined") {
@@ -255,7 +268,7 @@ window.__ModuleLoader__.load({
     }
     function syncDocumentLocale(active) {
       const lang = LANGUAGES.find((item) => item.id === active);
-      if (lang?.useConvert) startDomConversion();
+      if (lang?.useConvert) startDomConversion(lang.id);
       else stopDomConversion();
       try {
         document.documentElement.lang = lang?.id ?? document.documentElement.lang;
@@ -273,11 +286,58 @@ window.__ModuleLoader__.load({
     function apply(ctx) {
       const locale = ctx.get("locale");
       if (!locale || typeof locale.register !== "function" || typeof locale.getLocale !== "function") {
-        console.warn("[dsh-i18n] locale 服务不可用，插件静默降级");
+        console.warn("[dsh-i18n] locale service unavailable; plugin degraded");
         return;
       }
 
-      // 1) 注册各语言字典（单 locale 形态；重复注册会抛错，逐个 try）
+      const isOurs = (id) => LANGUAGES.some((l) => l.id === id || localeKey(l.id) === localeKey(id));
+      const findLang = (id) => LANGUAGES.find((l) => l.id === id || localeKey(l.id) === localeKey(id));
+
+      // 0) Register languages into the official catalog (Harness 0.1.5+).
+      //    setLocale only accepts catalog ids; snapshot patching alone is not enough.
+      //    Traditional locales fall back to zh (then convert); others fall back to en.
+      const languageDisposers = [];
+      if (typeof locale.addLanguage === "function") {
+        for (const lang of LANGUAGES) {
+          try {
+            const dispose = locale.addLanguage({
+              id: lang.id,
+              label: lang.label,
+              fallback: lang.useConvert ? "zh" : "en",
+            });
+            if (typeof dispose === "function") languageDisposers.push(dispose);
+          } catch (error) {
+            // Already registered (HMR / double apply) — keep going.
+            if (!/already registered/i.test(String(error && error.message || error))) {
+              console.error("[dsh-i18n] addLanguage", lang.id, error);
+            }
+          }
+        }
+        if (languageDisposers.length) {
+          ctx.effect(() => () => { for (const d of languageDisposers) try { d(); } catch { /* ignore */ } }, "dsh-i18n: languages");
+        }
+      } else {
+        // Legacy hosts without addLanguage: patch the snapshot option list.
+        const snapshot = locale.getLocale();
+        const locales = [...snapshot.locales];
+        for (const lang of LANGUAGES) {
+          if (!locales.some((l) => localeKey(l.id) === localeKey(lang.id))) {
+            locales.push({ id: lang.id, label: lang.label });
+          }
+        }
+        try {
+          locale.snapshot = Object.freeze({
+            active: snapshot.active,
+            locales: Object.freeze(locales),
+            revision: snapshot.revision,
+          });
+          locale.publish(snapshot.active, true);
+        } catch (error) {
+          console.error("[dsh-i18n] patch snapshot", error);
+        }
+      }
+
+      // 1) Register curated dictionaries (single-locale form).
       for (const [langId, perNs] of Object.entries(DICTS)) {
         for (const [ns, dict] of Object.entries(perNs)) {
           try {
@@ -288,22 +348,22 @@ window.__ModuleLoader__.load({
         }
       }
 
-      // 1.5) 包装 translate：我们语言的 active 时——先取精译（curated）；缺则：
-      //      zh-TW 用 zh 值单字转繁；其他语言 fallback 英文（en 字典官方齐备）。
+      // 1.5) Wrap translate: curated first (case-insensitive dict keys), then
+      //      zh→繁 convert for Traditional locales / English for others.
       const originalTranslate = locale.translate.bind(locale);
       locale.translate = (ns, key, params) => {
         const active = locale.getLocale().active;
-        const lang = LANGUAGES.find((l) => l.id === active);
+        const lang = findLang(active);
         if (lang === undefined) return originalTranslate(ns, key, params);
         const dicts = locale.dicts;
         const curated =
-          dicts.get(ns)?.get(active)?.[key] ??
-          (ns !== "common" ? dicts.get("common")?.get(active)?.[key] : undefined);
+          dictLookup(dicts, ns, active, key) ??
+          (ns !== "common" ? dictLookup(dicts, "common", active, key) : undefined);
         if (curated !== undefined) return applyParams(curated, params);
         const fallbackLang = lang.useConvert ? "zh" : "en";
         const fallback =
-          dicts.get(ns)?.get(fallbackLang)?.[key] ??
-          (ns !== "common" ? dicts.get("common")?.get(fallbackLang)?.[key] : undefined);
+          dictLookup(dicts, ns, fallbackLang, key) ??
+          (ns !== "common" ? dictLookup(dicts, "common", fallbackLang, key) : undefined);
         if (fallback !== undefined) {
           const value = lang.useConvert ? convertZhTw(fallback) : fallback;
           return applyParams(value, params);
@@ -311,51 +371,36 @@ window.__ModuleLoader__.load({
         return originalTranslate(ns, key, params);
       };
 
-      // 2) 把全部语言加入可选语言列表：patch snapshot，再 publish 一次让设置页
-      //    语言行（读取 locale/change 事件）刷新出选项。
-      const snapshot = locale.getLocale();
-      const locales = [...snapshot.locales];
-      for (const lang of LANGUAGES) {
-        if (!locales.some((l) => l.id === lang.id)) {
-          locales.push({ id: lang.id, label: lang.label });
-        }
-      }
-      try {
-        locale.snapshot = Object.freeze({
-          active: snapshot.active,
-          locales: Object.freeze(locales),
-          revision: snapshot.revision,
-        });
-        locale.publish(snapshot.active, true);
-      } catch (error) {
-        console.error("[dsh-i18n] patch snapshot", error);
-      }
-
-      // 3) 包装 setLocale：我们语言的 id 走自有路径，其余（zh/en）走原逻辑并清除偏好
-      const isOurs = (id) => LANGUAGES.some((l) => l.id === id);
+      // 2) Wrap setLocale: persist plugin preference + sync DOM/MT.
+      //    With addLanguage, the original setLocale accepts our ids and writes Host settings.
       const originalSetLocale = locale.setLocale.bind(locale);
       locale.setLocale = (id) => {
-        if (isOurs(id)) {
-          locale.publish(id, true);
-          writePref(id);
-        } else {
+        try {
           originalSetLocale(id);
-          writePref(null);
+        } catch (error) {
+          // Legacy path: force-publish owned ids when catalog API is missing.
+          if (isOurs(id) && typeof locale.publish === "function") {
+            locale.publish(id, true);
+          } else {
+            throw error;
+          }
         }
+        writePref(isOurs(id) ? (findLang(id)?.id ?? id) : null);
         syncDocumentLocale(locale.getLocale().active);
       };
 
-      // 4) 持久化：启动时若 localStorage 有我们的语言偏好则自动启用。
-      //    注意：内置 dsh-client-locale 的 host 偏好是异步载入的——它在构造后
-      //    才收到 settings 文档，随即 adopt() 用 locale.preference ?? provisional
-      //    重置 active（provisional 对 zh 系浏览器是 "zh"），会盖掉我们启动时的
-      //    启用。因此除启动时立即启用外，还要包一层 adopt()：每次内置 re-adopt
-      //    后若我们的偏好仍在我们的语言里，就重新断言。
+      // 3) Persist across Host adopt() resets (async settings load can clobber active).
       const activateIfPreferred = () => {
         const pref = readPref();
-        if (pref !== null && isOurs(pref) && locale.getLocale().active !== pref) {
-          try { locale.publish(pref, true); } catch (error) { /* 忽略 */ }
+        if (pref === null || !isOurs(pref)) return;
+        const want = findLang(pref)?.id ?? pref;
+        if (locale.getLocale().active === want) return;
+        try {
+          originalSetLocale(want);
+        } catch {
+          try { locale.publish(want, true); } catch { /* ignore */ }
         }
+        syncDocumentLocale(locale.getLocale().active);
       };
       if (typeof locale.adopt === "function") {
         const originalAdopt = locale.adopt.bind(locale);
@@ -366,7 +411,7 @@ window.__ModuleLoader__.load({
         };
       }
 
-      // 5) 自動翻譯：英文長文本 → 用戶語言（經 /dsh-i18n RPC，預設主模型）
+      // 4) Auto-translate English long text via /api/dsh-i18n.translate (non-Traditional locales).
       const connection = (() => { try { return ctx.get("connection"); } catch { return null; } })();
       if (connection && connection.rpc && typeof connection.rpc.call === "function") {
         const MT_CONFIG_KEY = "dsh-i18n.mt";
@@ -377,7 +422,7 @@ window.__ModuleLoader__.load({
 
         const mtActiveLang = () => locale.getLocale().active;
         const mtIsTarget = (id) => {
-          const l = LANGUAGES.find((x) => x.id === id);
+          const l = findLang(id);
           return Boolean(l && !l.useConvert);
         };
         const mtLooksTranslatable = (text) => {
@@ -419,7 +464,7 @@ window.__ModuleLoader__.load({
           if (!mtIsTarget(mtActiveLang())) { pendingTexts.clear(); return; }
           const texts = [...pendingTexts].slice(0, 12);
           for (const t of texts) pendingTexts.delete(t);
-          const targetLang = (LANGUAGES.find((l) => l.id === mtActiveLang()) || {}).label;
+          const targetLang = (findLang(mtActiveLang()) || {}).label;
           const cfg = (() => { try { return JSON.parse(window.localStorage.getItem(MT_CONFIG_KEY)) || {}; } catch { return {}; } })();
           const payload = { texts, targetLang };
           if (cfg.provider && cfg.model) {
@@ -428,7 +473,11 @@ window.__ModuleLoader__.load({
             if (cfg.reasoningEffort) payload.reasoningEffort = cfg.reasoningEffort;
           }
           connection.rpc.call("/api", "dsh-i18n.translate", payload).then((result) => {
-            if (!result || !result.ok) return;
+            if (!result || !result.ok) {
+              const msg = result && result.error && result.error.message ? result.error.message : "translate failed";
+              console.warn("[dsh-i18n] auto-translate:", msg);
+              return;
+            }
             if (!mtIsTarget(mtActiveLang())) return;
             const translations = result.value && result.value.translations;
             if (!Array.isArray(translations)) return;
@@ -437,7 +486,9 @@ window.__ModuleLoader__.load({
               if (typeof tr === "string" && tr && tr !== t) translateCache.set(t, tr);
             });
             mtWalk(document.body);
-          }).catch(() => { /* 翻譯失敗靜默 */ });
+          }).catch((error) => {
+            console.warn("[dsh-i18n] auto-translate rpc error:", error instanceof Error ? error.message : error);
+          });
           if (pendingTexts.size) mtTimer = window.setTimeout(flushMt, 250);
         }
         function startMt() {
@@ -467,12 +518,14 @@ window.__ModuleLoader__.load({
           if (mtIsTarget(mtActiveLang())) startMt();
           else stopMt();
         };
+      } else {
+        console.info("[dsh-i18n] connection.rpc unavailable; dictionary + convert only (no LLM auto-translate)");
       }
 
       activateIfPreferred();
       syncDocumentLocale(locale.getLocale().active);
-      // 启动后 DOM 可能未渲染完，延后几拍再补一轮兜底转换
       try { window.setTimeout(() => syncDocumentLocale(locale.getLocale().active), 500); } catch { /* 忽略 */ }
+      console.info("[dsh-i18n] ready; active=", locale.getLocale().active, "languages=", LANGUAGES.length);
     }
 
     module.exports = { name, inject, apply };
