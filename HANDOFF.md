@@ -3,16 +3,16 @@
 # HANDOFF
 
 ## In progress
-- 2026-09-19: Desktop upgraded to **2.0.11** (Harness **0.1.5-rc.2**). `connection.rpc.handle` cannot mount a dedicated channel anymore. Version **0.2.5** registers `/api/dsh-i18n.translate` via `connection.fetch.register`. Desktop profile uses `github:mimateinn/dsh-i18n`. npm `latest` is still **0.2.2**.
-- 2026-09-09: Multi-agent UI lag / “model running but text does not paint” was this plugin’s `document.body` MutationObservers. Fix is in `scripts/assemble.mjs` (skip conversation/composer/AgentTeams surfaces, drop `characterData`, rAF-coalesce `childList`, TreeWalker `FILTER_REJECT`). That observer fix shipped as **0.2.3** (`5220902`).
+- 2026-10-18: Local checkout fast-forwarded `0d71c98` (v0.2.3) → `ffafaca` (v0.2.8). Desktop profile already pinned `github:mimateinn/dsh-i18n#ffafaca`. Live Desktop **2.0.17** at `%LOCALAPPDATA%\Programs\DSH Desktop` (Harness **0.2.0-rc.2**) mounted `[dsh-i18n] 0.2.8 mounted /api/dsh-i18n.translate`. Observer/streaming-DOM fix from 0.2.3 is still in `scripts/assemble.mjs` (skip conversation/composer/AgentTeams, no `characterData`, rAF-coalesce, TreeWalker `FILTER_REJECT`). No npm publish this round.
+- 2026-09-19: Desktop was **2.0.11** (Harness **0.1.5-rc.2**). `connection.rpc.handle` cannot mount a dedicated channel anymore. 0.2.5+ registers `/api/dsh-i18n.translate` via `connection.fetch.register`.
 
 ## Next
-- Restart DSH Desktop after pulling 0.2.5 so the Host reloads `index.mjs`.
-- Publish `@mimateinn/dsh-i18n@0.2.5` only when the owner asks (Market stays on 0.2.2 until then).
+- Publish `@mimateinn/dsh-i18n@0.2.8` only when the owner asks (npm `latest` remains **0.2.6**; Market still lags git).
 - Harvest the 14 upstream locale keys (715 → 729) across 20 locales.
 
 ## Gotchas
-- npm `latest` is still **0.2.2**. Git `master` is **0.2.5**. Market update installs the old observers until 0.2.5 is published.
+- npm `latest` is **0.2.6**. Git `master` / Desktop pin is **0.2.8**. Market update can install an older bundle than git.
+- Live Desktop is `%LOCALAPPDATA%\Programs\DSH Desktop` (2.0.17). `%LOCALAPPDATA%\DSH Desktop` is leftover 2.0.11. `C:\Program Files\DSH Desktop` is leftover 2.0.3. Always pass `--profile desktop` to the 2.0.17 CLI.
 - zh-TW live convert / auto-MT no longer rewrite streaming bubbles (chrome/settings still convert via `childList`).
 - Isolated Host RPC times out at 120s if MCP servers (OpenViking / wincu) stall; launch with `DSH_DESKTOP_ISOLATED_HOST=0` when that happens.
 - Community Market accepts only an exact published npm version. GitHub specs install only via `dsh plugin add`.
