@@ -3,6 +3,7 @@
 # HANDOFF
 
 ## In progress
+- 2026-10-18: GitHub Release **v0.2.8** already existed on `ffafaca` (https://github.com/mimateinn/dsh-i18n/releases/tag/v0.2.8). Docs-only tip `bd0af6a` was not re-tagged. No npm publish.
 - 2026-10-18: Local checkout fast-forwarded `0d71c98` (v0.2.3) → `ffafaca` (v0.2.8). Desktop profile already pinned `github:mimateinn/dsh-i18n#ffafaca`. Live Desktop **2.0.17** at `%LOCALAPPDATA%\Programs\DSH Desktop` (Harness **0.2.0-rc.2**) mounted `[dsh-i18n] 0.2.8 mounted /api/dsh-i18n.translate`. Observer/streaming-DOM fix from 0.2.3 is still in `scripts/assemble.mjs` (skip conversation/composer/AgentTeams, no `characterData`, rAF-coalesce, TreeWalker `FILTER_REJECT`). No npm publish this round.
 - 2026-09-19: Desktop was **2.0.11** (Harness **0.1.5-rc.2**). `connection.rpc.handle` cannot mount a dedicated channel anymore. 0.2.5+ registers `/api/dsh-i18n.translate` via `connection.fetch.register`.
 
